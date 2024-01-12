@@ -71,6 +71,7 @@ nav {
     margin: 0;
     padding: 0;
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .quiz{
@@ -104,12 +105,17 @@ th, td {
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
-    .menu {
-        display: none;
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1em;
+        margin: 0;
+        background-color: aliceblue;
     }
 
-    .menu-toggle {
-        display: flex;
+    .menu {
+        display: none;
     }
 
     .menu ul {
