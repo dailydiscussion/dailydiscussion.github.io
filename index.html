@@ -9,6 +9,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script>
+        // This script will refresh the page only once on load
+        if (!sessionStorage.getItem('reloaded')) {
+            sessionStorage.setItem('reloaded', 'true');
+            window.onload = function() {
+                location.reload(true);
+            };
+        }
+    </script>
 </head>
 
 <body>
