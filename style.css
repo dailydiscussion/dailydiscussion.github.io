@@ -181,6 +181,11 @@ th, td {
         display: none;
     }
 
+    table {
+        width: 80%;
+        margin: auto;
+    }
+
     .menu ul {
         flex-direction: column;
         text-align: center;
