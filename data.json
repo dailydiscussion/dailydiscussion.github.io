@@ -1,0 +1,17 @@
+{
+    "data": [
+      {
+        "Name": "Dr Sarim",
+        "Scores": ["68%"]
+      },
+      {
+        "Name": "Dr Nikhil",
+        "Scores": ["54%"]
+      },
+      {
+        "Name": "Dr Snehlata",
+        "Scores": ["42%"]
+      }
+    ]
+  }
+  

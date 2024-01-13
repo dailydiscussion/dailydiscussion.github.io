@@ -48,47 +48,22 @@
             </h5>
         </div>
         <div class="leaderboards">
-            <table>
+            <table id="data-table">
                 <thead>
-                    <tr>
-                        <th>
-                            Name
-                        </th>
-                        <th>
-                            Overall Score
-                        </th>
-                    </tr>
+                  <tr>
+                    <th>Name</th>
+                    <th>Overall Score</th>
+                  </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>
-                            Dr. Sarim
-                        </td>
-                        <td>
-                            68%
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Dr. Nikhil</td>
-                        <td>
-                            54%
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            Dr. Snehlata
-                        </td>
-                        <td>
-                            42%
-                        </td>
-                    </tr>
+                <tbody id="table-body">
+                  <!-- Table body will be dynamically populated here -->
                 </tbody>
-            </table>
+              </table>
         </div>
     </main>
     <footer class="footer">
         <p>
-            © Copyright 2024 | All Rights reserved
+            © Copyright 2024 | All Rights Reserved
         </p>
     </footer>
 
@@ -99,7 +74,32 @@
         });
       </script>
       
+      <script>
+        // Fetch JSON data
+        fetch('data.json')
+          .then(response => response.json())
+          .then(data => {
+            // Get the table body element
+            const tableBody = document.getElementById('table-body');
+      
+            // Iterate through the JSON data and dynamically populate the table
+            data.data.forEach((item, index) => {
+              const row = tableBody.insertRow();
+              const cellName = row.insertCell(0);
+              const cellOverallScore = row.insertCell(1);
+              const cellScoreIncrease = row.insertCell(2);
+      
+              cellName.textContent = item.Name;
+      
+              // Calculate average score and display in the "Overall Score" column
+              const scores = item.Scores.map(score => parseInt(score));
+              const overallScore = scores.reduce((sum, score) => sum + score, 0) / scores.length;
+              cellOverallScore.textContent = overallScore.toFixed(2) + "%";
 
+            });
+          })
+          .catch(error => console.error('Error fetching JSON:', error));
+      </script>
     <script src="script.js"></script>
 
 </body>
