@@ -70,7 +70,7 @@ nav {
 .leaderboards {
     margin: 0;
     padding: 0;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 40px;
 }
 
@@ -135,6 +135,20 @@ th, td {
     text-align: center;
     padding: 0.5em;
 }
+
+th{
+    background-color: #0F1035;
+    color: #DCF2F1;
+    border-radius: 0.5em;
+}
+
+td{
+    background-color: #DCF2F1;
+    color: rgb(45, 72, 73);
+    border-radius: 0.5em;
+}
+
+
 /* Apply transition to the element you want to animate */
 .animated-element {
     opacity: 0;
