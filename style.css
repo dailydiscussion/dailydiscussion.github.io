@@ -101,6 +101,11 @@ a{
     text-decoration: none;
 }
 
+.tests{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
 button{
     font-family: 'Josefin Sans', sans-serif;
     background-color: #000000;
