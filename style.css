@@ -11,7 +11,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1em;
+    padding: 0.1em;
     margin: 0;
     background-color: aliceblue;
 }
