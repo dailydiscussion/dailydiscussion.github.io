@@ -138,13 +138,13 @@ th, td {
 
 th{
     background-color: #0F1035;
-    color: #DCF2F1;
+    color: white;
     border-radius: 0.5em;
 }
 
 td{
-    background-color: #DCF2F1;
-    color: rgb(45, 72, 73);
+    background-color: whitesmoke;
+    color: #0F1035;
     border-radius: 0.5em;
 }
 
