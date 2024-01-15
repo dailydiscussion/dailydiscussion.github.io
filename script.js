@@ -41,7 +41,7 @@ if (!sessionStorage.getItem('reloaded')) {
 
 // JavaScript to update the counter value
 const counterElement = document.getElementById('counter');
-const targetNumber = 150;
+const targetNumber = 200;
 let currentNumber = 0;
 
 function updateCounter() {
