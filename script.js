@@ -6,29 +6,38 @@ if (!sessionStorage.getItem('reloaded')) {
     };
     }
 
-// Fetch JSON data
-fetch('data.json')
-.then(response => response.json())
-.then(data => {
-  // Get the table body element
-  const tableBody = document.getElementById('table-body');
+    fetch('data.json')
+    .then(response => response.json())
+    .then(jsonData => {
+        const tableContainer = document.getElementById('tableContainer');
+        const table = document.createElement('table');
+        const thead = document.createElement('thead');
+        const tbody = document.createElement('tbody');
 
-  // Iterate through the JSON data and dynamically populate the table
-  data.data.forEach((item, index) => {
-    const row = tableBody.insertRow();
-    const cellName = row.insertCell(0);
-    const cellOverallScore = row.insertCell(1);
+        jsonData.tests.forEach(test => {
+            const trHead = document.createElement('tr');
+            const th = document.createElement('th');
+            th.textContent = test.title;
+            trHead.appendChild(th);
+            thead.appendChild(trHead);
 
-    cellName.textContent = item.Name;
+            test.links.forEach(link => {
+                const trBody = document.createElement('tr');
+                const td = document.createElement('td');
+                const anchor = document.createElement('a');
+                anchor.href = link.url;
+                anchor.textContent = link.text;
+                td.appendChild(anchor);
+                trBody.appendChild(td);
+                tbody.appendChild(trBody);
+            });
+        });
 
-    // Calculate average score and display in the "Overall Score" column
-    const scores = item.Scores.map(score => parseInt(score));
-    const overallScore = scores.reduce((sum, score) => sum + score, 0) / scores.length;
-    cellOverallScore.textContent = overallScore.toFixed(2) + "%";
-
-  });
-})
-.catch(error => console.error('Error fetching JSON:', error));
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        tableContainer.appendChild(table);
+    })
+    .catch(error => console.error('Error fetching data:', error));
 
 // JavaScript to update the counter value
 const counterElement = document.getElementById('counter');

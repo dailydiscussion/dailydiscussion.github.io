@@ -1,17 +1,21 @@
 {
-    "data": [
-      {
-        "Name": "Dr Sarim",
-        "Scores": ["68%","70%","54%"]
-      },
-      {
-        "Name": "Dr Nikhil",
-        "Scores": ["54%","58%","58%"]
-      },
-      {
-        "Name": "Dr Snehlata",
-        "Scores": ["42%","38%","42%"]
-      }
-    ]
-  }
-  
+  "tests": [
+    {
+      "title": "Surgery Tests",
+      "links": [
+        {
+          "text": "Topic - General Surgery + Breast + Endocrine 1",
+          "url": "https://link.marrow.com/join_custom_module/559S0IFN"
+        },
+        {
+          "text": "Topic - General Surgery + Breast + Endocrine 2",
+          "url": "https://link.marrow.com/join_custom_module/559U04NH"
+        },
+        {
+          "text": "Topic - Endocrine and Breast - Surgery, ENT and Pathology",
+          "url": "https://link.marrow.com/join_custom_module/559U0ENR"
+        }
+      ]
+    }
+  ]
+}
