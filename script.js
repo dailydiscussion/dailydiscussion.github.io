@@ -59,3 +59,4 @@ updateCounter();
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.animated-element').classList.add('active');
   });
+
