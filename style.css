@@ -82,8 +82,9 @@ nav {
 }
 
 .topic{
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
+    max-width: 80%;
     margin-top: 20px;
     margin-bottom: 20px;
     text-align: center;
@@ -134,6 +135,8 @@ table {
 th, td {
     text-align: center;
     padding: 0.5em;
+    margin: 0 auto;
+    max-width: 80%;
 }
 
 th{
@@ -210,6 +213,11 @@ td{
         padding: 1em;
         margin: 0;
         background-color: aliceblue;
+    }
+
+    .logo h3{
+        margin: 0;
+        padding: 0.2em;
     }
 
     .menu {
