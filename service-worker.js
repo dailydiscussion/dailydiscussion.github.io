@@ -6,9 +6,9 @@ self.addEventListener('install', (event) => {
     caches.open(cacheName).then((cache) => {
       return cache.addAll([
         '/',
-        '/index.html',
-        '/style.css',
-        '/script.js',
+        'index.html',
+        'style.css',
+        'script.js',
         // Add more paths to your assets
       ]);
     })

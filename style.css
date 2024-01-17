@@ -61,7 +61,6 @@ nav {
     padding: 2em;
     text-align: center;
     background-color: #000000;
-    background-image: url("stacked-waves-haikei.svg");
     background-attachment: fixed;
     background-size: cover;
     color: white;
@@ -110,7 +109,6 @@ a{
 button{
     font-family: 'Josefin Sans', sans-serif;
     background-color: #000000;
-    background-image: url("stacked-waves-haikei.svg");
     background-attachment: fixed;
     background-size: cover;
     color: white;
@@ -140,7 +138,7 @@ th, td {
 }
 
 th{
-    background-image: url("stacked-waves-haikei.svg");
+    background-color: black;
     color: white;
     border-radius: 0.5em;
 }
