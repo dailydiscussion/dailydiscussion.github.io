@@ -240,6 +240,10 @@ td{
         display: none;
     }
 
+    th, td{
+        text-align: left;
+    }
+
     .menu ul.show {
         display: flex;
     }
