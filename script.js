@@ -33,7 +33,7 @@ tableContainer.appendChild(table);
 
 // JavaScript to update the counter value
 const counterElement = document.getElementById('counter');
-const targetNumber = 250;
+const targetNumber = 300;
 let currentNumber = 0;
 
 function updateCounter() {
