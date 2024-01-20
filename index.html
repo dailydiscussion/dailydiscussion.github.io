@@ -25,7 +25,7 @@
             </h3>
         </div>
         <div class="quiz">
-            <div>
+            <div class="col">
                 <h3>
                     Today's Quiz -
                     <a href="https://link.marrow.com/join_custom_module/559Z0HUS">
@@ -38,14 +38,24 @@
                     Topic - Surgery - Miscellaneous
                 </h5>
             </div>
-            <div>
-                <div>
-                    <h3>
-                        Total Questions discussed
-                    </h3>
-                </div>
-                <div class="circle-container">
-                    <div class="counter" id="counter">0</div>
+            <div class="col">
+                <div class="flex">
+                    <div class="col-6-12">
+                        <h2>
+                            <div class="counter" id="counter" data-target="400">0</div>
+                        </h2>
+                        <h6>
+                            Questions discussed
+                        </h6>
+                    </div>
+                    <div class="col-6-12">
+                        <h2>
+                            <div class="counter" id="counter" data-target="1">0</div>
+                        </h2>
+                        <h6>
+                            Subjects Completed
+                        </h6>
+                    </div>
                 </div>                
             </div>
         </div>
@@ -100,21 +110,29 @@
     </script> 
 
     <script>
-    // JavaScript to update the counter value
-    const counterElement = document.getElementById('counter');
-    const targetNumber = 400;
-    let currentNumber = 0;
-
-    function updateCounter() {
-    if (currentNumber < targetNumber) {
-    currentNumber++;
-    counterElement.textContent = currentNumber;
-    requestAnimationFrame(updateCounter);
-    }
-    }
-
-    // Start the animation
-    updateCounter();
+        function updateCounter(counterElement, targetNumber) {
+            let currentNumber = 0;
+    
+            function animate() {
+                if (currentNumber < targetNumber) {
+                    currentNumber++;
+                    counterElement.textContent = currentNumber;
+                    requestAnimationFrame(animate);
+                }
+            }
+    
+            // Start the animation
+            animate();
+        }
+    
+        // Find all elements with the class 'counter'
+        const counterElements = document.querySelectorAll('.counter');
+    
+        // Iterate over each counter element and start the animation
+        counterElements.forEach((counterElement) => {
+            const targetNumber = parseInt(counterElement.dataset.target, 10);
+            updateCounter(counterElement, targetNumber);
+        });
     </script>
 
 </body>
