@@ -236,6 +236,25 @@ td{
         display: none;
     }
 
+    .flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        width: 90%;
+        margin: auto;
+    }
+    .col-6-12{
+        max-width: 50%;
+        background-color: whitesmoke;
+        color: black;
+        text-align: center;
+        margin: auto;
+        border-radius: 1em;
+        padding: 1em;
+        margin-right: 5px;
+    }
+
     table {
         width: 80%;
         margin: auto;
