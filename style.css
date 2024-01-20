@@ -241,7 +241,7 @@ td{
         flex-direction: row;
         justify-content: flex-start;
         flex-wrap: nowrap;
-        width: 90%;
+        width: 80%;
         margin: auto;
     }
     .col-6-12{
