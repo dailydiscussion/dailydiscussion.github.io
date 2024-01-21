@@ -26,16 +26,17 @@
         </div>
         <div class="quiz">
             <div class="col">
-                <h3>
+                <h3 id="quizTitleContainer">
                     Today's Quiz -
-                    <a href="https://link.marrow.com/join_custom_module/55A102JS">
+                    <a id="quizLink" href="#">
                         <button>
                             Surgery MCQs
                         </button>
                     </a>
                 </h3>
-                <h5 class="topic">
-                    Topic - Surgery - Complete
+                
+                <h5 id="topicContainer" class="topic">
+                    <!-- Content will be dynamically added here -->
                 </h5>
             </div>
             <div class="col">
@@ -81,22 +82,47 @@
     </footer>
 
     <script>
-        // Function to update the count and display it
-        function updateCount(elementId, increment, initialCount) {
-            // Get the current count from the specified element or use the initial count
-            let count = parseInt(document.getElementById(elementId).textContent) || initialCount;
+    // Fetch the JSON data from the file using AJAX
+    fetch('data.json')
+    .then(response => response.json())
+    .then(jsonData => {
+    // Find the last entry by ID
+    var lastEntry = jsonData.tests[0].links.find(link => link.id === "lastEntry");
 
-            // Update the count by the specified increment
-            count += increment;
+    // Check if the last entry is found
+    if (lastEntry) {
+    // Update the HTML content with the last entry dynamically
+    var quizLink = document.getElementById("quizLink");
 
-            // Display the updated count in the specified element
-            document.getElementById(elementId).textContent = count;
-        }
+    quizLink.href = lastEntry.url;
+    // You can keep the existing button text if you don't want to change it
+    // quizLink.querySelector("button").textContent = lastEntry.text;
+    }
 
-        // Call the function to update the counts with initial values
-        updateCount('countDay', 1, 9);
-        updateCount('countTest', 1, 9);
-        updateCount('countQuestions', 50, 450);
+    // Assuming the "Topic - Surgery - Complete" is the last entry in the JSON
+    var topicContainer = document.getElementById("topicContainer");
+    topicContainer.textContent = jsonData.tests[0].links[jsonData.tests[0].links.length - 1].text;
+    })
+    .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+
+    <script>
+    // Function to update the count and display it
+    function updateCount(elementId, increment, initialCount) {
+    // Get the current count from the specified element or use the initial count
+    let count = parseInt(document.getElementById(elementId).textContent) || initialCount;
+
+    // Update the count by the specified increment
+    count += increment;
+
+    // Display the updated count in the specified element
+    document.getElementById(elementId).textContent = count;
+    }
+
+    // Call the function to update the counts with initial values
+    updateCount('countDay', 1, 9);
+    updateCount('countTest', 1, 9);
+    updateCount('countQuestions', 50, 450);
     </script>
 
     <script>
