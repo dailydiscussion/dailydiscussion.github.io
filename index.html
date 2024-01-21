@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2b5797">
 </head>
@@ -42,19 +42,19 @@
             <div class="col">
                 <div class="flex">
                     <div class="col-6-12">
-                        <h2 id="countDay">10</h2>
+                        <h2>10</h2>
                         <h6>
                             Day
                         </h6>
                     </div>
                     <div class="col-6-12">
-                        <h2 id="countQuestions">450</h2>
+                        <h2>500</h2>
                         <h6>
                             Questions discussed
                         </h6>
                     </div>
                     <div class="col-6-12">
-                        <h2 id="countTest">9</h2>
+                        <h2>10</h2>
                         <h6>
                             Tests Discussed
                         </h6>
@@ -104,30 +104,6 @@
     topicContainer.textContent = jsonData.tests[0].links[jsonData.tests[0].links.length - 1].text;
     })
     .catch(error => console.error('Error fetching JSON:', error));
-    </script>
-
-    <script>
-        function updateCount(elementId, increment) {
-            let count = parseInt(document.getElementById(elementId).textContent);
-            count += increment;
-            document.getElementById(elementId).textContent = count;
-        }
-
-        function updateCountsDaily() {
-            // Get the current date and time
-            const now = new Date();
-            
-            // Check if it's 2:00 AM
-            if (now.getHours() === 2 && now.getMinutes() === 0 && now.getSeconds() === 0) {
-                // Update the counts daily
-                updateCount('countDay', 1);
-                updateCount('countTest', 50);
-                updateCount('countQuestions', 1);
-            }
-        }
-
-        // Set up an interval to check the time and update counts every minute
-        setInterval(updateCountsDaily, 60000);
     </script>
 
     <script>
