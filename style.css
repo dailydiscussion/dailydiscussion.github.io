@@ -88,6 +88,17 @@ nav {
     margin-bottom: 20px;
 }
 
+.slider {
+    width: 100%; /* Take the full width of the viewport */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical overflow */
+    white-space: nowrap; /* Prevent content from wrapping to the next line */
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+  
 .flex{
     display: flex;
     flex-direction: row;
@@ -104,6 +115,7 @@ nav {
     padding: 1em;
     margin-right: 10px;
 }
+
 
 
 .topic{
@@ -240,11 +252,13 @@ td{
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        align-items: stretch;
         flex-wrap: nowrap;
         width: 80%;
         margin: auto;
     }
     .col-6-12{
+        flex: 1;
         max-width: 50%;
         background-color: whitesmoke;
         color: black;

@@ -28,52 +28,48 @@
             <div class="col">
                 <h3>
                     Today's Quiz -
-                    <a href="https://link.marrow.com/join_custom_module/559Z0HUS">
+                    <a href="https://link.marrow.com/join_custom_module/55A102JS">
                         <button>
                             Surgery MCQs
                         </button>
                     </a>
                 </h3>
                 <h5 class="topic">
-                    Topic - Surgery - Miscellaneous
+                    Topic - Surgery - Complete
                 </h5>
             </div>
             <div class="col">
-                <div class="flex">
-                    <div class="col-6-12">
-                        <h2>
-                            <div class="counter" id="counter" data-target="9">0</div>
-                        </h2>
-                        <h6>
-                            Day
-                        </h6>
-                    </div>
-                    <div class="col-6-12">
-                        <h2>
-                            <div class="counter" id="counter" data-target="450">0</div>
-                        </h2>
-                        <h6>
-                            Questions discussed
-                        </h6>
-                    </div>
-                    <div class="col-6-12">
-                        <h2>
-                            <div class="counter" id="counter" data-target="9">0</div>
-                        </h2>
-                        <h6>
-                            Tests Discussed
-                        </h6>
-                    </div>
-                    <div class="col-6-12">
-                        <h2>
-                            <div class="counter" id="counter" data-target="1">0</div>
-                        </h2>
-                        <h6>
-                            Subjects Completed
-                        </h6>
-                    </div>
-     
-                </div>                
+                <div class="slider">
+                    <div class="flex">
+                        <div class="col-6-12">
+                            <h2 id="countDay"></h2>
+                            <h6>
+                                Day
+                            </h6>
+                        </div>
+                        <div class="col-6-12">
+                            <h2 id="countQuestions"></h2>
+                            <h6>
+                                Questions discussed
+                            </h6>
+                        </div>
+                        <div class="col-6-12">
+                            <h2 id="countTest"></h2>
+                            <h6>
+                                Tests Discussed
+                            </h6>
+                        </div>
+                        <div class="col-6-12">
+                            <h2>
+                                1
+                            </h2>
+                            <h6>
+                                Subjects Completed
+                            </h6>
+                        </div>
+         
+                    </div> 
+                </div>               
             </div>
         </div>
 
@@ -85,6 +81,25 @@
             © Copyright 2024 | All Rights Reserved
         </p>
     </footer>
+
+    <script>
+        // Function to update the count and display it
+        function updateCount(elementId, increment, initialCount) {
+            // Get the current count from the specified element or use the initial count
+            let count = parseInt(document.getElementById(elementId).textContent) || initialCount;
+
+            // Update the count by the specified increment
+            count += increment;
+
+            // Display the updated count in the specified element
+            document.getElementById(elementId).textContent = count;
+        }
+
+        // Call the function to update the counts with initial values
+        updateCount('countDay', 1, 9);
+        updateCount('countTest', 1, 9);
+        updateCount('countQuestions', 50, 450);
+    </script>
 
     <script>
     fetch('data.json')
@@ -125,32 +140,6 @@
     document.querySelector('.animated-element').classList.add('active');
     });
     </script> 
-
-    <script>
-        function updateCounter(counterElement, targetNumber) {
-            let currentNumber = 0;
-    
-            function animate() {
-                if (currentNumber < targetNumber) {
-                    currentNumber++;
-                    counterElement.textContent = currentNumber;
-                    requestAnimationFrame(animate);
-                }
-            }
-    
-            // Start the animation
-            animate();
-        }
-    
-        // Find all elements with the class 'counter'
-        const counterElements = document.querySelectorAll('.counter');
-    
-        // Iterate over each counter element and start the animation
-        counterElements.forEach((counterElement) => {
-            const targetNumber = parseInt(counterElement.dataset.target, 10);
-            updateCounter(counterElement, targetNumber);
-        });
-    </script>
 
 </body>
 
