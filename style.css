@@ -92,9 +92,12 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-items: stretch;
 }
+
 .col-6-12{
+    flex: 1;
     max-width: 50%;
     background-color: whitesmoke;
     color: black;
@@ -103,6 +106,7 @@ nav {
     border-radius: 1em;
     padding: 1em;
     margin-right: 10px;
+    height: 100px;
 }
 
 
