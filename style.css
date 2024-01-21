@@ -87,17 +87,6 @@ nav {
 .col{
     margin-bottom: 20px;
 }
-
-.slider {
-    width: 100%; /* Take the full width of the viewport */
-    overflow-x: auto; /* Enable horizontal scrolling */
-    overflow-y: hidden; /* Hide vertical overflow */
-    white-space: nowrap; /* Prevent content from wrapping to the next line */
-}
-
-.slider::-webkit-scrollbar {
-    display: none;
-}
   
 .flex{
     display: flex;
