@@ -42,19 +42,19 @@
             <div class="col">
                 <div class="flex">
                     <div class="col-6-12">
-                        <h2 id="countDay"></h2>
+                        <h2 id="countDay">10</h2>
                         <h6>
                             Day
                         </h6>
                     </div>
                     <div class="col-6-12">
-                        <h2 id="countQuestions"></h2>
+                        <h2 id="countQuestions">450</h2>
                         <h6>
                             Questions discussed
                         </h6>
                     </div>
                     <div class="col-6-12">
-                        <h2 id="countTest"></h2>
+                        <h2 id="countTest">9</h2>
                         <h6>
                             Tests Discussed
                         </h6>
@@ -107,22 +107,27 @@
     </script>
 
     <script>
-    // Function to update the count and display it
-    function updateCount(elementId, increment, initialCount) {
-    // Get the current count from the specified element or use the initial count
-    let count = parseInt(document.getElementById(elementId).textContent) || initialCount;
+        function updateCount(elementId, increment) {
+            let count = parseInt(document.getElementById(elementId).textContent);
+            count += increment;
+            document.getElementById(elementId).textContent = count;
+        }
 
-    // Update the count by the specified increment
-    count += increment;
+        function updateCountsDaily() {
+            // Get the current date and time
+            const now = new Date();
+            
+            // Check if it's 2:00 AM
+            if (now.getHours() === 2 && now.getMinutes() === 0 && now.getSeconds() === 0) {
+                // Update the counts daily
+                updateCount('countDay', 1);
+                updateCount('countTest', 50);
+                updateCount('countQuestions', 1);
+            }
+        }
 
-    // Display the updated count in the specified element
-    document.getElementById(elementId).textContent = count;
-    }
-
-    // Call the function to update the counts with initial values
-    updateCount('countDay', 1, 9);
-    updateCount('countTest', 1, 9);
-    updateCount('countQuestions', 50, 450);
+        // Set up an interval to check the time and update counts every minute
+        setInterval(updateCountsDaily, 60000);
     </script>
 
     <script>
