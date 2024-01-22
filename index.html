@@ -19,40 +19,25 @@
 
 <body>
     <main class="main animated-element">
-        <div class="home">
-            <div class="header-box">
-                <div class="col">
-                    <div class="header">
-                        <h2 id="greeting"></h2>
-                        <h4>
-                            "Ready to boost your NEET PG | INICET preparation together? Start quizzing now!"
-                        </h4>
-                    </div>
-                </div>
-                <div class="col-quiz">
-                    <h3>
-                        Today's Quiz
-                    </h3>
-                </div>
-                <div class="col">
-                    <h5 id="topicContainer" class="topic">
-                        <!-- Content will be dynamically added here -->
-                    </h5>
-                </div>
-                <div class="col" id="quizTitleContainer">
-                    <a id="quizLink" href="#">
-                        <button class="button">Start Quiz</button>
-                    </a>
-                </div>
-            </div>
+        <div class="header">
+            <h3>
+                "Ready to boost your NEET PG | INICET preparation together? Start quizzing now!"
+            </h3>
         </div>
-        
-        
         <div class="quiz">
             <div class="col">
-                <h3 class="left-align">
-                    Dashboard
+                <h3 id="quizTitleContainer">
+                    Today's Quiz -
+                    <a id="quizLink" href="#">
+                        <button>
+                            Surgery MCQs
+                        </button>
+                    </a>
                 </h3>
+                
+                <h5 id="topicContainer" class="topic">
+                    <!-- Content will be dynamically added here -->
+                </h5>
             </div>
             <div class="col">
                 <div class="flex">
@@ -95,27 +80,6 @@
             © Copyright 2024 | All Rights Reserved
         </p>
     </footer>
-
-    <script>
-        // Get the current hour of the day
-        var currentHour = new Date().getHours();
-
-        // Function to determine the appropriate greeting based on the time
-        function getGreeting() {
-            var greeting = '';
-            if (currentHour >= 5 && currentHour < 12) {
-                greeting = 'Good Morning!';
-            } else if (currentHour >= 12 && currentHour < 18) {
-                greeting = 'Good Afternoon!';
-            } else {
-                greeting = 'Good Evening!';
-            }
-            return greeting;
-        }
-
-        // Display the greeting message
-        document.getElementById('greeting').textContent = getGreeting();
-    </script>
 
     <script>
     // Fetch the JSON data from the file using AJAX
