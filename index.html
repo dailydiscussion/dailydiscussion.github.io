@@ -19,42 +19,57 @@
 
 <body>
     <main class="main animated-element">
-        <div class="header">
-            <h3>
-                "Ready to boost your NEET PG | INICET preparation together? Start quizzing now!"
-            </h3>
-        </div>
-        <div class="quiz">
-            <div class="col">
-                <h3 id="quizTitleContainer">
-                    Today's Quiz -
+        <div class="home">
+            <div class="header-box">
+                <div class="col">
+                    <div class="header">
+                        <h2 id="greeting"></h2>
+                        <h4 style="color: gray;">
+                            "Ready to boost your NEET PG | INICET preparation together? Start quizzing now!"
+                        </h4>
+                    </div>
+                </div>
+                <div class="col-quiz">
+                    <h3>
+                        Today's Quiz
+                    </h3>
+                </div>
+                <div class="col">
+                    <h5 id="topicContainer" class="topic" style="color: gray;">
+                        <!-- Content will be dynamically added here -->
+                    </h5>
+                </div>
+                <div class="col" id="quizTitleContainer">
                     <a id="quizLink" href="#">
-                        <button>
-                            Surgery MCQs
-                        </button>
+                        <button class="button">Start Quiz</button>
                     </a>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="quiz">
+            <div>
+                <h3 style="margin: 0; margin-top: 40px;">
+                    Dashboard
                 </h3>
-                
-                <h5 id="topicContainer" class="topic">
-                    <!-- Content will be dynamically added here -->
-                </h5>
             </div>
             <div class="col">
                 <div class="flex">
                     <div class="col-6-12">
-                        <h2>10</h2>
+                        <h2 id="totalDays"></h2>
                         <h6>
                             Day
                         </h6>
                     </div>
                     <div class="col-6-12">
-                        <h2>500</h2>
+                        <h2 id="totalQuestions"></h2>
                         <h6>
                             Questions discussed
                         </h6>
                     </div>
                     <div class="col-6-12">
-                        <h2>10</h2>
+                        <h2 id="totalTests"></h2>
                         <h6>
                             Tests Discussed
                         </h6>
@@ -72,6 +87,12 @@
             </div>
         </div>
 
+        <div>
+            <h3 class="test-links">
+                Tests Completed
+            </h3>
+        </div>
+
         <div id="tableContainer" class="tests"></div>
         
     </main>
@@ -80,6 +101,27 @@
             © Copyright 2024 | All Rights Reserved
         </p>
     </footer>
+
+    <script>
+    // Get the current hour of the day
+    var currentHour = new Date().getHours();
+
+    // Function to determine the appropriate greeting based on the time
+    function getGreeting() {
+    var greeting = '';
+    if (currentHour >= 5 && currentHour < 12) {
+    greeting = 'Good Morning!';
+    } else if (currentHour >= 12 && currentHour < 18) {
+    greeting = 'Good Afternoon!';
+    } else {
+    greeting = 'Good Evening!';
+    }
+    return greeting;
+    }
+
+    // Display the greeting message
+    document.getElementById('greeting').textContent = getGreeting();
+    </script>
 
     <script>
     // Fetch the JSON data from the file using AJAX
@@ -140,11 +182,67 @@
     })
     .catch(error => console.error('Error fetching data:', error));
 
+    </script>
+
+    <script>
     // Add the 'active' class to trigger the animation
     document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.animated-element').classList.add('active');
     });
     </script> 
+
+    <script>
+    // Function to calculate total number of questions
+    function calculateTotalQuestions(testData) {
+    let totalQuestions = 0;
+
+    testData.tests[0].links.forEach(test => {
+    const numberOfQuestions = parseInt(test.questions, 10);
+
+    if (!isNaN(numberOfQuestions)) {
+    totalQuestions += numberOfQuestions;
+    } else {
+    console.error(`Invalid or missing number of questions for test: ${test.text}`);
+    }
+    });
+
+    return totalQuestions;
+    }
+
+    // Function to calculate total number of tests
+    function calculateTotalTests(testData) {
+    return testData.tests[0].links.length;
+    }
+
+    // Function to calculate total number of days
+    function calculateTotalDays(testData) {
+    let totalDays = 0;
+
+    testData.tests[0].links.forEach(test => {
+    const numberOfDays = parseInt(test.days, 10);
+
+    if (!isNaN(numberOfDays)) {
+    totalDays += numberOfDays;
+    } else {
+    console.error(`Invalid or missing number of days for test: ${test.text}`);
+    }
+    });
+
+    return totalDays;
+    }
+
+    // Fetch JSON data from data.json
+    fetch('data.json')
+    .then(response => response.json())
+    .then(data => {
+    // Update HTML elements with calculated values
+    document.getElementById('totalQuestions').innerText = calculateTotalQuestions(data);
+    document.getElementById('totalTests').innerText = calculateTotalTests(data);
+    document.getElementById('totalDays').innerText = calculateTotalDays(data);
+    })
+    .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+      
 
 </body>
 
