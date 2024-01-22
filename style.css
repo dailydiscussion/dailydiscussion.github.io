@@ -7,15 +7,6 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.1em;
-    margin: 0;
-    background-color: aliceblue;
-}
-
 .menu {
     display: flex;
     justify-content: center;
@@ -57,13 +48,30 @@ nav {
 }
 
 .header {
-    margin: 0%;
-    padding: 2em;
-    text-align: center;
-    background-color: #000000;
-    background-attachment: fixed;
+    margin: 0;
     background-size: cover;
     color: white;
+    border-radius: 1em;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 1em; 
+    text-align: left;
+    align-items: left;
+}
+
+.header-box{
+    background-color: #000000;
+    color: white;
+    border-radius: 1em;
+    padding: 2em;
+}
+
+.col-quiz{
+    margin-top: 50px;
 }
 
 .leaderboards {
@@ -98,8 +106,11 @@ nav {
 
 .col-6-12{
     flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     max-width: 50%;
-    background-color: whitesmoke;
+    border: 1px solid #333;
     color: black;
     text-align: center;
     margin: auto;
@@ -109,22 +120,30 @@ nav {
     height: 100px;
 }
 
-
-
-.topic{
-    margin: 0 auto;
-    padding: 0;
-    max-width: 80%;
-    margin-top: 20px;
+.col-6-12 h2{
+    font-size: 35px;
+    margin: 0;
     margin-bottom: 20px;
-    text-align: center;
-    color: gray;
 }
 
-button{
+.col-6-12 h6{
+    margin: 0;
+    color: #333;
+}
+
+.topic{
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+button {
     text-decoration: none;
-    background-color: whitesmoke;
-    margin:0;
+    background-color: white;
+    border-radius: 0.5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
     padding: 1em;
     border: none;
 }
@@ -137,15 +156,6 @@ a{
 .tests{
     margin-top: 20px;
     margin-bottom: 40px;
-}
-
-button{
-    font-family: 'Josefin Sans', sans-serif;
-    background-color: #000000;
-    background-attachment: fixed;
-    background-size: cover;
-    color: white;
-    border-radius: 0.5rem;
 }
 
 button:active{
@@ -224,14 +234,6 @@ td{
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
-    nav{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1em;
-        margin: 0;
-        background-color: aliceblue;
-    }
 
     .logo h3{
         margin: 0;
@@ -251,10 +253,10 @@ td{
         width: 80%;
         margin: auto;
     }
+
     .col-6-12{
         flex: 1;
         max-width: 50%;
-        background-color: whitesmoke;
         color: black;
         text-align: center;
         margin: auto;
