@@ -189,11 +189,6 @@ td{
 /* Media Queries */
 @media only screen and (max-width: 768px) {
 
-    .logo h3{
-        margin: 0;
-        padding: 0.2em;
-    }
-
     .svg{
         display: none;
     }
@@ -201,21 +196,19 @@ td{
     .flex{
         display: flex;
         flex-direction: row;
-        justify-content: flex-start;
-        align-items: stretch;
+        justify-content: center;
         flex-wrap: nowrap;
-        width: 80%;
-        margin: auto;
+        align-items: stretch;
     }
-
+    
     .col-6-12{
         flex: 1;
         max-width: 50%;
         color: black;
         text-align: center;
         margin: auto;
-        border-radius: 1em;
         padding: 1em;
+        height: 100px;
     }
 
     table {
@@ -223,22 +216,9 @@ td{
         margin: auto;
     }
 
-    .menu ul {
-        flex-direction: column;
-        text-align: center;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background-color: aliceblue;
-        display: none;
-    }
 
     th, td{
         text-align: left;
     }
 
-    .menu ul.show {
-        display: flex;
-    }
 }
