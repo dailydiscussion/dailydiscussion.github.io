@@ -123,7 +123,7 @@ button:hover{
 }
 
 table {
-    width: 50%;
+    width: 80%;
     margin: auto;
 }
 
@@ -192,6 +192,10 @@ td{
     .logo h3{
         margin: 0;
         padding: 0.2em;
+    }
+
+    .svg{
+        display: none;
     }
 
     .flex{
