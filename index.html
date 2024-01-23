@@ -197,39 +197,45 @@
                 <div>
                     <div class="flex">
                         <div class="col-6-12" style="background-color: #F8FAE5;">
-                            <h2 id="totalDays"></h2>
+                            
                             <h6>
                                 Days
                             </h6>
+                            <h2 id="totalDays"></h2>
+                            
                         </div>
                         <div class="col-6-12" style="background-color: #F9EFDB;">
-                            <h2 id="totalQuestions"></h2>
                             <h6>
                                 MCQs discussed
                             </h6>
+                            <h2 id="totalQuestions"></h2>
+                            
                         </div>
+                    </div> 
+                    <div class="flex">
                         <div class="col-6-12" style="background-color: #FBF9F1;">
-                            <h2 id="totalTests"></h2>
                             <h6>
                                 Tests Discussed
                             </h6>
+                            <h2 id="totalTests"></h2>
+                            
                         </div>
                         <div class="col-6-12" style="background-color: #E5E1DA;">
-                            <h2>
-                                1
-                            </h2>
                             <h6>
                                 Subjects Completed
                             </h6>
+                            <h2>
+                                1
+                            </h2>
+                            
                         </div>
-         
-                    </div> 
+                    </div>
                 </div>
             </div>
         </div>
 
         <div>
-            <h3 class="test-links">
+            <h3 class="test-links-2">
                 Tests Completed
             </h3>
             <h5 class="subheading">
@@ -251,6 +257,66 @@
             © Copyright 2024 | All Rights Reserved
         </p>
     </footer>
+
+    <div id="popup-container">
+        <span id="close-button" onclick="closePopup()">X</span>
+        <div class="flex-cookie">
+            <div>
+                <span><img src="cookie.svg" alt="cookie"></span>
+            </div>
+            <div>
+                <p style="margin-left: 10px;">
+                    Today's Quiz is live
+                </p>
+            </div>
+        </div>        
+      </div>
+
+      <style>
+        .flex-cookie{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #popup-container {
+            display: none;
+            position: fixed;
+            bottom: 10px; /* Change top to bottom */
+            right: 10px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 1em;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+          }
+          
+          #close-button {
+            position: absolute;
+            top: 10px; /* Change bottom to top */
+            right: 15px;
+            cursor: pointer;
+          }
+          
+      </style>
+
+      <script>
+        // Function to show the popup
+        function showPopup() {
+          document.getElementById('popup-container').style.display = 'block';
+        }
+      
+        // Function to close the popup
+        function closePopup() {
+          document.getElementById('popup-container').style.display = 'none';
+        }
+      
+        // Call the showPopup() function when the page loads (for demonstration purposes)
+        window.onload = showPopup;
+      </script>
+
+
+    <!-- js for this site -->
 
     <script>
     // Add the 'active' class to trigger the animation

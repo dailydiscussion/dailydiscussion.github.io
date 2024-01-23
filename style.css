@@ -84,16 +84,19 @@ svg{
     justify-content: center;
     flex-wrap: nowrap;
     align-items: stretch;
+    margin-bottom: 10px;
 }
 
 .col-6-12{
     flex: 1;
-    max-width: 50%;
+    display: flex;
+    flex-direction: column;
     color: black;
     text-align: center;
     margin: auto;
-    padding: 1em;
+    padding: 0.5em;
     height: 100px;
+    width: 200px;
     border-radius:1em;
     border-radius: 1em;
     margin-right: 10px;
@@ -101,6 +104,12 @@ svg{
 
 .col-6-12 h6{
 color: gray;
+padding: 0;
+margin: 1em;
+}
+
+.col-6-12 h2{
+    font-size: 30px;
 }
 
 .col-6-12:last-child{
@@ -148,6 +157,12 @@ margin-bottom: 40px;
 }
 
 .test-links{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.test-links-2{
     text-align: center;
     margin-top: 50px;
     margin-bottom: 10px;
@@ -246,6 +261,11 @@ td{
     table {
         width: 90%;
         margin: auto;
+    }
+
+    .col-6-12{
+        height: 100px;
+        width: 30vw;
     }
 
     th, td{
