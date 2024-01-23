@@ -42,6 +42,12 @@
                                 <!-- Content will be dynamically added here -->
                             </h5>
                         </div>
+                        <div class="col">
+                            <h6 class="topic" style="color: #B6BBC4;">
+                                (<span id="MCQCount"></span> MCQs)
+                            </h6>
+
+                        </div>
                         <div class="col" id="quizTitleContainer">
                             <a id="quizLink" href="#">
                                 <button class="button">Start Quiz</button>
@@ -180,11 +186,11 @@
 
         <div class="dash">
             <div class="col">
-                <h2 class="test-links">
+                <h3 class="test-links">
                     Dashboard
-                </h2>
+                </h3>
                 <h5 class="subheading">
-                   Our Journey: Questions Conquered, Tests Tackled
+                   Our Journey: Questions Conquered, Tests Tackled...
                 </h5>
             </div>
             <div class="dash-container">
@@ -223,11 +229,11 @@
         </div>
 
         <div>
-            <h2 class="test-links">
+            <h3 class="test-links">
                 Tests Completed
-            </h2>
+            </h3>
             <h5 class="subheading">
-                Click on the links below to access the results of each test
+               Review the results of each test...
             </h5>
         </div>
 
@@ -313,8 +319,15 @@
     // Assuming the "Topic - Surgery - Complete" is the last entry in the JSON
     var topicContainer = document.getElementById("topicContainer");
     topicContainer.textContent = jsonData.tests[0].links[jsonData.tests[0].links.length - 1].text;
+
+    var topicContainer = document.getElementById("MCQCount");
+    topicContainer.textContent = jsonData.tests[0].links[jsonData.tests[0].links.length - 1].questions;
     })
     .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+
+    <script>
+
     </script>
 
     <script>
