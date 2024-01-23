@@ -258,66 +258,79 @@
         </p>
     </footer>
 
-    <div id="popup-container">
+    <style>
+        .flex-cookie {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+    
+        #popup-container {
+          position: fixed;
+          bottom: 10px;
+          right: 10px;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 1em;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+          z-index: 1000;
+          transform: translateY(100%); /* Initial state off the screen */
+          transition: transform 0.3s ease;
+        }
+    
+        #close-button {
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          cursor: pointer;
+        }
+      </style>
+    
+      <div id="popup-container" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd()">
         <span id="close-button" onclick="closePopup()">X</span>
         <div class="flex-cookie">
-            <div>
-                <span><img src="cookie.svg" alt="cookie"></span>
-            </div>
-            <div>
-                <p style="margin:10px;">
-                    Today's Quiz is live
-                </p>
-                <p style="margin:10px; font-size:13px;">
-                    Surgery Test ST3 '17
-                </p>
-            </div>
-        </div>        
+          <div>
+            <span><img src="cookie.svg" alt="cookie"></span>
+          </div>
+          <div>
+            <p style="margin:10px;">Today's Topic</p>
+            <p style="margin:10px; font-size:13px;">Surgery Test ST2 & ST4</p>
+          </div>
+        </div>
       </div>
-
-      <style>
-        .flex-cookie{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-        }
-        #popup-container {
-            display: none;
-            position: fixed;
-            bottom: 10px; /* Change top to bottom */
-            right: 10px;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 1em;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-          }
-          
-          #close-button {
-            position: absolute;
-            top: 10px; /* Change bottom to top */
-            right: 15px;
-            cursor: pointer;
-          }
-          
-      </style>
-
+      
       <script>
-        // Function to show the popup
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const swipeThreshold = 50;
+      
+        function handleTouchStart(event) {
+          touchStartX = event.touches[0].clientX;
+        }
+      
+        function handleTouchMove(event) {
+          touchEndX = event.touches[0].clientX;
+        }
+      
+        function handleTouchEnd() {
+          const deltaX = touchEndX - touchStartX;
+      
+          if (deltaX > swipeThreshold) {
+            closePopup();
+          }
+        }
+      
         function showPopup() {
-          document.getElementById('popup-container').style.display = 'block';
+          document.getElementById('popup-container').style.transform = 'translateY(0)';
         }
       
-        // Function to close the popup
         function closePopup() {
-          document.getElementById('popup-container').style.display = 'none';
+          document.getElementById('popup-container').style.transform = 'translateY(100%)';
         }
       
-        // Call the showPopup() function when the page loads (for demonstration purposes)
         window.onload = showPopup;
       </script>
-
 
     <!-- js for this site -->
 
