@@ -128,7 +128,7 @@ button {
 .test-links{
     text-align: center;
     margin-top: 50px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 a{
@@ -178,9 +178,6 @@ td{
     padding: 1em;
 }
 
-  
-
-
 /* Apply transition to the element you want to animate */
 .animated-element {
     opacity: 0;
@@ -228,7 +225,6 @@ td{
         width: 90%;
         margin: auto;
     }
-
 
     th, td{
         text-align: left;
