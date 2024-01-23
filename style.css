@@ -125,6 +125,28 @@ button {
     border: none;
 }
 
+.table-flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.table-button {
+margin-bottom: 10px;
+}
+
+.table-questions{
+font-size: 14px; 
+text-align:left;
+color: gray;
+}
+
+.table{
+margin-top: 20px;
+margin-bottom: 40px;
+}
+
 .test-links{
     text-align: center;
     margin-top: 50px;
