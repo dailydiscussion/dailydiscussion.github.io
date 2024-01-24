@@ -32,6 +32,7 @@ body {
 
 .header-box{
     background-color: #1D2B53;
+    background-image: url(topography.svg);
     color: white;
     border-radius: 1em;
     padding: 2em;
