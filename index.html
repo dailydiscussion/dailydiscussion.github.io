@@ -2,597 +2,462 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ready to boost your NEET PG | INICET preparation together? Start quizzing now">
-    <title>Target NEET-PG | INICET 2024</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-    <meta name="msapplication-TileColor" content="#2b5797">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ready to boost your NEET PG | INICET preparation together? Start quizzing now">
+<title>Target NEET-PG | INICET 2024</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
 </head>
 
 <body>
-    <style>
-        .flex-question {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-          }
 
-          .button{
-            text-align: left;
-            margin: 0;
-            padding: 0.1em;
-            border-radius: 2em;
-            background-color: #FBF9F1;
-        }
-    </style>
-    <main class="main animated-element">
-        <div class="home">
-            <div class="header-box">
-                <div class="col-header">
-                    <div>
-                        <div class="col">
-                            <div class="header" style="color: white;">
-                                <h2 id="greeting"></h2>
-                                <h4 style="color: #B6BBC4; font-weight:100;">
-                                    "Ready to boost your NEET PG | INICET preparation together? Start quizzing now!"
-                                </h4>
-                            </div>
-                        </div>
-                        <div class="col-quiz">
-                            <h3 style="color: white;">
-                                Today's Quizes
-                            </h3>
-                        </div>
-                        <div class="col">
-                            <a id="quizLink1" href="#">
-                                <button class="button">
-                                    <div class="flex-question">
-                                        <div style="margin-left: 10px; margin-right:5px;">
-                                            <span><img src="surgery.svg" alt="surgery"></span>
-                                        </div>
-                                        <div>
-                                          <p id="topicContainer1" style="margin:10px;"></p>
-                                          <p style="margin:10px; font-size:13px; color: #333;">(<span id="MCQCount1"></span> MCQs)</p>
-                                        </div>
-                                        <div>
-                                            <span><img src="right.svg" alt="right"></span>
-                                        </div>
-                                    </div>
-                                </button>
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a id="quizLink2" href="#">
-                                <button class="button">
-                                    <div class="flex-question">
-                                        <div style="margin-left: 10px; margin-right:5px;">
-                                            <span><img src="surgery.svg" alt="surgery"></span>
-                                        </div>
-                                        <div>
-                                          <p id="topicContainer2" style="margin:10px;"></p>
-                                          <p style="margin:10px; font-size:13px; color: #333;">(<span id="MCQCount2"></span> MCQs)</p>
-                                        </div>
-                                        <div>
-                                            <span><img src="right.svg" alt="right"></span>
-                                        </div>
-                                      </div>
-                                </button>
-                            </a>
-                        </div>
-                        <!-- <div class="col">
-                            <h4 id="topicContainer" class="topic" style="color: #B6BBC4; font-weight:100;">
-                                Content will be dynamically added here
-                            </h4>
-                        </div> -->
-                        <!-- <div class="col">
-                            <h5 class="topic" style="color: #B6BBC4; font-weight:100;">
-                                (<span id="MCQCount"></span> MCQs)
-                            </h5>
+<style>
+/* Loading screen styles */
+#loadingScreen {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #fff; /* Background color of the loading screen */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+z-index: 9999; /* Ensure it's on top of other elements */
+}
 
-                        </div> -->
-                        <!-- <div class="col" id="quizTitleContainer">
-                            <a id="quizLink" href="#">
-                                <button class="button">Start Quiz</button>
-                            </a>
-                        </div> -->
-                    </div>
-                    <div class="svg">
-                        <?xml version="1.0" standalone="no"?>
-                        <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
-                        "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-                        <svg version="1.0" xmlns="http://www.w3.org/2000/svg" height="300px" width="300px"
-                         viewBox="0 0 1200.000000 1200.000000"
-                        preserveAspectRatio="xMidYMid meet">
-                        <metadata>
-                        Created by potrace 1.14, written by Peter Selinger 2001-2017
-                        </metadata>
-                        <g transform="translate(0.000000,1200.000000) scale(0.100000,-0.100000)"
-                        fill="white" stroke="black">
-                        <path d="M6290 10254 c-375 -16 -769 -89 -1095 -201 -1224 -423 -2160 -1444
-                        -2464 -2686 -185 -755 -137 -1550 136 -2267 407 -1068 1282 -1904 2366 -2262
-                        240 -79 456 -126 777 -169 130 -18 680 -18 820 -1 661 83 1170 269 1695 617
-                        222 148 355 255 549 445 658 643 1047 1453 1137 2370 15 160 15 550 0 705 -50
-                        489 -174 923 -388 1349 -546 1090 -1597 1864 -2789 2051 -237 37 -541 57 -744
-                        49z m2742 -1726 c33 -26 42 -188 10 -188 -18 0 -182 -29 -189 -33 -9 -6 -9
-                        -109 0 -124 5 -9 61 -333 97 -570 24 -152 40 -250 49 -293 5 -25 11 -66 14
-                        -92 3 -25 8 -52 13 -59 4 -7 9 -24 11 -38 1 -14 7 -48 12 -76 26 -147 26 -142
-                        -5 -149 -114 -23 -165 -28 -178 -17 -20 17 -50 189 -36 206 8 10 8 14 -2 17
-                        -7 3 -18 37 -25 79 -6 41 -14 85 -18 99 -3 14 -10 57 -15 95 -5 39 -14 85 -19
-                        104 -6 18 -10 58 -10 88 1 31 -4 58 -9 62 -6 4 -20 65 -31 136 -12 72 -25 155
-                        -31 186 -5 30 -10 71 -10 90 0 67 -33 219 -48 219 -8 0 -60 -7 -115 -16 -76
-                        -12 -101 -13 -107 -4 -14 23 -20 164 -7 177 7 7 150 35 317 62 168 27 308 50
-                        311 50 3 1 12 -5 21 -11z m-765 -116 c29 -19 53 -161 30 -180 -7 -6 -82 -22
-                        -166 -36 -84 -13 -154 -26 -156 -28 -10 -10 -4 -82 14 -158 38 -165 50 -225
-                        53 -262 3 -45 -3 -44 139 -21 115 18 135 15 148 -20 14 -37 22 -131 13 -145
-                        -5 -8 -50 -20 -103 -28 -137 -20 -149 -23 -149 -42 0 -9 5 -46 10 -82 6 -44 6
-                        -68 -2 -77 -7 -9 -7 -13 2 -13 6 0 10 -6 7 -12 -2 -7 2 -25 9 -39 7 -14 16
-                        -50 19 -80 4 -30 16 -91 27 -137 21 -80 22 -83 47 -78 124 24 304 47 312 39
-                        17 -17 28 -70 16 -82 -8 -8 -8 -11 1 -11 16 0 16 -75 0 -88 -17 -13 -468 -84
-                        -509 -80 -18 2 -35 10 -39 18 -4 8 -15 67 -25 130 -22 151 -43 268 -55 305 -5
-                        17 -12 55 -15 85 -3 30 -7 66 -10 80 -2 14 -17 104 -34 200 -17 96 -42 247
-                        -57 334 -14 88 -35 188 -45 224 -10 35 -21 90 -25 121 -8 72 9 95 68 89 21 -2
-                        39 0 41 5 1 4 74 19 162 32 88 14 180 29 205 34 25 5 47 9 50 10 3 0 10 -3 17
-                        -7z m-687 -136 c14 -37 22 -139 12 -154 -5 -7 -78 -24 -170 -39 l-162 -26 4
-                        -46 c2 -25 14 -89 26 -141 22 -94 48 -233 49 -257 1 -17 32 -16 153 4 l101 17
-                        18 -22 c21 -27 37 -148 21 -164 -6 -6 -59 -19 -119 -29 -140 -24 -137 -22
-                        -129 -62 14 -72 16 -131 3 -139 -9 -6 -9 -8 1 -8 6 0 12 -11 12 -24 0 -14 4
-                        -27 9 -30 5 -4 12 -30 15 -59 9 -75 49 -237 59 -237 4 0 78 11 164 25 173 28
-                        175 28 188 -32 4 -22 3 -33 -5 -33 -7 0 -6 -5 3 -15 19 -18 15 -75 -6 -86 -8
-                        -5 -126 -27 -262 -49 -176 -28 -253 -37 -266 -30 -10 6 -21 25 -24 43 -2 17
-                        -12 73 -20 124 -9 50 -15 95 -14 100 1 4 0 15 -3 23 -9 24 -40 187 -53 285 -7
-                        50 -16 97 -19 105 -3 8 -7 33 -10 55 -2 22 -9 63 -14 90 -6 28 -18 102 -27
-                        165 -10 63 -31 180 -47 260 -16 80 -37 181 -45 224 l-16 79 23 19 c14 12 36
-                        18 55 17 16 -2 35 0 41 4 6 3 58 14 115 23 57 9 136 22 174 29 39 7 89 13 113
-                        14 36 1 44 -3 52 -23z m-765 -129 c13 -31 32 -148 75 -448 11 -75 22 -143 25
-                        -150 3 -8 11 -57 19 -109 8 -52 29 -176 46 -275 88 -511 91 -538 71 -559 -32
-                        -32 -188 -50 -209 -23 -5 6 -31 62 -57 122 -26 61 -60 137 -75 170 -40 90 -51
-                        121 -48 131 1 5 -5 21 -15 35 -9 14 -34 68 -56 120 -21 52 -73 175 -114 275
-                        -41 99 -82 194 -90 210 l-16 29 -1 -30 c0 -16 16 -124 36 -240 19 -115 53
-                        -318 74 -450 22 -132 44 -262 51 -290 26 -116 20 -184 -15 -172 -6 3 -18 1
-                        -26 -3 -8 -4 -36 -11 -62 -14 -42 -6 -48 -5 -62 16 -14 21 -43 179 -96 508
-                        -12 74 -28 162 -36 195 -9 32 -22 102 -29 155 -7 52 -24 160 -38 240 -32 182
-                        -55 329 -63 400 -9 77 6 88 140 108 101 15 106 15 126 -3 11 -10 25 -36 31
-                        -58 6 -21 33 -92 60 -156 27 -64 49 -120 49 -125 0 -5 21 -54 46 -110 26 -56
-                        82 -186 126 -291 75 -181 109 -247 94 -182 -4 15 -13 72 -21 125 -18 121 -39
-                        239 -64 362 -11 52 -22 120 -25 150 -4 30 -16 117 -28 193 -14 94 -18 141 -11
-                        148 11 11 87 26 141 28 28 1 35 -4 47 -32z m-3335 -337 c91 -40 168 -75 172
-                        -79 4 -3 1 -16 -5 -28 -12 -21 -13 -21 -169 48 -87 38 -160 69 -162 69 -2 0
-                        -19 -34 -37 -75 -18 -41 -37 -75 -43 -75 -34 1 -34 17 3 100 20 47 40 93 44
-                        104 4 10 13 16 20 13 6 -3 86 -37 177 -77z m-250 -675 c102 -19 190 -37 196
-                        -39 8 -3 4 -40 -12 -121 -12 -64 -24 -119 -27 -121 -9 -10 -37 9 -37 25 1 9 7
-                        45 15 81 8 36 14 70 15 77 0 10 -79 33 -114 33 -9 0 -18 -26 -27 -72 -14 -70
-                        -23 -85 -45 -70 -9 5 -9 25 1 77 7 38 12 72 9 76 -2 4 -29 10 -59 14 -30 3
-                        -58 7 -62 8 -4 1 -13 -29 -20 -68 -7 -38 -15 -80 -18 -92 -5 -23 -29 -31 -40
-                        -13 -4 7 33 240 39 240 1 0 84 -16 186 -35z m5883 -314 c105 -51 187 -184 187
-                        -303 0 -45 -11 -52 -105 -69 -66 -11 -69 -11 -86 10 -10 12 -23 47 -29 78 -9
-                        39 -21 66 -42 86 -26 27 -33 29 -84 25 -65 -6 -100 -33 -110 -86 -4 -22 4
-                        -100 20 -201 31 -190 50 -320 66 -441 45 -346 69 -449 113 -486 28 -23 37 -26
-                        81 -20 28 3 62 14 76 24 45 34 47 71 11 315 -19 122 -35 228 -37 235 -3 9 -18
-                        11 -57 6 -38 -5 -56 -3 -64 7 -21 28 -38 179 -19 179 1 0 29 5 62 11 32 6 79
-                        13 104 15 25 2 66 7 92 10 40 5 48 3 58 -16 6 -11 31 -148 56 -303 36 -225 45
-                        -301 42 -377 -3 -91 -5 -98 -41 -152 -66 -100 -134 -139 -267 -154 -65 -7
-                        -157 13 -214 47 -48 28 -100 97 -126 166 -11 30 -29 111 -40 181 -12 70 -38
-                        235 -60 367 -76 470 -84 600 -38 688 44 88 91 130 184 168 69 27 200 23 267
-                        -10z m-813 -133 c97 -30 165 -116 198 -253 62 -250 52 -451 -27 -551 -47 -59
-                        -138 -102 -244 -114 -38 -4 -73 -12 -78 -17 -4 -4 0 -61 11 -130 11 -67 19
-                        -133 18 -147 -1 -13 3 -35 9 -48 6 -13 16 -54 23 -93 6 -38 14 -82 16 -97 3
-                        -14 0 -29 -5 -33 -7 -4 -8 -13 -2 -23 4 -9 8 -35 7 -57 l-2 -40 -54 -12 c-74
-                        -15 -126 -16 -137 0 -10 12 -26 108 -88 522 -19 127 -37 244 -40 260 -6 34
-                        -51 318 -65 410 -27 182 -43 358 -33 373 10 17 38 23 263 56 91 13 174 11 230
-                        -6z m-4937 -365 c12 -172 10 -210 -12 -216 -21 -5 -31 24 -31 90 l0 35 -174
-                        -7 -173 -7 -5 25 c-5 24 -3 25 70 31 41 3 105 6 141 6 36 0 83 3 104 7 l38 6
-                        -7 63 c-6 63 -6 64 18 64 24 0 25 -2 31 -97z m91 -659 c4 -9 4 -19 1 -22 -8
-                        -8 -119 -30 -127 -25 -22 12 -2 32 45 46 68 20 74 20 81 1z m166 -523 c36 -25
-                        61 -79 58 -126 -2 -32 -7 -40 -23 -40 -16 0 -21 8 -23 35 -7 84 -50 126 -98
-                        95 -22 -14 -24 -22 -24 -106 0 -82 -2 -92 -24 -114 -82 -82 -216 -8 -216 120
-                        0 48 8 64 31 58 15 -4 19 -14 19 -50 0 -49 21 -97 45 -107 31 -11 62 -6 80 14
-                        15 16 16 30 11 92 -8 87 3 115 54 141 39 19 71 16 110 -12z m5308 -603 c8 -8
-                        1 -23 -29 -59 -22 -27 -38 -52 -35 -57 3 -5 62 -55 131 -112 69 -57 125 -109
-                        125 -116 0 -6 -7 -17 -15 -24 -12 -10 -37 6 -147 99 -72 61 -134 111 -137 111
-                        -4 0 -22 -20 -41 -45 -37 -47 -51 -53 -68 -32 -8 10 13 41 86 129 53 64 102
-                        117 108 117 5 1 15 -4 22 -11z m-4521 -443 c77 -39 140 -146 93 -158 -16 -4
-                        -24 4 -39 37 -35 81 -108 111 -184 78 -149 -66 -140 -267 13 -292 26 -4 36
-                        -11 38 -28 3 -18 -1 -22 -25 -22 -69 1 -165 73 -183 139 -15 55 -12 83 16 140
-                        39 78 112 128 190 130 16 1 53 -10 81 -24z m4062 -250 c61 -80 114 -152 117
-                        -159 6 -16 -21 -40 -35 -32 -6 4 -63 74 -127 157 -109 141 -115 151 -98 164
-                        11 8 22 15 25 15 3 0 56 -65 118 -145z m-3476 -151 c79 -40 108 -64 124 -101
-                        28 -69 -23 -143 -98 -143 -22 0 -39 -3 -39 -7 0 -5 7 -46 15 -93 18 -101 18
-                        -110 5 -110 -28 0 -46 40 -59 128 -11 80 -16 95 -37 109 -14 9 -26 14 -28 12
-                        -2 -2 -20 -37 -40 -77 -34 -68 -38 -72 -59 -61 -12 6 -23 13 -25 14 -4 4 178
-                        355 184 355 3 0 28 -12 57 -26z m2417 -219 c0 -3 -22 -50 -50 -105 -27 -55
-                        -50 -103 -50 -107 0 -5 49 -42 109 -83 104 -72 117 -89 66 -90 -11 0 -64 29
-                        -118 66 -69 46 -104 63 -118 59 -23 -8 -24 -2 5 -102 l23 -82 -25 -6 c-13 -3
-                        -26 -5 -27 -3 -3 3 -105 372 -105 380 0 3 11 8 25 10 23 5 26 1 41 -51 26 -94
-                        30 -105 40 -108 18 -6 32 14 82 114 28 55 57 103 64 106 18 7 38 8 38 2z
-                        m-1648 -78 c4 -7 8 -19 8 -27 0 -8 13 -99 29 -203 28 -187 28 -187 7 -181 -32
-                        10 -36 16 -43 72 -5 46 -9 53 -32 58 -14 3 -51 12 -82 20 -31 8 -59 14 -62 14
-                        -4 0 -20 -20 -37 -45 -23 -33 -38 -45 -56 -45 -16 0 -24 5 -22 14 2 7 55 88
-                        118 180 105 152 117 165 140 160 14 -3 28 -11 32 -17z m854 -76 c47 -22 56
-                        -31 44 -50 -7 -12 -15 -11 -49 3 -76 30 -147 12 -186 -47 -46 -70 -20 -198 47
-                        -233 44 -23 110 -21 152 5 29 18 35 19 46 6 39 -47 -121 -97 -207 -64 -100 38
-                        -146 184 -93 294 43 88 155 127 246 86z"/>
-                        <path d="M8103 6491 c-28 -4 -55 -10 -59 -14 -5 -4 7 -114 26 -245 18 -130 34
-                        -244 35 -252 4 -34 146 -11 190 30 34 32 38 93 14 243 -23 145 -48 211 -91
-                        233 -28 15 -32 15 -115 5z"/>
-                        <path d="M4930 3600 c-16 -32 -30 -64 -30 -70 0 -15 63 -40 100 -40 63 0 93
-                        75 48 117 -13 11 -38 28 -55 37 l-33 16 -30 -60z"/>
-                        <path d="M5662 3268 c-29 -44 -52 -81 -50 -83 2 -1 34 -9 71 -17 l69 -15 -6
-                        31 c-3 17 -8 56 -12 86 -4 30 -9 60 -13 67 -3 6 -29 -23 -59 -69z"/>
-                        </g>
-                        </svg>
-        
-                    </div>
-                </div>
-            </div>
-        </div>
+#loadingSpinner {
+border: 8px solid #3498db; /* Color of the spinner */
+border-top: 8px solid #f1f1f1; /* Color of the spinner's top */
+border-radius: 50%;
+width: 50px;
+height: 50px;
+animation: spin 1s linear infinite; /* Rotate animation */
+}
 
-        <div class="dash">
-            <div class="col">
-                <h3 class="test-links">
-                    Dashboard
-                </h3>
-                <h5 class="subheading" style="font-weight:100;">
-                   Questions Conquered, Tests Tackled...
-                </h5>
-            </div>
-            <div class="dash-container">
-                <div>
-                    <div class="flex">
-                        <div class="col-6-12" style="background-color: #F8FAE5;">
-                            
-                            <h6>
-                                Days
-                            </h6>
-                            <h2 id="totalDays"></h2>
-                            
-                        </div>
-                        <div class="col-6-12" style="background-color: #F9EFDB;">
-                            <h6>
-                                MCQs
-                            </h6>
-                            <h2 id="totalQuestions"></h2>
-                            
-                        </div>
-                    </div> 
-                    <div class="flex">
-                        <div class="col-6-12" style="background-color: #FBF9F1;">
-                            <h6>
-                                Tests 
-                            </h6>
-                            <h2 id="totalTests"></h2>
-                            
-                        </div>
-                        <div class="col-6-12" style="background-color: #E5E1DA;">
-                            <h6>
-                                Subjects
-                            </h6>
-                            <h2>
-                                1 / 19
-                            </h2>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
 
-        <div>
-            <h3 class="test-links-2">
-                Tests Completed
-            </h3>
-            <h5 class="subheading" style="font-weight:100;">
-               Review the results of each test...
-            </h5>
-        </div>
+/* Optional: Style the "Loading..." text */
+#loadingScreen p {
+margin-top: 10px;
+color: #333; /* Text color */
+font-size: 18px;
+}
 
-        <table class="table" id="dynamicTable">
-            <tr>
-                <th>
-                    <div class="flex-question" style="justify-content: center;">
-                        <div style="margin-right:10px;">
-                            <span><img src="surgery.svg" alt="surgery"></span>
-                        </div>
-                        <div>
-                          Surgery
-                        </div>
-                    </div>
-                </th>
-            </tr>
-        </table>
-        
-        <!-- <style>
-            .load-btn{
-                display: flex;
-                justify-content: center;
-                text-align: center;
-                margin: 1em;
-            }
-        </style>
+/* Hide the loading screen initially */
+#loadingScreen {
+display: none;
+}
+</style>
 
-        <div class="load-btn">
-            <button style="background-color: black; color:white;" id="loadContentBtn">Load More Content</button>
-            <div id="dynamicContent"></div>
-        </div> -->
-        
+<div id="loadingScreen">
+<div id="loadingSpinner"></div>
+<p>Loading...</p>
+</div>
 
-        
-    </main>
-    <footer class="footer">
-        <p>
-            © Copyright 2024 | All Rights Reserved
-        </p>
-    </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+document.getElementById("loadingScreen").style.display = "none";
+});
+</script>
 
-    <style>
-        .flex-cookie {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: center;
-        }
-    
-        #popup-container {
-          position: fixed;
-          bottom: 10px;
-          right: 10px;
-          padding: 20px;
-          background-color: #fff;
-          border-radius: 1em;
-          box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-          z-index: 1000;
-          transform: translateY(100%); /* Initial state off the screen */
-          transition: transform 0.3s ease;
-        }
-    
-        #close-button {
-          position: absolute;
-          top: 10px;
-          right: 15px;
-          cursor: pointer;
-        }
-      </style>
-    
-      <div id="popup-container" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd()">
-        <span id="close-button" onclick="closePopup()">X</span>
-        <div class="flex-cookie">
-          <div>
-            <span><img src="cookie.svg" alt="cookie"></span>
-          </div>
-          <div>
-            <p style="margin:10px;">Today's Topic</p>
-            <p style="margin:10px; font-size:13px;">Surgery Test ST2 & ST4</p>
-          </div>
-        </div>
-      </div>
-      
-      <script>
-        let touchStartX = 0;
-        let touchEndX = 0;
-        const swipeThreshold = 50;
-      
-        function handleTouchStart(event) {
-          touchStartX = event.touches[0].clientX;
-        }
-      
-        function handleTouchMove(event) {
-          touchEndX = event.touches[0].clientX;
-        }
-      
-        function handleTouchEnd() {
-          const deltaX = touchEndX - touchStartX;
-      
-          if (deltaX > swipeThreshold) {
-            closePopup();
-          }
-        }
-      
-        function showPopup() {
-          document.getElementById('popup-container').style.transform = 'translateY(0)';
-        }
-      
-        function closePopup() {
-          document.getElementById('popup-container').style.transform = 'translateY(100%)';
-        }
-      
-        window.onload = showPopup;
-      </script>
+<main class="main animated-element content">
+<div class="home">
+<div class="header-box">
+<div class="col-header">
+<div>
+<div class="col">
+<div class="header" style="color: white;">
+<h2 id="greeting"></h2>
+<h4 style="color: #B6BBC4; font-weight:100;">
+"Ready to boost your NEET PG | INICET preparation together? Start quizzing now!"
+</h4>
+</div>
+</div>
+<div class="col-quiz">
+<h3 style="color: white;">
+Today's Quizes
+</h3>
+</div>
+<div class="col">
+<a id="quizLink1" href="#">
+<button class="button">
+<div class="flex-question">
+<div style="margin-left: 10px; margin-right:5px;">
+<span><img src="surgery.svg" alt="surgery"></span>
+</div>
+<div>
+<p id="topicContainer1" style="margin:10px;"></p>
+<p style="margin:10px; font-size:13px; color: #333;">(<span id="MCQCount1"></span> MCQs)</p>
+</div>
+<div>
+<span><img src="right.svg" alt="right"></span>
+</div>
+</div>
+</button>
+</a>
+</div>
+<div class="col">
+<a id="quizLink2" href="#">
+<button class="button">
+<div class="flex-question">
+<div style="margin-left: 10px; margin-right:5px;">
+<span><img src="surgery.svg" alt="surgery"></span>
+</div>
+<div>
+<p id="topicContainer2" style="margin:10px;"></p>
+<p style="margin:10px; font-size:13px; color: #333;">(<span id="MCQCount2"></span> MCQs)</p>
+</div>
+<div>
+<span><img src="right.svg" alt="right"></span>
+</div>
+</div>
+</button>
+</a>
+</div>
+<!-- <div class="col">
+<h4 id="topicContainer" class="topic" style="color: #B6BBC4; font-weight:100;">
+Content will be dynamically added here
+</h4>
+</div> -->
+<!-- <div class="col">
+<h5 class="topic" style="color: #B6BBC4; font-weight:100;">
+(<span id="MCQCount"></span> MCQs)
+</h5>
 
-    <!-- js for this site -->
+</div> -->
+<!-- <div class="col" id="quizTitleContainer">
+<a id="quizLink" href="#">
+<button class="button">Start Quiz</button>
+</a>
+</div> -->
+</div>
+<div class="svg">
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
+"http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" height="300px" width="300px"
+viewBox="0 0 1200.000000 1200.000000"
+preserveAspectRatio="xMidYMid meet">
+<metadata>
+Created by potrace 1.14, written by Peter Selinger 2001-2017
+</metadata>
+<g transform="translate(0.000000,1200.000000) scale(0.100000,-0.100000)"
+fill="white" stroke="black">
+<path d="M6290 10254 c-375 -16 -769 -89 -1095 -201 -1224 -423 -2160 -1444
+-2464 -2686 -185 -755 -137 -1550 136 -2267 407 -1068 1282 -1904 2366 -2262
+240 -79 456 -126 777 -169 130 -18 680 -18 820 -1 661 83 1170 269 1695 617
+222 148 355 255 549 445 658 643 1047 1453 1137 2370 15 160 15 550 0 705 -50
+489 -174 923 -388 1349 -546 1090 -1597 1864 -2789 2051 -237 37 -541 57 -744
+49z m2742 -1726 c33 -26 42 -188 10 -188 -18 0 -182 -29 -189 -33 -9 -6 -9
+-109 0 -124 5 -9 61 -333 97 -570 24 -152 40 -250 49 -293 5 -25 11 -66 14
+-92 3 -25 8 -52 13 -59 4 -7 9 -24 11 -38 1 -14 7 -48 12 -76 26 -147 26 -142
+-5 -149 -114 -23 -165 -28 -178 -17 -20 17 -50 189 -36 206 8 10 8 14 -2 17
+-7 3 -18 37 -25 79 -6 41 -14 85 -18 99 -3 14 -10 57 -15 95 -5 39 -14 85 -19
+104 -6 18 -10 58 -10 88 1 31 -4 58 -9 62 -6 4 -20 65 -31 136 -12 72 -25 155
+-31 186 -5 30 -10 71 -10 90 0 67 -33 219 -48 219 -8 0 -60 -7 -115 -16 -76
+-12 -101 -13 -107 -4 -14 23 -20 164 -7 177 7 7 150 35 317 62 168 27 308 50
+311 50 3 1 12 -5 21 -11z m-765 -116 c29 -19 53 -161 30 -180 -7 -6 -82 -22
+-166 -36 -84 -13 -154 -26 -156 -28 -10 -10 -4 -82 14 -158 38 -165 50 -225
+53 -262 3 -45 -3 -44 139 -21 115 18 135 15 148 -20 14 -37 22 -131 13 -145
+-5 -8 -50 -20 -103 -28 -137 -20 -149 -23 -149 -42 0 -9 5 -46 10 -82 6 -44 6
+-68 -2 -77 -7 -9 -7 -13 2 -13 6 0 10 -6 7 -12 -2 -7 2 -25 9 -39 7 -14 16
+-50 19 -80 4 -30 16 -91 27 -137 21 -80 22 -83 47 -78 124 24 304 47 312 39
+17 -17 28 -70 16 -82 -8 -8 -8 -11 1 -11 16 0 16 -75 0 -88 -17 -13 -468 -84
+-509 -80 -18 2 -35 10 -39 18 -4 8 -15 67 -25 130 -22 151 -43 268 -55 305 -5
+17 -12 55 -15 85 -3 30 -7 66 -10 80 -2 14 -17 104 -34 200 -17 96 -42 247
+-57 334 -14 88 -35 188 -45 224 -10 35 -21 90 -25 121 -8 72 9 95 68 89 21 -2
+39 0 41 5 1 4 74 19 162 32 88 14 180 29 205 34 25 5 47 9 50 10 3 0 10 -3 17
+-7z m-687 -136 c14 -37 22 -139 12 -154 -5 -7 -78 -24 -170 -39 l-162 -26 4
+-46 c2 -25 14 -89 26 -141 22 -94 48 -233 49 -257 1 -17 32 -16 153 4 l101 17
+18 -22 c21 -27 37 -148 21 -164 -6 -6 -59 -19 -119 -29 -140 -24 -137 -22
+-129 -62 14 -72 16 -131 3 -139 -9 -6 -9 -8 1 -8 6 0 12 -11 12 -24 0 -14 4
+-27 9 -30 5 -4 12 -30 15 -59 9 -75 49 -237 59 -237 4 0 78 11 164 25 173 28
+175 28 188 -32 4 -22 3 -33 -5 -33 -7 0 -6 -5 3 -15 19 -18 15 -75 -6 -86 -8
+-5 -126 -27 -262 -49 -176 -28 -253 -37 -266 -30 -10 6 -21 25 -24 43 -2 17
+-12 73 -20 124 -9 50 -15 95 -14 100 1 4 0 15 -3 23 -9 24 -40 187 -53 285 -7
+50 -16 97 -19 105 -3 8 -7 33 -10 55 -2 22 -9 63 -14 90 -6 28 -18 102 -27
+165 -10 63 -31 180 -47 260 -16 80 -37 181 -45 224 l-16 79 23 19 c14 12 36
+18 55 17 16 -2 35 0 41 4 6 3 58 14 115 23 57 9 136 22 174 29 39 7 89 13 113
+14 36 1 44 -3 52 -23z m-765 -129 c13 -31 32 -148 75 -448 11 -75 22 -143 25
+-150 3 -8 11 -57 19 -109 8 -52 29 -176 46 -275 88 -511 91 -538 71 -559 -32
+-32 -188 -50 -209 -23 -5 6 -31 62 -57 122 -26 61 -60 137 -75 170 -40 90 -51
+121 -48 131 1 5 -5 21 -15 35 -9 14 -34 68 -56 120 -21 52 -73 175 -114 275
+-41 99 -82 194 -90 210 l-16 29 -1 -30 c0 -16 16 -124 36 -240 19 -115 53
+-318 74 -450 22 -132 44 -262 51 -290 26 -116 20 -184 -15 -172 -6 3 -18 1
+-26 -3 -8 -4 -36 -11 -62 -14 -42 -6 -48 -5 -62 16 -14 21 -43 179 -96 508
+-12 74 -28 162 -36 195 -9 32 -22 102 -29 155 -7 52 -24 160 -38 240 -32 182
+-55 329 -63 400 -9 77 6 88 140 108 101 15 106 15 126 -3 11 -10 25 -36 31
+-58 6 -21 33 -92 60 -156 27 -64 49 -120 49 -125 0 -5 21 -54 46 -110 26 -56
+82 -186 126 -291 75 -181 109 -247 94 -182 -4 15 -13 72 -21 125 -18 121 -39
+239 -64 362 -11 52 -22 120 -25 150 -4 30 -16 117 -28 193 -14 94 -18 141 -11
+148 11 11 87 26 141 28 28 1 35 -4 47 -32z m-3335 -337 c91 -40 168 -75 172
+-79 4 -3 1 -16 -5 -28 -12 -21 -13 -21 -169 48 -87 38 -160 69 -162 69 -2 0
+-19 -34 -37 -75 -18 -41 -37 -75 -43 -75 -34 1 -34 17 3 100 20 47 40 93 44
+104 4 10 13 16 20 13 6 -3 86 -37 177 -77z m-250 -675 c102 -19 190 -37 196
+-39 8 -3 4 -40 -12 -121 -12 -64 -24 -119 -27 -121 -9 -10 -37 9 -37 25 1 9 7
+45 15 81 8 36 14 70 15 77 0 10 -79 33 -114 33 -9 0 -18 -26 -27 -72 -14 -70
+-23 -85 -45 -70 -9 5 -9 25 1 77 7 38 12 72 9 76 -2 4 -29 10 -59 14 -30 3
+-58 7 -62 8 -4 1 -13 -29 -20 -68 -7 -38 -15 -80 -18 -92 -5 -23 -29 -31 -40
+-13 -4 7 33 240 39 240 1 0 84 -16 186 -35z m5883 -314 c105 -51 187 -184 187
+-303 0 -45 -11 -52 -105 -69 -66 -11 -69 -11 -86 10 -10 12 -23 47 -29 78 -9
+39 -21 66 -42 86 -26 27 -33 29 -84 25 -65 -6 -100 -33 -110 -86 -4 -22 4
+-100 20 -201 31 -190 50 -320 66 -441 45 -346 69 -449 113 -486 28 -23 37 -26
+81 -20 28 3 62 14 76 24 45 34 47 71 11 315 -19 122 -35 228 -37 235 -3 9 -18
+11 -57 6 -38 -5 -56 -3 -64 7 -21 28 -38 179 -19 179 1 0 29 5 62 11 32 6 79
+13 104 15 25 2 66 7 92 10 40 5 48 3 58 -16 6 -11 31 -148 56 -303 36 -225 45
+-301 42 -377 -3 -91 -5 -98 -41 -152 -66 -100 -134 -139 -267 -154 -65 -7
+-157 13 -214 47 -48 28 -100 97 -126 166 -11 30 -29 111 -40 181 -12 70 -38
+235 -60 367 -76 470 -84 600 -38 688 44 88 91 130 184 168 69 27 200 23 267
+-10z m-813 -133 c97 -30 165 -116 198 -253 62 -250 52 -451 -27 -551 -47 -59
+-138 -102 -244 -114 -38 -4 -73 -12 -78 -17 -4 -4 0 -61 11 -130 11 -67 19
+-133 18 -147 -1 -13 3 -35 9 -48 6 -13 16 -54 23 -93 6 -38 14 -82 16 -97 3
+-14 0 -29 -5 -33 -7 -4 -8 -13 -2 -23 4 -9 8 -35 7 -57 l-2 -40 -54 -12 c-74
+-15 -126 -16 -137 0 -10 12 -26 108 -88 522 -19 127 -37 244 -40 260 -6 34
+-51 318 -65 410 -27 182 -43 358 -33 373 10 17 38 23 263 56 91 13 174 11 230
+-6z m-4937 -365 c12 -172 10 -210 -12 -216 -21 -5 -31 24 -31 90 l0 35 -174
+-7 -173 -7 -5 25 c-5 24 -3 25 70 31 41 3 105 6 141 6 36 0 83 3 104 7 l38 6
+-7 63 c-6 63 -6 64 18 64 24 0 25 -2 31 -97z m91 -659 c4 -9 4 -19 1 -22 -8
+-8 -119 -30 -127 -25 -22 12 -2 32 45 46 68 20 74 20 81 1z m166 -523 c36 -25
+61 -79 58 -126 -2 -32 -7 -40 -23 -40 -16 0 -21 8 -23 35 -7 84 -50 126 -98
+95 -22 -14 -24 -22 -24 -106 0 -82 -2 -92 -24 -114 -82 -82 -216 -8 -216 120
+0 48 8 64 31 58 15 -4 19 -14 19 -50 0 -49 21 -97 45 -107 31 -11 62 -6 80 14
+15 16 16 30 11 92 -8 87 3 115 54 141 39 19 71 16 110 -12z m5308 -603 c8 -8
+1 -23 -29 -59 -22 -27 -38 -52 -35 -57 3 -5 62 -55 131 -112 69 -57 125 -109
+125 -116 0 -6 -7 -17 -15 -24 -12 -10 -37 6 -147 99 -72 61 -134 111 -137 111
+-4 0 -22 -20 -41 -45 -37 -47 -51 -53 -68 -32 -8 10 13 41 86 129 53 64 102
+117 108 117 5 1 15 -4 22 -11z m-4521 -443 c77 -39 140 -146 93 -158 -16 -4
+-24 4 -39 37 -35 81 -108 111 -184 78 -149 -66 -140 -267 13 -292 26 -4 36
+-11 38 -28 3 -18 -1 -22 -25 -22 -69 1 -165 73 -183 139 -15 55 -12 83 16 140
+39 78 112 128 190 130 16 1 53 -10 81 -24z m4062 -250 c61 -80 114 -152 117
+-159 6 -16 -21 -40 -35 -32 -6 4 -63 74 -127 157 -109 141 -115 151 -98 164
+11 8 22 15 25 15 3 0 56 -65 118 -145z m-3476 -151 c79 -40 108 -64 124 -101
+28 -69 -23 -143 -98 -143 -22 0 -39 -3 -39 -7 0 -5 7 -46 15 -93 18 -101 18
+-110 5 -110 -28 0 -46 40 -59 128 -11 80 -16 95 -37 109 -14 9 -26 14 -28 12
+-2 -2 -20 -37 -40 -77 -34 -68 -38 -72 -59 -61 -12 6 -23 13 -25 14 -4 4 178
+355 184 355 3 0 28 -12 57 -26z m2417 -219 c0 -3 -22 -50 -50 -105 -27 -55
+-50 -103 -50 -107 0 -5 49 -42 109 -83 104 -72 117 -89 66 -90 -11 0 -64 29
+-118 66 -69 46 -104 63 -118 59 -23 -8 -24 -2 5 -102 l23 -82 -25 -6 c-13 -3
+-26 -5 -27 -3 -3 3 -105 372 -105 380 0 3 11 8 25 10 23 5 26 1 41 -51 26 -94
+30 -105 40 -108 18 -6 32 14 82 114 28 55 57 103 64 106 18 7 38 8 38 2z
+m-1648 -78 c4 -7 8 -19 8 -27 0 -8 13 -99 29 -203 28 -187 28 -187 7 -181 -32
+10 -36 16 -43 72 -5 46 -9 53 -32 58 -14 3 -51 12 -82 20 -31 8 -59 14 -62 14
+-4 0 -20 -20 -37 -45 -23 -33 -38 -45 -56 -45 -16 0 -24 5 -22 14 2 7 55 88
+118 180 105 152 117 165 140 160 14 -3 28 -11 32 -17z m854 -76 c47 -22 56
+-31 44 -50 -7 -12 -15 -11 -49 3 -76 30 -147 12 -186 -47 -46 -70 -20 -198 47
+-233 44 -23 110 -21 152 5 29 18 35 19 46 6 39 -47 -121 -97 -207 -64 -100 38
+-146 184 -93 294 43 88 155 127 246 86z"/>
+<path d="M8103 6491 c-28 -4 -55 -10 -59 -14 -5 -4 7 -114 26 -245 18 -130 34
+-244 35 -252 4 -34 146 -11 190 30 34 32 38 93 14 243 -23 145 -48 211 -91
+233 -28 15 -32 15 -115 5z"/>
+<path d="M4930 3600 c-16 -32 -30 -64 -30 -70 0 -15 63 -40 100 -40 63 0 93
+75 48 117 -13 11 -38 28 -55 37 l-33 16 -30 -60z"/>
+<path d="M5662 3268 c-29 -44 -52 -81 -50 -83 2 -1 34 -9 71 -17 l69 -15 -6
+31 c-3 17 -8 56 -12 86 -4 30 -9 60 -13 67 -3 6 -29 -23 -59 -69z"/>
+</g>
+</svg>
 
-    <script>
-    // Add the 'active' class to trigger the animation
-    document.addEventListener('DOMContentLoaded', function () {
-    document.querySelector('.animated-element').classList.add('active');
-    });
-    </script>
+</div>
+</div>
+</div>
+</div>
 
-    <script>
-    // Get the current hour of the day
-    var currentHour = new Date().getHours();
+<div class="dash">
+<div class="col">
+<h3 class="test-links">
+Dashboard
+</h3>
+<h5 class="subheading" style="font-weight:100;">
+Questions Conquered, Tests Tackled...
+</h5>
+</div>
+<div class="dash-container">
+<div>
+<div class="flex">
+<div class="col-6-12" style="background-color: #F8FAE5;">
 
-    // Function to determine the appropriate greeting based on the time
-    function getGreeting() {
-    var greeting = '';
-    if (currentHour >= 5 && currentHour < 12) {
-    greeting = 'Good Morning!';
-    } else if (currentHour >= 12 && currentHour < 18) {
-    greeting = 'Good Afternoon!';
-    } else {
-    greeting = 'Good Evening!';
-    }
-    return greeting;
-    }
+<h6>
+Days
+</h6>
+<h2 id="totalDays"></h2>
 
-    // Display the greeting message
-    document.getElementById('greeting').textContent = getGreeting();
-    </script>
+</div>
+<div class="col-6-12" style="background-color: #F9EFDB;">
+<h6>
+MCQs
+</h6>
+<h2 id="totalQuestions"></h2>
 
-    <script>
-    // Fetch the JSON data from the file using AJAX
-    fetch('data.json')
-    .then(response => response.json())
-    .then(jsonData => {
-    // Find the Quiz entry by ID
-    var quizEntry1 = jsonData.tests[0].links.find(link => link.id === "Quiz");
-    var quizEntry2 = jsonData.tests[0].links.find(link => link.id === "Quiz-2");
+</div>
+</div> 
+<div class="flex">
+<div class="col-6-12" style="background-color: #FBF9F1;">
+<h6>
+Tests 
+</h6>
+<h2 id="totalTests"></h2>
 
-    // Check if both Quiz entries are found
-    if (quizEntry1 && quizEntry2) {
-    // Update the HTML content with the Quiz dynamically for Quiz entry
-    var quizLink1 = document.getElementById("quizLink1");
+</div>
+<div class="col-6-12" style="background-color: #E5E1DA;">
+<h6>
+Subjects
+</h6>
+<h2>
+1 / 19
+</h2>
 
-    quizLink1.href = quizEntry1.url;
+</div>
+</div>
+</div>
+</div>
+</div>
 
-    document.getElementById("topicContainer1").textContent = quizEntry1.text;
-    document.getElementById("MCQCount1").textContent = quizEntry1.questions;
+<div>
+<h3 class="test-links-2">
+Tests Completed
+</h3>
+<h5 class="subheading" style="font-weight:100;">
+Review the results of each test...
+</h5>
+</div>
 
-    // Update the HTML content with the Quiz dynamically for Quiz-2 entry
-    var quizLink2 = document.getElementById("quizLink2");
+<table class="table" id="dynamicTable">
+<tr>
+<th>
+<div class="flex-question" style="justify-content: center;">
+<div style="margin-right:10px;">
+<span><img src="surgery.svg" alt="surgery"></span>
+</div>
+<div>
+Surgery
+</div>
+</div>
+</th>
+</tr>
+</table>
 
-    quizLink2.href = quizEntry2.url;
+<!-- <style>
+.load-btn{
+display: flex;
+justify-content: center;
+text-align: center;
+margin: 1em;
+}
+</style>
 
-    document.getElementById("topicContainer2").textContent = quizEntry2.text;
-    document.getElementById("MCQCount2").textContent = quizEntry2.questions;
-    } else {
-    console.error('One or both Quiz entries not found in JSON data.');
-    }
-    })
-    .catch(error => console.error('Error fetching JSON:', error));
+<div class="load-btn">
+<button style="background-color: black; color:white;" id="loadContentBtn">Load More Content</button>
+<div id="dynamicContent"></div>
+</div> -->
 
-    </script>
+<!-- <script>
+const loadContentButton = document.getElementById('loadContentBtn');
+const contentContainer = document.getElementById('dynamicContent');
 
-    <script>
-    // Function to calculate total number of questions
-    function calculateTotalQuestions(testData) {
-    let totalQuestions = 0;
+loadContentButton.addEventListener('click', function() {
+fetch('content.html')
+.then(response => response.text())
+.then(data => {
+contentContainer.innerHTML = data;
+});
+});
+</script> -->
 
-    testData.tests[0].links.forEach(test => {
-    const numberOfQuestions = parseInt(test.questions, 10);
+</main>
+<footer class="footer">
+<p>
+© Copyright 2024 | All Rights Reserved
+</p>
+</footer>
 
-    if (!isNaN(numberOfQuestions)) {
-    totalQuestions += numberOfQuestions;
-    } else {
-    console.error(`Invalid or missing number of questions for test: ${test.text}`);
-    }
-    });
+<style>
+.flex-cookie {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
 
-    return totalQuestions;
-    }
+#popup-container {
+position: fixed;
+bottom: 10px;
+right: 10px;
+padding: 20px;
+background-color: #fff;
+border-radius: 1em;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+z-index: 1000;
+transform: translateY(100%); /* Initial state off the screen */
+transition: transform 0.3s ease;
+}
 
-    // Function to calculate total number of tests
-    function calculateTotalTests(testData) {
-    return testData.tests[0].links.length;
-    }
+#close-button {
+position: absolute;
+top: 10px;
+right: 15px;
+cursor: pointer;
+}
+</style>
 
-    // Function to calculate total number of days
-    function calculateTotalDays(testData) {
-    let totalDays = 0;
+<div id="popup-container" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)" ontouchend="handleTouchEnd()">
+<span id="close-button" onclick="closePopup()">X</span>
+<div class="flex-cookie">
+<div>
+<span><img src="cookie.svg" alt="cookie"></span>
+</div>
+<div>
+<p style="margin:10px;">Today's Topic</p>
+<p style="margin:10px; font-size:13px;">Surgery Test ST2 & ST4</p>
+</div>
+</div>
+</div>
 
-    testData.tests[0].links.forEach(test => {
-    const numberOfDays = parseInt(test.days, 10);
+<script>
+let touchStartX = 0;
+let touchEndX = 0;
+const swipeThreshold = 50;
 
-    if (!isNaN(numberOfDays)) {
-    totalDays += numberOfDays;
-    } else {
-    console.error(`Invalid or missing number of days for test: ${test.text}`);
-    }
-    });
+function handleTouchStart(event) {
+touchStartX = event.touches[0].clientX;
+}
 
-    return totalDays;
-    }
+function handleTouchMove(event) {
+touchEndX = event.touches[0].clientX;
+}
 
-    // Fetch JSON data from data.json
-    fetch('data.json')
-    .then(response => response.json())
-    .then(data => {
-    // Update HTML elements with calculated values
-    document.getElementById('totalQuestions').innerText = calculateTotalQuestions(data);
-    document.getElementById('totalTests').innerText = calculateTotalTests(data);
-    document.getElementById('totalDays').innerText = calculateTotalDays(data);
-    })
-    .catch(error => console.error('Error fetching JSON:', error));
-    </script>
+function handleTouchEnd() {
+const deltaX = touchEndX - touchStartX;
 
-    <script>
-    // Function to dynamically create the table rows
-    function createTable(data) {
-    var table = document.getElementById("dynamicTable");
+if (deltaX > swipeThreshold) {
+closePopup();
+}
+}
 
-    data.tests.forEach(function (test) {
-    test.links.forEach(function (link) {
-    var row = table.insertRow();
-    var cell = row.insertCell();
+function showPopup() {
+document.getElementById('popup-container').style.transform = 'translateY(0)';
+}
 
-    // Extract values from the JSON
-    var text = link.text;
-    var url = link.url;
-    var questions = link.questions;
+function closePopup() {
+document.getElementById('popup-container').style.transform = 'translateY(100%)';
+}
 
-    // Create the div elements and set their content
-    var div1 = document.createElement("div");
-    div1.classList.add("table-flex");
+window.onload = showPopup;
+</script>
 
-    var topicText = document.createElement("div");
-    topicText.id = "topic-text";
-    topicText.innerHTML = text;
-
-    var questionsDiv = document.createElement("div");
-    questionsDiv.classList.add("table-questions");
-    questionsDiv.innerHTML = '(' + questions + ' MCQs)';
-
-    topicText.appendChild(questionsDiv);
-
-    var div2 = document.createElement("div");
-
-    var linkButton = document.createElement("a");
-    linkButton.id = "topic-link";
-    linkButton.href = url;
-
-    var button = document.createElement("button");
-    button.innerHTML = "Review";
-    button.classList.add("table-button");
-
-    // Append the elements to the document
-    linkButton.appendChild(button);
-    div2.appendChild(linkButton);
-
-    div1.appendChild(topicText);
-    div1.appendChild(div2);
-
-    cell.appendChild(div1);
-    });
-    });
-    }
-
-    // Fetch data from data.json
-    fetch('data.json')
-    .then(response => response.json())
-    .then(data => createTable(data))
-    .catch(error => console.error('Error fetching data:', error));
-    </script>
-
-    <!-- <script>
-    // JavaScript
-    const loadContentButton = document.getElementById('loadContentBtn');
-    const contentContainer = document.getElementById('dynamicContent');
-
-    loadContentButton.addEventListener('click', function() {
-    fetch('content.html')
-    .then(response => response.text())
-    .then(data => {
-        contentContainer.innerHTML = data;
-    });
-    });
-    </script> -->
+<script src="script.js"></script>
 
 </body>
 

@@ -1,134 +1,139 @@
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
 * {
-    transition: all 0.5s ease;
+transition: all 0.5s ease;
 }
 
 /* Hide scrollbar for WebKit browsers */
 body::-webkit-scrollbar {
-    width: 0; /* Adjust the width as needed */
-}
-  
-  body::-webkit-scrollbar-thumb {
-    background-color: transparent; /* Make the thumb transparent */
+width: 0; /* Adjust the width as needed */
 }
 
-
-@font-face {
-    font-family: 'Josefin Sans';
-    src: url('josefinsans.woff2') format('woff2');
-    font-display: swap;
+body::-webkit-scrollbar-thumb {
+background-color: transparent; /* Make the thumb transparent */
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    overflow-scrolling: touch;
-    min-height: 100vh;
-    font-family: 'Josefin Sans', sans-serif;
-    transition: font-size 0.3s ease; /* Apply a smooth transition for font size changes */
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: column;
+overflow-scrolling: touch;
+min-height: 100vh;
+font-family: 'Josefin Sans', sans-serif;
+transition: font-size 0.3s ease; /* Apply a smooth transition for font size changes */
 }
 
-
-
 .footer {
-    margin: 0;
-    padding: 0.8em;
-    background-color: rgba(128, 128, 128, 0.164);
-    text-align: center;
+margin: 0;
+padding: 0.8em;
+background-color: rgba(128, 128, 128, 0.164);
+text-align: center;
 }
 
 .header {
-    margin: 0;
-    padding: 0;
-    color: white;
+margin: 0;
+padding: 0;
+color: white;
 }
 
 .home {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 1em; 
-    text-align: left;
-    align-items: left;
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+margin: 0;
+padding: 1em; 
+text-align: left;
+align-items: left;
 }
 
 .header-box{
-    background-color: #1D2B53;
-    background-image: url(topography.svg);
-    color: white;
-    border-radius: 1em;
-    padding: 2em;
-    margin: 0;
+background-color: #1D2B53;
+background-image: url(topography.svg);
+color: white;
+border-radius: 1em;
+padding: 2em;
+margin: 0;
+}
+
+.flex-question {
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.button{
+text-align: left;
+margin: 0;
+padding: 0.1em;
+border-radius: 2em;
+background-color: #FBF9F1;
 }
 
 .col-quiz{
-    margin-top: 50px;
+margin-top: 50px;
 }
 
 .dash{
-   margin: 1em;
+margin: 1em;
 }
 
 .dash-container{
-    text-align: center;
-    max-width: max-content;
-    margin: auto;
-    padding: 1em;
-    padding-bottom: 0;
-    padding-top: 0.5em;
+text-align: center;
+max-width: max-content;
+margin: auto;
+padding: 1em;
+padding-bottom: 0;
+padding-top: 0.5em;
 }
 
 .col{
-    margin-bottom: 20px;
+margin-bottom: 20px;
 }
 
 svg{
-    padding: 0;
-    margin: 0;
+padding: 0;
+margin: 0;
 }
 .subheading{
-    color: gray;
-    text-align:center;
-    margin-bottom:40px;
-    width: 80%;
-    margin: auto;
+color: gray;
+text-align:center;
+margin-bottom:40px;
+width: 80%;
+margin: auto;
 }
 
 .col-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
 }
-  
+
 .flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: nowrap;
-    align-items: stretch;
-    margin-bottom: 10px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+flex-wrap: nowrap;
+align-items: stretch;
+margin-bottom: 10px;
 }
 
 .col-6-12{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    color: black;
-    text-align: center;
-    margin: auto;
-    padding: 0.5em;
-    height: 100px;
-    width: 200px;
-    border-radius:1em;
-    border-radius: 1em;
-    margin-right: 10px;
+flex: 1;
+display: flex;
+flex-direction: column;
+color: black;
+text-align: center;
+margin: auto;
+padding: 0.5em;
+height: 100px;
+width: 200px;
+border-radius:1em;
+border-radius: 1em;
+margin-right: 10px;
 }
 
 .col-6-12 h6{
@@ -138,36 +143,36 @@ margin: 1em;
 }
 
 .col-6-12 h2{
-    font-size: 30px;
+font-size: 30px;
 }
 
 .col-6-12:last-child{
-    margin-right: 0px;
+margin-right: 0px;
 }
 
 
 .topic{
-    padding: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: white;
+padding: 0;
+margin-top: 20px;
+margin-bottom: 20px;
+color: white;
 }
 
 button {
-    text-decoration: none;
-    background-color: white;
-    border-radius: 0.5rem;
-    font-family: 'Josefin Sans', sans-serif;
-    margin: 0;
-    padding: 1.1em;
-    border: none;
+text-decoration: none;
+background-color: white;
+border-radius: 0.5rem;
+font-family: 'Josefin Sans', sans-serif;
+margin: 0;
+padding: 1.1em;
+border: none;
 }
 
 .table-flex{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+text-align: left;
 }
 
 .table-button {
@@ -181,7 +186,7 @@ color: gray;
 }
 
 #topic-text{
-    margin-right: 40px;
+margin-right: 40px;
 }
 
 .table{
@@ -190,119 +195,119 @@ margin-bottom: 40px;
 }
 
 .test-links{
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 10px;
+text-align: center;
+margin-top: 40px;
+margin-bottom: 10px;
 }
 
 .test-links-2{
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 10px;
+text-align: center;
+margin-top: 50px;
+margin-bottom: 10px;
 }
 
 a{
-    text-decoration: none;
-    color: black;
+text-decoration: none;
+color: black;
 }
 
 .tests{
-    margin-top: 20px;
-    margin-bottom: 40px;
-    width: 100%;
+margin-top: 20px;
+margin-bottom: 40px;
+width: 100%;
 }
 
 button:active{
-    transform: translateY(2px); 
-      box-shadow: 0 0 5px rgba(109, 108, 108, 0.3);  
+transform: translateY(2px); 
+box-shadow: 0 0 5px rgba(109, 108, 108, 0.3);  
 }
 
 button:hover{
-    transform: translateY(-2px); 
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+transform: translateY(-2px); 
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 table {
-    width: 75%;
-    margin: auto;
+width: 75%;
+margin: auto;
 }
 
 th, td {
-    text-align: center;
-    padding: 0.5em;
-    margin: 0 auto;
-    max-width: 80%;
+text-align: center;
+padding: 0.5em;
+margin: 0 auto;
+max-width: 80%;
 }
 
 th{
-    background-color: #EEE0C9;
-    color: black;
-    border-radius: 0.5em;
-    padding: 1em;
+background-color: #EEE0C9;
+color: black;
+border-radius: 0.5em;
+padding: 1em;
 }
 
 td{
-    background-color: #F1F0E8;
-    color: #0F1035;
-    border-radius: 0.5em;
-    padding: 1em;
+background-color: #F1F0E8;
+color: #0F1035;
+border-radius: 0.5em;
+padding: 1em;
 }
 
 /* Apply transition to the element you want to animate */
 .animated-element {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-  }
-  
-  /* Add a class to trigger the animation when the page loads */
-  .animated-element.active {
-    opacity: 1;
-  }
-  
+opacity: 0;
+transition: opacity 1s ease-in-out;
+}
 
- /* Define a keyframe animation */
+/* Add a class to trigger the animation when the page loads */
+.animated-element.active {
+opacity: 1;
+}
+
+
+/* Define a keyframe animation */
 @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  
-  /* Apply the animation to the element */
-  .animated-element {
-    animation: fadeIn 1s ease-in-out;
-    opacity: 0; /* optional initial state */
-  }
-  
-  
-  /* Apply the animation to the element */
-  .animated-element {
-    animation: fadeIn 1s ease-in-out;
-    opacity: 0; /* optional initial state */
-  }
-  
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+/* Apply the animation to the element */
+.animated-element {
+animation: fadeIn 1s ease-in-out;
+opacity: 0; /* optional initial state */
+}
+
+
+/* Apply the animation to the element */
+.animated-element {
+animation: fadeIn 1s ease-in-out;
+opacity: 0; /* optional initial state */
+}
+
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
 
-    .svg{
-        display: none;
-    }
+.svg{
+display: none;
+}
 
-    table {
-        width: 90%;
-        margin: auto;
-    }
+table {
+width: 90%;
+margin: auto;
+}
 
-    .col-6-12{
-        height: 100px;
-        width: 30vw;
-    }
+.col-6-12{
+height: 100px;
+width: 30vw;
+}
 
-    th, td{
-        text-align: left;
-    }
+th, td{
+text-align: left;
+}
 
 }
