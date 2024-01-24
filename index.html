@@ -18,7 +18,13 @@
 </head>
 
 <body>
-
+    <style>
+        .flex-question {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+          }
+    </style>
     <main class="main animated-element">
         <div class="home">
             <div class="header-box">
@@ -34,25 +40,61 @@
                         </div>
                         <div class="col-quiz">
                             <h3>
-                                Today's Quiz
+                                Today's Quizes
                             </h3>
                         </div>
                         <div class="col">
-                            <h4 id="topicContainer" class="topic" style="color: #B6BBC4; font-weight:100;">
-                                <!-- Content will be dynamically added here -->
-                            </h4>
+                            <a id="quizLink1" href="#">
+                                <button class="button">
+                                    <div class="flex-question">
+                                        <div style="margin-left: 10px; margin-right:5px;">
+                                            <span><img src="surgery.svg" alt="surgery"></span>
+                                        </div>
+                                        <div>
+                                          <p id="topicContainer1" style="margin:10px;"></p>
+                                          <p style="margin:10px; font-size:13px; color:gray;">(<span id="MCQCount1"></span> MCQs)</p>
+                                        </div>
+                                        <div>
+                                            <span><img src="right.svg" alt="right"></span>
+                                        </div>
+                                      </div>
+                                </button>
+                            </a>
                         </div>
                         <div class="col">
+                            <a id="quizLink2" href="#">
+                                <button class="button">
+                                    <div class="flex-question">
+                                        <div style="margin-left: 10px; margin-right:5px;">
+                                            <span><img src="surgery.svg" alt="surgery"></span>
+                                        </div>
+                                        <div>
+                                          <p id="topicContainer2" style="margin:10px;"></p>
+                                          <p style="margin:10px; font-size:13px; color:gray;">(<span id="MCQCount2"></span> MCQs)</p>
+                                        </div>
+                                        <div>
+                                            <span><img src="right.svg" alt="right"></span>
+                                        </div>
+                                      </div>
+                                </button>
+                            </a>
+                        </div>
+                        <!-- <div class="col">
+                            <h4 id="topicContainer" class="topic" style="color: #B6BBC4; font-weight:100;">
+                                Content will be dynamically added here
+                            </h4>
+                        </div> -->
+                        <!-- <div class="col">
                             <h5 class="topic" style="color: #B6BBC4; font-weight:100;">
                                 (<span id="MCQCount"></span> MCQs)
                             </h5>
 
-                        </div>
-                        <div class="col" id="quizTitleContainer">
+                        </div> -->
+                        <!-- <div class="col" id="quizTitleContainer">
                             <a id="quizLink" href="#">
                                 <button class="button">Start Quiz</button>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="svg">
                         <?xml version="1.0" standalone="no"?>
@@ -368,19 +410,28 @@
     .then(response => response.json())
     .then(jsonData => {
     // Find the Quiz entry by ID
-    var Quiz = jsonData.tests[0].links.find(link => link.id === "Quiz");
+    var quizEntry1 = jsonData.tests[0].links.find(link => link.id === "Quiz");
+    var quizEntry2 = jsonData.tests[0].links.find(link => link.id === "Quiz-2");
 
-    // Check if the Quiz entry is found
-    if (Quiz) {
-    // Update the HTML content with the Quiz dynamically
-    var quizLink = document.getElementById("quizLink");
+    // Check if both Quiz entries are found
+    if (quizEntry1 && quizEntry2) {
+    // Update the HTML content with the Quiz dynamically for Quiz entry
+    var quizLink1 = document.getElementById("quizLink1");
 
-    quizLink.href = Quiz.url;
+    quizLink1.href = quizEntry1.url;
 
-    document.getElementById("topicContainer").textContent = Quiz.text;
-    document.getElementById("MCQCount").textContent = Quiz.questions;
+    document.getElementById("topicContainer1").textContent = quizEntry1.text;
+    document.getElementById("MCQCount1").textContent = quizEntry1.questions;
+
+    // Update the HTML content with the Quiz dynamically for Quiz-2 entry
+    var quizLink2 = document.getElementById("quizLink2");
+
+    quizLink2.href = quizEntry2.url;
+
+    document.getElementById("topicContainer2").textContent = quizEntry2.text;
+    document.getElementById("MCQCount2").textContent = quizEntry2.questions;
     } else {
-    console.error('Quiz not found in JSON data.');
+    console.error('One or both Quiz entries not found in JSON data.');
     }
     })
     .catch(error => console.error('Error fetching JSON:', error));
