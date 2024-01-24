@@ -5,7 +5,7 @@
       "links": [
         {
           "s.no": 1,
-          "text": "Surgery - Trauma Complete",
+          "text": "Trauma Complete",
           "questions": "50",
           "days": 1,
           "url": "https://link.marrow.com/join_custom_module/559S070Y"
@@ -33,28 +33,28 @@
         },
         {
           "s.no": 5,
-          "text": "Anatomy - (Abdomen & Pelvis) and Surgery - (Urology & Upper GI)",
+          "text": "Urology & Upper GI + Anatomy - (Abdomen & Pelvis)",
           "questions": "50",
           "days": 1,
           "url": "https://link.marrow.com/join_custom_module/559V0FVZ"
         },
         {
           "s.no": 6,
-          "text": "Surgery - (Urology & Upper GI)",
+          "text": "Urology & Upper GI",
           "questions": "50",
           "days": 1,
           "url": "https://link.marrow.com/join_custom_module/559X01IN"
         },
         {
           "s.no": 7,
-          "text": "Anatomy - (Abdomen & Pelvis) and Surgery - (Lower GI & Hernia)",
+          "text": "Lower GI & Hernia + Anatomy - (Abdomen & Pelvis)",
           "questions": "50",
           "days": 1,
           "url": "https://link.marrow.com/join_custom_module/559X0HNS"
         },
         {
           "s.no": 8,
-          "text": "Surgery - Hepatobiliary and Spleen & Pancreas",
+          "text": "Hepatobiliary, Spleen & Pancreas",
           "questions": "50",
           "days": 1,
           "url": "https://link.marrow.com/join_custom_module/559Y0I9S"
