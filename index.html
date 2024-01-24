@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ready to boost your NEET PG | INICET preparation together? Start quizzing now">
     <title>Target NEET-PG | INICET 2024</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +40,7 @@
                 <div class="col-header">
                     <div>
                         <div class="col">
-                            <div class="header">
+                            <div class="header" style="color: white;">
                                 <h2 id="greeting"></h2>
                                 <h4 style="color: #B6BBC4; font-weight:100;">
                                     "Ready to boost your NEET PG | INICET preparation together? Start quizzing now!"
@@ -47,7 +48,7 @@
                             </div>
                         </div>
                         <div class="col-quiz">
-                            <h3>
+                            <h3 style="color: white;">
                                 Today's Quizes
                             </h3>
                         </div>
@@ -308,6 +309,22 @@
             </tr>
         </table>
         
+        <!-- <style>
+            .load-btn{
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                margin: 1em;
+            }
+        </style>
+
+        <div class="load-btn">
+            <button style="background-color: black; color:white;" id="loadContentBtn">Load More Content</button>
+            <div id="dynamicContent"></div>
+        </div> -->
+        
+
+        
     </main>
     <footer class="footer">
         <p>
@@ -563,7 +580,19 @@
     .catch(error => console.error('Error fetching data:', error));
     </script>
 
-      
+    <!-- <script>
+    // JavaScript
+    const loadContentButton = document.getElementById('loadContentBtn');
+    const contentContainer = document.getElementById('dynamicContent');
+
+    loadContentButton.addEventListener('click', function() {
+    fetch('content.html')
+    .then(response => response.text())
+    .then(data => {
+        contentContainer.innerHTML = data;
+    });
+    });
+    </script> -->
 
 </body>
 

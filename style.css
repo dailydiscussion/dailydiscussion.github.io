@@ -2,14 +2,38 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    transition: all 0.5s ease;
+}
+
+/* Hide scrollbar for WebKit browsers */
+body::-webkit-scrollbar {
+    width: 0; /* Adjust the width as needed */
+}
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Make the thumb transparent */
+}
+
+
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url('josefinsans.woff2') format('woff2');
+    font-display: swap;
+}
+
 body {
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    overflow-scrolling: touch;
     min-height: 100vh;
     font-family: 'Josefin Sans', sans-serif;
+    transition: font-size 0.3s ease; /* Apply a smooth transition for font size changes */
 }
+
+
 
 .footer {
     margin: 0;
@@ -158,10 +182,6 @@ color: gray;
 
 #topic-text{
     margin-right: 40px;
-}
-
-* {
-    transition: all 0.3s ease;
 }
 
 .table{
