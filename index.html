@@ -46,40 +46,54 @@ display: block;
 }
 
 .box-placeholder .circle-placeholder {
-height: 35px;
-width: 35px;
-background-color: #444; /* Placeholder color */
-border-radius: 50%; /* Make it circular */
-opacity: 0.1; /* Placeholder opacity */
-animation: rotateAnimation 1.5s infinite; /* Infinite rotation animation */
+height: 30px;
+width: 30px;
+background-color: #444;
+/* Placeholder color */
+border-radius: 50%;
+/* Make it circular */
+opacity: 0.1;
+/* Placeholder opacity */
+animation: rotateAnimation 1.5s infinite;
+/* Infinite rotation animation */
 }
 
 .box-placeholder #topicContainerPlaceholder {
-height: 12px; /* Adjust the height based on your design */
-width: 150px; /* Adjust the width based on your design */
-background-color: #444; /* Placeholder color */
-border-radius: 100px; /* Rounded corners */
-opacity: 0.1; /* Placeholder opacity */
+height: 12px;
+/* Adjust the height based on your design */
+width: 150px;
+/* Adjust the width based on your design */
+background-color: #444;
+/* Placeholder color */
+border-radius: 100px;
+/* Rounded corners */
+opacity: 0.1;
+/* Placeholder opacity */
 }
 
 .box-placeholder #MCQCountPlaceholder {
 display: inline-block;
-background-color: #444; /* Placeholder color */
-height: 12px; /* Adjust the height based on your design */
-width: 60px; /* Adjust the width based on your design */
-border-radius: 100px; /* Rounded corners */
-opacity: 0.1; /* Placeholder opacity */
+background-color: #444;
+/* Placeholder color */
+height: 11px;
+/* Adjust the height based on your design */
+width: 60px;
+/* Adjust the width based on your design */
+border-radius: 100px;
+/* Rounded corners */
+opacity: 0.1;
+/* Placeholder opacity */
 }
 
 @keyframes rotateAnimation {
 0% {
 transform: rotate(0deg);
 }
+
 100% {
 transform: rotate(360deg);
 }
-}                              
-
+}
 </style>
 
 <div class="col">
@@ -87,17 +101,18 @@ transform: rotate(360deg);
 <button class="button">
 <div class="box-placeholder" id="placeholder1">
 <div class="flex-question">
-<div style="margin-left: 10px; margin-right:5px;" class="circle-placeholder"></div>
+<div style="margin-left: 10px; margin-right:5px;"
+class="circle-placeholder"></div>
 <div>
 <p id="topicContainerPlaceholder" style="margin: 10px;"></p>
 <p style="margin: 10px; font-size: 13px; color: #333;">
-<span id="MCQCountPlaceholder"></span> 
+<span id="MCQCountPlaceholder"></span>
 </p>
 </div>
 </div>
 </div>
 
-<div  id="actualContent1" style="display: none;">
+<div id="actualContent1" style="display: none;">
 <div class="flex-question">
 <div style="margin-left: 10px; margin-right:5px;">
 <span><img src="svg/surgery.svg"></span>
@@ -111,7 +126,7 @@ id="MCQCount1"></span> MCQs)</p>
 <span><img src="svg/right.svg"></span>
 </div>
 </div>
-</div>   
+</div>
 </button>
 </a>
 </div>
@@ -120,17 +135,18 @@ id="MCQCount1"></span> MCQs)</p>
 <button class="button">
 <div class="box-placeholder" id="placeholder2">
 <div class="flex-question">
-<div style="margin-left: 10px; margin-right:5px;" class="circle-placeholder"></div>
+<div style="margin-left: 10px; margin-right:5px;"
+class="circle-placeholder"></div>
 <div>
 <p id="topicContainerPlaceholder" style="margin: 10px;"></p>
 <p style="margin: 10px; font-size: 13px; color: #333;">
-<span id="MCQCountPlaceholder"></span> 
+<span id="MCQCountPlaceholder"></span>
 </p>
 </div>
 </div>
 </div>
 
-<div  id="actualContent2" style="display: none;">
+<div id="actualContent2" style="display: none;">
 <div class="flex-question">
 <div style="margin-left: 10px; margin-right:5px;">
 <span><img src="svg/surgery.svg" alt="surgery"></span>
@@ -172,7 +188,6 @@ document.getElementById('actualContent2').style.display = 'block';
 
 
 <script id="quizlinks">
-
 // Fetch the JSON data from the file using AJAX
 fetch('surgery.json')
 .then(response => response.json())
@@ -359,7 +374,6 @@ ontouchend="handleTouchEnd()">
 </div>
 
 <script id="popup">
-
 let touchStartX = 0;
 let touchEndX = 0;
 const swipeThreshold = 50;
@@ -392,7 +406,6 @@ window.onload = showPopup;
 </script>
 
 <script id="animation">
-
 // Add the 'active' class to trigger the animation
 document.addEventListener('DOMContentLoaded', function () {
 document.querySelector('.animated-element').classList.add('active');
@@ -400,7 +413,6 @@ document.querySelector('.animated-element').classList.add('active');
 </script>
 
 <script id="greeting">
-
 // Get the current hour of the day
 var currentHour = new Date().getHours();
 
@@ -422,7 +434,6 @@ document.getElementById('greeting').textContent = getGreeting();
 </script>
 
 <script id="dashboard">
-
 // Function to calculate total number of questions
 function calculateTotalQuestions(testData) {
 let totalQuestions = 0;
@@ -475,7 +486,6 @@ document.getElementById('totalDays').innerText = calculateTotalDays(data);
 </script>
 
 <script id="dyanmic table">
-
 // Function to dynamically create the table rows
 function createTable(data) {
 var table = document.getElementById("dynamicTable");
