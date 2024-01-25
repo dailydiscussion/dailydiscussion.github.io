@@ -104,6 +104,7 @@ document.getElementById('totalDays').innerText = calculateTotalDays(data);
 })
 .catch(error => console.error('Error fetching JSON:', error));
 
+
 // Function to dynamically create the table rows
 function createTable(data) {
 var table = document.getElementById("dynamicTable");
