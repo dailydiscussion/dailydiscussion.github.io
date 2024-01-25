@@ -8,7 +8,9 @@
 <title>Target NEET-PG | INICET 2024</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap"
+rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -19,72 +21,6 @@
 </head>
 
 <body>
-
-<style>
-/* Loading screen styles */
-#loadingScreen {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: #fff;
-/* Background color of the loading screen */
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-z-index: 9999;
-/* Ensure it's on top of other elements */
-}
-
-#loadingSpinner {
-border: 8px solid #3498db;
-/* Color of the spinner */
-border-top: 8px solid #f1f1f1;
-/* Color of the spinner's top */
-border-radius: 50%;
-width: 50px;
-height: 50px;
-animation: spin 1s linear infinite;
-/* Rotate animation */
-}
-
-@keyframes spin {
-0% {
-transform: rotate(0deg);
-}
-
-100% {
-transform: rotate(360deg);
-}
-}
-
-/* Optional: Style the "Loading..." text */
-#loadingScreen p {
-margin-top: 10px;
-color: #333;
-/* Text color */
-font-size: 18px;
-}
-
-/* Hide the loading screen initially */
-#loadingScreen {
-display: none;
-}
-</style>
-
-<div id="loadingScreen">
-<div id="loadingSpinner"></div>
-<p>Loading...</p>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-document.getElementById("loadingScreen").style.display = "none";
-});
-</script>
-
 <main class="main animated-element content">
 <div class="home">
 <div class="header-box">
@@ -141,22 +77,6 @@ id="MCQCount2"></span> MCQs)</p>
 </button>
 </a>
 </div>
-<!-- <div class="col">
-<h4 id="topicContainer" class="topic" style="color: #B6BBC4; font-weight:100;">
-Content will be dynamically added here
-</h4>
-</div> -->
-<!-- <div class="col">
-<h5 class="topic" style="color: #B6BBC4; font-weight:100;">
-(<span id="MCQCount"></span> MCQs)
-</h5>
-
-</div> -->
-<!-- <div class="col" id="quizTitleContainer">
-<a id="quizLink" href="#">
-<button class="button">Start Quiz</button>
-</a>
-</div> -->
 </div>
 <div class="svg">
 <?xml version="1.0" standalone="no"?>
@@ -288,14 +208,15 @@ m-1648 -78 c4 -7 8 -19 8 -27 0 -8 13 -99 29 -203 28 -187 28 -187 7 -181 -32
 </div>
 
 <style>
-.dash-flex{
+.dash-flex {
 display: flex;
 flex-direction: row;
 justify-content: center;
 align-items: center;
 margin-top: 40px;
 }
-.dash-flex img{
+
+.dash-flex img {
 margin-left: 10px;
 }
 </style>
@@ -311,7 +232,7 @@ Dashboard
 <div>
 <img src="dash.svg">
 </div>
-</div>  
+</div>
 <h5 class="subheading" style="font-weight:100;">
 Questions Conquered, Tests Tackled...
 </h5>
@@ -387,33 +308,6 @@ Surgery
 </th>
 </tr>
 </table>
-
-<!-- <style>
-.load-btn{
-display: flex;
-justify-content: center;
-text-align: center;
-margin: 1em;
-}
-</style>
-
-<div class="load-btn">
-<button style="background-color: black; color:white;" id="loadContentBtn">Load More Content</button>
-<div id="dynamicContent"></div>
-</div> -->
-
-<!-- <script>
-const loadContentButton = document.getElementById('loadContentBtn');
-const contentContainer = document.getElementById('dynamicContent');
-
-loadContentButton.addEventListener('click', function() {
-fetch('content.html')
-.then(response => response.text())
-.then(data => {
-contentContainer.innerHTML = data;
-});
-});
-</script> -->
 
 </main>
 <footer class="footer">

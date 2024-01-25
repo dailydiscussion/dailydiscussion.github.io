@@ -24,7 +24,7 @@ return greeting;
 document.getElementById('greeting').textContent = getGreeting();
 
 // Fetch the JSON data from the file using AJAX
-fetch('data.json')
+fetch('surgery.json')
 .then(response => response.json())
 .then(jsonData => {
 // Find the Quiz entry by ID
@@ -93,8 +93,8 @@ console.error(`Invalid or missing number of days for test: ${test.text}`);
 return totalDays;
 }
 
-// Fetch JSON data from data.json
-fetch('data.json')
+// Fetch JSON data from surgery.json
+fetch('surgery.json')
 .then(response => response.json())
 .then(data => {
 // Update HTML elements with calculated values
@@ -155,8 +155,9 @@ cell.appendChild(div1);
 });
 }
 
-// Fetch data from data.json
-fetch('data.json')
+// Fetch data from surgery.json
+fetch('surgery.json')
 .then(response => response.json())
 .then(data => createTable(data))
 .catch(error => console.error('Error fetching data:', error));
+
