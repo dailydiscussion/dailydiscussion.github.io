@@ -82,20 +82,6 @@ transform: rotate(360deg);
 
 </style>
 
-<script>
-// Simulate content loading for the first box
-setTimeout(function () {
-document.getElementById('placeholder1').style.display = 'none';
-document.getElementById('actualContent1').style.display = 'block';
-}, 1500);
-
-// Simulate content loading for the second box
-setTimeout(function () {
-document.getElementById('placeholder2').style.display = 'none';
-document.getElementById('actualContent2').style.display = 'block';
-}, 1500); // Adjust the timeout based on your actual content loading time
-</script>
-
 <div class="col">
 <a id="quizLink1" href="#">
 <button class="button">
@@ -166,11 +152,58 @@ id="MCQCount2"></span> MCQs)</p>
 <div class="svg">
 <img src="favicon/safari-pinned-tab.svg">
 </div>
+</div>
+</div>
+</div>
+
+<script>
+// Simulate content loading for the first box
+setTimeout(function () {
+document.getElementById('placeholder1').style.display = 'none';
+document.getElementById('actualContent1').style.display = 'block';
+}, 1000);
+
+// Simulate content loading for the second box
+setTimeout(function () {
+document.getElementById('placeholder2').style.display = 'none';
+document.getElementById('actualContent2').style.display = 'block';
+}, 1000); // Adjust the timeout based on your actual content loading time
+</script>
 
 
-</div>
-</div>
-</div>
+<script id="quizlinks">
+
+// Fetch the JSON data from the file using AJAX
+fetch('surgery.json')
+.then(response => response.json())
+.then(jsonData => {
+// Find the Quiz entry by ID
+var quizEntry1 = jsonData.tests[0].links.find(link => link.id === "Quiz");
+var quizEntry2 = jsonData.tests[0].links.find(link => link.id === "Quiz-2");
+
+// Check if both Quiz entries are found
+if (quizEntry1 && quizEntry2) {
+// Update the HTML content with the Quiz dynamically for Quiz entry
+var quizLink1 = document.getElementById("quizLink1");
+
+quizLink1.href = quizEntry1.url;
+
+document.getElementById("topicContainer1").textContent = quizEntry1.text;
+document.getElementById("MCQCount1").textContent = quizEntry1.questions;
+
+// Update the HTML content with the Quiz dynamically for Quiz-2 entry
+var quizLink2 = document.getElementById("quizLink2");
+
+quizLink2.href = quizEntry2.url;
+
+document.getElementById("topicContainer2").textContent = quizEntry2.text;
+document.getElementById("MCQCount2").textContent = quizEntry2.questions;
+} else {
+console.error('One or both Quiz entries not found in JSON data.');
+}
+})
+.catch(error => console.error('Error fetching JSON:', error));
+</script>
 
 <style>
 .dash-flex {
@@ -386,40 +419,6 @@ return greeting;
 
 // Display the greeting message
 document.getElementById('greeting').textContent = getGreeting();
-</script>
-
-<script id="quizlinks">
-
-// Fetch the JSON data from the file using AJAX
-fetch('surgery.json')
-.then(response => response.json())
-.then(jsonData => {
-// Find the Quiz entry by ID
-var quizEntry1 = jsonData.tests[0].links.find(link => link.id === "Quiz");
-var quizEntry2 = jsonData.tests[0].links.find(link => link.id === "Quiz-2");
-
-// Check if both Quiz entries are found
-if (quizEntry1 && quizEntry2) {
-// Update the HTML content with the Quiz dynamically for Quiz entry
-var quizLink1 = document.getElementById("quizLink1");
-
-quizLink1.href = quizEntry1.url;
-
-document.getElementById("topicContainer1").textContent = quizEntry1.text;
-document.getElementById("MCQCount1").textContent = quizEntry1.questions;
-
-// Update the HTML content with the Quiz dynamically for Quiz-2 entry
-var quizLink2 = document.getElementById("quizLink2");
-
-quizLink2.href = quizEntry2.url;
-
-document.getElementById("topicContainer2").textContent = quizEntry2.text;
-document.getElementById("MCQCount2").textContent = quizEntry2.questions;
-} else {
-console.error('One or both Quiz entries not found in JSON data.');
-}
-})
-.catch(error => console.error('Error fetching JSON:', error));
 </script>
 
 <script id="dashboard">
