@@ -2,546 +2,490 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Ready to boost your NEET PG | INICET preparation together? Start quizzing now">
-<title>Target NEET-PG | INICET 2024</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap"
-rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-<link rel="manifest" href="manifest.json">
-<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#2b5797">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ready to boost your NEET PG | INICET preparation together? Start quizzing now">
+    <title>Target NEET-PG | INICET 2024</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
 </head>
 
 <body>
-<main class="main animated-element content">
-<div class="home">
-<div class="header-box">
-<div class="col-header">
-<div>
-<div class="col">
-<div class="header" style="color: white;">
-<h2 id="greeting"></h2>
-<h4 style="color: #B6BBC4; font-weight:100;">
-"Ready to boost your NEET PG | INICET preparation together? Start quizzing now!"
-</h4>
-</div>
-</div>
-<div class="col-quiz">
-<h3 style="color: white;">
-Today's Quizes
-</h3>
-</div>
-
-<style>
-.box-placeholder {
-display: block;
-}
-
-.box-placeholder .circle-placeholder {
-height: 30px;
-width: 30px;
-background-color: #444;
-/* Placeholder color */
-border-radius: 50%;
-/* Make it circular */
-opacity: 0.1;
-/* Placeholder opacity */
-animation: rotateAnimation 1.5s infinite;
-/* Infinite rotation animation */
-}
-
-.box-placeholder #topicContainerPlaceholder {
-height: 12px;
-/* Adjust the height based on your design */
-width: 150px;
-/* Adjust the width based on your design */
-background-color: #444;
-/* Placeholder color */
-border-radius: 100px;
-/* Rounded corners */
-opacity: 0.1;
-/* Placeholder opacity */
-}
-
-.box-placeholder #MCQCountPlaceholder {
-display: inline-block;
-background-color: #444;
-/* Placeholder color */
-height: 11px;
-/* Adjust the height based on your design */
-width: 60px;
-/* Adjust the width based on your design */
-border-radius: 100px;
-/* Rounded corners */
-opacity: 0.1;
-/* Placeholder opacity */
-}
-
-@keyframes rotateAnimation {
-0% {
-transform: rotate(0deg);
-}
-
-100% {
-transform: rotate(360deg);
-}
-}
-</style>
-
-<div class="col">
-<a id="quizLink1" href="#">
-<button class="button">
-<div class="box-placeholder" id="placeholder1">
-<div class="flex-question">
-<div style="margin-left: 10px; margin-right:5px;"
-class="circle-placeholder"></div>
-<div>
-<p id="topicContainerPlaceholder" style="margin: 10px;"></p>
-<p style="margin: 10px; font-size: 13px; color: #333;">
-<span id="MCQCountPlaceholder"></span>
-</p>
-</div>
-</div>
-</div>
-
-<div id="actualContent1" style="display: none;">
-<div class="flex-question">
-<div style="margin-left: 10px; margin-right:5px;">
-<span><img src="svg/surgery.svg"></span>
-</div>
-<div>
-<p id="topicContainer1" style="margin:10px;"></p>
-<p style="margin:10px; font-size:13px; color: #333;">(<span
-id="MCQCount1"></span> MCQs)</p>
-</div>
-<div>
-<span><img src="svg/right.svg"></span>
-</div>
-</div>
-</div>
-</button>
-</a>
-</div>
-<div class="col">
-<a id="quizLink2" href="#">
-<button class="button">
-<div class="box-placeholder" id="placeholder2">
-<div class="flex-question">
-<div style="margin-left: 10px; margin-right:5px;"
-class="circle-placeholder"></div>
-<div>
-<p id="topicContainerPlaceholder" style="margin: 10px;"></p>
-<p style="margin: 10px; font-size: 13px; color: #333;">
-<span id="MCQCountPlaceholder"></span>
-</p>
-</div>
-</div>
-</div>
-
-<div id="actualContent2" style="display: none;">
-<div class="flex-question">
-<div style="margin-left: 10px; margin-right:5px;">
-<span><img src="svg/surgery.svg" alt="surgery"></span>
-</div>
-<div>
-<p id="topicContainer2" style="margin:10px;"></p>
-<p style="margin:10px; font-size:13px; color: #333;">(<span
-id="MCQCount2"></span> MCQs)</p>
-</div>
-<div>
-<span><img src="svg/right.svg" alt="right"></span>
-</div>
-</div>
-</div>
-</button>
-</a>
-</div>
-</div>
-<div class="svg">
-<img src="favicon/safari-pinned-tab.svg">
-</div>
-</div>
-</div>
-</div>
-
-<script>
-// Simulate content loading for the first box
-setTimeout(function () {
-document.getElementById('placeholder1').style.display = 'none';
-document.getElementById('actualContent1').style.display = 'block';
-}, 1000);
-
-// Simulate content loading for the second box
-setTimeout(function () {
-document.getElementById('placeholder2').style.display = 'none';
-document.getElementById('actualContent2').style.display = 'block';
-}, 1000); // Adjust the timeout based on your actual content loading time
-</script>
-
-
-<script id="quizlinks">
-// Fetch the JSON data from the file using AJAX
-fetch('surgery.json')
-.then(response => response.json())
-.then(jsonData => {
-// Find the Quiz entry by ID
-var quizEntry1 = jsonData.tests[0].links.find(link => link.id === "Quiz");
-var quizEntry2 = jsonData.tests[0].links.find(link => link.id === "Quiz-2");
-
-// Check if both Quiz entries are found
-if (quizEntry1 && quizEntry2) {
-// Update the HTML content with the Quiz dynamically for Quiz entry
-var quizLink1 = document.getElementById("quizLink1");
-
-quizLink1.href = quizEntry1.url;
-
-document.getElementById("topicContainer1").textContent = quizEntry1.text;
-document.getElementById("MCQCount1").textContent = quizEntry1.questions;
-
-// Update the HTML content with the Quiz dynamically for Quiz-2 entry
-var quizLink2 = document.getElementById("quizLink2");
-
-quizLink2.href = quizEntry2.url;
-
-document.getElementById("topicContainer2").textContent = quizEntry2.text;
-document.getElementById("MCQCount2").textContent = quizEntry2.questions;
-} else {
-console.error('One or both Quiz entries not found in JSON data.');
-}
-})
-.catch(error => console.error('Error fetching JSON:', error));
-</script>
-
-<style>
-.dash-flex {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-margin-top: 40px;
-}
-
-.dash-flex img {
-margin-left: 10px;
-}
-</style>
-
-<div class="dash">
-<div class="col">
-<div class="dash-flex">
-<div>
-<h3>
-Dashboard
-</h3>
-</div>
-<div>
-<img src="svg/dash.svg">
-</div>
-</div>
-<h5 class="subheading" style="font-weight:100;">
-Questions Conquered, Tests Tackled...
-</h5>
-</div>
-<div class="dash-container">
-<div>
-<div class="flex">
-<div class="col-6-12" style="background-color: #F8FAE5;">
-
-<h6>
-Days
-</h6>
-<h2 id="totalDays"></h2>
-
-</div>
-<div class="col-6-12" style="background-color: #F9EFDB;">
-<h6>
-MCQs
-</h6>
-<h2 id="totalQuestions"></h2>
-
-</div>
-</div>
-<div class="flex">
-<div class="col-6-12" style="background-color: #FBF9F1;">
-<h6>
-Tests
-</h6>
-<h2 id="totalTests"></h2>
-
-</div>
-<div class="col-6-12" style="background-color: #E5E1DA;">
-<h6>
-Subjects
-</h6>
-<h2>
-1 / 19
-</h2>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<div>
-<div class="dash-flex">
-<div>
-<h3>
-Tests Completed
-</h3>
-</div>
-<div>
-<img src="svg/check.svg">
-</div>
-</div>
-<h5 class="subheading" style="font-weight:100;">
-Review the results of each test...
-</h5>
-</div>
-
-<table class="table" id="dynamicTable">
-<tr>
-<th>
-<div class="flex-question" style="justify-content: center;">
-<div style="margin-right:10px;">
-<span><img src="svg/surgery.svg" alt="surgery"></span>
-</div>
-<div>
-Surgery
-</div>
-</div>
-</th>
-</tr>
-</table>
-
-</main>
-<footer class="footer">
-<p>
-© Copyright 2024 | All Rights Reserved
-</p>
-</footer>
-
-<style>
-.flex-cookie {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-}
-
-#popup-container {
-position: fixed;
-bottom: 10px;
-right: 10px;
-padding: 20px;
-background-color: #fff;
-border-radius: 1em;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-z-index: 1000;
-transform: translateY(100%);
-/* Initial state off the screen */
-transition: transform 0.3s ease;
-}
-
-#close-button {
-position: absolute;
-top: 10px;
-right: 15px;
-cursor: pointer;
-}
-</style>
-
-<div id="popup-container" ontouchstart="handleTouchStart(event)" ontouchmove="handleTouchMove(event)"
-ontouchend="handleTouchEnd()">
-<span id="close-button" onclick="closePopup()">X</span>
-<div class="flex-cookie">
-<div>
-<span><img src="svg/cookie.svg" alt="cookie"></span>
-</div>
-<div>
-<p style="margin:10px;">Today's Topic</p>
-<p style="margin:10px; font-size:13px;">Surgery Test 1 & 2 ('18-19)</p>
-</div>
-</div>
-</div>
-
-<script id="popup">
-let touchStartX = 0;
-let touchEndX = 0;
-const swipeThreshold = 50;
-
-function handleTouchStart(event) {
-touchStartX = event.touches[0].clientX;
-}
-
-function handleTouchMove(event) {
-touchEndX = event.touches[0].clientX;
-}
-
-function handleTouchEnd() {
-const deltaX = touchEndX - touchStartX;
-
-if (deltaX > swipeThreshold) {
-closePopup();
-}
-}
-
-function showPopup() {
-document.getElementById('popup-container').style.transform = 'translateY(0)';
-}
-
-function closePopup() {
-document.getElementById('popup-container').style.transform = 'translateY(100%)';
-}
-
-window.onload = showPopup;
-</script>
-
-<script id="animation">
-// Add the 'active' class to trigger the animation
-document.addEventListener('DOMContentLoaded', function () {
-document.querySelector('.animated-element').classList.add('active');
-});
-</script>
-
-<script id="greeting">
-// Get the current hour of the day
-var currentHour = new Date().getHours();
-
-// Function to determine the appropriate greeting based on the time
-function getGreeting() {
-var greeting = '';
-if (currentHour >= 5 && currentHour < 12) {
-greeting = 'Good Morning!';
-} else if (currentHour >= 12 && currentHour < 18) {
-greeting = 'Good Afternoon!';
-} else {
-greeting = 'Good Evening!';
-}
-return greeting;
-}
-
-// Display the greeting message
-document.getElementById('greeting').textContent = getGreeting();
-</script>
-
-<script id="dashboard">
-// Function to calculate total number of questions
-function calculateTotalQuestions(testData) {
-let totalQuestions = 0;
-
-testData.tests[0].links.forEach(test => {
-const numberOfQuestions = parseInt(test.questions, 10);
-
-if (!isNaN(numberOfQuestions)) {
-totalQuestions += numberOfQuestions;
-} else {
-console.error(`Invalid or missing number of questions for test: ${test.text}`);
-}
-});
-
-return totalQuestions;
-}
-
-// Function to calculate total number of tests
-function calculateTotalTests(testData) {
-return testData.tests[0].links.length;
-}
-
-// Function to calculate total number of days
-function calculateTotalDays(testData) {
-let totalDays = 0;
-
-testData.tests[0].links.forEach(test => {
-const numberOfDays = parseInt(test.days, 10);
-
-if (!isNaN(numberOfDays)) {
-totalDays += numberOfDays;
-} else {
-console.error(`Invalid or missing number of days for test: ${test.text}`);
-}
-});
-
-return totalDays;
-}
-
-// Fetch JSON data from surgery.json
-fetch('surgery.json')
-.then(response => response.json())
-.then(data => {
-// Update HTML elements with calculated values
-document.getElementById('totalQuestions').innerText = calculateTotalQuestions(data);
-document.getElementById('totalTests').innerText = calculateTotalTests(data);
-document.getElementById('totalDays').innerText = calculateTotalDays(data);
-})
-.catch(error => console.error('Error fetching JSON:', error));
-</script>
-
-<script id="dyanmic table">
-// Function to dynamically create the table rows
-function createTable(data) {
-var table = document.getElementById("dynamicTable");
-
-data.tests.forEach(function (test) {
-test.links.forEach(function (link) {
-var row = table.insertRow();
-var cell = row.insertCell();
-
-// Extract values from the JSON
-var text = link.text;
-var url = link.url;
-var questions = link.questions;
-
-// Create the div elements and set their content
-var div1 = document.createElement("div");
-div1.classList.add("table-flex");
-
-var topicText = document.createElement("div");
-topicText.id = "topic-text";
-topicText.innerHTML = text;
-
-var questionsDiv = document.createElement("div");
-questionsDiv.classList.add("table-questions");
-questionsDiv.innerHTML = '(' + questions + ' MCQs)';
-
-topicText.appendChild(questionsDiv);
-
-var div2 = document.createElement("div");
-
-var linkButton = document.createElement("a");
-linkButton.id = "topic-link";
-linkButton.href = url;
-
-var button = document.createElement("button");
-button.innerHTML = "Review";
-button.classList.add("table-button");
-
-// Append the elements to the document
-linkButton.appendChild(button);
-div2.appendChild(linkButton);
-
-div1.appendChild(topicText);
-div1.appendChild(div2);
-
-cell.appendChild(div1);
-});
-});
-}
-
-// Fetch data from surgery.json
-fetch('surgery.json')
-.then(response => response.json())
-.then(data => createTable(data))
-.catch(error => console.error('Error fetching data:', error));
-</script>
+    <main class="main animated-element content">
+        <div class="home">
+            <div class="header-box">
+                <div class="col-header">
+                    <div>
+                        <div class="col">
+                            <div class="header" style="color: white;">
+                                <h2 id="greeting"></h2>
+                                <h4 style="color: #B6BBC4; font-weight:100;">
+                                    "Ready to boost your NEET PG | INICET preparation together? Start quizzing now!"
+                                </h4>
+                            </div>
+                        </div>
+                        <div class="col-quiz">
+                            <h3 style="color: white;">
+                                Today's Quizes
+                            </h3>
+                        </div>
+
+                        <style>
+                            .box-placeholder {
+                                display: block;
+                            }
+
+                            .box-placeholder .circle-placeholder {
+                                height: 30px;
+                                width: 30px;
+                                background-color: #444;
+                                /* Placeholder color */
+                                border-radius: 50%;
+                                /* Make it circular */
+                                opacity: 0.1;
+                                /* Placeholder opacity */
+                                animation: rotateAnimation 1.5s infinite;
+                                /* Infinite rotation animation */
+                            }
+
+                            .box-placeholder #topicContainerPlaceholder {
+                                height: 12px;
+                                /* Adjust the height based on your design */
+                                width: 150px;
+                                /* Adjust the width based on your design */
+                                background-color: #444;
+                                /* Placeholder color */
+                                border-radius: 100px;
+                                /* Rounded corners */
+                                opacity: 0.1;
+                                /* Placeholder opacity */
+                            }
+
+                            .box-placeholder #MCQCountPlaceholder {
+                                display: inline-block;
+                                background-color: #444;
+                                /* Placeholder color */
+                                height: 11px;
+                                /* Adjust the height based on your design */
+                                width: 60px;
+                                /* Adjust the width based on your design */
+                                border-radius: 100px;
+                                /* Rounded corners */
+                                opacity: 0.1;
+                                /* Placeholder opacity */
+                            }
+
+                            @keyframes rotateAnimation {
+                                0% {
+                                    transform: rotate(0deg);
+                                }
+
+                                100% {
+                                    transform: rotate(360deg);
+                                }
+                            }
+                        </style>
+
+                        <div class="col">
+                            <a id="quizLink1" href="#">
+                                <button class="button">
+                                    <div class="box-placeholder" id="placeholder1">
+                                        <div class="flex-question">
+                                            <div style="margin-left: 10px; margin-right:5px;"
+                                                class="circle-placeholder"></div>
+                                            <div>
+                                                <p id="topicContainerPlaceholder" style="margin: 10px;"></p>
+                                                <p style="margin: 10px; font-size: 13px; color: #333;">
+                                                    <span id="MCQCountPlaceholder"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="actualContent1" style="display: none;">
+                                        <div class="flex-question">
+                                            <div style="margin-left: 10px; margin-right:5px;">
+                                                <span><img src="svg/surgery.svg"></span>
+                                            </div>
+                                            <div>
+                                                <p id="topicContainer1" style="margin:10px;"></p>
+                                                <p style="margin:10px; font-size:13px; color: #333;">(<span
+                                                        id="MCQCount1"></span> MCQs)</p>
+                                            </div>
+                                            <div>
+                                                <span><img src="svg/right.svg"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a id="quizLink2" href="#">
+                                <button class="button">
+                                    <div class="box-placeholder" id="placeholder2">
+                                        <div class="flex-question">
+                                            <div style="margin-left: 10px; margin-right:5px;"
+                                                class="circle-placeholder"></div>
+                                            <div>
+                                                <p id="topicContainerPlaceholder" style="margin: 10px;"></p>
+                                                <p style="margin: 10px; font-size: 13px; color: #333;">
+                                                    <span id="MCQCountPlaceholder"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div id="actualContent2" style="display: none;">
+                                        <div class="flex-question">
+                                            <div style="margin-left: 10px; margin-right:5px;">
+                                                <span><img src="svg/surgery.svg" alt="surgery"></span>
+                                            </div>
+                                            <div>
+                                                <p id="topicContainer2" style="margin:10px;"></p>
+                                                <p style="margin:10px; font-size:13px; color: #333;">(<span
+                                                        id="MCQCount2"></span> MCQs)</p>
+                                            </div>
+                                            <div>
+                                                <span><img src="svg/right.svg" alt="right"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="svg">
+                        <img src="favicon/safari-pinned-tab.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Simulate content loading for the first box
+            setTimeout(function () {
+                document.getElementById('placeholder1').style.display = 'none';
+                document.getElementById('actualContent1').style.display = 'block';
+            }, 1000);
+
+            // Simulate content loading for the second box
+            setTimeout(function () {
+                document.getElementById('placeholder2').style.display = 'none';
+                document.getElementById('actualContent2').style.display = 'block';
+            }, 1000); // Adjust the timeout based on your actual content loading time
+        </script>
+
+
+        <script id="quizlinks">
+            // Fetch the JSON data from the file using AJAX
+            fetch('data/surgery.json')
+                .then(response => response.json())
+                .then(jsonData => {
+                    // Find the Quiz entry by ID
+                    var quizEntry1 = jsonData.tests[0].links.find(link => link.id === "Quiz");
+                    var quizEntry2 = jsonData.tests[0].links.find(link => link.id === "Quiz-2");
+
+                    // Check if both Quiz entries are found
+                    if (quizEntry1 && quizEntry2) {
+                        // Update the HTML content with the Quiz dynamically for Quiz entry
+                        var quizLink1 = document.getElementById("quizLink1");
+
+                        quizLink1.href = quizEntry1.url;
+
+                        document.getElementById("topicContainer1").textContent = quizEntry1.text;
+                        document.getElementById("MCQCount1").textContent = quizEntry1.questions;
+
+                        // Update the HTML content with the Quiz dynamically for Quiz-2 entry
+                        var quizLink2 = document.getElementById("quizLink2");
+
+                        quizLink2.href = quizEntry2.url;
+
+                        document.getElementById("topicContainer2").textContent = quizEntry2.text;
+                        document.getElementById("MCQCount2").textContent = quizEntry2.questions;
+                    } else {
+                        console.error('One or both Quiz entries not found in JSON data.');
+                    }
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+        </script>
+
+        <style>
+            .dash-flex {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                margin-top: 40px;
+            }
+
+            .dash-flex img {
+                margin-left: 10px;
+            }
+        </style>
+
+        <div class="dash">
+            <div class="col">
+                <div class="dash-flex">
+                    <div>
+                        <h3>
+                            Dashboard
+                        </h3>
+                    </div>
+                    <div>
+                        <img src="svg/dash.svg">
+                    </div>
+                </div>
+                <h5 class="subheading" style="font-weight:100;">
+                    Questions Conquered, Tests Tackled...
+                </h5>
+            </div>
+            <div class="dash-container">
+                <div>
+                    <div class="flex">
+                        <div class="col-6-12" style="background-color: #F8FAE5;">
+
+                            <h6>
+                                Days
+                            </h6>
+                            <h2 id="totalDays"></h2>
+
+                        </div>
+                        <div class="col-6-12" style="background-color: #F9EFDB;">
+                            <h6>
+                                MCQs
+                            </h6>
+                            <h2 id="totalQuestions"></h2>
+
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="col-6-12" style="background-color: #FBF9F1;">
+                            <h6>
+                                Tests
+                            </h6>
+                            <h2 id="totalTests"></h2>
+
+                        </div>
+                        <div class="col-6-12" style="background-color: #E5E1DA;">
+                            <h6>
+                                Subjects
+                            </h6>
+                            <h2>
+                                1 / 19
+                            </h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="dash-flex">
+                <div>
+                    <h3>
+                        Tests Completed
+                    </h3>
+                </div>
+                <div>
+                    <img src="svg/check.svg">
+                </div>
+            </div>
+            <h5 class="subheading" style="font-weight:100;">
+                Review the results of each test...
+            </h5>
+        </div>
+
+        <style>
+            .th {
+                background-color: #EEE0C9;
+                color: black;
+                border-radius: 0.5em;
+                padding: 1em;
+            }
+        
+            .fade-in {
+                opacity: 1;
+                transition: opacity 0.2s ease-in-out;
+            }
+        
+            .fade-out {
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.5s ease-in-out, pointer-events 0.5s ease-in-out;
+            }
+        </style>
+
+        <div class="card-layout">
+            <div>
+                <a href="#" id="surgery-link">
+                    <div class="dash-card card" style="justify-content: center;">
+                        <div>
+                            <span><img src="svg/surgery.svg"></span>
+                        </div>
+                        <div>
+                            Surgery
+                        </div>
+                        <div class="card-text">
+                            <span>
+                                Expand
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="#" id="test-link">
+                    <div class="dash-card card" style="justify-content: center;">
+                        <div>
+                            <span><img src="svg/test.svg"></span>
+                        </div>
+                        <div>
+                            Test link
+                        </div>
+                        <div class="card-text">
+                            <span>
+                                Expand
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <table class="table" id="dynamic-table"></table>
+
+    </main>
+    <footer class="footer">
+        <p>
+            © Copyright 2024 | All Rights Reserved
+        </p>
+    </footer>
+
+    <script id="popup">
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const swipeThreshold = 50;
+
+        function handleTouchStart(event) {
+            touchStartX = event.touches[0].clientX;
+        }
+
+        function handleTouchMove(event) {
+            touchEndX = event.touches[0].clientX;
+        }
+
+        function handleTouchEnd() {
+            const deltaX = touchEndX - touchStartX;
+
+            if (deltaX > swipeThreshold) {
+                closePopup();
+            }
+        }
+
+        function showPopup() {
+            document.getElementById('popup-container').style.transform = 'translateY(0)';
+        }
+
+        function closePopup() {
+            document.getElementById('popup-container').style.transform = 'translateY(100%)';
+        }
+
+        window.onload = showPopup;
+    </script>
+
+    <script id="animation">
+        // Add the 'active' class to trigger the animation
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.animated-element').classList.add('active');
+        });
+    </script>
+
+    <script id="greeting">
+        // Get the current hour of the day
+        var currentHour = new Date().getHours();
+
+        // Function to determine the appropriate greeting based on the time
+        function getGreeting() {
+            var greeting = '';
+            if (currentHour >= 5 && currentHour < 12) {
+                greeting = 'Good Morning!';
+            } else if (currentHour >= 12 && currentHour < 18) {
+                greeting = 'Good Afternoon!';
+            } else {
+                greeting = 'Good Evening!';
+            }
+            return greeting;
+        }
+
+        // Display the greeting message
+        document.getElementById('greeting').textContent = getGreeting();
+    </script>
+
+    <script id="dashboard">
+        // Function to calculate total number of questions
+        function calculateTotalQuestions(testData) {
+            let totalQuestions = 0;
+
+            testData.tests[0].links.forEach(test => {
+                const numberOfQuestions = parseInt(test.questions, 10);
+
+                if (!isNaN(numberOfQuestions)) {
+                    totalQuestions += numberOfQuestions;
+                } else {
+                    console.error(`Invalid or missing number of questions for test: ${test.text}`);
+                }
+            });
+
+            return totalQuestions;
+        }
+
+        // Function to calculate total number of tests
+        function calculateTotalTests(testData) {
+            return testData.tests[0].links.length;
+        }
+
+        // Function to calculate total number of days
+        function calculateTotalDays(testData) {
+            let totalDays = 0;
+
+            testData.tests[0].links.forEach(test => {
+                const numberOfDays = parseInt(test.days, 10);
+
+                if (!isNaN(numberOfDays)) {
+                    totalDays += numberOfDays;
+                } else {
+                    console.error(`Invalid or missing number of days for test: ${test.text}`);
+                }
+            });
+
+            return totalDays;
+        }
+
+        // Fetch JSON data from data/surgery.json
+        fetch('data/surgery.json')
+            .then(response => response.json())
+            .then(data => {
+                // Update HTML elements with calculated values
+                document.getElementById('totalQuestions').innerText = calculateTotalQuestions(data);
+                document.getElementById('totalTests').innerText = calculateTotalTests(data);
+                document.getElementById('totalDays').innerText = calculateTotalDays(data);
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+
+    <script src="script.js"></script>
 
 </body>
 

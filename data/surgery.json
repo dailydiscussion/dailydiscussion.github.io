@@ -84,26 +84,25 @@
           "s.no": 12,
           "text": "Surgery Test ST2 2017",
           "questions": "50",
-          "days": 1,
+          "days": 0,
           "url": "https://link.marrow.com/test/595316905d817243aa2e97c6?prev=subject"
         },
         {
           "s.no": 13,
           "text": "Surgery Test ST3 2017",
           "questions": "50",
-          "days": 0,
+          "days": 1,
           "url": "https://link.marrow.com/test/59531e835d817243aa2e97e0?prev=subject"
         },
         {
           "s.no": 14,
           "text": "Surgery Test ST4 2017",
           "questions": "50",
-          "days": 1,
+          "days": 0,
           "url": "https://link.marrow.com/test/59547e275d817243aa2e9c10?prev=subject"
         },
         {
           "s.no": 15,
-          "id": "Quiz",
           "text": "Surgery Test 1 2018-19",
           "questions": "50",
           "days": 1,
@@ -111,11 +110,26 @@
         },
         {
           "s.no": 16,
-          "id": "Quiz-2",
           "text": "Surgery Test 2 2018-19",
           "questions": "50",
           "days": 0,
           "url": "https://link.marrow.com/test/5a618b034f2544767f6a183e?prev=subject"
+        },
+        {
+          "s.no": 17,
+          "id": "Quiz",
+          "text": "Surgery Test ST3 2018-19",
+          "questions": "50",
+          "days": 1,
+          "url": "https://link.marrow.com/test/5a6188124f2544767f6a1831?prev=subject"
+        },
+        {
+          "s.no": 18,
+          "id": "Quiz-2",
+          "text": "Surgery Test ST1 2019-20",
+          "questions": "75",
+          "days": 0,
+          "url": "https://link.marrow.com/test/5c470f241576320cfd048154?prev=subject"
         }
       ]
     }

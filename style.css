@@ -227,6 +227,41 @@ transform: translateY(-2px);
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
+.card-layout{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 75%;
+  margin: auto;
+}
+
+.card{
+    background-color: beige;
+    color: black;
+    padding: 1.5em;
+    margin: auto;
+    max-width: max-content;
+    border-radius: 1em;
+    margin-left: 20px;
+}
+
+.dash-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.dash-card img{
+  margin-bottom:20px;
+}
+
+.card-text{
+  color: gray;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
 table {
 width: 75%;
 margin: auto;
@@ -299,6 +334,14 @@ display: none;
 table {
 width: 90%;
 margin: auto;
+}
+
+.card-layout{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 90%;
+  margin: auto;
 }
 
 .col-6-12{
