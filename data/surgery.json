@@ -118,7 +118,7 @@
         {
           "s.no": 17,
           "id": "Quiz",
-          "text": "Surgery Test ST3 2018-19",
+          "text": "Surgery Test 3 2018-19",
           "questions": "50",
           "days": 1,
           "url": "https://link.marrow.com/test/5a6188124f2544767f6a1831?prev=subject"
@@ -126,7 +126,7 @@
         {
           "s.no": 18,
           "id": "Quiz-2",
-          "text": "Surgery Test ST1 2019-20",
+          "text": "Surgery Test 1 2019-20",
           "questions": "75",
           "days": 0,
           "url": "https://link.marrow.com/test/5c470f241576320cfd048154?prev=subject"

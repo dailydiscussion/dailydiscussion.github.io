@@ -261,6 +261,11 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-size: 12px;
 }
 
+.card:hover{
+  background-color: #EEE0C9;
+  color: black;
+}
+
 .dash-card{
   display: flex;
   flex-direction: column;
