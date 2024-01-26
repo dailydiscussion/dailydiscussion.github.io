@@ -330,17 +330,15 @@
         <div class="card-layout">
             <div>
                 <a href="#" id="surgery-link">
-                    <div class="dash-card card" style="justify-content: center;">
+                    <div class="dash-card card-active" style="justify-content: center;">
                         <div>
                             <span><img src="svg/surgery.svg"></span>
                         </div>
                         <div>
                             Surgery
                         </div>
-                        <div class="card-text">
-                            <span>
-                                Expand
-                            </span>
+                        <div class="card-text-active">
+                            <span id="totalTests-card"></span> Tests
                         </div>
                     </div>
                 </a>
@@ -355,9 +353,7 @@
                             Test link
                         </div>
                         <div class="card-text">
-                            <span>
-                                Expand
-                            </span>
+                            <span></span> Tests
                         </div>
                     </div>
                 </a>
@@ -372,38 +368,6 @@
             © Copyright 2024 | All Rights Reserved
         </p>
     </footer>
-
-    <script id="popup">
-        let touchStartX = 0;
-        let touchEndX = 0;
-        const swipeThreshold = 50;
-
-        function handleTouchStart(event) {
-            touchStartX = event.touches[0].clientX;
-        }
-
-        function handleTouchMove(event) {
-            touchEndX = event.touches[0].clientX;
-        }
-
-        function handleTouchEnd() {
-            const deltaX = touchEndX - touchStartX;
-
-            if (deltaX > swipeThreshold) {
-                closePopup();
-            }
-        }
-
-        function showPopup() {
-            document.getElementById('popup-container').style.transform = 'translateY(0)';
-        }
-
-        function closePopup() {
-            document.getElementById('popup-container').style.transform = 'translateY(100%)';
-        }
-
-        window.onload = showPopup;
-    </script>
 
     <script id="animation">
         // Add the 'active' class to trigger the animation
@@ -481,6 +445,7 @@
                 document.getElementById('totalQuestions').innerText = calculateTotalQuestions(data);
                 document.getElementById('totalTests').innerText = calculateTotalTests(data);
                 document.getElementById('totalDays').innerText = calculateTotalDays(data);
+                document.getElementById('totalTests-card').innerText = calculateTotalTests(data);
             })
             .catch(error => console.error('Error fetching JSON:', error));
     </script>

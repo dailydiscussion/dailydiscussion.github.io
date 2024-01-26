@@ -236,13 +236,29 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .card{
-    background-color: beige;
+    background-color: #F8F4EC;
     color: black;
     padding: 1.5em;
     margin: auto;
     max-width: max-content;
     border-radius: 1em;
     margin-left: 20px;
+}
+
+.card-active{
+  background-color: #EEE0C9;
+  color: black;
+  padding: 1.5em;
+  margin: auto;
+  max-width: max-content;
+  border-radius: 1em;
+  margin-left: 20px;
+}
+
+.card-text-active{
+  color: black;
+  margin-top: 5px;
+  font-size: 12px;
 }
 
 .dash-card{
