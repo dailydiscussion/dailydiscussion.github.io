@@ -64,6 +64,10 @@ transition: font-size 0.3s ease; /* Apply a smooth transition for font size chan
   display: none;
 }
 
+.card-layout::-webkit-scrollbar {
+  display: none;
+}
+
 .day{
   display: flex;
   flex-direction: column;
@@ -326,17 +330,19 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   justify-content: left;
   width: 75%;
   margin: auto;
+  overflow: auto;
+}
+
+.cards{
+  flex: 0 0 20%;
 }
 
 .card{
-  background-color: #F8FAE5;
+  background-color: #F8F4EC;
   color: black;
-    padding: 1.5em;
-    margin: auto;
-    max-width: max-content;
-    border-radius: 1em;
-    margin-left: 20px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 1.5em;
+  border-radius: 1em;
+  margin-left: 20px;
 }
 
 .card-text{
@@ -346,13 +352,12 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .card-active{
-  background-color: #DBE7C9;
+  background-color: #EBD9B4;
   color: black;
   padding: 1.5em;
   margin: auto;
   border-radius: 1em;
   margin-left: 5px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .card-text-active{
@@ -391,15 +396,8 @@ margin: 0 auto;
 max-width: 80%;
 }
 
-th{
-background-color: #EEE0C9;
-color: black;
-border-radius: 0.5em;
-padding: 1em;
-}
-
 td{
-background-color: #FFFFEC;
+background-color: #F8F4EC;
 color: #0F1035;
 border-radius: 0.5em;
 padding: 1em;

@@ -319,13 +319,14 @@ Calender
 <h2>
 Today
 </h2>
-</div>  
+</div>
 <div class="calender" id="calendarContainer">
 <!-- Days will be inserted here dynamically -->
-</div>  
 </div>
 
-</main> 
+</div>
+
+</main>
 
 <main class="section-table">
 <div>
@@ -346,7 +347,7 @@ Tests Completed
 
 <style>
 .th {
-background-color: #DBE7C9;
+background-color: #EBD9B4;
 color: black;
 border-radius: 0.5em;
 padding: 1em;
@@ -365,7 +366,7 @@ transition: opacity 0.2s ease-in-out, pointer-events 0.2s ease-in-out;
 </style>
 
 <div class="card-layout">
-<div>
+<div class="cards">
 <a href="#" id="surgery-link">
 <div class="dash-card card-active" style="justify-content: center;">
 <div>
@@ -380,14 +381,269 @@ Surgery
 </div>
 </a>
 </div>
-<div>
-<a href="#" id="test-link">
+<div class="cards">
+<a href="#" id="obgy-link">
 <div class="dash-card card" style="justify-content: center;">
 <div>
-<span><img src="svg/test.svg"></span>
+<span><img src="svg/obgy.svg"></span>
 </div>
 <div>
-Test link
+Obs&gyne
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="medicine-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/medicine.svg"></span>
+</div>
+<div>
+Medicine
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="pedia-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/pedia.svg"></span>
+</div>
+<div>
+Pediatrics
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="ortho-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/ortho.svg"></span>
+</div>
+<div>
+Orthopaedics
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="anesthesia-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/anesthesia.svg"></span>
+</div>
+<div>
+Anesthesiology
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="radiology-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/radiology.svg"></span>
+</div>
+<div>
+Radiology
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="anatomy-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/anatomy.svg"></span>
+</div>
+<div>
+Anatomy
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="physiology-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/physiology.svg"></span>
+</div>
+<div>
+Physiology
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="biochem-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/biochem.svg"></span>
+</div>
+<div>
+Biochemistry
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="derma-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/derma.svg"></span>
+</div>
+<div>
+Dermatology
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="eye-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/eye.svg"></span>
+</div>
+<div>
+Eye
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="ent-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/ent.svg"></span>
+</div>
+<div>
+ENT
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="microbiology-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/microbiology.svg"></span>
+</div>
+<div>
+MIcrobiology
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="patho-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/patho.svg"></span>
+</div>
+<div>
+Pathology
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="pharma-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/pharma.svg"></span>
+</div>
+<div>
+Pharmacology
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="psm-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/psm.svg"></span>
+</div>
+<div>
+PSM
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="psychiatry-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/psychiatry.svg"></span>
+</div>
+<div>
+Psychiatry
+</div>
+<div class="card-text">
+<span></span> Tests
+</div>
+</div>
+</a>
+</div>
+<div class="cards">
+<a href="#" id="fmt-link">
+<div class="dash-card card" style="justify-content: center;">
+<div>
+<span><img src="svg/fmt.svg"></span>
+</div>
+<div>
+FMT
 </div>
 <div class="card-text">
 <span></span> Tests
@@ -396,6 +652,7 @@ Test link
 </a>
 </div>
 </div>
+
 
 <table class="table" id="dynamic-table"></table>
 </main>
@@ -495,7 +752,11 @@ var currentDateElement = document.getElementById('currentDate');
 var currentDate = new Date();
 
 // Format the date as needed (e.g., "27 Jan 2024")
-var options = { day: 'numeric', month: 'short', year: 'numeric' };
+var options = {
+day: 'numeric',
+month: 'short',
+year: 'numeric'
+};
 var formattedDate = currentDate.toLocaleDateString('en-US', options);
 
 // Update the content of the element

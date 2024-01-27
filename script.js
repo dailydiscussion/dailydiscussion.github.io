@@ -85,6 +85,23 @@ function createDynamicTable(linkId, jsonFile, iconDivId) {
 }
 
 createDynamicTable("surgery-link", "data/surgery.json", "surgery-icon");
-createDynamicTable("test-link", "data/test.json", "test-icon");
+createDynamicTable("medicine-link", "data/medicine.json", "medicine-icon");
+createDynamicTable("obgy-link", "data/obgy.json", "obgy-icon");
+createDynamicTable("pedia-link", "data/pedia.json", "pedia-icon");
+createDynamicTable("ortho-link", "data/ortho.json", "ortho-icon");
+createDynamicTable("anesthesia-link", "data/anesthesia.json", "anesthesia-icon");
+createDynamicTable("radiology-link", "data/radiology.json", "radiology-icon");
+createDynamicTable("anatomy-link", "data/anatomy.json", "anatomy-icon");
+createDynamicTable("physiology-link", "data/physiology.json", "physiology-icon");
+createDynamicTable("biochem-link", "data/biochem.json", "biochem-icon");
+createDynamicTable("derma-link", "data/derma.json", "derma-icon");
+createDynamicTable("eye-link", "data/eye.json", "eye-icon");
+createDynamicTable("ent-link", "data/ent.json", "ent-icon");
+createDynamicTable("microbiology-link", "data/microbiology.json", "microbiology-icon");
+createDynamicTable("patho-link", "data/patho.json", "patho-icon");
+createDynamicTable("pharma-link", "data/pharma.json", "pharma-icon");
+createDynamicTable("psm-link", "data/psm.json", "psm-icon");
+createDynamicTable("psychiatry-link", "data/psychiatry.json", "psychiatry-icon");
+createDynamicTable("fmt-link", "data/fmt.json", "fmt-icon");
 
 document.getElementById("surgery-link").click();
