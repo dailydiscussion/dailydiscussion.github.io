@@ -343,6 +343,10 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 1.5em;
   border-radius: 1em;
   margin-left: 20px;
+<<<<<<< HEAD
+=======
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+>>>>>>> b9a3540a16f6846a84433e34313e428b2214106b
 }
 
 .card-text{
