@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "tests": [
     {
@@ -36,42 +35,3 @@
     }
   ]
 }
-=======
-{
-  "tests": [
-    {
-      "title": "Test link",
-      "links": [
-        {
-          "s.no": 1,
-          "text": "Test Name",
-          "questions": "x",
-          "days": 1,
-          "url": "#"
-        },
-        {
-          "s.no": 2,
-          "text": "Test Name",
-          "questions": "x",
-          "days": 1,
-          "url": "#"
-        },
-        {
-          "s.no": 3,
-          "text": "Test Name",
-          "questions": "x",
-          "days": 1,
-          "url": "#"
-        },
-        {
-          "s.no": 4,
-          "text": "Test Name",
-          "questions": "x",
-          "days": 1,
-          "url": "#"
-        }
-      ]
-    }
-  ]
-}
->>>>>>> b9a3540a16f6846a84433e34313e428b2214106b

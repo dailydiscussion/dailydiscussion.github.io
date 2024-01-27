@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {
   "entries": [
     {
@@ -47,59 +46,3 @@
   ]
 }
 
-=======
-{
-  "entries": [
-    {
-      "id": 1,
-      "day": "Sat",
-      "date": "27",
-      "meetings": "Surgery Test 2 2019-20"
-    },
-    {
-      "id": 2,
-      "day": "Sun",
-      "date": "28",
-      "meetings": "Today's Test"
-    },
-    {
-      "id": 3,
-      "day": "Mon",
-      "date": "29",
-      "meetings": "Today's Test"
-    },
-    {
-      "id": 4,
-      "day": "Tue",
-      "date": "30",
-      "meetings": "Today's Test"
-    },
-    {
-      "id": 5,
-      "day": "Thu",
-      "date": "31",
-      "meetings": "Today's Test"
-    },
-    {
-      "id": 6,
-      "day": "Fri",
-      "date": "1",
-      "meetings": "Today's Test"
-    },
-    {
-      "id": 7,
-      "day": "Sat",
-      "date": "2",
-      "meetings": "Today's Test"
-    },
-    {
-      "id": 8,
-      "day": "Sun",
-      "date": "3",
-      "meetings": "Today's Test"
-    }
-    
-  ]
-}
-
->>>>>>> b9a3540a16f6846a84433e34313e428b2214106b
