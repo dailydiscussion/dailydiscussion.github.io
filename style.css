@@ -26,6 +26,81 @@ font-family: 'Josefin Sans', sans-serif;
 transition: font-size 0.3s ease; /* Apply a smooth transition for font size changes */
 }
 
+.section-table{
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.section-schedule{
+  background-color: #DBE7C9;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  border-radius: 1em;
+  margin: 1em;
+}
+
+.schedule{
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: auto;
+  margin-top: 0;
+}
+
+.calender {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+/* Hide the scrollbar for WebKit browsers (Safari and Chrome) */
+.calender::-webkit-scrollbar {
+  display: none;
+}
+
+.day{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  background-color: white;
+  color: black;
+  max-width: max-content;
+  margin-left: 10px;
+  padding: 1em;
+  border-radius: 1em;
+  flex: 0 0 50%;
+}
+
+.day:hover {
+  background-color: white;
+  color: black;
+}
+
+.day:first-child{
+  margin-left: 0;
+}
+
+.reminder-content{
+  background-color: #F8FAE5;
+  color: black;
+  padding: 1em;
+  border-radius: 1em;
+  max-width: max-content;
+  margin-top: 1em;
+}
+
+.reminder{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
 .footer {
 margin: 0;
 padding: 0.8em;
@@ -78,6 +153,23 @@ margin-top: 50px;
 
 .dash{
 margin: 1em;
+margin-bottom: 60px;
+}
+
+.dash-flex {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+margin-top: 20px;
+}
+
+.dash-flex img {
+margin-left: 5px;
+}
+
+.margin-top-2{
+margin-top: 40px;
 }
 
 .dash-container{
@@ -166,6 +258,7 @@ font-family: 'Josefin Sans', sans-serif;
 margin: 0;
 padding: 1.1em;
 border: none;
+box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .table-flex{
@@ -236,22 +329,30 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .card{
-    background-color: #F8F4EC;
-    color: black;
+  background-color: #F8FAE5;
+  color: black;
     padding: 1.5em;
     margin: auto;
     max-width: max-content;
     border-radius: 1em;
     margin-left: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.card-text{
+  color: black;
+  margin-top: 5px;
+  font-size: 12px;
 }
 
 .card-active{
-  background-color: #EEE0C9;
+  background-color: #DBE7C9;
   color: black;
   padding: 1.5em;
   margin: auto;
   border-radius: 1em;
-  margin-left: 20px;
+  margin-left: 5px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .card-text-active{
@@ -261,7 +362,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .card:hover{
-  background-color: #EEE0C9;
+  background-color: white;
   color: black;
 }
 
@@ -276,12 +377,6 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
 .dash-card img{
   margin-bottom:20px;
-}
-
-.card-text{
-  color: gray;
-  margin-top: 5px;
-  font-size: 12px;
 }
 
 table {
@@ -304,7 +399,7 @@ padding: 1em;
 }
 
 td{
-background-color: #F1F0E8;
+background-color: #FFFFEC;
 color: #0F1035;
 border-radius: 0.5em;
 padding: 1em;
@@ -356,6 +451,13 @@ display: none;
 table {
 width: 90%;
 margin: auto;
+}
+
+.schedule{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: 2em;
 }
 
 .card-layout{

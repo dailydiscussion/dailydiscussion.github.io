@@ -237,20 +237,6 @@
                 .catch(error => console.error('Error fetching JSON:', error));
         </script> -->
 
-        <style>
-            .dash-flex {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                margin-top: 40px;
-            }
-
-            .dash-flex img {
-                margin-left: 10px;
-            }
-        </style>
-
         <div class="dash">
             <div class="col">
                 <div class="dash-flex">
@@ -308,231 +294,42 @@
             </div>
         </div>
 
-        <style>
-            :root {
-                --numDays: 5;
-                --numHours: 10;
-                --timeHeight: 60px;
-                --calBgColor: #fff1f8;
-                --eventBorderColor: #f2d3d8;
-                --eventColor1: #ffd6d1;
-                --eventColor2: #fafaa3;
-                --eventColor3: #e2f8ff;
-                --eventColor4: #d1ffe6;
-            }
+    </main>
 
-            .calendar {
-                display: grid;
-                gap: 10px;
-                grid-template-columns: auto 1fr;
-                margin: 2rem;
-            }
-
-            .timeline {
-                display: grid;
-                grid-template-rows: repeat(var(--numHours), var(--timeHeight));
-            }
-
-            .days {
-                display: grid;
-                grid-column: 2;
-                gap: 5px;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            }
-
-            .events {
-                display: grid;
-                grid-template-rows: repeat(var(--numHours), var(--timeHeight));
-                border-radius: 5px;
-                background: var(--calBgColor);
-            }
-
-            // Place on Timeline
-            .start-10 {
-                grid-row-start: 2;
-            }
-
-            .start-12 {
-                grid-row-start: 4;
-            }
-
-            .start-1 {
-                grid-row-start: 5;
-            }
-
-            .start-2 {
-                grid-row-start: 6;
-            }
-
-            .end-12 {
-                grid-row-end: 4;
-            }
-
-            .end-1 {
-                grid-row-end: 5;
-            }
-
-            .end-3 {
-                grid-row-end: 7;
-            }
-
-            .end-4 {
-                grid-row-end: 8;
-            }
-
-            .end-5 {
-                grid-row-end: 9;
-            }
-
-            // Event
-
-            .title {
-                font-weight: 600;
-                margin-bottom: 0.25rem;
-            }
-
-            .event {
-                border: 1px solid var(--eventBorderColor);
-                border-radius: 5px;
-                padding: 0.5rem;
-                margin: 0 0.5rem;
-                background: white;
-            }
-
-            .space,
-            .date {
-                height: 60px
-            }
-
-            // Global / Etc
-
-            body {
-                font-family: system-ui, sans-serif;
-            }
-
-            .corp-fi {
-                background: var(--eventColor1);
-            }
-
-            .ent-law {
-                background: var(--eventColor2);
-            }
-
-            .writing {
-                background: var(--eventColor3);
-            }
-
-            .securities {
-                background: var(--eventColor4);
-            }
-
-            .date {
-                display: flex;
-                gap: 1em;
-            }
-
-            .date-num {
-                font-size: 3rem;
-                font-weight: 600;
-                display: inline;
-            }
-
-            .date-day {
-                display: inline;
-                font-size: 3rem;
-                font-weight: 100;
-            }
-
-            .scheduler{
-                width: 75%;
-                margin: auto;
-            }
-        </style>
-
-        <!-- <div class="scheduler">
-            <div class="calendar">
-                <div class="timeline">
-                    <div class="spacer"></div>
-                    <div class="time-marker">11 AM</div>
-                    <div class="time-marker">12 AM</div>
-                    <div class="time-marker">1AM</div>
-                    <div class="time-marker">2AM</div>
-                </div>
-                <div class="days">
-                    <div class="day mon">
-                        <div class="date">
-                            <p class="date-num">9</p>
-                            <p class="date-day">Mon</p>
-                        </div>
-                        <div class="events">
-                            <div class="event start-2 end-5 securities">
-                                <p class="title">Securities Regulation</p>
-                                <p class="time">12 PM - 2AM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="day tues">
-                        <div class="date">
-                            <p class="date-num">12</p>
-                            <p class="date-day">Tues</p>
-                        </div>
-                        <div class="events">
-                            <div class="event start-10 end-12 corp-fi">
-                                <p class="title">Corporate Finance</p>
-                                <p class="time">10 AM - 12 PM</p>
-                            </div>
-                            <div class="event start-1 end-4 ent-law">
-                                <p class="title">Entertainment Law</p>
-                                <p class="time">1PM - 4PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="day wed">
-                        <div class="date">
-                            <p class="date-num">11</p>
-                            <p class="date-day">Wed</p>
-                        </div>
-                        <div class="events">
-                            <div class="event start-12 end-1 writing">
-                                <p class="title">Writing Seminar</p>
-                                <p class="time">11 AM - 12 PM</p>
-                            </div>
-                            <div class="event start-2 end-5 securities">
-                                <p class="title">Securities Regulation</p>
-                                <p class="time">2 PM - 5 PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="day thurs">
-                        <div class="date">
-                            <p class="date-num">12</p>
-                            <p class="date-day">Thurs</p>
-                        </div>
-                        <div class="events">
-                            <div class="event start-10 end-12 corp-fi">
-                                <p class="title">Corporate Finance</p>
-                                <p class="time">10 AM - 12 PM</p>
-                            </div>
-                            <div class="event start-1 end-4 ent-law">
-                                <p class="title">Entertainment Law</p>
-                                <p class="time">1PM - 4PM</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="day fri">
-                        <div class="date">
-                            <p class="date-num">13</p>
-                            <p class="date-day">Fri</p>
-                        </div>
-                        <div class="events">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+    
+    <main class="section-schedule">
         <div>
             <div class="dash-flex">
+                <div>
+                    <h3>
+                        Calender
+                    </h3>
+                </div>
+                <div>
+                    <img src="svg/calender.svg">
+                </div>
+            </div>
+            <h5 style="font-weight:100; color:#294B29; text-align:center; margin-top:0px;">
+                "Discover your schedule for upcoming tests."
+            </h5>
+        </div>
+        <div class="schedule">
+            <div>
+                <h4 id="currentDate" style="font-weight:100; margin:0;"></h4>
+                <h2>
+                    Today
+                </h2>
+            </div>  
+            <div class="calender" id="calendarContainer">
+            <!-- Days will be inserted here dynamically -->
+            </div>  
+        </div>
+        
+    </main> 
+
+    <main class="section-table">
+        <div>
+            <div class="dash-flex margin-top-2">
                 <div>
                     <h3>
                         Tests Completed
@@ -543,13 +340,13 @@
                 </div>
             </div>
             <h5 class="subheading" style="font-weight:100;">
-                Review the results of each test...
+                A peek into your previous test performances...
             </h5>
         </div>
 
         <style>
             .th {
-                background-color: #EEE0C9;
+                background-color: #DBE7C9;
                 color: black;
                 border-radius: 0.5em;
                 padding: 1em;
@@ -601,8 +398,9 @@
         </div>
 
         <table class="table" id="dynamic-table"></table>
-
     </main>
+
+
     <footer class="footer">
         <p>
             © Copyright 2024 | All Rights Reserved
@@ -688,6 +486,70 @@
                 document.getElementById('totalTests-card').innerText = calculateTotalTests(data);
             })
             .catch(error => console.error('Error fetching JSON:', error));
+    </script>
+
+    <script id="current-date">
+        // Function to update the date dynamically
+        function updateDate() {
+            var currentDateElement = document.getElementById('currentDate');
+            var currentDate = new Date();
+            
+            // Format the date as needed (e.g., "27 Jan 2024")
+            var options = { day: 'numeric', month: 'short', year: 'numeric' };
+            var formattedDate = currentDate.toLocaleDateString('en-US', options);
+
+            // Update the content of the element
+            currentDateElement.textContent = formattedDate;
+        }
+
+        // Call the function on page load
+        window.onload = function () {
+            updateDate();
+
+            // Update the date every second (1000 milliseconds)
+            setInterval(updateDate, 1000);
+        };
+    </script>
+
+    <script id="calender">
+        // Function to fetch JSON data
+        async function fetchCalendarData() {
+            try {
+                const response = await fetch('calender.json');
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Error fetching calendar data:', error);
+            }
+        }
+    
+        // Function to populate the calendar
+        async function populateCalendar() {
+            const data = await fetchCalendarData();
+    
+            if (data) {
+                var calendarContainer = document.getElementById('calendarContainer');
+    
+                data.entries.forEach(function (entry) {
+                    var dayElement = document.createElement('div');
+                    dayElement.className = 'day';
+                    dayElement.id = 'day' + entry.id;
+    
+                    dayElement.innerHTML = `
+                        <div class="day-name" id="dayName${entry.id}">${entry.day}</div>
+                        <div class="day-date" id="dayDate${entry.id}">${entry.date}</div>
+                        <div class="reminder-content">
+                            <h5 class="meeting" id="meeting${entry.id}">${entry.meetings}</h5>
+                        </div>
+                    `;
+    
+                    calendarContainer.appendChild(dayElement);
+                });
+            }
+        }
+    
+        // Call the function to populate the calendar
+        populateCalendar();
     </script>
 
     <script src="script.js"></script>
