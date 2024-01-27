@@ -36,7 +36,7 @@
                         </div>
                         <div class="col-quiz">
                             <h3 style="color: white;">
-                                Today's Quizes
+                                Today's Quiz
                             </h3>
                         </div>
 
@@ -130,7 +130,7 @@
                                 </button>
                             </a>
                         </div>
-                        <div class="col">
+                        <!-- <div class="col">
                             <a id="quizLink2" href="#">
                                 <button class="button">
                                     <div class="box-placeholder" id="placeholder2">
@@ -163,7 +163,7 @@
                                     </div>
                                 </button>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="svg">
                         <img src="favicon/safari-pinned-tab.svg">
@@ -172,32 +172,32 @@
             </div>
         </div>
 
-        <script>
+        <script id="firstbox">
             // Simulate content loading for the first box
             setTimeout(function () {
                 document.getElementById('placeholder1').style.display = 'none';
                 document.getElementById('actualContent1').style.display = 'block';
             }, 1000);
+        </script>
 
-            // Simulate content loading for the second box
-            setTimeout(function () {
+        <!-- <script id="secondbox">
+              // Simulate content loading for the second box
+              setTimeout(function () {
                 document.getElementById('placeholder2').style.display = 'none';
                 document.getElementById('actualContent2').style.display = 'block';
             }, 1000); // Adjust the timeout based on your actual content loading time
-        </script>
+        </script> -->
 
-
-        <script id="quizlinks">
+        <script id="quizlink-1">
             // Fetch the JSON data from the file using AJAX
             fetch('data/surgery.json')
                 .then(response => response.json())
                 .then(jsonData => {
                     // Find the Quiz entry by ID
                     var quizEntry1 = jsonData.tests[0].links.find(link => link.id === "Quiz");
-                    var quizEntry2 = jsonData.tests[0].links.find(link => link.id === "Quiz-2");
 
                     // Check if both Quiz entries are found
-                    if (quizEntry1 && quizEntry2) {
+                    if (quizEntry1) {
                         // Update the HTML content with the Quiz dynamically for Quiz entry
                         var quizLink1 = document.getElementById("quizLink1");
 
@@ -205,7 +205,23 @@
 
                         document.getElementById("topicContainer1").textContent = quizEntry1.text;
                         document.getElementById("MCQCount1").textContent = quizEntry1.questions;
+                    } else {
+                        console.error('Quiz entries not found in JSON data.');
+                    }
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+        </script>
 
+        <!-- <script id="quizlink-2">
+            // Fetch the JSON data from the file using AJAX
+            fetch('data/surgery.json')
+                .then(response => response.json())
+                .then(jsonData => {
+                    // Find the Quiz entry by ID
+                    var quizEntry2 = jsonData.tests[0].links.find(link => link.id === "Quiz-2");
+
+                    // Check if both Quiz entries are found
+                    if (quizEntry2) {
                         // Update the HTML content with the Quiz dynamically for Quiz-2 entry
                         var quizLink2 = document.getElementById("quizLink2");
 
@@ -213,12 +229,13 @@
 
                         document.getElementById("topicContainer2").textContent = quizEntry2.text;
                         document.getElementById("MCQCount2").textContent = quizEntry2.questions;
-                    } else {
-                        console.error('One or both Quiz entries not found in JSON data.');
+                    } 
+                    else {
+                        console.error('Quiz entries not found in JSON data.');
                     }
                 })
                 .catch(error => console.error('Error fetching JSON:', error));
-        </script>
+        </script> -->
 
         <style>
             .dash-flex {
@@ -291,6 +308,229 @@
             </div>
         </div>
 
+        <style>
+            :root {
+                --numDays: 5;
+                --numHours: 10;
+                --timeHeight: 60px;
+                --calBgColor: #fff1f8;
+                --eventBorderColor: #f2d3d8;
+                --eventColor1: #ffd6d1;
+                --eventColor2: #fafaa3;
+                --eventColor3: #e2f8ff;
+                --eventColor4: #d1ffe6;
+            }
+
+            .calendar {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: auto 1fr;
+                margin: 2rem;
+            }
+
+            .timeline {
+                display: grid;
+                grid-template-rows: repeat(var(--numHours), var(--timeHeight));
+            }
+
+            .days {
+                display: grid;
+                grid-column: 2;
+                gap: 5px;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+
+            .events {
+                display: grid;
+                grid-template-rows: repeat(var(--numHours), var(--timeHeight));
+                border-radius: 5px;
+                background: var(--calBgColor);
+            }
+
+            // Place on Timeline
+            .start-10 {
+                grid-row-start: 2;
+            }
+
+            .start-12 {
+                grid-row-start: 4;
+            }
+
+            .start-1 {
+                grid-row-start: 5;
+            }
+
+            .start-2 {
+                grid-row-start: 6;
+            }
+
+            .end-12 {
+                grid-row-end: 4;
+            }
+
+            .end-1 {
+                grid-row-end: 5;
+            }
+
+            .end-3 {
+                grid-row-end: 7;
+            }
+
+            .end-4 {
+                grid-row-end: 8;
+            }
+
+            .end-5 {
+                grid-row-end: 9;
+            }
+
+            // Event
+
+            .title {
+                font-weight: 600;
+                margin-bottom: 0.25rem;
+            }
+
+            .event {
+                border: 1px solid var(--eventBorderColor);
+                border-radius: 5px;
+                padding: 0.5rem;
+                margin: 0 0.5rem;
+                background: white;
+            }
+
+            .space,
+            .date {
+                height: 60px
+            }
+
+            // Global / Etc
+
+            body {
+                font-family: system-ui, sans-serif;
+            }
+
+            .corp-fi {
+                background: var(--eventColor1);
+            }
+
+            .ent-law {
+                background: var(--eventColor2);
+            }
+
+            .writing {
+                background: var(--eventColor3);
+            }
+
+            .securities {
+                background: var(--eventColor4);
+            }
+
+            .date {
+                display: flex;
+                gap: 1em;
+            }
+
+            .date-num {
+                font-size: 3rem;
+                font-weight: 600;
+                display: inline;
+            }
+
+            .date-day {
+                display: inline;
+                font-size: 3rem;
+                font-weight: 100;
+            }
+
+            .scheduler{
+                width: 75%;
+                margin: auto;
+            }
+        </style>
+
+        <!-- <div class="scheduler">
+            <div class="calendar">
+                <div class="timeline">
+                    <div class="spacer"></div>
+                    <div class="time-marker">11 AM</div>
+                    <div class="time-marker">12 AM</div>
+                    <div class="time-marker">1AM</div>
+                    <div class="time-marker">2AM</div>
+                </div>
+                <div class="days">
+                    <div class="day mon">
+                        <div class="date">
+                            <p class="date-num">9</p>
+                            <p class="date-day">Mon</p>
+                        </div>
+                        <div class="events">
+                            <div class="event start-2 end-5 securities">
+                                <p class="title">Securities Regulation</p>
+                                <p class="time">12 PM - 2AM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day tues">
+                        <div class="date">
+                            <p class="date-num">12</p>
+                            <p class="date-day">Tues</p>
+                        </div>
+                        <div class="events">
+                            <div class="event start-10 end-12 corp-fi">
+                                <p class="title">Corporate Finance</p>
+                                <p class="time">10 AM - 12 PM</p>
+                            </div>
+                            <div class="event start-1 end-4 ent-law">
+                                <p class="title">Entertainment Law</p>
+                                <p class="time">1PM - 4PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day wed">
+                        <div class="date">
+                            <p class="date-num">11</p>
+                            <p class="date-day">Wed</p>
+                        </div>
+                        <div class="events">
+                            <div class="event start-12 end-1 writing">
+                                <p class="title">Writing Seminar</p>
+                                <p class="time">11 AM - 12 PM</p>
+                            </div>
+                            <div class="event start-2 end-5 securities">
+                                <p class="title">Securities Regulation</p>
+                                <p class="time">2 PM - 5 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day thurs">
+                        <div class="date">
+                            <p class="date-num">12</p>
+                            <p class="date-day">Thurs</p>
+                        </div>
+                        <div class="events">
+                            <div class="event start-10 end-12 corp-fi">
+                                <p class="title">Corporate Finance</p>
+                                <p class="time">10 AM - 12 PM</p>
+                            </div>
+                            <div class="event start-1 end-4 ent-law">
+                                <p class="title">Entertainment Law</p>
+                                <p class="time">1PM - 4PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day fri">
+                        <div class="date">
+                            <p class="date-num">13</p>
+                            <p class="date-day">Fri</p>
+                        </div>
+                        <div class="events">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
         <div>
             <div class="dash-flex">
                 <div>
@@ -314,12 +554,12 @@
                 border-radius: 0.5em;
                 padding: 1em;
             }
-        
+
             .fade-in {
                 opacity: 1;
                 transition: opacity 0.2s ease-in-out;
             }
-        
+
             .fade-out {
                 opacity: 0;
                 pointer-events: none;
