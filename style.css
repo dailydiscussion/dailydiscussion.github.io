@@ -342,7 +342,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: black;
   padding: 1.5em;
   border-radius: 1em;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 .card-text{
@@ -356,7 +356,6 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   padding: 1.5em;
   margin: auto;
   border-radius: 1em;
-  margin-left: 5px;
 }
 
 .card:hover{
