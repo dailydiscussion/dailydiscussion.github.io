@@ -3,34 +3,7 @@
     {
       "title": "Obs&gyne Tests",
       "links": [
-        {
-          "s.no": 1,
-          "text": "Test Name",
-          "questions": "x",
-          "days": 1,
-          "url": "#"
-        },
-        {
-          "s.no": 2,
-          "text": "Test Name",
-          "questions": "x",
-          "days": 1,
-          "url": "#"
-        },
-        {
-          "s.no": 3,
-          "text": "Test Name",
-          "questions": "x",
-          "days": 1,
-          "url": "#"
-        },
-        {
-          "s.no": 4,
-          "text": "Test Name",
-          "questions": "x",
-          "days": 1,
-          "url": "#"
-        }
+        
       ]
     }
   ]

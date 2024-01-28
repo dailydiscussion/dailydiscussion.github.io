@@ -342,28 +342,21 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   color: black;
   padding: 1.5em;
   border-radius: 1em;
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .card-text{
-  color: black;
   margin-top: 5px;
   font-size: 12px;
 }
 
 .card-active{
-  background-color: #EBD9B4;
-  color: black;
+  background-color: black;
+  color: white;
   padding: 1.5em;
   margin: auto;
   border-radius: 1em;
   margin-left: 5px;
-}
-
-.card-text-active{
-  color: black;
-  margin-top: 5px;
-  font-size: 12px;
 }
 
 .card:hover{
