@@ -327,27 +327,27 @@ Today
 <h3 style="margin-top: 2em; margin-bottom:1em;">
 Important dates :
 </h3>
-<ul>
-<li>
+<div class="ul">
+<div class="li">
 <h5 style="margin: 0;">
 INICET 2024 - May 19, 2024
 </h5>
-<h5 id="countdownOutput1" class="counter-date" ></h5>
-</li>
-<li>
+<h5 id="countdownOutput1" class="counter-date"></h5>
+</div>
+<div class="li">
 <h5 style="margin: 0;">
 NEET PG 2024 - July 7, 2024
 </h5>
 <h5 id="countdownOutput2" class="counter-date"></h5>
-</li>
-</ul>
+</div>
+</div>
 </div>
 </div>
 </main>
 
 <style>
-.counter-date{
-font-weight:100; 
+.counter-date {
+font-weight: 100;
 margin: 0;
 margin-top: 10px;
 background-color: #F8FAE5;
@@ -356,18 +356,24 @@ padding: 1em;
 border-radius: 1em;
 }
 
-ul{
+.ul {
+display: flex;
+flex-direction: row;
 margin: 0;
 padding: 0;
+overflow: auto;
+flex-wrap: nowrap;
 }
 
-li{
+.li {
 margin-top: 15px;
 list-style: none;
 background-color: white;
 padding: 1em;
 max-width: max-content;
 border-radius: 1em;
+margin-right: 10px;
+flex: 0 0 100%;
 }
 </style>
 

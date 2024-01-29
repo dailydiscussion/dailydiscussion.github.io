@@ -68,6 +68,10 @@ transition: font-size 0.3s ease; /* Apply a smooth transition for font size chan
   display: none;
 }
 
+.ul::-webkit-scrollbar {
+  display: none;
+}
+
 .day{
   display: flex;
   flex-direction: column;
