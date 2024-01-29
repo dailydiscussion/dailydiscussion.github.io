@@ -399,6 +399,10 @@ border-radius: 0.5em;
 padding: 1em;
 }
 
+.meeting{
+  font-weight: 100;
+}
+
 /* Apply transition to the element you want to animate */
 .animated-element {
 opacity: 0;
