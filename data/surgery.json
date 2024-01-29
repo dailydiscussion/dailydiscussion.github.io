@@ -145,11 +145,26 @@
         },
         {
           "s.no": 21,
-          "id": "Quiz",
           "text": "Surgery Test 2 2020-21",
           "questions": "75",
           "days": 1,
           "url": "https://link.marrow.com/test/5e3d5527c49dd4524decb77f?prev=subject"
+        },
+        {
+          "s.no": 22,
+          "id": "Quiz",
+          "text": "Surgery Test ST1 2020-21",
+          "questions": "50",
+          "days": 1,
+          "url": "https://link.marrow.com/test/609d2267c49dd45e67804b5d?prev=subject"
+        },
+        {
+          "s.no": 23,
+          "id": "Quiz-2",
+          "text": "Surgery Test ST2 2020-21",
+          "questions": "50",
+          "days": 0,
+          "url": "https://link.marrow.com/test/609d219ac49dd45e67804b5a?prev=subject"
         }
       ]
     }

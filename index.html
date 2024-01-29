@@ -130,7 +130,7 @@ id="MCQCount1"></span> MCQs)</p>
 </button>
 </a>
 </div>
-<!-- <div class="col">
+<div class="col">
 <a id="quizLink2" href="#">
 <button class="button">
 <div class="box-placeholder" id="placeholder2">
@@ -163,7 +163,7 @@ id="MCQCount2"></span> MCQs)</p>
 </div>
 </button>
 </a>
-</div> -->
+</div>
 </div>
 <div class="svg">
 <img src="favicon/safari-pinned-tab.svg">
@@ -180,13 +180,13 @@ document.getElementById('actualContent1').style.display = 'block';
 }, 1000);
 </script>
 
-<!-- <script id="secondbox">
+<script id="secondbox">
 // Simulate content loading for the second box
 setTimeout(function () {
 document.getElementById('placeholder2').style.display = 'none';
 document.getElementById('actualContent2').style.display = 'block';
 }, 1000); // Adjust the timeout based on your actual content loading time
-</script> -->
+</script>
 
 <script id="quizlink-1">
 // Fetch the JSON data from the file using AJAX
@@ -212,7 +212,7 @@ console.error('Quiz entries not found in JSON data.');
 .catch(error => console.error('Error fetching JSON:', error));
 </script>
 
-<!-- <script id="quizlink-2">
+<script id="quizlink-2">
 // Fetch the JSON data from the file using AJAX
 fetch('data/surgery.json')
 .then(response => response.json())
@@ -229,13 +229,12 @@ quizLink2.href = quizEntry2.url;
 
 document.getElementById("topicContainer2").textContent = quizEntry2.text;
 document.getElementById("MCQCount2").textContent = quizEntry2.questions;
-} 
-else {
+} else {
 console.error('Quiz entries not found in JSON data.');
 }
 })
 .catch(error => console.error('Error fetching JSON:', error));
-</script> -->
+</script>
 
 <div class="dash">
 <div class="col">
