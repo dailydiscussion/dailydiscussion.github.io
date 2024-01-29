@@ -450,6 +450,17 @@ margin: auto;
   margin: 2em;
 }
 
+.section-schedule{
+  background-color: #DBE7C9;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-radius: 1em;
+  margin: 1em;
+}
+
 .card-layout{
   display: flex;
   flex-direction: row;

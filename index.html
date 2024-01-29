@@ -323,10 +323,78 @@ Today
 <div class="calender" id="calendarContainer">
 <!-- Days will be inserted here dynamically -->
 </div>
-
+<div>
+<h3 style="margin-top: 2em; margin-bottom:1em;">
+Important dates :
+</h3>
+<ul>
+<li>
+<h4 style="margin: 0;">
+INICET 2024 
+</h4>
+<h4 id="countdownOutput1" class="counter-date" ></h4>
+</li>
+<li>
+<h4 style="margin: 0;">
+NEET PG 2024 
+</h4>
+<h4 id="countdownOutput2" class="counter-date"></h4>
+</li>
+</ul>
 </div>
-
+</div>
 </main>
+
+<style>
+.counter-date{
+font-weight:100; 
+margin: 0;
+margin-top: 10px;
+background-color: #F8FAE5;
+max-width: max-content;
+padding: 1em;
+border-radius: 1em;
+}
+
+ul{
+margin: 0;
+padding: 0;
+}
+
+li{
+margin-top: 30px;
+list-style: none;
+background-color: white;
+padding: 1em;
+max-width: max-content;
+border-radius: 1em;
+}
+</style>
+
+<script>
+// Function to update the countdown
+function updateCountdown(targetDate, outputElementId) {
+const currentDate = new Date();
+const timeDifference = targetDate - currentDate;
+
+if (timeDifference > 0) {
+const days = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+
+// Update the content of the HTML element with the countdown
+document.getElementById(outputElementId).innerHTML = `${days} days remaining until exam.`;
+} else {
+document.getElementById(outputElementId).innerHTML = "The specified date has passed.";
+}
+}
+
+// Set the target date for the first countdown
+const targetDate1 = new Date("2024-05-19T00:00:00");
+setInterval(() => updateCountdown(targetDate1, "countdownOutput1"), 1000);
+
+// Set the target date for the second countdown
+const targetDate2 = new Date("2024-07-07T00:00:00");
+setInterval(() => updateCountdown(targetDate2, "countdownOutput2"), 1000);
+</script>
 
 <main class="section-table">
 <div>
@@ -377,26 +445,139 @@ function calculateTotalTests(testData) {
 return testData.tests[0].links.length;
 }
 
-const cardData = [
-{ id: 'surgery-link', img: 'svg/surgery.svg', title: 'Surgery', icon: 'surgery-icon', json: 'data/surgery.json' },
-{ id: 'obgy-link', img: 'svg/obgy.svg', title: 'Obs&gyne', icon: 'obgy-icon', json: 'data/obgy.json' },
-{ id: 'medicine-link', img: 'svg/medicine.svg', title: 'Medicine', icon: 'medicine-icon', json: 'data/medicine.json' },
-{ id: 'pedia-link', img: 'svg/pedia.svg', title: 'Pediatrics', icon: 'pedia-icon', json: 'data/pedia.json' },
-{ id: 'ortho-link', img: 'svg/ortho.svg', title: 'Orthopaedics', icon: 'ortho-icon', json: 'data/ortho.json' },
-{ id: 'anesthesia-link', img: 'svg/anesthesia.svg', title: 'Anesthesiology', icon: 'anesthesia-icon', json: 'data/anesthesia.json' },
-{ id: 'radiology-link', img: 'svg/radiology.svg', title: 'Radiology', icon: 'radiology-icon', json: 'data/radiology.json' },
-{ id: 'anatomy-link', img: 'svg/anatomy.svg', title: 'Anatomy', icon: 'anatomy-icon', json: 'data/anatomy.json' },
-{ id: 'physiology-link', img: 'svg/physiology.svg', title: 'Physiology', icon: 'physiology-icon', json: 'data/physiology.json' },
-{ id: 'biochem-link', img: 'svg/biochem.svg', title: 'Biochemistry', icon: 'biochem-icon', json: 'data/biochem.json' },
-{ id: 'derma-link', img: 'svg/derma.svg', title: 'Dermatology', icon: 'derma-icon', json: 'data/derma.json' },
-{ id: 'eye-link', img: 'svg/eye.svg', title: 'Eye', icon: 'eye-icon', json: 'data/eye.json' },
-{ id: 'ent-link', img: 'svg/ent.svg', title: 'ENT', icon: 'ent-icon', json: 'data/ent.json' },
-{ id: 'microbiology-link', img: 'svg/microbiology.svg', title: 'Microbiology', icon: 'microbiology-icon', json: 'data/microbiology.json' },
-{ id: 'patho-link', img: 'svg/patho.svg', title: 'Pathology', icon: 'patho-icon', json: 'data/patho.json' },
-{ id: 'pharma-link', img: 'svg/pharma.svg', title: 'Pharmacology', icon: 'pharma-icon', json: 'data/pharma.json' },
-{ id: 'psm-link', img: 'svg/psm.svg', title: 'PSM', icon: 'psm-icon', json: 'data/psm.json' },
-{ id: 'psychiatry-link', img: 'svg/psychiatry.svg', title: 'Psychiatry', icon: 'psychiatry-icon', json: 'data/psychiatry.json' },
-{ id: 'fmt-link', img: 'svg/fmt.svg', title: 'FMT', icon: 'fmt-icon', json: 'data/fmt.json' }
+const cardData = [{
+id: 'surgery-link',
+img: 'svg/surgery.svg',
+title: 'Surgery',
+icon: 'surgery-icon',
+json: 'data/surgery.json'
+},
+{
+id: 'obgy-link',
+img: 'svg/obgy.svg',
+title: 'Obs&gyne',
+icon: 'obgy-icon',
+json: 'data/obgy.json'
+},
+{
+id: 'medicine-link',
+img: 'svg/medicine.svg',
+title: 'Medicine',
+icon: 'medicine-icon',
+json: 'data/medicine.json'
+},
+{
+id: 'pedia-link',
+img: 'svg/pedia.svg',
+title: 'Pediatrics',
+icon: 'pedia-icon',
+json: 'data/pedia.json'
+},
+{
+id: 'ortho-link',
+img: 'svg/ortho.svg',
+title: 'Orthopaedics',
+icon: 'ortho-icon',
+json: 'data/ortho.json'
+},
+{
+id: 'anesthesia-link',
+img: 'svg/anesthesia.svg',
+title: 'Anesthesiology',
+icon: 'anesthesia-icon',
+json: 'data/anesthesia.json'
+},
+{
+id: 'radiology-link',
+img: 'svg/radiology.svg',
+title: 'Radiology',
+icon: 'radiology-icon',
+json: 'data/radiology.json'
+},
+{
+id: 'anatomy-link',
+img: 'svg/anatomy.svg',
+title: 'Anatomy',
+icon: 'anatomy-icon',
+json: 'data/anatomy.json'
+},
+{
+id: 'physiology-link',
+img: 'svg/physiology.svg',
+title: 'Physiology',
+icon: 'physiology-icon',
+json: 'data/physiology.json'
+},
+{
+id: 'biochem-link',
+img: 'svg/biochem.svg',
+title: 'Biochemistry',
+icon: 'biochem-icon',
+json: 'data/biochem.json'
+},
+{
+id: 'derma-link',
+img: 'svg/derma.svg',
+title: 'Dermatology',
+icon: 'derma-icon',
+json: 'data/derma.json'
+},
+{
+id: 'eye-link',
+img: 'svg/eye.svg',
+title: 'Eye',
+icon: 'eye-icon',
+json: 'data/eye.json'
+},
+{
+id: 'ent-link',
+img: 'svg/ent.svg',
+title: 'ENT',
+icon: 'ent-icon',
+json: 'data/ent.json'
+},
+{
+id: 'microbiology-link',
+img: 'svg/microbiology.svg',
+title: 'Microbiology',
+icon: 'microbiology-icon',
+json: 'data/microbiology.json'
+},
+{
+id: 'patho-link',
+img: 'svg/patho.svg',
+title: 'Pathology',
+icon: 'patho-icon',
+json: 'data/patho.json'
+},
+{
+id: 'pharma-link',
+img: 'svg/pharma.svg',
+title: 'Pharmacology',
+icon: 'pharma-icon',
+json: 'data/pharma.json'
+},
+{
+id: 'psm-link',
+img: 'svg/psm.svg',
+title: 'PSM',
+icon: 'psm-icon',
+json: 'data/psm.json'
+},
+{
+id: 'psychiatry-link',
+img: 'svg/psychiatry.svg',
+title: 'Psychiatry',
+icon: 'psychiatry-icon',
+json: 'data/psychiatry.json'
+},
+{
+id: 'fmt-link',
+img: 'svg/fmt.svg',
+title: 'FMT',
+icon: 'fmt-icon',
+json: 'data/fmt.json'
+}
 // Add more card data as needed
 ];
 
