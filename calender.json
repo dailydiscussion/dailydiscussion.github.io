@@ -4,37 +4,37 @@
       "id": 3,
       "day": "Mon",
       "date": "29",
-      "meetings": "Surgery: <p>Surgery Test 2 2020-21</p>"
+      "meetings": "<p>Surgery:</p> <p>Surgery Test 2 2020-21</p>"
     },
     {
       "id": 4,
       "day": "Tue",
       "date": "30",
-      "meetings": "Surgery: <p>Surgery Test 2022-23</p>"
+      "meetings": "<p>Surgery:</p> <p>Surgery Test 2022-23</p>"
     },
     {
       "id": 5,
       "day": "Thu",
       "date": "31",
-      "meetings": "Coming up soon"
+      "meetings": "<p> Coming up soon </p>"
     },
     {
       "id": 6,
       "day": "Fri",
       "date": "1",
-      "meetings": "Coming up soon"
+      "meetings": "<p> Coming up soon </p>"
     },
     {
       "id": 7,
       "day": "Sat",
       "date": "2",
-      "meetings": "Coming up soon"
+      "meetings": "<p> Coming up soon </p>"
     },
     {
       "id": 8,
       "day": "Sun",
       "date": "3",
-      "meetings": "Coming up soon"
+      "meetings": "<p> Coming up soon </p>"
     }
     
   ]
