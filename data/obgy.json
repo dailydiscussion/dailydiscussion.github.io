@@ -3,7 +3,14 @@
     {
       "title": "Obs&gyne Tests",
       "links": [
-        
+        {
+          "s.no": 1,
+          "id": "Quiz",
+          "text": "Fundamentals + Antenatal + Instruments",
+          "questions": "100",
+          "days": 1,
+          "url": "https://link.marrow.com/join_custom_module/55C90GC4"
+        }
       ]
     }
   ]

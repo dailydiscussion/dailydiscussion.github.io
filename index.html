@@ -115,7 +115,7 @@ class="circle-placeholder"></div>
 <div id="actualContent1" style="display: none;">
 <div class="flex-question">
 <div style="margin-left: 10px; margin-right:5px;">
-<span><img src="svg/surgery.svg"></span>
+<span><img src="svg/obgy.svg"></span>
 </div>
 <div>
 <p id="topicContainer1" style="margin:10px;"></p>
@@ -130,7 +130,7 @@ id="MCQCount1"></span> MCQs)</p>
 </button>
 </a>
 </div>
-<div class="col">
+<!-- <div class="col">
 <a id="quizLink2" href="#">
 <button class="button">
 <div class="box-placeholder" id="placeholder2">
@@ -163,7 +163,7 @@ id="MCQCount2"></span> MCQs)</p>
 </div>
 </button>
 </a>
-</div>
+</div> -->
 </div>
 <div class="svg">
 <img src="favicon/safari-pinned-tab.svg">
@@ -180,17 +180,17 @@ document.getElementById('actualContent1').style.display = 'block';
 }, 1000);
 </script>
 
-<script id="secondbox">
+<!-- <script id="secondbox">
 // Simulate content loading for the second box
 setTimeout(function () {
 document.getElementById('placeholder2').style.display = 'none';
 document.getElementById('actualContent2').style.display = 'block';
 }, 1000); // Adjust the timeout based on your actual content loading time
-</script>
+</script> -->
 
 <script id="quizlink-1">
 // Fetch the JSON data from the file using AJAX
-fetch('data/surgery.json')
+fetch('data/obgy.json')
 .then(response => response.json())
 .then(jsonData => {
 // Find the Quiz entry by ID
@@ -212,7 +212,7 @@ console.error('Quiz entries not found in JSON data.');
 .catch(error => console.error('Error fetching JSON:', error));
 </script>
 
-<script id="quizlink-2">
+<!-- <script id="quizlink-2">
 // Fetch the JSON data from the file using AJAX
 fetch('data/surgery.json')
 .then(response => response.json())
@@ -234,7 +234,7 @@ console.error('Quiz entries not found in JSON data.');
 }
 })
 .catch(error => console.error('Error fetching JSON:', error));
-</script>
+</script> -->
 
 <div class="dash">
 <div class="col">
@@ -281,7 +281,7 @@ Tests
 Subjects
 </h6>
 <h2>
-1/19
+2/19
 </h2>
 
 </div>
@@ -447,19 +447,20 @@ function calculateTotalTests(testData) {
 return testData.tests[0].links.length;
 }
 
-const cardData = [{
-id: 'surgery-link',
-img: 'svg/surgery.svg',
-title: 'Surgery',
-icon: 'surgery-icon',
-json: 'data/surgery.json'
-},
+const cardData = [
 {
 id: 'obgy-link',
 img: 'svg/obgy.svg',
 title: 'Obs&gyne',
 icon: 'obgy-icon',
 json: 'data/obgy.json'
+},
+{
+id: 'surgery-link',
+img: 'svg/surgery.svg',
+title: 'Surgery',
+icon: 'surgery-icon',
+json: 'data/surgery.json'
 },
 {
 id: 'medicine-link',
@@ -735,17 +736,32 @@ console.error(`Invalid or missing number of days for test: ${test.text}`);
 return totalDays;
 }
 
-// Fetch JSON data from data/surgery.json
-fetch('data/surgery.json')
-.then(response => response.json())
-.then(data => {
+// Fetch JSON data from all files in the data folder
+const fetchData = async () => {
+const files = ['surgery.json','obgy.json', 'anatomy.json', 'anesthesia.json', 'biochem.json','derma.json', 'ent.json', 'fmt.json', 'medicine.json', 'microbiology.json', 'ortho.json', 'patho.json', 'pedia.json', 'pharma.json', 'physiology.json', 'psm.json', 'psychiatry.json', 'radiology.json'];
+const responses = await Promise.all(files.map(file => fetch(`data/${file}`).then(response => response.json())));
+
+return responses;
+};
+
+fetchData()
+.then(dataArray => {
+// Combine data from all JSON files
+const combinedData = dataArray.reduce((accumulator, currentData) => {
+// Combine logic here based on your data structure
+// For simplicity, assuming the structure is similar across files
+accumulator.tests[0].links = accumulator.tests[0].links.concat(currentData.tests[0].links);
+return accumulator;
+});
+
 // Update HTML elements with calculated values
-document.getElementById('totalQuestions').innerText = calculateTotalQuestions(data);
-document.getElementById('totalTests').innerText = calculateTotalTests(data);
-document.getElementById('totalDays').innerText = calculateTotalDays(data);
-document.getElementById('totalTests-card').innerText = calculateTotalTests(data);
+document.getElementById('totalQuestions').innerText = calculateTotalQuestions(combinedData);
+document.getElementById('totalTests').innerText = calculateTotalTests(combinedData);
+document.getElementById('totalDays').innerText = calculateTotalDays(combinedData);
+document.getElementById('totalTests-card').innerText = calculateTotalTests(combinedData);
 })
 .catch(error => console.error('Error fetching JSON:', error));
+
 </script>
 
 <script id="current-date">

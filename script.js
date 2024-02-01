@@ -104,4 +104,4 @@ createDynamicTable("psm-link", "data/psm.json", "psm-icon");
 createDynamicTable("psychiatry-link", "data/psychiatry.json", "psychiatry-icon");
 createDynamicTable("fmt-link", "data/fmt.json", "fmt-icon");
 
-document.getElementById("surgery-link").click();
+document.getElementById("obgy-link").click();

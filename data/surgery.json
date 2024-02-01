@@ -152,7 +152,6 @@
         },
         {
           "s.no": 22,
-          "id": "Quiz",
           "text": "Surgery Test ST1 2020-21",
           "questions": "50",
           "days": 1,
@@ -160,11 +159,17 @@
         },
         {
           "s.no": 23,
-          "id": "Quiz-2",
           "text": "Surgery Test ST2 2020-21",
           "questions": "50",
           "days": 0,
           "url": "https://link.marrow.com/test/609d219ac49dd45e67804b5a?prev=subject"
+        },
+        {
+          "s.no": 24,
+          "text": "Surgery Test 2022-23",
+          "questions": "50",
+          "days": 1,
+          "url": "https://link.marrow.com/test/62a1a7611543b6fcba21e242/result"
         }
       ]
     }
