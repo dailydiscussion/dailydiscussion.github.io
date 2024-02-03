@@ -2,15 +2,15 @@
   "entries": [
     {
       "id": 2,
-      "day": "Sat",
-      "date": "2",
-      "meetings": "<p>Obgy:</p> <p>Fundamentals + Antenatal + Instruments</p>"
+      "day": "Sun",
+      "date": "3",
+      "meetings": "<p>Obgy:</p> <p>Labor and Peurperium</p>"
     },
     {
       "id": 3,
-      "day": "Sun",
-      "date": "3",
-      "meetings": "<p>Obgy:</p> <p>Labor + Obs Complications</p>"
+      "day": "Mon",
+      "date": "4",
+      "meetings": "<p>Obgy:</p> <p> Obs Complications</p>"
     },
     {
       "id": 4,
@@ -29,12 +29,6 @@
       "day": "Wed",
       "date": "6",
       "meetings": "<p>Obgy:</p> <p>Infertility + Oncology</p>"
-    },
-    {
-      "id": 7,
-      "day": "Thu",
-      "date": "7",
-      "meetings": "<p>Obgy:</p> <p>OBG Complete</p>"
     },
     {
       "id": 8,
