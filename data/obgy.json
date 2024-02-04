@@ -19,11 +19,18 @@
         },
         {
           "s.no": 3,
-          "id": "Quiz",
           "text": "Obstetrics Complications",
           "questions": "50",
           "days": 1,
           "url": "https://link.marrow.com/join_custom_module/55CB0GHI"
+        },
+        {
+          "s.no": 4,
+          "id": "Quiz",
+          "text": "Medical & Surgical Complications",
+          "questions": "50",
+          "days": 1,
+          "url": "https://link.marrow.com/join_custom_module/55CC0EFY"
         }
       ]
     }
