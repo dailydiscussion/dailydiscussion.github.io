@@ -420,9 +420,11 @@ max-width: 80%;
 td{
 background-color: #F8F4EC;
 color: black;
-border-radius: 1em;
 padding: 1em;
+border-radius: 1em;
 }
+
+
 
 /* Apply transition to the element you want to animate */
 .animated-element {
