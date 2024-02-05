@@ -910,6 +910,13 @@ calendarContainer.appendChild(dayElement);
 populateCalendar();
 </script>
 
+<script>
+ // Optional: If you want to disable right-click as well
+ document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+</script>
+
 <script src="script.js"></script>
 
 </body>

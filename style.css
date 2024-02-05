@@ -20,6 +20,7 @@ margin: 0;
 padding: 0;
 display: flex;
 flex-direction: column;
+user-select: none;
 overflow-scrolling: touch;
 min-height: 100vh;
 font-family: 'Josefin Sans', sans-serif;
@@ -423,17 +424,13 @@ background-color: #F8F4EC;
 color: black;
 padding: 1em;
 border-radius: 1em;
-transition: background-color 0.3s ease, color 0.3s ease, padding-top 0.3s ease, padding-bottom 0.3s ease, border-radius 0.3s ease;
+transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 td:hover{
 background-color: #EBD9B4;
 color: black;
-padding-top: 1.5em;
-padding-bottom: 1.5em;
-border-radius: 1.5em;
 }
-
 
 
 /* Apply transition to the element you want to animate */
