@@ -48,7 +48,7 @@ function createTable(data, table, iconDivId) {
 
             var questionsDiv = document.createElement("div");
             questionsDiv.classList.add("table-questions");
-            questionsDiv.innerHTML = '(' + link.questions + ' MCQs)';
+            questionsDiv.innerHTML = link.questions + ' MCQs';
 
             topicText.appendChild(questionsDiv);
 

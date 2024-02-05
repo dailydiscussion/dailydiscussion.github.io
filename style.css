@@ -27,86 +27,85 @@ transition: font-size 0.3s ease; /* Apply a smooth transition for font size chan
 }
 
 .section-table{
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 20px;
+background-color: white;
+display: flex;
+flex-direction: column;
 }
 
 .section-schedule{
-  background-color: #DBE7C9;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-  padding-bottom: 60px;
-  border-radius: 1em;
-  margin: 1em;
+background-color: #DBE7C9;
+color: black;
+display: flex;
+flex-direction: column;
+padding-top: 20px;
+padding-bottom: 60px;
+border-radius: 1em;
+margin: 1em;
 }
 
 .schedule{
-  display: flex;
-  flex-direction: column;
-  width: 75%;
-  margin: auto;
-  margin-top: 0;
+display: flex;
+flex-direction: column;
+width: 75%;
+margin: auto;
+margin-top: 0;
 }
 
 .calender {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  overflow: auto;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+overflow: auto;
 }
 
 /* Hide the scrollbar for WebKit browsers (Safari and Chrome) */
 .calender::-webkit-scrollbar {
-  display: none;
+display: none;
 }
 
 .card-layout::-webkit-scrollbar {
-  display: none;
+display: none;
 }
 
 .ul::-webkit-scrollbar {
-  display: none;
+display: none;
 }
 
 .day{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  background-color: white;
-  color: black;
-  max-width: max-content;
-  margin-left: 10px;
-  padding: 1em;
-  border-radius: 1em;
-  flex: 0 0 50%;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+background-color: white;
+color: black;
+max-width: max-content;
+margin-left: 10px;
+padding: 1em;
+border-radius: 1em;
+flex: 0 0 50%;
 }
 
 .day:hover {
-  background-color: white;
-  color: black;
+background-color: white;
+color: black;
 }
 
 .day:first-child{
-  margin-left: 0;
+margin-left: 0;
 }
 
 .reminder-content{
-  background-color: #F8FAE5;
-  color: black;
-  padding: 1em;
-  border-radius: 1em;
-  max-width: max-content;
-  margin-top: 1em;
+background-color: #F8FAE5;
+color: black;
+padding: 1em;
+border-radius: 1em;
+max-width: max-content;
+margin-top: 1em;
 }
 
 .reminder{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
 }
 
 .footer {
@@ -329,60 +328,86 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .card-layout{
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  width: 75%;
-  margin: auto;
-  overflow: auto;
+display: flex;
+flex-direction: row;
+justify-content: left;
+width: 75%;
+margin: auto;
+overflow: auto;
 }
 
 .cards{
-  flex: 0 0 20%;
+flex: 0 0 20%;
 }
 
 .card{
-  background-color: #F8F4EC;
-  color: black;
-  padding: 1.5em;
-  border-radius: 1em;
-  margin-right: 10px;
+background-color: #F8F4EC;
+color: black;
+padding: 1.5em;
+border-radius: 1em;
+margin-right: 10px;
 }
 
 .card-text{
-  margin-top: 5px;
-  font-size: 12px;
+margin-top: 5px;
+font-size: 12px;
 }
 
 .card-active{
-  background-color: black;
-  color: white;
-  padding: 1.5em;
-  margin: auto;
-  border-radius: 1em;
+background-color: black;
+color: white;
+padding: 1.5em;
+margin: auto;
+border-radius: 1em;
 }
 
 .card:hover{
-  background-color: white;
-  color: black;
+background-color: white;
+color: black;
 }
 
 .dash-card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: nowrap;
-  margin-top: 40px;
-  height: 80px;
+display: flex;
+flex-direction: column;
+align-items: center;
+flex-wrap: nowrap;
+margin-top: 40px;
+height: 80px;
 }
 
 .dash-card img{
-  margin-bottom:20px;
+margin-bottom:20px;
+}
+
+.about{
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+padding-bottom: 2em;
+width: 75%;
+margin: auto;
+}
+
+hr {
+border: none;
+height: 2px;
+background-color: #BED1CF;
+margin: 20px 0;
 }
 
 table {
 width: 75%;
 margin: auto;
+}
+
+.table-questions{
+margin-top: 10px;
+background-color: #EBD9B4;
+color: black;
+max-width: max-content;
+padding: 0.5em;
+border-radius: 1em;
 }
 
 th, td {
@@ -394,8 +419,8 @@ max-width: 80%;
 
 td{
 background-color: #F8F4EC;
-color: #0F1035;
-border-radius: 0.5em;
+color: black;
+border-radius: 1em;
 padding: 1em;
 }
 
@@ -447,30 +472,44 @@ width: 90%;
 margin: auto;
 }
 
+.about{
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+padding-bottom: 2em;
+width: 90%;
+margin: auto;
+}
+
+.table-questions{
+margin-top: 10px;
+}
+
 .schedule{
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 2em;
+display: flex;
+flex-direction: column;
+width: 90%;
+margin: 2em;
 }
 
 .section-schedule{
-  background-color: #DBE7C9;
-  color: black;
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  border-radius: 1em;
-  margin: 1em;
+background-color: #DBE7C9;
+color: black;
+display: flex;
+flex-direction: column;
+padding-top: 20px;
+padding-bottom: 20px;
+border-radius: 1em;
+margin: 1em;
 }
 
 .card-layout{
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  width: 90%;
-  margin: auto;
+display: flex;
+flex-direction: row;
+justify-content: left;
+width: 90%;
+margin: auto;
 }
 
 .col-6-12{
