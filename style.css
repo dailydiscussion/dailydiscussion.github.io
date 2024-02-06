@@ -35,7 +35,6 @@ flex-direction: column;
 
 .section-schedule{
 background-color: #DBE7C9;
-background-image: url(svg/topography2.svg);
 color: black;
 display: flex;
 flex-direction: column;
@@ -392,13 +391,6 @@ width: 75%;
 margin: auto;
 }
 
-hr {
-border: none;
-height: 2px;
-background-color: #BED1CF;
-margin: 20px 0;
-}
-
 table {
 width: 75%;
 margin: auto;
@@ -541,7 +533,6 @@ tap-highlight-color: rgba(0,0,0,0);
 }
 
 
-
 /* Apply transition to the element you want to animate */
 .animated-element {
 opacity: 0;
@@ -593,11 +584,9 @@ margin: auto;
 .about{
 display: flex;
 flex-direction: column;
-justify-content: center;
+flex-wrap: nowrap;
+align-items: center;
 text-align: center;
-padding-bottom: 2em;
-width: 90%;
-margin: auto;
 }
 
 .table-questions{
@@ -610,6 +599,7 @@ flex-direction: column;
 width: 90%;
 margin: 2em;
 }
+
 
 .section-schedule{
 background-color: #DBE7C9;
