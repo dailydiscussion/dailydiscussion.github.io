@@ -16,37 +16,37 @@
       "id": 8,
       "day": "Fri",
       "date": "8",
-      "meetings": "<p>Obgy:</p> <p>2017 OBG ST 1 + ST 2 (50 MCQs each)</p>"
+      "meetings": "<p>Obgy:</p> <p>OBG ST 1 + ST 2 (2017)</p>"
     },
     {
       "id": 9,
       "day": "Sat",
       "date": "9",
-      "meetings": "<p>Obgy:</p> <p>2017 OBG ST 3 + 2018 OBG 1 (50 MCQs each)</p>"
+      "meetings": "<p>Obgy:</p> <p>OBG ST 3 (2017) + OBG 1 (2018)</p>"
     },
     {
       "id": 10,
       "day": "Sun",
       "date": "10",
-      "meetings": "<p>Obgy:</p> <p>2018 OBG 2 (50 MCQs) + 2019 OBG 1 (75 MCQs)</p>"
+      "meetings": "<p>Obgy:</p> <p>OBG 2 (2018) + OBG 1 (2019)</p>"
     },
     {
       "id": 11,
       "day": "Mon",
       "date": "11",
-      "meetings": "<p>Obgy:</p> <p>2019 OBG 2 (75 MCQs) + 2020 OBG 1 (75 MCQs)</p>"
+      "meetings": "<p>Obgy:</p> <p>OBG 2 (2019) + OBG 1 (2020)</p>"
     },
     {
       "id": 12,
       "day": "Tue",
       "date": "12",
-      "meetings": "<p>Obgy:</p> <p>2020 OBG 2 (75 MCQs) + 2022 OBG (50 MCQs)</p>"
+      "meetings": "<p>Obgy:</p> <p>OBG 2 (2020) + OBG Complete (2022)</p>"
     },
     {
       "id": 12,
       "day": "Mon",
       "date": "13",
-      "meetings": "<p>Obgy:</p> <p>2023 OBG 1 + 2 (50 MCQs)</p>"
+      "meetings": "<p>Obgy:</p> <p>OBG 1 + 2 (2023)</p>"
     }   
     
     
