@@ -8,9 +8,7 @@
 <title>Target NEET-PG | INICET 2024</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -21,8 +19,11 @@ rel="stylesheet">
 </head>
 
 <body>
+
+<div class="desktop">    
+<div class="main-content">
 <main class="main animated-element content">
-<div class="home">
+<div class="home" id="home-link">
 <div class="header-box">
 <div class="col-header">
 <div>
@@ -39,62 +40,6 @@ rel="stylesheet">
 Today's Quiz
 </h3>
 </div>
-
-<style>
-.box-placeholder {
-display: block;
-}
-
-.box-placeholder .circle-placeholder {
-height: 30px;
-width: 30px;
-background-color: #444;
-/* Placeholder color */
-border-radius: 50%;
-/* Make it circular */
-opacity: 0.1;
-/* Placeholder opacity */
-animation: rotateAnimation 1.5s infinite;
-/* Infinite rotation animation */
-}
-
-.box-placeholder #topicContainerPlaceholder {
-height: 12px;
-/* Adjust the height based on your design */
-width: 150px;
-/* Adjust the width based on your design */
-background-color: #444;
-/* Placeholder color */
-border-radius: 100px;
-/* Rounded corners */
-opacity: 0.1;
-/* Placeholder opacity */
-}
-
-.box-placeholder #MCQCountPlaceholder {
-display: inline-block;
-background-color: #444;
-/* Placeholder color */
-height: 11px;
-/* Adjust the height based on your design */
-width: 60px;
-/* Adjust the width based on your design */
-border-radius: 100px;
-/* Rounded corners */
-opacity: 0.1;
-/* Placeholder opacity */
-}
-
-@keyframes rotateAnimation {
-0% {
-transform: rotate(0deg);
-}
-
-100% {
-transform: rotate(360deg);
-}
-}
-</style>
 
 <div class="col">
 <a id="quizLink1" href="#">
@@ -172,6 +117,247 @@ id="MCQCount2"></span> MCQs)</p>
 </div>
 </div>
 
+<div class="dash" id="dash-link">
+<div class="col">
+<div class="dash-flex">
+<div>
+<h3>
+Dashboard
+</h3>
+</div>
+<div>
+<img src="svg/dash.svg">
+</div>
+</div>
+</div>
+<div class="dash-container">
+<div>
+<div class="flex">
+<div class="col-6-12" style="background-color: #F8FAE5;">
+
+<h6>
+Days
+</h6>
+<h2 id="totalDays"></h2>
+
+</div>
+<div class="col-6-12" style="background-color: #F9EFDB;">
+<h6>
+MCQs
+</h6>
+<h2 id="totalQuestions"></h2>
+
+</div>
+</div>
+<div class="flex">
+<div class="col-6-12" style="background-color: #FBF9F1;">
+<h6>
+Tests
+</h6>
+<h2 id="totalTests"></h2>
+
+</div>
+<div class="col-6-12" style="background-color: #E5E1DA;">
+<h6>
+Subjects
+</h6>
+<h2>
+2/19
+</h2>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</main>
+
+<main class="section-schedule" id="schedule-link">
+<div>
+<div class="dash-flex">
+<div>
+<h3>
+Calender
+</h3>
+</div>
+<div>
+<img src="svg/calender.svg">
+</div>
+</div>
+<h5 style="font-weight:100; color: black; text-align:center; margin-top:0px;">
+Discover your schedule for upcoming tests
+</h5>
+</div>
+<div class="schedule">
+<div>
+<h4 id="currentDate" style="font-weight:100; margin:0;"></h4>
+<h2>
+Today
+</h2>
+</div>
+<div class="calender" id="calendarContainer">
+<!-- Days will be inserted here dynamically -->
+</div>
+<div>
+<h3 style="margin-top: 2em; margin-bottom:0.5em;">
+Important dates :
+</h3>
+<div class="ul">
+<div class="li">
+<h5 style="margin: 0;">
+INICET 2024 - May 19, 2024
+</h5>
+<h5 id="countdownOutput1" class="counter-date"></h5>
+</div>
+<div class="li">
+<h5 style="margin: 0;">
+NEET PG 2024 - July 7, 2024
+</h5>
+<h5 id="countdownOutput2" class="counter-date"></h5>
+</div>
+</div>
+</div>
+</div>
+</main>
+
+<main class="section-table" id="test-link">
+
+<div>
+<div class="dash-flex margin-top-2">
+<div>
+<h3>
+Tests Completed
+</h3>
+</div>
+<div>
+<img src="svg/check.svg">
+</div>
+</div>
+<h5 class="subheading" style="font-weight:100;">
+A peek into your previous test performances
+</h5>
+</div>
+
+<div class="card-layout" id="card-container"></div>
+
+<table class="table" id="dynamic-table"></table>
+
+</main>
+
+<main class="about">
+<hr>
+<span style="text-align: center;">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="#000000" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
+xml:space="preserve">
+<g id="Quotemarks-left">
+<path d="M50.6292648,26.225668c-0.1288986-1.3934994-0.0303001-5.1816006,3.5985985-10.4492006
+c0.2745018-0.3975,0.2247009-0.9335995-0.1161957-1.2743998c-1.4795036-1.4794998-2.395504-2.4131002-3.0379982-3.0663996
+c-0.8448029-0.8614006-1.2305031-1.2539005-1.795002-1.7657003c-0.3769035-0.3388004-0.9472008-0.3446999-1.3281021-0.0125999
+c-6.3251991,5.5038996-13.3505974,16.8768997-12.3339958,30.8105011
+c0.5956955,8.1815987,6.5634956,14.1200981,14.1894951,14.1200981c7.8260994,0,14.1932983-6.3661995,14.1932983-14.1923981
+C63.9993629,32.845768,58.0736694,26.6543674,50.6292648,26.225668z M49.8060646,52.5879669
+c-6.5489006,0-11.6767998-5.1581993-12.1953011-12.2645988c0,0,0,0,0-0.0009995
+c-1.1435966-15.6709003,8.1718025-25.8496017,10.9863014-28.5449009c0.2743988,0.2705002,0.5878983,0.5887995,1.0498009,1.0594997
+c0.5565987,0.5664005,1.3183975,1.3417997,2.4706993,2.4981003c-4.4053001,6.7870998-3.5741997,11.6229992-3.2099991,12.3164005
+c0.1728973,0.3290997,0.5273972,0.5508003,0.8984985,0.5508003c6.7236023,0,12.1932983,5.469698,12.1932983,12.1933002
+C61.9993629,47.1182671,56.5296669,52.5879669,49.8060646,52.5879669z" />
+<path d="M15.1136675,26.225668c-0.1299-1.3896008-0.0341997-5.1748009,3.5985994-10.4492006
+c0.2735004-0.3975,0.2245998-0.9335995-0.1161995-1.2743998c-1.4766006-1.4765997-2.3915997-2.4091997-3.0332003-3.0625
+c-0.8476-0.8633003-1.2343998-1.2568998-1.7987995-1.7695999c-0.3769999-0.3388004-0.9473-0.3437004-1.3281002-0.0136003
+c-6.3251996,5.5039005-13.3515997,16.875-12.3369999,30.8115005v0.0009995
+c0.5977,8.1805992,6.5664001,14.1190987,14.1924,14.1190987c7.8261995,0,14.1934004-6.3661995,14.1934004-14.1923981
+C28.4847679,32.8448677,22.5589676,26.6524677,15.1136675,26.225668z M14.2913675,52.5879669
+c-6.5478001,0-11.6786995-5.1581993-12.1982002-12.2655983v0.0009995
+c-1.1406-15.6748009,8.1747999-25.8516006,10.9892006-28.5459003c0.2754002,0.2705002,0.5899,0.5908003,1.0528002,1.0625
+c0.5555992,0.5663996,1.3163996,1.3408003,2.4667988,2.4951c-4.4052992,6.7880993-3.5741997,11.6229992-3.2099991,12.3153992
+c0.1729002,0.3291016,0.5283003,0.5518017,0.8993998,0.5518017c6.7237005,0,12.1934004,5.469698,12.1934004,12.1933002
+C26.4847679,47.1182671,21.0150681,52.5879669,14.2913675,52.5879669z" />
+</g>
+</svg>
+</span>
+<div class="quote">
+<h4>
+The difference between a successful person and others is not a lack of strength, not a lack of
+knowledge,
+but rather a lack in will.
+<br> <br> - <span style="color: gray;">Vince Lombardi</span>
+</h4>
+</div>
+<span style="text-align: center;">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+<svg fill="#000000" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
+xml:space="preserve">
+<g id="Quotemarks-right">
+<path
+d="M14.1933422,9.4116497c-7.8260994,0-14.1922989,6.3662004-14.1922989,14.1924
+c0,7.5498009,5.9247999,13.7420998,13.3690996,14.169899c0.1288996,1.3916016,0.0321999,5.1797028-3.5977001,10.4491997
+C9.4980431,48.6206512,9.547843,49.1567497,9.888648,49.497551c1.4853945,1.4853973,2.4033947,2.4208984,3.0458946,3.0751991
+c0.8408995,0.8554993,1.2247,1.2461014,1.7861996,1.7559013c0.1904001,0.1727982,0.4306002,0.259697,0.6719055,0.259697
+c0.2342949,0,0.4676943-0.0819969,0.6561956-0.2450981c6.3251991-5.5038986,13.3515987-16.8759995,12.3349991-30.8115005
+C27.7881413,15.3501501,21.820343,9.4116497,14.1933422,9.4116497z M15.4023428,52.2221489
+c-0.2723999-0.2684975-0.5830002-0.5848999-1.0410004-1.0508003c-0.5565996-0.5672989-1.3203001-1.3446999-2.4784994-2.5067978
+c4.4053001-6.7881012,3.5731993-11.6230011,3.2089996-12.3164024c-0.1729002-0.3290977-0.5274-0.5507965-0.8985004-0.5507965
+c-6.7225995,0-12.1922989-5.4697018-12.1922989-12.1933022c0-6.7227001,5.4696999-12.1924,12.1922989-12.1924
+c6.5489006,0,11.6777992,5.1582012,12.1963062,12.2646008C27.5322418,39.3501511,18.2168427,49.5268517,15.4023428,52.2221489z" />
+<path d="M63.9004402,23.5317497v-0.0009995C63.302742,15.3501501,57.3340416,9.4116497,49.7090416,9.4116497
+c-7.8261986,0-14.1933937,6.3662004-14.1933937,14.1924c0,7.5498009,5.9257927,13.7420998,13.3710938,14.169899
+c0.1289062,1.3906021,0.0312004,5.1767006-3.5996017,10.4491997c-0.2743988,0.3975029-0.2245979,0.9336014,0.1162033,1.2744026
+c1.4794998,1.4794998,2.3955002,2.4130974,3.0380974,3.0663986c0.8446999,0.8613014,1.2304993,1.2538986,1.7949028,1.7656021
+c0.1903992,0.1718979,0.4315987,0.2587967,0.6718979,0.2587967c0.2344055,0,0.4678001-0.0819969,0.6562004-0.2460976
+C57.8896484,48.8383484,64.9160385,37.4663506,63.9004402,23.5317497z M50.917942,52.2221489
+c-0.2743988-0.2705002-0.5877991-0.5887985-1.0498009-1.0594978c-0.5565987-0.5665016-1.3172989-1.3418007-2.4706993-2.4981003
+c4.4053001-6.7891006,3.5742989-11.6230011,3.2109985-12.3164024c-0.1728973-0.3280983-0.5282974-0.5507965-0.8993988-0.5507965
+c-6.7237015,0-12.1933937-5.4697018-12.1933937-12.1933022c0-6.7227001,5.4696922-12.1924,12.1933937-12.1924
+c6.5477982,0,11.6777,5.1582012,12.1972008,12.2656002v-0.0009995
+C63.0478401,39.3481483,53.7324409,49.5268517,50.917942,52.2221489z" />
+</g>
+</svg>
+</span>
+<hr>
+</main>
+</div>
+</div>
+
+<footer class="footer">
+<h5>
+© Daily Discussion 2024 | All Rights Reserved
+</h5>
+</footer>
+
+<script id="animation">
+// Add the 'active' class to trigger the animation
+document.addEventListener('DOMContentLoaded', function () {
+document.querySelector('.animated-element').classList.add('active');
+});
+</script>
+
+<script id="greeting">
+// Get the current hour of the day
+var currentHour = new Date().getHours();
+
+// Function to determine the appropriate greeting based on the time
+function getGreeting() {
+var greeting = '';
+if (currentHour >= 5 && currentHour < 12) {
+greeting = 'Good Morning!';
+} else if (currentHour >= 12 && currentHour < 18) {
+greeting = 'Good Afternoon!';
+} else {
+greeting = 'Good Evening!';
+}
+return greeting;
+}
+
+// Display the greeting message
+document.getElementById('greeting').textContent = getGreeting();
+</script>
+
 <script id="firstbox">
 // Simulate content loading for the first box
 setTimeout(function () {
@@ -236,144 +422,148 @@ console.error('Quiz entries not found in JSON data.');
 .catch(error => console.error('Error fetching JSON:', error));
 </script> -->
 
-<div class="dash">
-<div class="col">
-<div class="dash-flex">
-<div>
-<h3>
-Dashboard
-</h3>
-</div>
-<div>
-<img src="svg/dash.svg">
-</div>
-</div>
-</div>
-<div class="dash-container">
-<div>
-<div class="flex">
-<div class="col-6-12" style="background-color: #F8FAE5;">
+<script id="dashboard">
+// Function to calculate total number of questions
+function calculateTotalQuestions(testData) {
+let totalQuestions = 0;
 
-<h6>
-Days
-</h6>
-<h2 id="totalDays"></h2>
+testData.tests[0].links.forEach(test => {
+const numberOfQuestions = parseInt(test.questions, 10);
 
-</div>
-<div class="col-6-12" style="background-color: #F9EFDB;">
-<h6>
-MCQs
-</h6>
-<h2 id="totalQuestions"></h2>
+if (!isNaN(numberOfQuestions)) {
+totalQuestions += numberOfQuestions;
+} else {
+console.error(`Invalid or missing number of questions for test: ${test.text}`);
+}
+});
 
-</div>
-</div>
-<div class="flex">
-<div class="col-6-12" style="background-color: #FBF9F1;">
-<h6>
-Tests
-</h6>
-<h2 id="totalTests"></h2>
-
-</div>
-<div class="col-6-12" style="background-color: #E5E1DA;">
-<h6>
-Subjects
-</h6>
-<h2>
-2/19
-</h2>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</main>
-
-
-<main class="section-schedule">
-<div>
-<div class="dash-flex">
-<div>
-<h3>
-Calender
-</h3>
-</div>
-<div>
-<img src="svg/calender.svg">
-</div>
-</div>
-<h5 style="font-weight:100; color: rgba(0, 0, 0, 0.8); text-align:center; margin-top:0px;">
-Discover your schedule for upcoming tests
-</h5>
-</div>
-<div class="schedule">
-<div>
-<h4 id="currentDate" style="font-weight:100; margin:0;"></h4>
-<h2>
-Today
-</h2>
-</div>
-<div class="calender" id="calendarContainer">
-<!-- Days will be inserted here dynamically -->
-</div>
-<div>
-<h3 style="margin-top: 2em; margin-bottom:0.5em;">
-Important dates :
-</h3>
-<div class="ul">
-<div class="li">
-<h5 style="margin: 0;">
-INICET 2024 - May 19, 2024
-</h5>
-<h5 id="countdownOutput1" class="counter-date"></h5>
-</div>
-<div class="li">
-<h5 style="margin: 0;">
-NEET PG 2024 - July 7, 2024
-</h5>
-<h5 id="countdownOutput2" class="counter-date"></h5>
-</div>
-</div>
-</div>
-</div>
-</main>
-
-<style>
-.counter-date {
-font-weight: 100;
-margin: 0;
-margin-top: 10px;
-background-color: #F8FAE5;
-max-width: max-content;
-padding: 1em;
-border-radius: 1em;
+return totalQuestions;
 }
 
-.ul {
-display: flex;
-flex-direction: row;
-margin: 0;
-padding: 0;
-overflow: auto;
-flex-wrap: nowrap;
+// Function to calculate total number of tests
+function calculateTotalTests(testData) {
+return testData.tests[0].links.length;
 }
 
-.li {
-margin-top: 15px;
-list-style: none;
-background-color: white;
-padding: 1em;
-max-width: max-content;
-border-radius: 1em;
-margin-right: 10px;
-flex: 0 0 100%;
-}
-</style>
+// Function to calculate total number of days
+function calculateTotalDays(testData) {
+let totalDays = 0;
 
-<script>
+testData.tests[0].links.forEach(test => {
+const numberOfDays = parseInt(test.days, 10);
+
+if (!isNaN(numberOfDays)) {
+totalDays += numberOfDays;
+} else {
+console.error(`Invalid or missing number of days for test: ${test.text}`);
+}
+});
+
+return totalDays;
+}
+
+// Fetch JSON data from all files in the data folder
+const fetchData = async () => {
+const files = ['surgery.json', 'obgy.json', 'anatomy.json', 'anesthesia.json', 'biochem.json',
+'derma.json', 'ent.json', 'fmt.json', 'medicine.json', 'microbiology.json', 'ortho.json',
+'patho.json', 'pedia.json', 'pharma.json', 'physiology.json', 'psm.json', 'psychiatry.json',
+'radiology.json'
+];
+const responses = await Promise.all(files.map(file => fetch(`data/${file}`).then(response =>
+response.json())));
+
+return responses;
+};
+
+fetchData()
+.then(dataArray => {
+// Combine data from all JSON files
+const combinedData = dataArray.reduce((accumulator, currentData) => {
+// Combine logic here based on your data structure
+// For simplicity, assuming the structure is similar across files
+accumulator.tests[0].links = accumulator.tests[0].links.concat(currentData.tests[0]
+.links);
+return accumulator;
+});
+
+// Update HTML elements with calculated values
+document.getElementById('totalQuestions').innerText = calculateTotalQuestions(combinedData);
+document.getElementById('totalTests').innerText = calculateTotalTests(combinedData);
+document.getElementById('totalDays').innerText = calculateTotalDays(combinedData);
+document.getElementById('totalTests-card').innerText = calculateTotalTests(combinedData);
+})
+.catch(error => console.error('Error fetching JSON:', error));
+</script>
+
+<script id="current-date">
+// Function to update the date dynamically
+function updateDate() {
+var currentDateElement = document.getElementById('currentDate');
+var currentDate = new Date();
+
+// Format the date as needed (e.g., "27 Jan 2024")
+var options = {
+day: 'numeric',
+month: 'short',
+year: 'numeric'
+};
+var formattedDate = currentDate.toLocaleDateString('en-US', options);
+
+// Update the content of the element
+currentDateElement.textContent = formattedDate;
+}
+
+// Call the function on page load
+window.onload = function () {
+updateDate();
+
+// Update the date every second (1000 milliseconds)
+setInterval(updateDate, 1000);
+};
+</script>
+
+<script id="calender">
+// Function to fetch JSON data
+async function fetchCalendarData() {
+try {
+const response = await fetch('calender.json');
+const data = await response.json();
+return data;
+} catch (error) {
+console.error('Error fetching calendar data:', error);
+}
+}
+
+// Function to populate the calendar
+async function populateCalendar() {
+const data = await fetchCalendarData();
+
+if (data) {
+var calendarContainer = document.getElementById('calendarContainer');
+
+data.entries.forEach(function (entry) {
+var dayElement = document.createElement('div');
+dayElement.className = 'day';
+dayElement.id = 'day' + entry.id;
+
+dayElement.innerHTML = `
+<div class="day-name" id="dayName${entry.id}">${entry.day}</div>
+<div class="day-date" id="dayDate${entry.id}">${entry.date}</div>
+<div class="reminder-content">
+<div class="meeting" id="meeting${entry.id}">${entry.meetings}</div>
+</div>
+`;
+
+calendarContainer.appendChild(dayElement);
+});
+}
+}
+
+// Call the function to populate the calendar
+populateCalendar();
+</script>
+
+<script id="date-counter">
 // Function to update the countdown
 function updateCountdown(targetDate, outputElementId) {
 const currentDate = new Date();
@@ -397,49 +587,6 @@ setInterval(() => updateCountdown(targetDate1, "countdownOutput1"), 1000);
 const targetDate2 = new Date("2024-07-07T00:00:00");
 setInterval(() => updateCountdown(targetDate2, "countdownOutput2"), 1000);
 </script>
-
-<main class="section-table">
-<div>
-<div class="dash-flex margin-top-2">
-<div>
-<h3>
-Tests Completed
-</h3>
-</div>
-<div>
-<img src="svg/check.svg">
-</div>
-</div>
-<h5 class="subheading" style="font-weight:100;">
-A peek into your previous test performances
-</h5>
-</div>
-
-<style>
-.th {
-background-color: #EBD9B4;
-color: black;
-border-radius: 1em;
-padding: 1em;
-}
-
-.fade-in {
-opacity: 1;
-transition: opacity 0.2s ease-in-out;
-}
-
-.fade-out {
-opacity: 0;
-pointer-events: none;
-transition: opacity 0.2s ease-in-out, pointer-events 0.2s ease-in-out;
-}
-</style>
-
-<div class="card-layout" id="card-container"></div>
-
-<table class="table" id="dynamic-table"></table>
-
-</main>
 
 <script id="cards">
 // Function to calculate total number of tests
@@ -603,13 +750,13 @@ document.getElementById(`total-test-${cardInfo.id}`).innerHTML = totalTests;
 
 cardElement.innerHTML = `
 <div>
-    <span><img src="${cardInfo.img}"></span>
+<span><img src="${cardInfo.img}"></span>
 </div>
 <div>
-    ${cardInfo.title}
+${cardInfo.title}
 </div>
 <div class="card-text">
-    <span id="total-test-${cardInfo.id}"></span> Tests
+<span id="total-test-${cardInfo.id}"></span> Tests
 </div>
 `;
 
@@ -661,259 +808,10 @@ cardContainer.appendChild(cardWrapper);
 renderCards();
 </script>
 
-<main class="about">
-<hr>
-<span style="text-align: center;">
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg fill="#000000" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
-xml:space="preserve">
-<g id="Quotemarks-left">
-<path d="M50.6292648,26.225668c-0.1288986-1.3934994-0.0303001-5.1816006,3.5985985-10.4492006
-c0.2745018-0.3975,0.2247009-0.9335995-0.1161957-1.2743998c-1.4795036-1.4794998-2.395504-2.4131002-3.0379982-3.0663996
-c-0.8448029-0.8614006-1.2305031-1.2539005-1.795002-1.7657003c-0.3769035-0.3388004-0.9472008-0.3446999-1.3281021-0.0125999
-c-6.3251991,5.5038996-13.3505974,16.8768997-12.3339958,30.8105011
-c0.5956955,8.1815987,6.5634956,14.1200981,14.1894951,14.1200981c7.8260994,0,14.1932983-6.3661995,14.1932983-14.1923981
-C63.9993629,32.845768,58.0736694,26.6543674,50.6292648,26.225668z M49.8060646,52.5879669
-c-6.5489006,0-11.6767998-5.1581993-12.1953011-12.2645988c0,0,0,0,0-0.0009995
-c-1.1435966-15.6709003,8.1718025-25.8496017,10.9863014-28.5449009c0.2743988,0.2705002,0.5878983,0.5887995,1.0498009,1.0594997
-c0.5565987,0.5664005,1.3183975,1.3417997,2.4706993,2.4981003c-4.4053001,6.7870998-3.5741997,11.6229992-3.2099991,12.3164005
-c0.1728973,0.3290997,0.5273972,0.5508003,0.8984985,0.5508003c6.7236023,0,12.1932983,5.469698,12.1932983,12.1933002
-C61.9993629,47.1182671,56.5296669,52.5879669,49.8060646,52.5879669z" />
-<path d="M15.1136675,26.225668c-0.1299-1.3896008-0.0341997-5.1748009,3.5985994-10.4492006
-c0.2735004-0.3975,0.2245998-0.9335995-0.1161995-1.2743998c-1.4766006-1.4765997-2.3915997-2.4091997-3.0332003-3.0625
-c-0.8476-0.8633003-1.2343998-1.2568998-1.7987995-1.7695999c-0.3769999-0.3388004-0.9473-0.3437004-1.3281002-0.0136003
-c-6.3251996,5.5039005-13.3515997,16.875-12.3369999,30.8115005v0.0009995
-c0.5977,8.1805992,6.5664001,14.1190987,14.1924,14.1190987c7.8261995,0,14.1934004-6.3661995,14.1934004-14.1923981
-C28.4847679,32.8448677,22.5589676,26.6524677,15.1136675,26.225668z M14.2913675,52.5879669
-c-6.5478001,0-11.6786995-5.1581993-12.1982002-12.2655983v0.0009995
-c-1.1406-15.6748009,8.1747999-25.8516006,10.9892006-28.5459003c0.2754002,0.2705002,0.5899,0.5908003,1.0528002,1.0625
-c0.5555992,0.5663996,1.3163996,1.3408003,2.4667988,2.4951c-4.4052992,6.7880993-3.5741997,11.6229992-3.2099991,12.3153992
-c0.1729002,0.3291016,0.5283003,0.5518017,0.8993998,0.5518017c6.7237005,0,12.1934004,5.469698,12.1934004,12.1933002
-C26.4847679,47.1182671,21.0150681,52.5879669,14.2913675,52.5879669z" />
-</g>
-</svg>
-</span>
-<h4>
-The difference between a successful person and others is not a lack of strength, not a lack of knowledge,
-but rather a lack in will.
-<br> <br> - <span style="color: gray;">Vince Lombardi</span>
-</h4>
-<span style="text-align: center;">
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg fill="#000000" height="30px" width="30px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64" enable-background="new 0 0 64 64"
-xml:space="preserve">
-<g id="Quotemarks-right">
-<path
-d="M14.1933422,9.4116497c-7.8260994,0-14.1922989,6.3662004-14.1922989,14.1924
-c0,7.5498009,5.9247999,13.7420998,13.3690996,14.169899c0.1288996,1.3916016,0.0321999,5.1797028-3.5977001,10.4491997
-C9.4980431,48.6206512,9.547843,49.1567497,9.888648,49.497551c1.4853945,1.4853973,2.4033947,2.4208984,3.0458946,3.0751991
-c0.8408995,0.8554993,1.2247,1.2461014,1.7861996,1.7559013c0.1904001,0.1727982,0.4306002,0.259697,0.6719055,0.259697
-c0.2342949,0,0.4676943-0.0819969,0.6561956-0.2450981c6.3251991-5.5038986,13.3515987-16.8759995,12.3349991-30.8115005
-C27.7881413,15.3501501,21.820343,9.4116497,14.1933422,9.4116497z M15.4023428,52.2221489
-c-0.2723999-0.2684975-0.5830002-0.5848999-1.0410004-1.0508003c-0.5565996-0.5672989-1.3203001-1.3446999-2.4784994-2.5067978
-c4.4053001-6.7881012,3.5731993-11.6230011,3.2089996-12.3164024c-0.1729002-0.3290977-0.5274-0.5507965-0.8985004-0.5507965
-c-6.7225995,0-12.1922989-5.4697018-12.1922989-12.1933022c0-6.7227001,5.4696999-12.1924,12.1922989-12.1924
-c6.5489006,0,11.6777992,5.1582012,12.1963062,12.2646008C27.5322418,39.3501511,18.2168427,49.5268517,15.4023428,52.2221489z" />
-<path d="M63.9004402,23.5317497v-0.0009995C63.302742,15.3501501,57.3340416,9.4116497,49.7090416,9.4116497
-c-7.8261986,0-14.1933937,6.3662004-14.1933937,14.1924c0,7.5498009,5.9257927,13.7420998,13.3710938,14.169899
-c0.1289062,1.3906021,0.0312004,5.1767006-3.5996017,10.4491997c-0.2743988,0.3975029-0.2245979,0.9336014,0.1162033,1.2744026
-c1.4794998,1.4794998,2.3955002,2.4130974,3.0380974,3.0663986c0.8446999,0.8613014,1.2304993,1.2538986,1.7949028,1.7656021
-c0.1903992,0.1718979,0.4315987,0.2587967,0.6718979,0.2587967c0.2344055,0,0.4678001-0.0819969,0.6562004-0.2460976
-C57.8896484,48.8383484,64.9160385,37.4663506,63.9004402,23.5317497z M50.917942,52.2221489
-c-0.2743988-0.2705002-0.5877991-0.5887985-1.0498009-1.0594978c-0.5565987-0.5665016-1.3172989-1.3418007-2.4706993-2.4981003
-c4.4053001-6.7891006,3.5742989-11.6230011,3.2109985-12.3164024c-0.1728973-0.3280983-0.5282974-0.5507965-0.8993988-0.5507965
-c-6.7237015,0-12.1933937-5.4697018-12.1933937-12.1933022c0-6.7227001,5.4696922-12.1924,12.1933937-12.1924
-c6.5477982,0,11.6777,5.1582012,12.1972008,12.2656002v-0.0009995
-C63.0478401,39.3481483,53.7324409,49.5268517,50.917942,52.2221489z" />
-</g>
-</svg>
-</span>
-<hr>
-</main>
-
-<footer class="footer">
-<h5>
-© Daily Discussion 2024 | All Rights Reserved
-</h5>
-</footer>
-
-<script id="animation">
-// Add the 'active' class to trigger the animation
-document.addEventListener('DOMContentLoaded', function () {
-document.querySelector('.animated-element').classList.add('active');
-});
-</script>
-
-<script id="greeting">
-// Get the current hour of the day
-var currentHour = new Date().getHours();
-
-// Function to determine the appropriate greeting based on the time
-function getGreeting() {
-var greeting = '';
-if (currentHour >= 5 && currentHour < 12) {
-greeting = 'Good Morning!';
-} else if (currentHour >= 12 && currentHour < 18) {
-greeting = 'Good Afternoon!';
-} else {
-greeting = 'Good Evening!';
-}
-return greeting;
-}
-
-// Display the greeting message
-document.getElementById('greeting').textContent = getGreeting();
-</script>
-
-<script id="dashboard">
-// Function to calculate total number of questions
-function calculateTotalQuestions(testData) {
-let totalQuestions = 0;
-
-testData.tests[0].links.forEach(test => {
-const numberOfQuestions = parseInt(test.questions, 10);
-
-if (!isNaN(numberOfQuestions)) {
-totalQuestions += numberOfQuestions;
-} else {
-console.error(`Invalid or missing number of questions for test: ${test.text}`);
-}
-});
-
-return totalQuestions;
-}
-
-// Function to calculate total number of tests
-function calculateTotalTests(testData) {
-return testData.tests[0].links.length;
-}
-
-// Function to calculate total number of days
-function calculateTotalDays(testData) {
-let totalDays = 0;
-
-testData.tests[0].links.forEach(test => {
-const numberOfDays = parseInt(test.days, 10);
-
-if (!isNaN(numberOfDays)) {
-totalDays += numberOfDays;
-} else {
-console.error(`Invalid or missing number of days for test: ${test.text}`);
-}
-});
-
-return totalDays;
-}
-
-// Fetch JSON data from all files in the data folder
-const fetchData = async () => {
-const files = ['surgery.json', 'obgy.json', 'anatomy.json', 'anesthesia.json', 'biochem.json',
-'derma.json', 'ent.json', 'fmt.json', 'medicine.json', 'microbiology.json', 'ortho.json',
-'patho.json', 'pedia.json', 'pharma.json', 'physiology.json', 'psm.json', 'psychiatry.json',
-'radiology.json'
-];
-const responses = await Promise.all(files.map(file => fetch(`data/${file}`).then(response =>
-response.json())));
-
-return responses;
-};
-
-fetchData()
-.then(dataArray => {
-// Combine data from all JSON files
-const combinedData = dataArray.reduce((accumulator, currentData) => {
-// Combine logic here based on your data structure
-// For simplicity, assuming the structure is similar across files
-accumulator.tests[0].links = accumulator.tests[0].links.concat(currentData.tests[0]
-.links);
-return accumulator;
-});
-
-// Update HTML elements with calculated values
-document.getElementById('totalQuestions').innerText = calculateTotalQuestions(combinedData);
-document.getElementById('totalTests').innerText = calculateTotalTests(combinedData);
-document.getElementById('totalDays').innerText = calculateTotalDays(combinedData);
-document.getElementById('totalTests-card').innerText = calculateTotalTests(combinedData);
-})
-.catch(error => console.error('Error fetching JSON:', error));
-</script>
-
-<script id="current-date">
-// Function to update the date dynamically
-function updateDate() {
-var currentDateElement = document.getElementById('currentDate');
-var currentDate = new Date();
-
-// Format the date as needed (e.g., "27 Jan 2024")
-var options = {
-day: 'numeric',
-month: 'short',
-year: 'numeric'
-};
-var formattedDate = currentDate.toLocaleDateString('en-US', options);
-
-// Update the content of the element
-currentDateElement.textContent = formattedDate;
-}
-
-// Call the function on page load
-window.onload = function () {
-updateDate();
-
-// Update the date every second (1000 milliseconds)
-setInterval(updateDate, 1000);
-};
-</script>
-
-<script id="calender">
-// Function to fetch JSON data
-async function fetchCalendarData() {
-try {
-const response = await fetch('calender.json');
-const data = await response.json();
-return data;
-} catch (error) {
-console.error('Error fetching calendar data:', error);
-}
-}
-
-// Function to populate the calendar
-async function populateCalendar() {
-const data = await fetchCalendarData();
-
-if (data) {
-var calendarContainer = document.getElementById('calendarContainer');
-
-data.entries.forEach(function (entry) {
-var dayElement = document.createElement('div');
-dayElement.className = 'day';
-dayElement.id = 'day' + entry.id;
-
-dayElement.innerHTML = `
-<div class="day-name" id="dayName${entry.id}">${entry.day}</div>
-<div class="day-date" id="dayDate${entry.id}">${entry.date}</div>
-<div class="reminder-content">
-<div class="meeting" id="meeting${entry.id}">${entry.meetings}</div>
-</div>
-`;
-
-calendarContainer.appendChild(dayElement);
-});
-}
-}
-
-// Call the function to populate the calendar
-populateCalendar();
-</script>
-
-<script>
- // Optional: If you want to disable right-click as well
- document.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
+<script id="disable-click">
+// Optional: If you want to disable right-click as well
+document.addEventListener('contextmenu', function (e) {
+e.preventDefault();
 });
 </script>
 

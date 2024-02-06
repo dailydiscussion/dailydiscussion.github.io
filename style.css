@@ -35,6 +35,7 @@ flex-direction: column;
 
 .section-schedule{
 background-color: #DBE7C9;
+background-image: url(svg/topography2.svg);
 color: black;
 display: flex;
 flex-direction: column;
@@ -436,6 +437,109 @@ a {
 -webkit-tap-highlight-color: rgba(0,0,0,0);
 tap-highlight-color: rgba(0,0,0,0);
 }
+
+.box-placeholder {
+    display: block;
+}
+
+.box-placeholder .circle-placeholder {
+    height: 30px;
+    width: 30px;
+    background-color: #444;
+    /* Placeholder color */
+    border-radius: 50%;
+    /* Make it circular */
+    opacity: 0.1;
+    /* Placeholder opacity */
+    animation: rotateAnimation 1.5s infinite;
+    /* Infinite rotation animation */
+}
+
+.box-placeholder #topicContainerPlaceholder {
+    height: 12px;
+    /* Adjust the height based on your design */
+    width: 150px;
+    /* Adjust the width based on your design */
+    background-color: #444;
+    /* Placeholder color */
+    border-radius: 100px;
+    /* Rounded corners */
+    opacity: 0.1;
+    /* Placeholder opacity */
+}
+
+.box-placeholder #MCQCountPlaceholder {
+    display: inline-block;
+    background-color: #444;
+    /* Placeholder color */
+    height: 11px;
+    /* Adjust the height based on your design */
+    width: 60px;
+    /* Adjust the width based on your design */
+    border-radius: 100px;
+    /* Rounded corners */
+    opacity: 0.1;
+    /* Placeholder opacity */
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.th {
+    background-color: #EBD9B4;
+    color: black;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out, pointer-events 0.2s ease-in-out;
+}
+
+.counter-date {
+    font-weight: 100;
+    margin: 0;
+    margin-top: 10px;
+    background-color: #F8FAE5;
+    max-width: max-content;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    flex-wrap: nowrap;
+}
+
+.li {
+    margin-top: 15px;
+    list-style: none;
+    background-color: white;
+    padding: 1em;
+    max-width: max-content;
+    border-radius: 1em;
+    margin-right: 10px;
+    flex: 0 0 100%;
+}
+
 
 
 /* Apply transition to the element you want to animate */
