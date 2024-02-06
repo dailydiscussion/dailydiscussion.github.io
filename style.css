@@ -34,7 +34,7 @@ flex-direction: column;
 }
 
 .section-schedule{
-background-image: url(svg/Animated\ Shape.svg);
+background-color: lightgray;
 color: black;
 display: flex;
 flex-direction: column;
@@ -95,7 +95,7 @@ margin-left: 0;
 }
 
 .reminder-content{
-background-color: #F8FAE5;
+background-color: rgba(211, 211, 211, 0.425);
 color: black;
 padding: 1em;
 border-radius: 1em;
