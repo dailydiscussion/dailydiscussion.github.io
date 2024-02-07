@@ -40,11 +40,18 @@
         },
         {
           "s.no": 6,
-          "id": "Quiz",
           "text": "Infertility & Oncology",
           "questions": "50",
           "days": 1,
           "url": "https://link.marrow.com/join_custom_module/55CF02KK"
+        },
+        {
+          "s.no": 7,
+          "id": "Quiz",
+          "text": "Obstetrics Complete",
+          "questions": "100",
+          "days": 1,
+          "url": "https://link.marrow.com/join_custom_module/55CF0M5N"
         }
       ]
     }
