@@ -74,3 +74,39 @@ self.addEventListener('fetch', (event) => {
   // event.respondWith(), the request will be handled by the browser as if there
   // were no service worker involvement.
 });
+
+// Check for updates and send notification
+async function checkForUpdates() {
+  try {
+    const response = await fetch('version.json'); // Replace '/version.json' with the correct path to your version information file
+    const data = await response.json();
+    const currentVersion = data.version;
+
+    const storedVersion = localStorage.getItem('appVersion');
+    if (storedVersion && storedVersion !== currentVersion) {
+      // Notify user about the update
+      sendNotification();
+      // Update the stored version
+      localStorage.setItem('appVersion', currentVersion);
+    }
+  } catch (error) {
+    console.error('Error checking for updates:', error);
+  }
+}
+
+// Send push notification
+function sendNotification() {
+  // Customize notification message
+  const options = {
+    body: 'OBGY test is live!', // Customize the notification message
+    icon: 'svg/obgy.svg', // Replace '/images/icon.png' with the correct path to your notification icon
+  };
+
+  // Display notification
+  self.registration.showNotification('Site Update', options);
+}
+
+// Check for updates when the service worker starts
+self.addEventListener('activate', () => {
+  checkForUpdates();
+});
