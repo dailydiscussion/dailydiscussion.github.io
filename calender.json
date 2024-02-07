@@ -1,12 +1,6 @@
 {
   "entries": [
     {
-      "id": 5,
-      "day": "Tue",
-      "date": "6",
-      "meetings": "<p>Obgy:</p> <p>General Gyne + Infections</p>"
-    },
-    {
       "id": 6,
       "day": "Wed",
       "date": "7",
@@ -47,9 +41,7 @@
       "day": "Mon",
       "date": "13",
       "meetings": "<p>Obgy:</p> <p>OBG 1 + 2 (2023)</p>"
-    }   
-    
-    
+    }      
   ]
 }
 

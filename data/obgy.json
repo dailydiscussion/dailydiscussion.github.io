@@ -33,11 +33,18 @@
         },
         {
           "s.no": 5,
-          "id": "Quiz",
           "text": "General Gyne & Infections",
           "questions": "50",
           "days": 1,
           "url": "https://link.marrow.com/join_custom_module/55CD0K3U"
+        },
+        {
+          "s.no": 6,
+          "id": "Quiz",
+          "text": "Infertility & Oncology",
+          "questions": "50",
+          "days": 1,
+          "url": "https://link.marrow.com/join_custom_module/55CF02KK"
         }
       ]
     }
