@@ -17,22 +17,6 @@ return greeting;
 // Display the greeting message
 document.getElementById('greeting').textContent = getGreeting();
 
-
-
-// Simulate content loading for the first box
-setTimeout(function () {
-document.getElementById('placeholder1').style.display = 'none';
-document.getElementById('actualContent1').style.display = 'block';
-}, 1000);
-
-// Simulate content loading for the second box
-// setTimeout(function () {
-//     document.getElementById('placeholder2').style.display = 'none';
-//     document.getElementById('actualContent2').style.display = 'block';
-//     }, 1000); // Adjust the timeout based on your actual content loading time
-
-
-
 // Fetch the JSON data from the file using AJAX
 fetch('data/obgy.json')
 .then(response => response.json())

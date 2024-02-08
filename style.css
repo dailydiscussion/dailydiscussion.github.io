@@ -528,42 +528,6 @@ tap-highlight-color: rgba(0,0,0,0);
 }
 
 
-/* Apply transition to the element you want to animate */
-.animated-element {
-opacity: 0;
-transition: opacity 1s ease-in-out;
-}
-
-/* Add a class to trigger the animation when the page loads */
-.animated-element.active {
-opacity: 1;
-}
-
-
-/* Define a keyframe animation */
-@keyframes fadeIn {
-from {
-opacity: 0;
-}
-to {
-opacity: 1;
-}
-}
-
-/* Apply the animation to the element */
-.animated-element {
-animation: fadeIn 1s ease-in-out;
-opacity: 0; /* optional initial state */
-}
-
-
-/* Apply the animation to the element */
-.animated-element {
-animation: fadeIn 1s ease-in-out;
-opacity: 0; /* optional initial state */
-}
-
-
 /* Media Queries */
 @media only screen and (max-width: 768px) {
 
