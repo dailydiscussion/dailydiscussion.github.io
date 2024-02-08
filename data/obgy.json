@@ -47,11 +47,18 @@
         },
         {
           "s.no": 7,
-          "id": "Quiz",
           "text": "Obstetrics Complete",
           "questions": "100",
           "days": 1,
           "url": "https://link.marrow.com/join_custom_module/55CF0M5N"
+        },
+        {
+          "s.no": 8,
+          "id": "Quiz",
+          "text": "Gynaecology Complete",
+          "questions": "100",
+          "days": 1,
+          "url": "https://link.marrow.com/join_custom_module/55CG0M5T"
         }
       ]
     }
