@@ -56,7 +56,8 @@ margin-top: 0;
 display: flex;
 flex-direction: row;
 flex-wrap: nowrap;
-overflow: auto;
+position: relative;
+overflow-x: scroll;
 }
 
 /* Hide the scrollbar for WebKit browsers (Safari and Chrome) */
@@ -106,7 +107,6 @@ flex-wrap: nowrap;
 
 .footer {
 margin: 0;
-padding: 0.5em;
 text-align: center;
 }
 
@@ -114,7 +114,7 @@ hr {
 border: none; /* Remove default border */
 height: 1px; /* Set the height of the line */
 background-color: #ccc; /* Set the color of the line */
-width: 95%;
+width: 90vw;
 }
 
 .header {
@@ -388,9 +388,11 @@ flex-direction: column;
 justify-content: center;
 text-align: center;
 padding-bottom: 2em;
+padding-top: 0.5em;
 width: 75%;
 margin: auto;
 }
+
 
 table {
 width: 75%;
