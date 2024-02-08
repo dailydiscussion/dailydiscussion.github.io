@@ -106,9 +106,15 @@ flex-wrap: nowrap;
 
 .footer {
 margin: 0;
-padding: 0.8em;
-background-color: rgba(128, 128, 128, 0.164);
+padding: 0.5em;
 text-align: center;
+}
+
+hr {
+border: none; /* Remove default border */
+height: 1px; /* Set the height of the line */
+background-color: #ccc; /* Set the color of the line */
+width: 95%;
 }
 
 .header {
@@ -559,6 +565,15 @@ width: 90%;
 margin: 2em;
 }
 
+.home {
+display: flex;
+flex-direction: column;
+justify-content: flex-start;
+margin: 0;
+padding: 1em; 
+text-align: left;
+align-items: left;
+}
 
 .section-schedule{
 background-color: #DBE7C9;
