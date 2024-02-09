@@ -39,27 +39,29 @@ console.error('Quiz entries not found in JSON data.');
 })
 .catch(error => console.error('Error fetching JSON:', error));
 
-// // Fetch the JSON data from the file using AJAX
-// fetch('data/obgy.json')
-// .then(response => response.json())
-// .then(jsonData => {
-// // Find the Quiz entry by ID
-// var quizEntry2 = jsonData.tests[0].links.find(link => link.id === "Quiz-2");
+// quiz-2 script 
+ 
+// Fetch the JSON data from the file using AJAX
+fetch('data/obgy.json')
+.then(response => response.json())
+.then(jsonData => {
+// Find the Quiz entry by ID
+var quizEntry2 = jsonData.tests[0].links.find(link => link.id === "Quiz-2");
 
-// // Check if both Quiz entries are found
-// if (quizEntry2) {
-// // Update the HTML content with the Quiz dynamically for Quiz-2 entry
-// var quizLink2 = document.getElementById("quizLink2");
+// Check if both Quiz entries are found
+if (quizEntry2) {
+// Update the HTML content with the Quiz dynamically for Quiz-2 entry
+var quizLink2 = document.getElementById("quizLink2");
 
-// quizLink2.href = quizEntry2.url;
+quizLink2.href = quizEntry2.url;
 
-// document.getElementById("topicContainer2").textContent = quizEntry2.text;
-// document.getElementById("MCQCount2").textContent = quizEntry2.questions;
-// } else {
-// console.error('Quiz entries not found in JSON data.');
-// }
-// })
-// .catch(error => console.error('Error fetching JSON:', error));
+document.getElementById("topicContainer2").textContent = quizEntry2.text;
+document.getElementById("MCQCount2").textContent = quizEntry2.questions;
+} else {
+console.error('Quiz entries not found in JSON data.');
+}
+})
+.catch(error => console.error('Error fetching JSON:', error));
 
 
 
