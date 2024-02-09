@@ -109,6 +109,7 @@ flex-wrap: nowrap;
 margin: 0;
 text-align: center;
 padding: 0.3em;
+padding-bottom: 0.7em;
 }
 
 hr {
@@ -164,6 +165,10 @@ margin-top: 50px;
 .dash{
 margin: 1em;
 margin-bottom: 60px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
 }
 
 .dash-flex {
@@ -534,6 +539,13 @@ tap-highlight-color: rgba(0,0,0,0);
     border-radius: 1em;
     margin-right: 10px;
     flex: 0 0 100%;
+}
+
+.date-complete{
+    font-size: 12px;
+    font-weight: 100;
+    color: rgba(0, 0, 0, 0.7);
+    margin-top: 15px;
 }
 
 

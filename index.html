@@ -8,7 +8,9 @@
 <title>Target NEET-PG | INICET 2024</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap"
+rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -36,27 +38,37 @@ background-image: url(svg/topography.svg);
 display: flex;
 justify-content: center;
 align-items: center;
-z-index: 9999; /* Ensure it's on top of other content */
+z-index: 9999;
+/* Ensure it's on top of other content */
 }
 
 /* Style for the loading animation */
 .loading-spinner {
-border: 6px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
-border-top: 6px solid #ffffff; /* White border */
+border: 6px solid rgba(255, 255, 255, 0.3);
+/* Semi-transparent border */
+border-top: 6px solid #ffffff;
+/* White border */
 border-radius: 50%;
 width: 60px;
 height: 60px;
-animation: spin 1s linear infinite; /* Apply rotation animation */
+animation: spin 1s linear infinite;
+/* Apply rotation animation */
 }
 
 @keyframes spin {
-0% { transform: rotate(0deg); }
-100% { transform: rotate(360deg); }
+0% {
+transform: rotate(0deg);
+}
+
+100% {
+transform: rotate(360deg);
+}
 }
 
 /* Style for the loading message */
 .loading-message {
-color: #ffffff; /* White text */
+color: #ffffff;
+/* White text */
 margin-top: 20px;
 display: flex;
 flex-direction: column;
@@ -65,15 +77,16 @@ text-align: center;
 
 /* Apply transition to the main content */
 #mainContent {
-opacity: 0; /* Set initial opacity to 0 */
-transition: opacity 0.5s ease-in-out; /* Smooth opacity transition */
+opacity: 0;
+/* Set initial opacity to 0 */
+transition: opacity 0.5s ease-in-out;
+/* Smooth opacity transition */
 }
 
 /* Hide the main content initially */
 .hidden {
 display: none;
 }
-
 </style>
 
 <!-- Loading screen container -->
@@ -102,7 +115,8 @@ Daily Discussion
 <div class="header" style="color: white;">
 <h2 id="greeting"></h2>
 <h4 style="color: #B6BBC4; font-weight:100;">
-"Every day counts towards your success in the NEET PG | INICET exams. Make each one count!"
+"Every day counts towards your success in the NEET PG | INICET exams. Make
+each one count!"
 </h4>
 </div>
 </div>
@@ -175,6 +189,7 @@ Dashboard
 </div>
 </div>
 </div>
+
 <div class="dash-container">
 <div>
 <div class="flex">
@@ -365,6 +380,11 @@ C63.0478401,39.3481483,53.7324409,49.5268517,50.917942,52.2221489z" />
 
 </main>
 </div>
+
+<style>
+
+</style>
+
 <hr>
 <footer class="footer">
 <h5 style="font-weight: 100;">
@@ -377,18 +397,17 @@ C63.0478401,39.3481483,53.7324409,49.5268517,50.917942,52.2221489z" />
 // JavaScript code to toggle between loading screen and main content
 document.addEventListener('DOMContentLoaded', function () {
 // Simulate content loading (e.g., fetching data from a server)
-setTimeout(function() {
+setTimeout(function () {
 // Hide loading screen
 document.getElementById('loadingScreen').style.display = 'none';
 // Show main content
 document.getElementById('mainContent').classList.remove('hidden');
 // Trigger transition by changing opacity
-setTimeout(function() {
+setTimeout(function () {
 document.getElementById('mainContent').style.opacity = '1';
 }, 50); // Delay to ensure smooth transition after displaying main content
-}, 2000); // Simulated loading time (2 seconds)
+}, 000); // Simulated loading time (2 seconds)
 });
-
 </script>
 
 <script src="script.js"></script>
