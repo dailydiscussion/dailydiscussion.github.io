@@ -466,7 +466,6 @@ function createTable(data, table, iconDivId) {
 
         var div1 = document.createElement("div");
         div1.classList.add("flex-question");
-        div1.style.justifyContent = "center";
 
         var jsonFileName = iconDivId.replace("-icon", "").replace("-", ".");
         var iconPath = 'svg/' + jsonFileName + '.svg';
