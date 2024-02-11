@@ -31,6 +31,7 @@ transition: font-size 0.3s ease; /* Apply a smooth transition for font size chan
 background-color: white;
 display: flex;
 flex-direction: column;
+margin: 1em;
 }
 
 .section-schedule{
@@ -47,7 +48,7 @@ margin: 1em;
 .schedule{
 display: flex;
 flex-direction: column;
-width: 75%;
+width: 90%;
 margin: auto;
 margin-top: 0;
 }
@@ -105,12 +106,6 @@ flex-direction: column;
 flex-wrap: nowrap;
 }
 
-.footer {
-margin: 0;
-text-align: center;
-padding: 0.3em;
-padding-bottom: 0.7em;
-}
 
 hr {
 border: none; /* Remove default border */
@@ -341,7 +336,7 @@ display: flex;
 flex-wrap: nowrap;
 flex-direction: row;
 justify-content: left;
-width: 75%;
+width: 100%;
 margin: auto;
 overflow: auto;
 position: relative;
@@ -403,8 +398,9 @@ margin: auto;
 }
 
 
+
 table {
-width: 75%;
+width: 100%;
 margin: auto;
 }
 
@@ -559,7 +555,7 @@ display: none;
 }
 
 table {
-width: 90%;
+width: 100%;
 margin: auto;
 }
 
@@ -603,7 +599,7 @@ margin: 1em;
 display: flex;
 flex-direction: row;
 justify-content: left;
-width: 90%;
+width: 100%;
 margin: auto;
 }
 
@@ -633,7 +629,7 @@ align-items: center;
 }
 
 .sidebar a {
-padding: 1.5em;
+padding: 1.2em;
 text-decoration: none;
 color: #333;
 display: block;
