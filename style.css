@@ -344,7 +344,7 @@ flex: 0 0 20%;
 }
 
 .card{
-background-color: #F8F4EC;
+border: 1px solid #ddd;
 color: black;
 padding: 1.5em;
 border-radius: 1em;
@@ -357,16 +357,8 @@ font-size: 12px;
 color: rgba(0, 0, 0, 0.8);
 }
 
-.card-active{
-background-color: black;
-color: white;
-padding: 1.5em;
-margin: auto;
-border-radius: 1em;
-}
-
 .card:hover{
-background-color: #EBD9B4;
+background-color: #f0f0f0;
 color: black;
 }
 
@@ -394,46 +386,43 @@ width: 75%;
 margin: auto;
 }
 
-
+th, td {
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
 
 table {
 width: 100%;
 margin: auto;
+border-collapse: collapse;
 }
 
 .table-questions{
 margin-top: 10px;
-background-color: #EBD9B4;
+border: 1px solid rgba(0, 0, 0, 0.5);
 color: black;
 max-width: max-content;
 padding: 0.5em;
 border-radius: 1em;
 }
 
-th, td {
-padding: 0.5em;
-margin: 0 auto;
-max-width: 100%;
-}
-
 .th {
-background-color: #EBD9B4;
 color: black;
-border-radius: 1em;
 padding: 1em;
 }
 
 td{
-background-color: #F8F4EC;
 color: black;
 padding: 1em;
-border-radius: 1em;
 transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 td:hover{
-background-color: #EBD9B4;
-color: black;
+background-color: #f0f0f0;
+}
+
+.th:hover{
+background-color: white;
 }
 
 a {
@@ -611,7 +600,6 @@ text-align: left;
 
 }
 
-
 .sidebar {
 height: 100%;
 width: 80px; /* Adjust as needed */
@@ -623,6 +611,7 @@ display: flex;
 flex-direction: column;
 justify-content: center; /* Center vertically */
 align-items: center; 
+box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .sidebar a {
@@ -656,7 +645,6 @@ flex-direction: row;
 justify-content: space-evenly;
 align-items: center;
 z-index: 9999; /* Set a high z-index value */
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
 
