@@ -487,6 +487,9 @@ function createTable(data, table, iconDivId) {
         var titleElement = document.getElementById("dynamic-title");
         titleElement.innerHTML = title;
 
+        // Counter for serial number
+        var serialNumber = 1;
+
         data.tests[0].links.forEach(function (link) {
             var row = table.insertRow();
             var cell = row.insertCell();
@@ -498,8 +501,16 @@ function createTable(data, table, iconDivId) {
             var div1 = document.createElement("div");
             div1.classList.add("table-flex");
 
+            // Adding serial number
+            var serialDiv = document.createElement("div");
+            serialDiv.classList.add("table-no");
+            var serialText = document.createElement("div");
+            serialText.classList.add("table-no-text");
+            serialText.textContent = serialNumber++;
+            serialDiv.appendChild(serialText);
+
             var topicText = document.createElement("div");
-            topicText.id = "topic-text";
+            topicText.classList.add("topic-text");
             topicText.textContent = link.text;
 
             var questionsDiv = document.createElement("div");
@@ -513,11 +524,12 @@ function createTable(data, table, iconDivId) {
             topicText.appendChild(questionsDiv);
             topicText.appendChild(completeDiv); // Appending date-complete div inside topic-text div
 
-            div1.appendChild(topicText);
+            serialDiv.appendChild(topicText); // Placing topic-text inside table-no div
 
             var imgDiv = document.createElement("div");
             imgDiv.innerHTML = '<img src="svg/right.svg">';
 
+            div1.appendChild(serialDiv); // Adding serial number
             div1.appendChild(imgDiv);
 
             linkDiv.appendChild(div1);
