@@ -40,14 +40,15 @@ flex-direction: column;
 padding-top: 20px;
 padding-bottom: 60px;
 border-radius: 1em;
+padding: 1.5em;
 }
 
 .schedule{
 display: flex;
 flex-direction: column;
-width: 90%;
+width: 100%;
 margin: auto;
-margin-top: 0;
+margin-top: 40px;
 }
 
 .calender {
@@ -75,7 +76,7 @@ display: none;
 display: flex;
 flex-direction: column;
 flex-wrap: nowrap;
-border: 1px solid #ddd;
+background-color: #F1FADA;
 color: black;
 max-width: max-content;
 margin-left: 10px;
@@ -89,7 +90,7 @@ margin-left: 0;
 }
 
 .reminder-content{
-background-color: #F8FAE5;
+background-color: white;
 color: black;
 padding: 1em;
 border-radius: 1em;
@@ -108,7 +109,6 @@ hr {
 border: none; /* Remove default border */
 height: 1px; /* Set the height of the line */
 background-color: #ccc; /* Set the color of the line */
-width: 90vw;
 }
 
 .header {
@@ -166,9 +166,14 @@ text-align: center;
 .dash-flex {
 display: flex;
 flex-direction: row;
-justify-content: center;
 align-items: center;
-margin-top: 20px;
+}
+
+.calender-subhead {
+  font-weight: 100;
+  margin-top: 0px;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
 }
 
 .dash-flex img {
@@ -198,9 +203,7 @@ margin: 0;
 }
 .subheading{
 color: rgba(0, 0, 0, 0.8);
-text-align:center;
 margin-bottom:40px;
-width: 80%;
 margin: auto;
 }
 
@@ -384,11 +387,6 @@ width: 75%;
 margin: auto;
 }
 
-th, td {
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-
 table {
 width: 100%;
 margin: auto;
@@ -405,13 +403,16 @@ border-radius: 1em;
 }
 
 .table-flex{
- padding-top: 1.5em;
- padding-bottom: 1.5em;
+ padding: 1.5em;
+ background-color: #f0f0f088;
+ margin-top: 16px;
+ border-radius: 1em;
 }
 
 .th {
 color: black;
 padding: 1em;
+border-bottom: 1px solid #ddd;
 }
 
 td{
@@ -419,8 +420,8 @@ color: black;
 transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-td:hover{
-background-color: #f0f0f0;
+.table-flex:hover{
+background-color: #ddd;
 }
 
 .th:hover{
@@ -501,7 +502,7 @@ transition: opacity 0.2s ease-in-out, pointer-events 0.2s ease-in-out;
 font-weight: 100;
 margin: 0;
 margin-top: 10px;
-background-color: #F8FAE5;
+background-color: white;
 max-width: max-content;
 padding: 1em;
 border-radius: 1em;
@@ -519,7 +520,7 @@ flex-wrap: nowrap;
 .li {
 margin-top: 15px;
 list-style: none;
-background-color: white;
+background-color: #F1FADA;
 padding: 1em;
 max-width: max-content;
 border-radius: 1em;
@@ -554,8 +555,8 @@ margin-top: 10px;
 .schedule{
 display: flex;
 flex-direction: column;
-width: 90%;
-margin: 2em;
+width: 100%;
+margin-top: 40px;
 }
 
 .cards{
