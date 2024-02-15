@@ -403,7 +403,7 @@ border-radius: 1em;
 }
 
 .table-flex{
- padding: 1.5em;
+ padding: 1.2em;
  background-color: #f0f0f088;
  margin-top: 16px;
  border-radius: 1em;
@@ -668,7 +668,7 @@ margin-bottom: 100px;
 }
 
 .table-no-text{
-  font-size: 20px;
+  font-size: 16px;
   background-color: #1d2b5323;
   display: flex;
   justify-content: center;
@@ -678,6 +678,6 @@ margin-bottom: 100px;
   width: 20px;
   height: 20px;
   color: #1D2B53;
-  margin-right: 24px;
+  margin-right: 1em;
   font-weight: 900;
 }
