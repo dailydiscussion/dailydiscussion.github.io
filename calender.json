@@ -1,16 +1,16 @@
 {
   "entries": [
     {
-      "id": 12,
-      "day": "Wed",
-      "date": "14",
-      "meetings": "<p>Obgy:</p> <p>OBG 2 (2020) + OBG Complete (2022)</p>"
-    },
-    {
-      "id": 12,
+      "id": 1,
       "day": "Thu",
       "date": "15",
       "meetings": "<p>Obgy:</p> <p>OBG 1 + 2 (2023)</p>"
+    },
+    {
+      "id": 2,
+      "day": "Fri",
+      "date": "16",
+      "meetings": "<p>TBD</p> <p>Coming Soon</p>"
     }      
   ]
 }

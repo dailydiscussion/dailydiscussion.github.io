@@ -1,3 +1,4 @@
+
 // Get the current hour of the day
 var currentHour = new Date().getHours();
 
