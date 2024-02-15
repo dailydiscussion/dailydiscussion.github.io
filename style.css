@@ -30,7 +30,7 @@ transition: font-size 0.3s ease; /* Apply a smooth transition for font size chan
 background-color: white;
 display: flex;
 flex-direction: column;
-margin: 1em;
+margin: 1.5em;
 }
 
 .section-schedule{
@@ -406,6 +406,11 @@ padding: 0.5em;
 border-radius: 1em;
 }
 
+.table-flex{
+ padding-top: 1.5em;
+ padding-bottom: 1.5em;
+}
+
 .th {
 color: black;
 padding: 1em;
@@ -413,7 +418,6 @@ padding: 1em;
 
 td{
 color: black;
-padding: 1em;
 transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -676,8 +680,16 @@ margin-bottom: 100px;
 }
 
 .table-no-text{
-  font-size: 34px; 
-  margin-right: 1em;
-  color: #ddd;
+  font-size: 20px;
+  background-color: #1d2b5323;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%; 
+  padding: 0.3em;
+  width: 20px;
+  height: 20px;
+  color: #1D2B53;
+  margin-right: 30px;
   font-weight: 900;
 }

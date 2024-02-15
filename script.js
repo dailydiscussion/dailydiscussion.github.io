@@ -540,6 +540,7 @@ function createTable(data, table, iconDivId) {
 }
 
 
+
 function createDynamicTable(linkId, jsonFile, iconDivId) {
 document.getElementById(linkId).addEventListener("click", function (event) {
 event.preventDefault();
