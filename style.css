@@ -34,14 +34,12 @@ margin: 1.5em;
 }
 
 .section-schedule{
-background-color: #DBE7C9;
 color: black;
 display: flex;
 flex-direction: column;
 padding-top: 20px;
 padding-bottom: 60px;
 border-radius: 1em;
-margin: 1em;
 }
 
 .schedule{
@@ -77,7 +75,7 @@ display: none;
 display: flex;
 flex-direction: column;
 flex-wrap: nowrap;
-background-color: white;
+border: 1px solid #ddd;
 color: black;
 max-width: max-content;
 margin-left: 10px;
@@ -572,17 +570,6 @@ margin: 0;
 padding: 1em; 
 text-align: left;
 align-items: left;
-}
-
-.section-schedule{
-background-color: #DBE7C9;
-color: black;
-display: flex;
-flex-direction: column;
-padding-top: 20px;
-padding-bottom: 20px;
-border-radius: 1em;
-margin: 1em;
 }
 
 .card-layout{
