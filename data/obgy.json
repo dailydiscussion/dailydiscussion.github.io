@@ -149,7 +149,6 @@
         },
         {
           "s.no": 19,
-          "id": "Quiz",
           "text": "OBG 1 (2023)",
           "questions": "50",
           "days": 1,
@@ -158,7 +157,6 @@
         },
         {
           "s.no": 20,
-          "id": "Quiz-2",
           "text": "OBG 2 (2023)",
           "questions": "50",
           "days": 0,
