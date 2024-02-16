@@ -6,7 +6,7 @@
         {
           "s.no": 1,
           "id": "Quiz",
-          "text": "UL + LL + Spine 1",
+          "text": "Upper limb + Lower limb + Spine 1",
           "questions": "50",
           "days": 1,
           "date_completed": "16 Feb 2024",
@@ -15,7 +15,7 @@
         {
           "s.no": 2,
           "id": "Quiz-2",
-          "text": "UL + LL + Spine 2",
+          "text": "Upper limb + Lower limb + Spine 2",
           "questions": "50",
           "days": 0,
           "date_completed": "16 Feb 2024",
