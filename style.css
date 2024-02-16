@@ -26,8 +26,8 @@ font-family: 'Josefin Sans', sans-serif;
 transition: font-size 0.3s ease; /* Apply a smooth transition for font size changes */
 }
 
+
 .section-table{
-background-color: white;
 display: flex;
 flex-direction: column;
 margin: 1.5em;
@@ -409,22 +409,15 @@ border-radius: 1em;
  border-radius: 1em;
 }
 
-tr:nth-child(odd) .table-flex {
-  background-color: #F3F8FF; /* Even row background color */
-}
-
-tr:nth-child(even) .table-flex {
-  background-color: #E4F1FF; /* Odd row background color */
+.table-flex:hover{
+background-color: #E4F1FF;
+color: black;
 }
 
 .th {
 color: black;
 padding: 1em;
 border-bottom: 1px solid #ddd;
-}
-
-.th:hover{
-background-color: white;
 }
 
 a {
@@ -596,7 +589,7 @@ height: 100%;
 width: 80px; /* Adjust as needed */
 position: fixed;
 left: 0;
-background-color: #f0f0f0;
+background-color: #F3F8FF;
 padding-top: 20px;
 display: flex;
 flex-direction: column;
@@ -613,7 +606,7 @@ display: block;
 }
 
 .sidebar a:hover {
-background-color: #ddd;
+background-color: white;
 border-radius: 1em;
 }
 
