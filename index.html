@@ -484,21 +484,7 @@ document.getElementById('mainContent').style.opacity = '1';
     // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
-  </script>
 
-  <script id="FCM">
-    // Initialize Firebase
-    var firebaseConfig = {
-        apiKey: "AIzaSyAVbqSosUmhwpnoXAg5zL9CAC07fN5AL8Q",
-        authDomain: "dailydiscussion-aefdf.firebaseapp.com",
-        projectId: "dailydiscussion-aefdf",
-        storageBucket: "dailydiscussion-aefdf.appspot.com",
-        messagingSenderId: "825965290522",
-        appId: "1:825965290522:web:72f5f7ee2fa6dedf761da3",
-        measurementId: "G-JXX2XV3Y4T"
-    };
-    firebase.initializeApp(firebaseConfig);
-  
     // Retrieve Firebase Messaging object
     const messaging = firebase.messaging();
   
@@ -541,7 +527,7 @@ document.getElementById('mainContent').style.opacity = '1';
   
     main();
   </script>
-  
+ 
 
 </body>
 
