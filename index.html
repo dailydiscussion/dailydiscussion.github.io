@@ -462,6 +462,87 @@ document.getElementById('mainContent').style.opacity = '1';
 
 <script src="script.js"></script>
 
+<script type="module" id="Firebase">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAVbqSosUmhwpnoXAg5zL9CAC07fN5AL8Q",
+      authDomain: "dailydiscussion-aefdf.firebaseapp.com",
+      projectId: "dailydiscussion-aefdf",
+      storageBucket: "dailydiscussion-aefdf.appspot.com",
+      messagingSenderId: "825965290522",
+      appId: "1:825965290522:web:72f5f7ee2fa6dedf761da3",
+      measurementId: "G-JXX2XV3Y4T"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+  <script id="FCM">
+    // Initialize Firebase
+    var firebaseConfig = {
+        apiKey: "AIzaSyAVbqSosUmhwpnoXAg5zL9CAC07fN5AL8Q",
+        authDomain: "dailydiscussion-aefdf.firebaseapp.com",
+        projectId: "dailydiscussion-aefdf",
+        storageBucket: "dailydiscussion-aefdf.appspot.com",
+        messagingSenderId: "825965290522",
+        appId: "1:825965290522:web:72f5f7ee2fa6dedf761da3",
+        measurementId: "G-JXX2XV3Y4T"
+    };
+    firebase.initializeApp(firebaseConfig);
+  
+    // Retrieve Firebase Messaging object
+    const messaging = firebase.messaging();
+  
+    // Get FCM token
+    async function getToken() {
+      try {
+        const token = await messaging.getToken();
+        console.log('FCM Token:', token);
+      } catch (error) {
+        console.error('Error getting FCM token:', error);
+      }
+    }
+  
+    // Request permission and get token
+    async function requestPermission() {
+      try {
+        await messaging.requestPermission();
+        console.log('Notification permission granted.');
+        getToken();
+      } catch (error) {
+        console.error('Error requesting permission:', error);
+      }
+    }
+  
+    // Main function
+    async function main() {
+      try {
+        const permission = await Notification.requestPermission();
+        if (permission === 'granted') {
+          console.log('Notification permission already granted.');
+          getToken();
+        } else {
+          console.log('Notification permission not granted. Requesting permission...');
+          requestPermission();
+        }
+      } catch (error) {
+        console.error('Error in main function:', error);
+      }
+    }
+  
+    main();
+  </script>
+  
+
 </body>
 
 </html>
