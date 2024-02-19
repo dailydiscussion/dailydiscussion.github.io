@@ -76,7 +76,7 @@ display: none;
 display: flex;
 flex-direction: column;
 flex-wrap: nowrap;
-background-color: #F1FADA;
+background-color: #D5F0C1;
 color: black;
 max-width: max-content;
 margin-left: 10px;
@@ -512,7 +512,7 @@ flex-wrap: nowrap;
 .li {
 margin-top: 15px;
 list-style: none;
-background-color: #F1FADA;
+background-color: #D5F0C1;
 padding: 1em;
 max-width: max-content;
 border-radius: 1em;
@@ -661,7 +661,7 @@ margin-bottom: 100px;
 
 .table-no-text{
   font-size: 16px;
-  background-color: white;
+  background-color: #1D2B53;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -669,7 +669,7 @@ margin-bottom: 100px;
   padding: 0.3em;
   width: 20px;
   height: 20px;
-  color: #1D2B53;
+  color: white;
   margin-right: 1em;
   font-weight: 900;
 }
