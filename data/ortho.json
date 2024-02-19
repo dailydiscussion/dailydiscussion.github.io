@@ -37,7 +37,6 @@
         },
         {
           "s.no": 5,
-          "id": "Quiz",
           "text": "Bone Tumors + Miscellaneous - 1",
           "questions": "50",
           "days": 1,
@@ -46,12 +45,29 @@
         },
         {
           "s.no": 6,
-          "id": "Quiz-2",
           "text": "Bone Tumors + Miscellaneous - 2",
           "questions": "50",
           "days": 0,
           "date_completed": "19 Feb 2024",
           "url": "https://link.marrow.com/join_custom_module/55CP0LD2"
+        },
+        {
+          "s.no": 7,
+          "id": "Quiz",
+          "text": "Ortho ST-1 (2017)",
+          "questions": "50",
+          "days": 1,
+          "date_completed": "20 Feb 2024",
+          "url": "https://link.marrow.com/test/595319f85d817243aa2e97ce?prev=subject"
+        },
+        {
+          "s.no": 8,
+          "id": "Quiz-2",
+          "text": "Ortho ST-2 (2017)",
+          "questions": "50",
+          "days": 0,
+          "date_completed": "20 Feb 2024",
+          "url": "https://link.marrow.com/test/5991a7064f25444fb72d9242?prev=subject"
         }
       ]
     }
