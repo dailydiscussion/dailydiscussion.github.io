@@ -2,15 +2,9 @@
   "entries": [
     {
       "id": 3,
-      "day": "Sun",
-      "date": "18",
-      "meetings": "<p>Ortho</p> <p>Bone Tumors + Miscellaneous</p>"
-    },
-    {
-      "id": 1,
       "day": "Mon",
       "date": "19",
-      "meetings": "<p>Ortho</p> <p>Ortho Complete</p>"
+      "meetings": "<p>Ortho</p> <p>Bone Tumors + Miscellaneous</p>"
     },
     {
       "id": 4,
