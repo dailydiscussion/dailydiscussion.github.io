@@ -661,7 +661,7 @@ margin-bottom: 100px;
 
 .table-no-text{
   font-size: 14px;
-  background-color: #1D2B53;
+  background-color: #1d2b5328;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -669,7 +669,7 @@ margin-bottom: 100px;
   padding: 5px;
   width: 16px;
   height: 16px;
-  color: white;
+  color: #1D2B53;
   margin-right: 16px;
   font-weight: 900;
   flex-shrink: 0;
