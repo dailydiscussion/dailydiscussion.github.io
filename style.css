@@ -284,7 +284,7 @@ margin-bottom: 10px;
 }
 
 .table-questions{
-font-size: 14px; 
+font-size: 12px; 
 text-align:left;
 color: gray;
 }
@@ -660,16 +660,17 @@ margin-bottom: 100px;
 }
 
 .table-no-text{
-  font-size: 16px;
+  font-size: 14px;
   background-color: #1D2B53;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%; 
-  padding: 0.3em;
-  width: 20px;
-  height: 20px;
+  padding: 5px;
+  width: 16px;
+  height: 16px;
   color: white;
-  margin-right: 1em;
+  margin-right: 16px;
   font-weight: 900;
+  flex-shrink: 0;
 }
