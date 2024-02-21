@@ -674,3 +674,40 @@ margin-bottom: 100px;
   font-weight: 900;
   flex-shrink: 0;
 }
+
+
+.bookmark{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
+  
+  .bookmark-background:hover{
+  background-color: rgba(255, 0, 0, 0.2);
+  }
+  
+  .bookmark-container{
+  padding: 1em;
+  border-radius: 1em;
+  margin: 1em;
+  align-items: center;
+  }
+
+  .bookmark-background{
+    background-color: rgba(255, 0, 0, 0.1);
+    }
+
+  .imagebank-background{
+  background-color: rgba(0, 0, 255, 0.1);
+  }
+
+  .imagebank-background:hover{
+    background-color: rgba(0, 0, 255, 0.2);
+    }
+  
+  .bookmark-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  }
