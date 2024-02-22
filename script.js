@@ -250,7 +250,7 @@ eventContainer.querySelector('.event').innerHTML = event.event;
 // If no event found, update event container accordingly
 eventContainer.querySelector('.date-day').textContent = dayNames[new Date(dateKey).getDay()];
 eventContainer.querySelector('.date').textContent = i;
-eventContainer.querySelector('.event').textContent = "No event found for this date.";
+eventContainer.querySelector('.event').innerHTML = "<p>No event found for this date</p>";
 }
 });
 
