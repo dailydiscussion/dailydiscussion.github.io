@@ -711,3 +711,73 @@ margin-bottom: 100px;
   justify-content: space-between;
   align-items: center;
   }
+
+
+  .calendar-app {
+    max-width: 100vw;
+    margin-bottom: 2em;
+}
+
+.header-app {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #D5F0C1;
+    color: black;
+    border-radius: 1em;
+}
+
+.header-app .btn-app {
+    background-color: transparent;
+    border: none;
+    color: black;
+    cursor: pointer;
+    padding: 0.5em;
+}
+
+.header-app .btn-app:hover {
+    background-color: white;
+    border-radius: 1em;
+    padding: 0.5em;
+}
+
+#currentMonth {
+    font-size: 18px;
+    margin: 0;
+}
+
+.days-container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day-app {
+    border: 1px solid #dddddd38;
+    padding: auto;
+    border-radius: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+    font-weight: 900;
+}
+
+.day-app:hover {
+    background-color: #D5F0C1;
+    color: black;
+}   
+
+.today {
+    background-color: #D5F0C1;
+    color: black;
+} 
+
+.today:hover{
+    background-color: #D5F0C1;
+}
+
+.week-day{
+    padding-top: 1.5em;
+    padding-bottom: 1em;
+    text-align: center;
+}
