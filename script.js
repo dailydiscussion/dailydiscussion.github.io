@@ -41,7 +41,7 @@ console.error('Quiz entries not found in JSON data.');
 .catch(error => console.error('Error fetching JSON:', error));
 
 // quiz-2 script 
- 
+
 // Fetch the JSON data from the file using AJAX
 fetch('data/ortho.json')
 .then(response => response.json())
@@ -162,45 +162,127 @@ updateDate();
 setInterval(updateDate, 1000);
 };
 
-// Function to fetch JSON data
-async function fetchCalendarData() {
-try {
-const response = await fetch('calender.json');
-const data = await response.json();
-return data;
-} catch (error) {
-console.error('Error fetching calendar data:', error);
+
+// js for event calendar //
+
+document.addEventListener("DOMContentLoaded", function() {
+const currentDate = new Date();
+let currentMonth = currentDate.getMonth() + 1; // Adjust for zero-based month
+let currentYear = currentDate.getFullYear();
+let todayDate = currentDate.getDate(); // Get today's date
+
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+const currentMonthText = document.getElementById("currentMonth");
+const daysContainer = document.getElementById("daysContainer");
+const eventContainer = document.getElementById("eventContainer");
+
+prevBtn.addEventListener("click", function() {
+currentMonth--;
+if (currentMonth < 1) {
+currentMonth = 12;
+currentYear--;
+}
+renderCalendar();
+});
+
+nextBtn.addEventListener("click", function() {
+currentMonth++;
+if (currentMonth > 12) {
+currentMonth = 1;
+currentYear++;
+}
+renderCalendar();
+});
+
+function renderCalendar() {
+const monthNames = ["January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December"];
+const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+currentMonthText.textContent = monthNames[currentMonth - 1] + ' ' + currentYear;
+daysContainer.innerHTML = '';
+
+// Fetch event data from JSON file
+fetch('calendar-event.json')
+.then(response => {
+if (!response.ok) {
+throw new Error('Network response was not ok');
+}
+return response.json();
+})
+.then(data => {
+const events = data;
+
+const firstDayOfMonth = new Date(currentYear, currentMonth - 1, 1);
+const startDayIndex = firstDayOfMonth.getDay();
+
+const daysInMonth = new Date(currentYear, currentMonth, 0).getDate();
+
+for (let i = 0; i < startDayIndex; i++) {
+const emptyDayElement = document.createElement('div');
+emptyDayElement.classList.add('empty-day');
+daysContainer.appendChild(emptyDayElement);
+}
+
+for (let i = 1; i <= daysInMonth; i++) {
+const dayElement = document.createElement('div');
+dayElement.classList.add('day-app'); // Use 'day-app' class instead of 'day'
+dayElement.textContent = i;
+
+// Highlight today's date
+if (i === todayDate && currentMonth === currentDate.getMonth() + 1 && currentYear === currentDate.getFullYear()) {
+dayElement.classList.add('today');
+}
+
+// Add event listener to show event on click
+dayElement.addEventListener("click", function() {
+const paddedMonth = currentMonth.toString().padStart(2, '0'); // Pad single-digit month with leading zero
+const dateKey = `${currentYear}-${paddedMonth}-${i}`; // Format: YYYY-MM-DD
+console.log('Date key:', dateKey); // Log date key to console for debugging
+const event = events[dateKey];
+if (event) {
+// Update event container with event information
+eventContainer.querySelector('.date-day').textContent = dayNames[new Date(dateKey).getDay()];
+eventContainer.querySelector('.date').textContent = i;
+eventContainer.querySelector('.event').innerHTML = event.event;
+} else {
+// If no event found, update event container accordingly
+eventContainer.querySelector('.date-day').textContent = dayNames[new Date(dateKey).getDay()];
+eventContainer.querySelector('.date').textContent = i;
+eventContainer.querySelector('.event').textContent = "No event found for this date.";
+}
+});
+
+daysContainer.appendChild(dayElement);
+
+// Automatically trigger click event for current day
+if (i === todayDate && currentMonth === currentDate.getMonth() + 1 && currentYear === currentDate.getFullYear()) {
+simulateClick(dayElement);
 }
 }
-
-// Function to populate the calendar
-async function populateCalendar() {
-const data = await fetchCalendarData();
-
-if (data) {
-var calendarContainer = document.getElementById('calendarContainer');
-
-data.entries.forEach(function (entry) {
-var dayElement = document.createElement('div');
-dayElement.className = 'day';
-dayElement.id = 'day' + entry.id;
-
-dayElement.innerHTML = `
-<div class="day-name" id="dayName${entry.id}">${entry.day}</div>
-<div class="day-date" id="dayDate${entry.id}">${entry.date}</div>
-<div class="reminder-content">
-<div class="meeting" id="meeting${entry.id}">${entry.meetings}</div>
-</div>
-`;
-
-calendarContainer.appendChild(dayElement);
+})
+.catch(error => {
+console.error('Error fetching event data:', error);
 });
 }
+
+renderCalendar();
+});
+
+function simulateClick(element) {
+if (document.createEvent) {
+var event = document.createEvent("MouseEvents");
+event.initMouseEvent("click", true, true, window,
+0, 0, 0, 0, 0, false, false, false, false, 0, null);
+element.dispatchEvent(event);
+} else {
+var event = document.createEventObject();
+event.fireEvent("onclick");
+}
 }
 
-// Call the function to populate the calendar
-populateCalendar();
-
+// end of event calendar //
 
 // Function to update the countdown
 function updateCountdown(targetDate, outputElementId) {
@@ -454,90 +536,90 @@ e.preventDefault();
 // dynamic table script 
 
 function createTable(data, table, iconDivId) {
-    var oldTable = document.getElementById("dynamic-table");
-    oldTable.classList.remove("fade-in");
-    oldTable.classList.add("fade-out");
+var oldTable = document.getElementById("dynamic-table");
+oldTable.classList.remove("fade-in");
+oldTable.classList.add("fade-out");
 
-    setTimeout(function () {
-        oldTable.classList.remove("fade-out");
-        oldTable.innerHTML = "";
-        table.classList.add("fade-in");
+setTimeout(function () {
+oldTable.classList.remove("fade-out");
+oldTable.innerHTML = "";
+table.classList.add("fade-in");
 
-        var newRow = table.insertRow(0);
-        var newCell = newRow.insertCell(0);
+var newRow = table.insertRow(0);
+var newCell = newRow.insertCell(0);
 
-        var div1 = document.createElement("div");
-        div1.classList.add("flex-question");
+var div1 = document.createElement("div");
+div1.classList.add("flex-question");
 
-        var jsonFileName = iconDivId.replace("-icon", "").replace("-", ".");
-        var iconPath = 'svg/' + jsonFileName + '.svg';
+var jsonFileName = iconDivId.replace("-icon", "").replace("-", ".");
+var iconPath = 'svg/' + jsonFileName + '.svg';
 
-        var imgDiv = document.createElement("div");
-        imgDiv.style.marginRight = "10px";
-        imgDiv.innerHTML = '<span><img src="' + iconPath + '"></span>';
+var imgDiv = document.createElement("div");
+imgDiv.style.marginRight = "10px";
+imgDiv.innerHTML = '<span><img src="' + iconPath + '"></span>';
 
-        var titleDiv = document.createElement("div");
-        titleDiv.innerHTML = '<span id="dynamic-title"></span>';
+var titleDiv = document.createElement("div");
+titleDiv.innerHTML = '<span id="dynamic-title"></span>';
 
-        div1.appendChild(imgDiv);
-        div1.appendChild(titleDiv);
+div1.appendChild(imgDiv);
+div1.appendChild(titleDiv);
 
-        newCell.appendChild(div1);
-        newCell.classList.add("th");
+newCell.appendChild(div1);
+newCell.classList.add("th");
 
-        var title = data.tests[0].title;
-        var titleElement = document.getElementById("dynamic-title");
-        titleElement.innerHTML = title;
+var title = data.tests[0].title;
+var titleElement = document.getElementById("dynamic-title");
+titleElement.innerHTML = title;
 
-        // Counter for serial number
-        var serialNumber = 1;
+// Counter for serial number
+var serialNumber = 1;
 
-        data.tests[0].links.forEach(function (link) {
-            var row = table.insertRow();
-            var cell = row.insertCell();
+data.tests[0].links.forEach(function (link) {
+var row = table.insertRow();
+var cell = row.insertCell();
 
-            var linkDiv = document.createElement("a");
-            linkDiv.id = "topic-link";
-            linkDiv.href = link.url;
+var linkDiv = document.createElement("a");
+linkDiv.id = "topic-link";
+linkDiv.href = link.url;
 
-            var div1 = document.createElement("div");
-            div1.classList.add("table-flex");
+var div1 = document.createElement("div");
+div1.classList.add("table-flex");
 
-            // Adding serial number
-            var serialDiv = document.createElement("div");
-            serialDiv.classList.add("table-no");
-            var serialText = document.createElement("div");
-            serialText.classList.add("table-no-text");
-            serialText.textContent = serialNumber++;
-            serialDiv.appendChild(serialText);
+// Adding serial number
+var serialDiv = document.createElement("div");
+serialDiv.classList.add("table-no");
+var serialText = document.createElement("div");
+serialText.classList.add("table-no-text");
+serialText.textContent = serialNumber++;
+serialDiv.appendChild(serialText);
 
-            var topicText = document.createElement("div");
-            topicText.classList.add("topic-text");
-            topicText.textContent = link.text;
+var topicText = document.createElement("div");
+topicText.classList.add("topic-text");
+topicText.textContent = link.text;
 
-            var questionsDiv = document.createElement("div");
-            questionsDiv.classList.add("table-questions");
-            questionsDiv.textContent = link.questions + ' MCQs';
+var questionsDiv = document.createElement("div");
+questionsDiv.classList.add("table-questions");
+questionsDiv.textContent = link.questions + ' MCQs';
 
-            var completeDiv = document.createElement("div");
-            completeDiv.classList.add("date-complete");
-            completeDiv.textContent = 'Completed on ' + link.date_completed; // Assuming "date_completed" is a property of each link in the JSON data
+var completeDiv = document.createElement("div");
+completeDiv.classList.add("date-complete");
+completeDiv.textContent = 'Completed on ' + link.date_completed; // Assuming "date_completed" is a property of each link in the JSON data
 
-            topicText.appendChild(questionsDiv);
-            topicText.appendChild(completeDiv); // Appending date-complete div inside topic-text div
+topicText.appendChild(questionsDiv);
+topicText.appendChild(completeDiv); // Appending date-complete div inside topic-text div
 
-            serialDiv.appendChild(topicText); // Placing topic-text inside table-no div
+serialDiv.appendChild(topicText); // Placing topic-text inside table-no div
 
-            var imgDiv = document.createElement("div");
-            imgDiv.innerHTML = '<img src="svg/right.svg">';
+var imgDiv = document.createElement("div");
+imgDiv.innerHTML = '<img src="svg/right.svg">';
 
-            div1.appendChild(serialDiv); // Adding serial number
-            div1.appendChild(imgDiv);
+div1.appendChild(serialDiv); // Adding serial number
+div1.appendChild(imgDiv);
 
-            linkDiv.appendChild(div1);
-            cell.appendChild(linkDiv);
-        });
-    }, 500); // Adjust the delay based on the transition duration
+linkDiv.appendChild(div1);
+cell.appendChild(linkDiv);
+});
+}, 500); // Adjust the delay based on the transition duration
 }
 
 
