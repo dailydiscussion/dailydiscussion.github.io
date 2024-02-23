@@ -795,7 +795,7 @@ margin-bottom: 100px;
   background-color:#FAFDD6;
   color: black;
   border-radius: 1em;
-  padding: 1.2em;
+  padding: 1em;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -832,14 +832,14 @@ margin-bottom: 100px;
   background-color: #FAFDD6;
   color: black;
   border-radius: 1em;
-  padding: 1.2em;
+  padding: 1em;
   display: flex;
   flex-direction: row;
   align-items: center;
   font-weight: 100;
   max-width: max-content;
   margin-right: 1em;
-  flex: 0 0 100%;
+  flex: 0 0 90%;
   }
   
   .date-imp {
