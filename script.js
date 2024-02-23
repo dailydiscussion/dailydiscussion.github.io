@@ -178,32 +178,34 @@ const daysContainer = document.getElementById("daysContainer");
 const eventContainer = document.getElementById("eventContainer");
 
 prevBtn.addEventListener("click", function() {
-currentMonth--;
-if (currentMonth < 1) {
-currentMonth = 12;
-currentYear--;
-}
-renderCalendar();
+updateCalendar(-1);
 });
 
 nextBtn.addEventListener("click", function() {
-currentMonth++;
-if (currentMonth > 12) {
+updateCalendar(1);
+});
+
+function updateCalendar(delta) {
+currentMonth += delta;
+if (currentMonth < 1) {
+currentMonth = 12;
+currentYear--;
+} else if (currentMonth > 12) {
 currentMonth = 1;
 currentYear++;
 }
 renderCalendar();
-});
+}
 
 function renderCalendar() {
 const monthNames = ["January", "February", "March", "April", "May", "June",
-"July", "August", "September", "October", "November", "December"];
+"July", "August", "September", "October", "November", "December"
+];
 const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 currentMonthText.textContent = monthNames[currentMonth - 1] + ' ' + currentYear;
-daysContainer.innerHTML = '';
+const fragment = document.createDocumentFragment(); // Create a document fragment
 
-// Fetch event data from JSON file
 fetch('calendar-event.json')
 .then(response => {
 if (!response.ok) {
@@ -222,45 +224,42 @@ const daysInMonth = new Date(currentYear, currentMonth, 0).getDate();
 for (let i = 0; i < startDayIndex; i++) {
 const emptyDayElement = document.createElement('div');
 emptyDayElement.classList.add('empty-day');
-daysContainer.appendChild(emptyDayElement);
+fragment.appendChild(emptyDayElement); // Append empty day to fragment
 }
 
 for (let i = 1; i <= daysInMonth; i++) {
 const dayElement = document.createElement('div');
-dayElement.classList.add('day-app'); // Use 'day-app' class instead of 'day'
+dayElement.classList.add('day-app');
 dayElement.textContent = i;
 
-// Highlight today's date
 if (i === todayDate && currentMonth === currentDate.getMonth() + 1 && currentYear === currentDate.getFullYear()) {
 dayElement.classList.add('today');
 }
 
-// Add event listener to show event on click
 dayElement.addEventListener("click", function() {
-const paddedMonth = currentMonth.toString().padStart(2, '0'); // Pad single-digit month with leading zero
-const dateKey = `${currentYear}-${paddedMonth}-${i}`; // Format: YYYY-MM-DD
-console.log('Date key:', dateKey); // Log date key to console for debugging
+const paddedMonth = currentMonth.toString().padStart(2, '0');
+const dateKey = `${currentYear}-${paddedMonth}-${i}`;
 const event = events[dateKey];
 if (event) {
-// Update event container with event information
 eventContainer.querySelector('.date-day').textContent = dayNames[new Date(dateKey).getDay()];
 eventContainer.querySelector('.date').textContent = i;
 eventContainer.querySelector('.event').innerHTML = event.event;
 } else {
-// If no event found, update event container accordingly
 eventContainer.querySelector('.date-day').textContent = dayNames[new Date(dateKey).getDay()];
 eventContainer.querySelector('.date').textContent = i;
 eventContainer.querySelector('.event').innerHTML = "<p>No event found for this date</p>";
 }
 });
 
-daysContainer.appendChild(dayElement);
+fragment.appendChild(dayElement); // Append day element to fragment
 
-// Automatically trigger click event for current day
 if (i === todayDate && currentMonth === currentDate.getMonth() + 1 && currentYear === currentDate.getFullYear()) {
-simulateClick(dayElement);
+dayElement.click(); // Trigger click event for today's date
 }
 }
+
+daysContainer.innerHTML = ''; // Clear the container
+daysContainer.appendChild(fragment); // Append fragment to container
 })
 .catch(error => {
 console.error('Error fetching event data:', error);
@@ -270,15 +269,13 @@ console.error('Error fetching event data:', error);
 renderCalendar();
 });
 
+
+
 function simulateClick(element) {
-if (document.createEvent) {
-var event = document.createEvent("MouseEvents");
-event.initMouseEvent("click", true, true, window,
-0, 0, 0, 0, 0, false, false, false, false, 0, null);
-element.dispatchEvent(event);
+if (typeof element.click === 'function') {
+element.click(); // If the element has a click method, simply call it
 } else {
-var event = document.createEventObject();
-event.fireEvent("onclick");
+console.error('simulateClick: Unable to trigger click event on the element. The element does not have a click method.');
 }
 }
 

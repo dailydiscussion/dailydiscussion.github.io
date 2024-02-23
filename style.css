@@ -522,8 +522,8 @@ flex: 0 0 100%;
 .date-complete{
 font-size: 12px;
 font-weight: 100;
-color: rgba(0, 0, 0, 0.7);
-margin-top: 15px;
+color: gray;
+margin-top: 1.5em;
 }
 
 
@@ -660,16 +660,16 @@ margin-bottom: 100px;
 
 .table-no-text{
   font-size: 14px;
-  background-color: rgba(0, 0, 255, 0.1);
+  background-color: #40679E;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%; 
   padding: 5px;
-  width: 16px;
-  height: 16px;
-  color: #1D2B53;
-  margin-right: 16px;
+  width: 14px;
+  height: 14px;
+  color: white;
+  margin-right: 1.5em;
   font-weight: 900;
   flex-shrink: 0;
 }
@@ -760,6 +760,7 @@ margin-bottom: 100px;
     text-align: center;
     font-weight: 900;
     color: gray;
+    
 }
 
 .day-app:hover {
