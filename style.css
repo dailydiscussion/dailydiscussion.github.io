@@ -766,7 +766,15 @@ margin-bottom: 100px;
 .day-app:hover {
     background-color: rgba(255, 255, 0, 0.4);
     color: black;
-}   
+}  
+
+.day-name{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
 
 .today {
     background-color: rgba(255, 255, 0, 0.4);
