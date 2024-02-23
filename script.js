@@ -19,7 +19,7 @@ return greeting;
 document.getElementById('greeting').textContent = getGreeting();
 
 // Fetch the JSON data from the file using AJAX
-fetch('data/ortho.json')
+fetch('data/ent.json')
 .then(response => response.json())
 .then(jsonData => {
 // Find the Quiz entry by ID
@@ -43,7 +43,7 @@ console.error('Quiz entries not found in JSON data.');
 // quiz-2 script 
 
 // Fetch the JSON data from the file using AJAX
-fetch('data/ortho.json')
+fetch('data/ent.json')
 .then(response => response.json())
 .then(jsonData => {
 // Find the Quiz entry by ID
@@ -320,6 +320,13 @@ return testData.tests[0].links.length;
 
 const cardData = [
 {
+id: 'ent-link',
+img: 'svg/ent.svg',
+title: 'ENT',
+icon: 'ent-icon',
+json: 'data/ent.json'
+},
+{
 id: 'ortho-link',
 img: 'svg/ortho.svg',
 title: 'Orthopaedics',
@@ -329,7 +336,7 @@ json: 'data/ortho.json'
 {
 id: 'obgy-link',
 img: 'svg/obgy.svg',
-title: 'Obs&gyne',
+title: 'Obs&Gyne',
 icon: 'obgy-icon',
 json: 'data/obgy.json'
 },
@@ -402,13 +409,6 @@ img: 'svg/eye.svg',
 title: 'Eye',
 icon: 'eye-icon',
 json: 'data/eye.json'
-},
-{
-id: 'ent-link',
-img: 'svg/ent.svg',
-title: 'ENT',
-icon: 'ent-icon',
-json: 'data/ent.json'
 },
 {
 id: 'microbiology-link',
@@ -662,4 +662,4 @@ createDynamicTable("psychiatry-link", "data/psychiatry.json", "psychiatry-icon")
 createDynamicTable("fmt-link", "data/fmt.json", "fmt-icon");
 
 // Triggering the click event for "obgy-link"
-document.getElementById("ortho-link").click();
+document.getElementById("ent-link").click();
