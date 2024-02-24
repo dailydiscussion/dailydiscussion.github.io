@@ -457,37 +457,55 @@ json: 'data/fmt.json'
 
 // Function to create a card element
 function createCard(cardInfo) {
-const cardElement = document.createElement('div');
-cardElement.classList.add('dash-card', 'card');
-cardElement.style.justifyContent = 'center';
-
-// Fetch JSON data
-fetch(cardInfo.json)
-.then(response => response.json())
-.then(data => {
-// Calculate total test count using 'calculateTotalTests' function
-const totalTests = calculateTotalTests(data);
-
-// Update the total-test element
-document.getElementById(`total-test-${cardInfo.id}`).innerHTML = totalTests;
-})
-.catch(error => console.error('Error fetching data:', error));
-
-cardElement.innerHTML = `
-<div>
-<span><img src="${cardInfo.img}"></span>
-</div>
-<div>
-${cardInfo.title}
-</div>
-<div class="card-text">
-<span id="total-test-${cardInfo.id}"></span> Tests
-</div>
-`;
-
-return cardElement;
-}
-
+    const cardElement = document.createElement('div');
+    cardElement.classList.add('dash-card', 'card');
+    cardElement.style.justifyContent = 'center';
+  
+    // Apply default style to the card with ID 'ent-link'
+    if (cardInfo.id === 'ent-link') {
+      cardElement.style.backgroundColor = '#E4F1FF';
+      cardElement.style.color = '#637A9F';
+    }
+  
+    // Event listener to toggle active state and apply styles
+    cardElement.addEventListener('click', function() {
+      // Remove active state from all cards
+      document.querySelectorAll('.dash-card.card').forEach(function(card) {
+        card.style.backgroundColor = '';
+        card.style.color = '';
+      });
+      // Apply active state to the clicked card
+      cardElement.style.backgroundColor = '#E4F1FF';
+      cardElement.style.color = '#637A9F';
+    });
+  
+    // Fetch JSON data
+    fetch(cardInfo.json)
+      .then(response => response.json())
+      .then(data => {
+        // Calculate total test count using 'calculateTotalTests' function
+        const totalTests = calculateTotalTests(data);
+  
+        // Update the total-test element
+        document.getElementById(`total-test-${cardInfo.id}`).innerHTML = totalTests;
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  
+    cardElement.innerHTML = `
+      <div>
+        <span><img src="${cardInfo.img}"></span>
+      </div>
+      <div>
+        ${cardInfo.title}
+      </div>
+      <div class="card-text">
+        <span id="total-test-${cardInfo.id}"></span> Tests
+      </div>
+    `;
+  
+    return cardElement;
+  }
+  
 // Function to handle card click
 function handleCardClick(event) {
 // Prevent the default behavior of the link
