@@ -350,6 +350,7 @@ color: black;
 padding: 1.5em;
 border-radius: 1em;
 margin-right: 10px;
+font-weight: 900;
 }
 
 .card-text{
@@ -401,6 +402,7 @@ color: black;
 max-width: max-content;
 padding: 0.5em;
 border-radius: 1em;
+font-weight: 100;
 }
 
 .table-flex{
@@ -408,6 +410,7 @@ border-radius: 1em;
  background-color: #F3F8FF;
  margin-top: 10px;
  border-radius: 1em;
+ font-weight: 900;
 }
 
 .table-flex:hover{
@@ -419,6 +422,7 @@ color: black;
 color: black;
 padding: 1em;
 border-bottom: 1px solid #ddd;
+font-weight: 900;
 }
 
 a {
@@ -892,7 +896,7 @@ margin-bottom: 100px;
   .flex-head{
     color: black;
     margin-bottom: 0;
-    padding-top: 0.5em;
+    padding-top: 1em;
     padding-left: 1.5em;
 }
 
