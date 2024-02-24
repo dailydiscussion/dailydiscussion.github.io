@@ -463,8 +463,8 @@ function createCard(cardInfo) {
   
     // Apply default style to the card with ID 'ent-link'
     if (cardInfo.id === 'ent-link') {
-      cardElement.style.backgroundColor = '#E4F1FF';
-      cardElement.style.color = '#637A9F';
+      cardElement.style.backgroundColor = '#637A9F';
+      cardElement.style.color = 'white';
     }
   
     // Event listener to toggle active state and apply styles
@@ -475,8 +475,8 @@ function createCard(cardInfo) {
         card.style.color = '';
       });
       // Apply active state to the clicked card
-      cardElement.style.backgroundColor = '#E4F1FF';
-      cardElement.style.color = '#637A9F';
+      cardElement.style.backgroundColor = '#637A9F';
+      cardElement.style.color = 'white';
     });
   
     // Fetch JSON data

@@ -2,9 +2,9 @@ html {
 scroll-behavior: smooth;
 }
 
-* {
+/* * {
 transition: all 0.5s ease;
-}
+} */
 
 /* Hide scrollbar for WebKit browsers */
 body::-webkit-scrollbar {
@@ -344,26 +344,26 @@ overflow: auto;
 flex: 0 0 20%;
 }
 
-.card{
-background-color: #F3F8FF;
-color: #637A9F;
-padding: 1.5em;
-border-radius: 1em;
-margin-right: 10px;
-font-weight: 900;
+.card {
+  background-color: #F3F8FF;
+  color: #637A9F;
+  padding: 1.5em;
+  border-radius: 1em;
+  margin-right: 10px;
+  font-weight: 900;
 }
 
-.card-text{
-margin-top: 5px;
-font-size: 12px;
-color: gray;
-font-weight: 100;
+.card-text {
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 100;
 }
 
-.card:hover{
-background-color: #E4F1FF;
-color: #637A9F;
+.card:hover {
+  background-color: #637A9F;
+  color: white;
 }
+
 
 .dash-card{
 display: flex;
@@ -397,8 +397,8 @@ border-collapse: collapse;
 
 .table-questions{
 margin-top: 10px;
-border: 1px solid rgba(0, 0, 0, 0.5);
-color: black;
+background-color: white;
+color: #637A9F;
 max-width: max-content;
 padding: 0.5em;
 border-radius: 1em;
@@ -415,7 +415,8 @@ font-weight: 100;
 }
 
 .table-flex:hover{
-background-color: #E4F1FF;
+  background-color: #637A9F;
+  color: white;
 }
 
 .th {
@@ -507,7 +508,6 @@ border-radius: 1em;
 .date-complete{
 font-size: 12px;
 font-weight: 100;
-color: gray;
 margin-top: 1.5em;
 }
 
