@@ -279,14 +279,14 @@ text-align: left;
 align-items: center;
 }
 
+.table-questions{
+  font-size: 12px; 
+  text-align:left;
+  }
+  
+
 .table-button {
 margin-bottom: 10px;
-}
-
-.table-questions{
-font-size: 12px; 
-text-align:left;
-color: gray;
 }
 
 #topic-text{
@@ -346,7 +346,7 @@ flex: 0 0 20%;
 
 .card{
 background-color: #F3F8FF;
-color: black;
+color: #637A9F;
 padding: 1.5em;
 border-radius: 1em;
 margin-right: 10px;
@@ -362,7 +362,7 @@ font-weight: 100;
 
 .card:hover{
 background-color: #E4F1FF;
-color: black;
+color: #637A9F;
 }
 
 .dash-card{
@@ -408,6 +408,7 @@ font-weight: 100;
 .table-flex{
  padding: 1.2em;
  background-color: #F3F8FF;
+ color: #637A9F;
  margin-top: 10px;
  border-radius: 1em;
  font-weight: 900;
@@ -415,11 +416,10 @@ font-weight: 100;
 
 .table-flex:hover{
 background-color: #E4F1FF;
-color: black;
 }
 
 .th {
-color: black;
+color: #637A9F;
 padding: 1em;
 border-bottom: 1px solid #ddd;
 font-weight: 900;
