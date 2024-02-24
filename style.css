@@ -681,14 +681,6 @@ margin-bottom: 100px;
   .bookmark-background{
     background-color: rgba(255, 0, 0, 0.1);
     }
-
-  .imagebank-background{
-  background-color: rgba(0, 0, 255, 0.1);
-  }
-
-  .imagebank-background:hover{
-    background-color: rgba(0, 0, 255, 0.2);
-    }
   
   .bookmark-flex{
   display: flex;
@@ -775,10 +767,8 @@ margin-bottom: 100px;
 }
 
 .event-container{
-  background-color:rgba(255, 255, 0, 0.4);
   color: black;
-  border-radius: 1em;
-  padding: 0.8em;
+  padding: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -852,7 +842,7 @@ margin-bottom: 100px;
 
 .flex-head{
     padding: 1em;
-    padding-left: 0;
+    padding-left: 1em;
     margin-top: 0;
     margin-bottom: 1.5em;
     border-bottom: 2px solid white;
@@ -868,6 +858,8 @@ margin-bottom: 100px;
     flex-basis: 40%;
     margin-top: 1em;
     margin-right: 1em;
+    padding-left: 1em;
+    border-left: 2px solid white;
   }
 
   @media screen and (max-width: 1024px){
@@ -886,17 +878,29 @@ margin-bottom: 100px;
   .flex-item:nth-child(2) {
     flex-basis: 100%;
     margin: 0;
+    margin-top: 0.5em;
     padding-top: 1em;
-    background-color: white;
+    border-radius: 1em;
+    background-color: #FAFDD6;
+    border: 0;
+    padding-left: 0;
   }
 
   .flex-head{
     color: black;
-    margin-bottom: 0.5em;
+    margin-bottom: 0;
+    padding-top: 0.5em;
+    padding-left: 1em;
 }
 
 .event-container{
   background-color: #FAFDD6;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.calendar-app {
+  border-bottom: 2px solid white;
 }
 
 }

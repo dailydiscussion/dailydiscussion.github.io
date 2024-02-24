@@ -541,90 +541,77 @@ e.preventDefault();
 // dynamic table script 
 
 function createTable(data, table, iconDivId) {
-var oldTable = document.getElementById("dynamic-table");
-oldTable.classList.remove("fade-in");
-oldTable.classList.add("fade-out");
+    var oldTable = document.getElementById("dynamic-table");
+    oldTable.classList.remove("fade-in");
+    oldTable.classList.add("fade-out");
 
-setTimeout(function () {
-oldTable.classList.remove("fade-out");
-oldTable.innerHTML = "";
-table.classList.add("fade-in");
+    setTimeout(function () {
+        oldTable.classList.remove("fade-out");
+        oldTable.innerHTML = "";
+        table.classList.add("fade-in");
 
-var newRow = table.insertRow(0);
-var newCell = newRow.insertCell(0);
+        var newRow = table.insertRow(0);
+        var newCell = newRow.insertCell(0);
 
-var div1 = document.createElement("div");
-div1.classList.add("flex-question");
+        var div1 = document.createElement("div");
+        div1.classList.add("flex-question");
 
-var jsonFileName = iconDivId.replace("-icon", "").replace("-", ".");
-var iconPath = 'svg/' + jsonFileName + '.svg';
+        var jsonFileName = iconDivId.replace("-icon", "").replace("-", ".");
+        var iconPath = 'svg/' + jsonFileName + '.svg';
 
-var imgDiv = document.createElement("div");
-imgDiv.style.marginRight = "10px";
-imgDiv.innerHTML = '<span><img src="' + iconPath + '"></span>';
+        var imgDiv = document.createElement("div");
+        imgDiv.style.marginRight = "10px";
+        imgDiv.innerHTML = '<span><img src="' + iconPath + '"></span>';
 
-var titleDiv = document.createElement("div");
-titleDiv.innerHTML = '<span id="dynamic-title"></span>';
+        var titleDiv = document.createElement("div");
+        titleDiv.innerHTML = '<span id="dynamic-title"></span>';
 
-div1.appendChild(imgDiv);
-div1.appendChild(titleDiv);
+        div1.appendChild(imgDiv);
+        div1.appendChild(titleDiv);
 
-newCell.appendChild(div1);
-newCell.classList.add("th");
+        newCell.appendChild(div1);
+        newCell.classList.add("th");
 
-var title = data.tests[0].title;
-var titleElement = document.getElementById("dynamic-title");
-titleElement.innerHTML = title;
+        var title = data.tests[0].title;
+        var titleElement = document.getElementById("dynamic-title");
+        titleElement.innerHTML = title;
 
-// Counter for serial number
-var serialNumber = 1;
+        data.tests[0].links.forEach(function (link) {
+            var row = table.insertRow();
+            var cell = row.insertCell();
 
-data.tests[0].links.forEach(function (link) {
-var row = table.insertRow();
-var cell = row.insertCell();
+            var linkDiv = document.createElement("a");
+            linkDiv.id = "topic-link";
+            linkDiv.href = link.url;
 
-var linkDiv = document.createElement("a");
-linkDiv.id = "topic-link";
-linkDiv.href = link.url;
+            var div1 = document.createElement("div");
+            div1.classList.add("table-flex");
 
-var div1 = document.createElement("div");
-div1.classList.add("table-flex");
+            var topicText = document.createElement("div");
+            topicText.classList.add("topic-text");
+            topicText.textContent = link.text;
 
-// Adding serial number
-var serialDiv = document.createElement("div");
-serialDiv.classList.add("table-no");
-var serialText = document.createElement("div");
-serialText.classList.add("table-no-text");
-serialText.textContent = serialNumber++;
-serialDiv.appendChild(serialText);
+            var questionsDiv = document.createElement("div");
+            questionsDiv.classList.add("table-questions");
+            questionsDiv.textContent = link.questions + ' MCQs';
 
-var topicText = document.createElement("div");
-topicText.classList.add("topic-text");
-topicText.textContent = link.text;
+            var completeDiv = document.createElement("div");
+            completeDiv.classList.add("date-complete");
+            completeDiv.textContent = 'Completed on ' + link.date_completed;
 
-var questionsDiv = document.createElement("div");
-questionsDiv.classList.add("table-questions");
-questionsDiv.textContent = link.questions + ' MCQs';
+            topicText.appendChild(questionsDiv);
+            topicText.appendChild(completeDiv);
 
-var completeDiv = document.createElement("div");
-completeDiv.classList.add("date-complete");
-completeDiv.textContent = 'Completed on ' + link.date_completed; // Assuming "date_completed" is a property of each link in the JSON data
+            var imgDiv = document.createElement("div");
+            imgDiv.innerHTML = '<img src="svg/right.svg">';
 
-topicText.appendChild(questionsDiv);
-topicText.appendChild(completeDiv); // Appending date-complete div inside topic-text div
+            div1.appendChild(topicText);
+            div1.appendChild(imgDiv);
 
-serialDiv.appendChild(topicText); // Placing topic-text inside table-no div
-
-var imgDiv = document.createElement("div");
-imgDiv.innerHTML = '<img src="svg/right.svg">';
-
-div1.appendChild(serialDiv); // Adding serial number
-div1.appendChild(imgDiv);
-
-linkDiv.appendChild(div1);
-cell.appendChild(linkDiv);
-});
-}, 500); // Adjust the delay based on the transition duration
+            linkDiv.appendChild(div1);
+            cell.appendChild(linkDiv);
+        });
+    }, 500); // Adjust the delay based on the transition duration
 }
 
 
