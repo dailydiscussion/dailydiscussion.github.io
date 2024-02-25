@@ -964,7 +964,7 @@ footer{
 .container {
   max-width: 400px;
   margin: 50px auto;
-  padding: 20px;
+  padding: 50px;
   border-radius: 5px;
  
 }
@@ -1013,10 +1013,14 @@ input[type="submit"]:hover {
 @media screen and (max-width: 1024px){
   .signup-left {
     flex-basis: 100%;
+    margin-left: 2em;
+    margin-right: 2em;
   }
   
   .signup-right{
     flex-basis: 100%;
+    padding-left: 2em;
+    padding-right: 2em;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
     border-top-right-radius: 0;
