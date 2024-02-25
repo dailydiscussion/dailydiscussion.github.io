@@ -2,9 +2,9 @@ html {
 scroll-behavior: smooth;
 }
 
-/* * {
+.smooth {
 transition: all 0.5s ease;
-} */
+}
 
 /* Hide scrollbar for WebKit browsers */
 body::-webkit-scrollbar {
@@ -159,8 +159,6 @@ margin: 1em;
 display: flex;
 margin-bottom: 40px;
 flex-direction: column;
-justify-content: center;
-text-align: center;
 }
 
 .dash-flex {
@@ -185,12 +183,8 @@ margin-top: 20px;
 }
 
 .dash-container{
-text-align: center;
-max-width: max-content;
-margin: auto;
-padding: 1em;
 padding-bottom: 0;
-padding-top: 0.5em;
+padding-top: 40px;
 }
 
 .col{
@@ -214,44 +208,54 @@ justify-content: space-between;
 align-items: center;
 }
 
-.flex{
-display: flex;
-flex-direction: row;
-justify-content: center;
-flex-wrap: nowrap;
-align-items: stretch;
-margin-bottom: 10px;
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
-.col-6-12{
-flex: 1;
-display: flex;
-flex-direction: column;
-color: black;
-text-align: center;
-margin: auto;
-padding: 0.5em;
-height: 100px;
-width: 200px;
-border-radius:1em;
-border-radius: 1em;
-margin-right: 10px;
-}
-
-.col-6-12 h6{
-color: gray;
-padding: 0;
-margin: 1em;
-}
-
-.col-6-12 h2{
-font-size: 30px;
+.col-6-12 {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  text-align: center;
+  padding: 0.5em;
+  height: 100px;
+  width: calc(25% - 23.5px);
+  border-radius: 1em;
+  margin-right: 10px;
 }
 
 .col-6-12:last-child{
-margin-right: 0px;
+  margin-right: 0;
 }
 
+@media (max-width: 768px) {
+  .col-6-12 {
+    width: calc(50% - 22px);
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .col-6-12:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+
+.col-6-12 h6{
+  color: gray;
+  padding: 0;
+  margin: 1em;
+  }
+  
+  .col-6-12 h2{
+  font-size: 30px;
+  }
+  
+  .col-6-12:last-child{
+  margin-right: 0px;
+  }
 
 .topic{
 padding: 0;
@@ -345,12 +349,13 @@ flex: 0 0 20%;
 }
 
 .card {
-  background-color: #F3F8FF;
+  background-color: #637a9f13;
   color: #637A9F;
   padding: 1.5em;
   border-radius: 1em;
   margin-right: 10px;
   font-weight: 900;
+  flex-shrink: 0;
 }
 
 .card-text {
@@ -407,7 +412,7 @@ font-weight: 100;
 
 .table-flex{
  padding: 1.2em;
- background-color: #F3F8FF;
+ background-color: #637a9f13;
  color: #637A9F;
  margin-top: 10px;
  border-radius: 1em;
@@ -555,11 +560,6 @@ flex-direction: row;
 justify-content: left;
 width: 100%;
 margin: auto;
-}
-
-.col-6-12{
-height: 100px;
-width: 30vw;
 }
 
 th, td{

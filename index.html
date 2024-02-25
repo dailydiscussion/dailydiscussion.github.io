@@ -2,490 +2,446 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ready to boost your NEET PG | INICET preparation together? Start quizzing now">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <title>Target NEET-PG | INICET 2024</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="manifest.json">
-  <link rel="preload" href="svg/topography.svg" as="image" type="image/svg+xml">
-  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#2b5797">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ready to boost your NEET PG | INICET preparation together? Start quizzing now">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>Target NEET-PG | INICET 2024</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap"
+rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="manifest.json">
+<link rel="preload" href="svg/topography.svg" as="image" type="image/svg+xml">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#2b5797">
 </head>
 
 <body>
 
-  <style>
-    /* Style for the loading screen container */
-    .loading-screen {
-      position: fixed;
-      flex-direction: column;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #1D2B53;
-      color: white;
-      background-image: url(svg/topography.svg);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      /* Ensure it's on top of other content */
-    }
+<style>
+/* Style for the loading screen container */
+.loading-screen {
+position: fixed;
+flex-direction: column;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #1D2B53;
+color: white;
+background-image: url(svg/topography.svg);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 9999;
+/* Ensure it's on top of other content */
+}
 
-    /* Style for the loading animation */
-    .loading-spinner {
-      border: 6px solid rgba(255, 255, 255, 0.3);
-      /* Semi-transparent border */
-      border-top: 6px solid #ffffff;
-      /* White border */
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      animation: spin 1s linear infinite;
-      /* Apply rotation animation */
-    }
+/* Style for the loading animation */
+.loading-spinner {
+border: 6px solid rgba(255, 255, 255, 0.3);
+/* Semi-transparent border */
+border-top: 6px solid #ffffff;
+/* White border */
+border-radius: 50%;
+width: 60px;
+height: 60px;
+animation: spin 1s linear infinite;
+/* Apply rotation animation */
+}
 
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
-      }
+@keyframes spin {
+0% {
+transform: rotate(0deg);
+}
 
-      100% {
-        transform: rotate(360deg);
-      }
-    }
+100% {
+transform: rotate(360deg);
+}
+}
 
-    /* Style for the loading message */
-    .loading-message {
-      color: #ffffff;
-      /* White text */
-      margin-top: 20px;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-    }
+/* Style for the loading message */
+.loading-message {
+color: #ffffff;
+/* White text */
+margin-top: 20px;
+display: flex;
+flex-direction: column;
+text-align: center;
+}
 
-    /* Apply transition to the main content */
-    #mainContent {
-      opacity: 0;
-      /* Set initial opacity to 0 */
-      transition: opacity 0.5s ease-in-out;
-      /* Smooth opacity transition */
-    }
+/* Apply transition to the main content */
+#mainContent {
+opacity: 0;
+/* Set initial opacity to 0 */
+transition: opacity 0.5s ease-in-out;
+/* Smooth opacity transition */
+}
 
-    /* Hide the main content initially */
-    .hidden {
-      display: none;
-    }
-  </style>
+/* Hide the main content initially */
+.hidden {
+display: none;
+}
+</style>
 
-  <!-- Loading screen container -->
-  <div class="loading-screen" id="loadingScreen">
-    <!-- Loading animation -->
-    <div class="loading-spinner"></div>
-    <!-- Loading message -->
-    <div class="loading-message">
-      <h2>
-        Daily Discussion
-      </h2>
-      <h4 style="color: #B6BBC4; font-weight:100; margin-top:0; width:60%; margin:auto;">
-        Ready to boost your NEET PG | INICET preparation together? Start quizzing now!
-      </h4>
-    </div>
-  </div>
+<!-- Loading screen container -->
+<div class="loading-screen" id="loadingScreen">
+<!-- Loading animation -->
+<div class="loading-spinner"></div>
+<!-- Loading message -->
+<div class="loading-message">
+<h2>
+Daily Discussion
+</h2>
+<h4 style="color: #B6BBC4; font-weight:100; margin-top:0; width:60%; margin:auto;">
+Ready to boost your NEET PG | INICET preparation together? Start quizzing now!
+</h4>
+</div>
+</div>
 
-  <script id="sidebar">
-    function showSection(sectionId) {
-      // Hide all sections
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(section => {
-        section.style.display = 'none';
-      });
+<script id="sidebar">
+function showSection(sectionId) {
+// Hide all sections
+const sections = document.querySelectorAll('.section');
+sections.forEach(section => {
+section.style.display = 'none';
+});
 
-      // Show the selected section
-      const selectedSection = document.getElementById(sectionId);
-      if (selectedSection) {
-        selectedSection.style.display = 'block';
-      }
-    }
-    // Initially hide all sections except home-link
-    document.addEventListener("DOMContentLoaded", function () {
-      const sections = document.querySelectorAll('.section');
-      sections.forEach(section => {
-        section.style.display = 'none';
-      });
-      document.getElementById('home-link').style.display = 'block';
-    });
-  </script>
+// Show the selected section
+const selectedSection = document.getElementById(sectionId);
+if (selectedSection) {
+selectedSection.style.display = 'block';
+}
+}
+// Initially hide all sections except home-link
+document.addEventListener("DOMContentLoaded", function () {
+const sections = document.querySelectorAll('.section');
+sections.forEach(section => {
+section.style.display = 'none';
+});
+document.getElementById('home-link').style.display = 'block';
+});
+</script>
 
-  <div class="desktop hidden" id="mainContent">
+<div class="desktop hidden" id="mainContent">
 
-    <div class="sidebar">
-      <a href="#" onclick="showSection('home-link')"><img src="svg/Home.svg"></a>
-      <a href="#" onclick="showSection('schedule-link')"><img src="svg/calender-link.svg"></a>
-      <a href="#" onclick="showSection('test-link')"><img src="svg/Test-link.svg"></a>
-      <a href="#" onclick="showSection('news-link')"><img src="svg/about-link.svg"></a>
-    </div>
+<div class="sidebar">
+<a href="#" onclick="showSection('home-link')"><img src="svg/Home.svg"></a>
+<a href="#" onclick="showSection('schedule-link')"><img src="svg/calender-link.svg"></a>
+<a href="#" onclick="showSection('test-link')"><img src="svg/Test-link.svg"></a>
+<a href="#" onclick="showSection('news-link')"><img src="svg/about-link.svg"></a>
+</div>
 
-    <div class="main-content">
-      <section class="main content section" id="home-link">
-        <div class="home">
-          <div class="header-box" id="background">
-            <div class="col-header">
-              <div>
-                <div class="col">
-                  <div class="header" style="color: white;">
-                    <h2>Hi, <span id="greeting"></span></h2>
-                    <h4 style="color: #B6BBC4; font-weight:100;">
-                      Every day is crucial for your NEET PG | INICET success. Make it count!
-                    </h4>
-                  </div>
-                </div>
-                <div class="col-quiz">
-                  <h3 style="color: white;">
-                    Today's Quizes
-                  </h3>
-                </div>
+<div class="main-content smooth">
+<section class="main content section" id="home-link">
+<div class="home">
+<div class="header-box" id="background">
+<div class="col-header">
+<div>
+<div class="col">
+<div class="header" style="color: white;">
+<h2>Hi, <span id="greeting"></span></h2>
+<h4 style="color: #B6BBC4; font-weight:100;">
+Every day is crucial for your NEET PG | INICET success. Make it count!
+</h4>
+</div>
+</div>
+<div class="col-quiz">
+<h3 style="color: white;">
+Today's Quizes
+</h3>
+</div>
 
-                <div class="col">
-                  <a id="quizLink1" href="#">
-                    <button class="button">
-                      <div id="actualContent1">
-                        <div class="flex-question">
-                          <div style="margin-left: 10px; margin-right:5px;">
-                            <span><img src="svg/ent.svg"></span>
-                          </div>
-                          <div>
-                            <p id="topicContainer1" style="margin:10px;"></p>
-                            <p style="margin:10px; font-size:13px; color: #333;">(<span id="MCQCount1"></span> MCQs)</p>
-                          </div>
-                          <div style="margin-right: 10px; margin-left:10px;">
-                            <span><img src="svg/right.svg"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </button>
-                  </a>
-                </div>
-                <div class="col">
-                  <a id="quizLink2" href="#">
-                    <button class="button">
-                      <div id="actualContent2">
-                        <div class="flex-question">
-                          <div style="margin-left: 10px; margin-right:5px;">
-                            <span><img src="svg/ent.svg" alt="surgery"></span>
-                          </div>
-                          <div>
-                            <p id="topicContainer2" style="margin:10px;"></p>
-                            <p style="margin:10px; font-size:13px; color: #333;">(<span id="MCQCount2"></span> MCQs)</p>
-                          </div>
-                          <div style="margin-right: 10px; margin-left:10px;">
-                            <span><img src="svg/right.svg" alt="right"></span>
-                          </div>
-                        </div>
-                      </div>
-                    </button>
-                  </a>
-                </div>
-              </div>
-              <div class="svg">
-                <img src="favicon/safari-pinned-tab.svg">
-              </div>
-            </div>
-          </div>
-        </div>
+<div class="col">
+<a id="quizLink1" href="#">
+<button class="button">
+<div id="actualContent1">
+<div class="flex-question">
+<div style="margin-left: 10px; margin-right:5px;">
+<span><img src="svg/ent.svg"></span>
+</div>
+<div>
+<p id="topicContainer1" style="margin:10px;"></p>
+<p style="margin:10px; font-size:13px; color: #333;">(<span id="MCQCount1"></span> MCQs)</p>
+</div>
+<div style="margin-right: 10px; margin-left:10px;">
+<span><img src="svg/right.svg"></span>
+</div>
+</div>
+</div>
+</button>
+</a>
+</div>
+<div class="col">
+<a id="quizLink2" href="#">
+<button class="button">
+<div id="actualContent2">
+<div class="flex-question">
+<div style="margin-left: 10px; margin-right:5px;">
+<span><img src="svg/ent.svg" alt="surgery"></span>
+</div>
+<div>
+<p id="topicContainer2" style="margin:10px;"></p>
+<p style="margin:10px; font-size:13px; color: #333;">(<span id="MCQCount2"></span> MCQs)</p>
+</div>
+<div style="margin-right: 10px; margin-left:10px;">
+<span><img src="svg/right.svg" alt="right"></span>
+</div>
+</div>
+</div>
+</button>
+</a>
+</div>
+</div>
+<div class="svg">
+<img src="favicon/safari-pinned-tab.svg">
+</div>
+</div>
+</div>
+</div>
 
-        <div class="dash">
-          <div class="col">
-            <div class="dash-flex" style="justify-content: center; align-items:center;">
-              <div>
-                <h2>
-                  Dashboard
-                </h2>
-              </div>
-              <div>
-                <img src="svg/dash.svg">
-              </div>
-            </div>
-          </div>
+<div class="dash">
 
-          <div class="dash-container">
-            <div>
-              <div class="flex">
-                <div class="col-6-12" style="background-color: #FAFDD6;">
-                  <h6 style="color: black; font-weight:300;">
-                    Days
-                  </h6>
-                  <h2 id="totalDays"></h2>
+<div>
+<div class="dash-flex">
+<div>
+<h2>
+Dashboard
+</h2>
+</div>
+<div>
+<img src="svg/dash.svg">
+</div>
+</div>
 
-                </div>
-                <div class="col-6-12" style="background-color: #F9EFDB;">
-                  <h6 style="color: black; font-weight:300;">
-                    MCQs
-                  </h6>
-                  <h2 id="totalQuestions"></h2>
+<h5 class="calender-subhead">
+Performance Overview
+</h5>
 
-                </div>
-              </div>
-              <div class="flex">
-                <div class="col-6-12" style="background-color: #F3F8FF;">
-                  <h6 style="color: black; font-weight:300;">
-                    Tests
-                  </h6>
-                  <h2 id="totalTests"></h2>
+<hr>
+</div>
 
-                </div>
-                <div class="col-6-12" style="background-color: #FFF8CD;">
-                  <h6 style="color: black; font-weight:300;">
-                    Subjects
-                  </h6>
-                  <h2>
-                    4/19
-                  </h2>
+<div class="dash-container">
+<div>
+<div class="flex">
 
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+<div class="col-6-12" style="background-color: #FAFDD6;">
+<h6 style="color: black; font-weight:300;">
+Days
+</h6>
+<h2 id="totalDays"></h2>
+</div>
 
-      </section>
+<div class="col-6-12" style="background-color: #F9EFDB;">
+<h6 style="color: black; font-weight:300;">
+MCQs
+</h6>
+<h2 id="totalQuestions"></h2>
+</div>
 
-      <section class="section-schedule section" id="schedule-link">
-        <div>
-          <div class="dash-flex">
-            <div>
-              <h2>
-                Calender
-              </h2>
-            </div>
-            <div>
-              <img src="svg/calender.svg">
-            </div>
-          </div>
+<div class="col-6-12" style="background-color: #F3F8FF;">
+<h6 style="color: black; font-weight:300;">
+Tests
+</h6>
+<h2 id="totalTests"></h2>
+</div>
 
-          <h5 class="calender-subhead">
-            Discover your schedule for upcoming tests
-          </h5>
-        </div>
-        <hr>
-        <div class="schedule">
-          <div>
-            <h3 id="currentDate" style="font-weight:100; margin:0;"></h3>
-            <h2>
-              Today
-            </h2>
-          </div>
+<div class="col-6-12" style="background-color: #FFF8CD;">
+<h6 style="color: black; font-weight:300;">
+Subjects
+</h6>
+<h2>
+4/19
+</h2>
+</div>
 
-          <div class="flex-row">
-            <div class="flex-item">
-              <div class="calendar-app">
-                <div class="header-app">
-                  <div class="btn-app" id="prevBtn"><img src="svg/left.svg"></div>
-                  <h1 id="currentMonth"></h1>
-                  <div class="btn-app" id="nextBtn"><img src="svg/right.svg"></div>
-                </div>
-                <div class="days-container" id="daysContainer"></div>
-              </div>
-            </div>
-            <div class="flex-item">
-              <div class="flex-head">
-                Test Schedule :
-              </div>
+</div>
+</div>
+</div>
+</div>
 
-              <div id="eventContainer" class="event-container">
-                <div class="date-container">
-                  <div class="date"></div>
-                  <div class="date-day"></div>
-                </div>
-                <div class="event"></div>
-              </div>
-            </div>
-          </div>
+</section>
 
-          <div>
-            <h3 style="margin-top: 2em; margin-bottom: 1.5em;">
-              Important Events :
-            </h3>
+<section class="section-schedule section" id="schedule-link">
+<div>
+<div class="dash-flex">
+<div>
+<h2>
+Calender
+</h2>
+</div>
+<div>
+<img src="svg/calender.svg">
+</div>
+</div>
 
-            <div class="horizontal">
-              <div class="imp-date">
-                <div class="date-container">
-                  <div class="date-imp">19</div>
-                  <div class="month-imp">May</div>
-                </div>
-                <div class="counter-date">
-                  <p>
-                    INICET 2024
-                  </p>
-                  <p id="countdownOutput1"></p>
-                </div>
-              </div>
+<h5 class="calender-subhead">
+Discover your schedule for upcoming tests
+</h5>
+</div>
+<hr>
+<div class="schedule">
+<div>
+<h3 id="currentDate" style="font-weight:100; margin:0;"></h3>
+<h2>
+Today
+</h2>
+</div>
 
-              <div class="imp-date">
-                <div class="date-container">
-                  <div class="date-imp">7</div>
-                  <div class="month-imp">July</div>
-                </div>
-                <div class="counter-date">
-                  <p>
-                    NEET-PG 2024
-                  </p>
-                  <p id="countdownOutput2"></p>
-                </div>
-              </div>
-            </div>
+<div class="flex-row">
+<div class="flex-item">
+<div class="calendar-app">
+<div class="header-app">
+<div class="btn-app" id="prevBtn"><img src="svg/left.svg"></div>
+<h1 id="currentMonth"></h1>
+<div class="btn-app" id="nextBtn"><img src="svg/right.svg"></div>
+</div>
+<div class="days-container" id="daysContainer"></div>
+</div>
+</div>
+<div class="flex-item">
+<div class="flex-head">
+Test Schedule :
+</div>
 
+<div id="eventContainer" class="event-container">
+<div class="date-container">
+<div class="date"></div>
+<div class="date-day"></div>
+</div>
+<div class="event"></div>
+</div>
+</div>
+</div>
 
-          </div>
-        </div>
-      </section>
+<div>
+<h3 style="margin-top: 2em; margin-bottom: 1.5em;">
+Important Events :
+</h3>
 
-      <section class="section-table section" id="test-link">
+<div class="horizontal">
+<div class="imp-date">
+<div class="date-container">
+<div class="date-imp">19</div>
+<div class="month-imp">May</div>
+</div>
+<div class="counter-date">
+<p>
+INICET 2024
+</p>
+<p id="countdownOutput1"></p>
+</div>
+</div>
 
-        <div>
-          <div class="dash-flex margin-top-2">
-            <div>
-              <h2>
-                Tests Completed
-              </h2>
-            </div>
-            <div>
-              <img src="svg/check.svg">
-            </div>
-          </div>
-          <h5 class="subheading" style="font-weight:100; margin-bottom:20px;">
-            A peek into your previous test performances
-          </h5>
-        </div>
-        <hr>
-
-        <div class="card-container">
-          <div class="card-layout" id="card-container"></div>
-        </div>
+<div class="imp-date">
+<div class="date-container">
+<div class="date-imp">7</div>
+<div class="month-imp">July</div>
+</div>
+<div class="counter-date">
+<p>
+NEET-PG 2024
+</p>
+<p id="countdownOutput2"></p>
+</div>
+</div>
+</div>
 
 
-        <table class="table" id="dynamic-table"></table>
+</div>
+</div>
+</section>
 
-      </section>
+<section class="section-table section" id="test-link">
 
-      <section class="about section" id="news-link">
-        <style>
-          .about-sec {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            /* Center both horizontally and vertically */
-          }
-        </style>
-        <div class="about-sec">
-          <h2>
-            Important Announcements
-          </h2>
-          <p>
-            Coming soon
-          </p>
-        </div>
+<div>
+<div class="dash-flex margin-top-2">
+<div>
+<h2>
+Tests Completed
+</h2>
+</div>
+<div>
+<img src="svg/check.svg">
+</div>
+</div>
+<h5 class="subheading" style="font-weight:100; margin-bottom:20px;">
+A peek into your previous test performances
+</h5>
+</div>
+<hr>
 
-      </section>
+<div class="card-container">
+<div class="card-layout" id="card-container"></div>
+</div>
 
-    </div>
 
-  </div>
+<table class="table" id="dynamic-table"></table>
 
-  <script>
-    // JavaScript code to toggle between loading screen and main content
-    document.addEventListener('DOMContentLoaded', function () {
-      // Simulate content loading (e.g., fetching data from a server)
-      setTimeout(function () {
-        // Hide loading screen
-        document.getElementById('loadingScreen').style.display = 'none';
-        // Show main content
-        document.getElementById('mainContent').classList.remove('hidden');
-        // Trigger transition by changing opacity
-        setTimeout(function () {
-          document.getElementById('mainContent').style.opacity = '1';
-        }, 50); // Delay to ensure smooth transition after displaying main content
-      }, 1500); // Simulated loading time (1.5 seconds)
-    });
-  </script>
+</section>
 
-  <script src="script.js"></script>
+<section class="about section" id="news-link">
+<style>
+.about-sec {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+/* Center both horizontally and vertically */
+}
+</style>
+<div class="about-sec">
+<h2>
+Important Announcements
+</h2>
+<p>
+Coming soon
+</p>
+</div>
 
-  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-  <script>
-    window.OneSignalDeferred = window.OneSignalDeferred || [];
-    OneSignalDeferred.push(function (OneSignal) {
-      OneSignal.init({
-        appId: "88e8b250-302e-41c7-ba16-0be6fdc3b645",
-      });
-    });
-  </script>
+</section>
 
-  <!-- JavaScript to handle sign-up and login -->
-  <script>
-    const signupForm = document.getElementById('signup-form');
-    const loginForm = document.getElementById('login-form');
+</div>
 
-    signupForm.addEventListener('submit', (event) => {
-      event.preventDefault(); // Prevent default form submission
+</div>
 
-      const email = signupForm['email'].value;
-      const password = signupForm['password'].value;
+<script>
+// JavaScript code to toggle between loading screen and main content
+document.addEventListener('DOMContentLoaded', function () {
+// Simulate content loading (e.g., fetching data from a server)
+setTimeout(function () {
+// Hide loading screen
+document.getElementById('loadingScreen').style.display = 'none';
+// Show main content
+document.getElementById('mainContent').classList.remove('hidden');
+// Trigger transition by changing opacity
+setTimeout(function () {
+document.getElementById('mainContent').style.opacity = '1';
+}, 50); // Delay to ensure smooth transition after displaying main content
+}, 1500); // Simulated loading time (1.5 seconds)
+});
+</script>
 
-      firebase.auth().createUserWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-          // Signed up successfully
-          const user = userCredential.user;
-          console.log('Signed up successfully:', user);
-          // You can redirect the user to another page or perform any other action here
-        })
-        .catch((error) => {
-          // Handle errors
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.error('Error signing up:', errorMessage);
-          // You can display an error message to the user or perform any other action here
-        });
-    });
+<script src="script.js"></script>
 
-    loginForm.addEventListener('submit', (event) => {
-      event.preventDefault(); // Prevent default form submission
-
-      const email = loginForm['email'].value;
-      const password = loginForm['password'].value;
-
-      firebase.auth().signInWithEmailAndPassword(email, password)
-        .then((userCredential) => {
-          // Signed in successfully
-          const user = userCredential.user;
-          console.log('Signed in successfully:', user);
-          // You can redirect the user to another page or perform any other action here
-        })
-        .catch((error) => {
-          // Handle errors
-          const errorCode = error.code;
-          const errorMessage = error.message;
-          console.error('Error signing in:', errorMessage);
-          // You can display an error message to the user or perform any other action here
-        });
-    });
-  </script>
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+window.OneSignalDeferred = window.OneSignalDeferred || [];
+OneSignalDeferred.push(function (OneSignal) {
+OneSignal.init({
+appId: "88e8b250-302e-41c7-ba16-0be6fdc3b645",
+});
+});
+</script>
 
 </body>
 
