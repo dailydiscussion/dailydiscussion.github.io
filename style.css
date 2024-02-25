@@ -211,7 +211,6 @@ align-items: center;
 .flex {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
 .col-6-12 {
@@ -221,7 +220,7 @@ align-items: center;
   text-align: center;
   padding: 0.5em;
   height: 100px;
-  width: calc(25% - 23.5px);
+  width: 25%;
   border-radius: 1em;
   margin-right: 10px;
 }
@@ -231,8 +230,14 @@ align-items: center;
 }
 
 @media (max-width: 768px) {
+  .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .col-6-12 {
-    width: calc(50% - 22px);
+    width: calc(50% - 21px);
     margin-bottom: 10px;
     margin-right: 10px;
   }
@@ -692,6 +697,63 @@ padding: 1.5em;
   flex-direction: row;
   align-items: center;
   font-weight: 100;
+}
+
+.test-flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.test-container{
+  background-color: #FFF8CD;
+  color: black;
+  padding-left: 1em;
+  border-radius: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-weight: 100;
+  margin-right: 10px;
+  width: calc(50% - 21px);
+}
+
+.test-container:nth-child(2),
+.test-container:nth-child(4),
+.test-container:nth-child(6){
+  margin-right: 0;
+}
+
+.test-event{
+  padding: 1em;
+  padding-left: 1.5em;
+  font-weight: 100;
+  width: 100%;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  border-left: 2px solid white;
+}
+
+.date-test-container{
+  display: flex;
+  flex-direction: column;
+  margin-right: 1.5em;
+  margin-left: 1em;
+  width: 50px;
+}
+
+@media (max-width: 768px) {
+  .test-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .test-container{
+    margin-right: 0px;
+    width: 100%;
+  }
 }
 
 .date{
