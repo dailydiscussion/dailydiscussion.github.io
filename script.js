@@ -566,7 +566,7 @@ const timetableElement = document.getElementById('timetable');
 const currentDate = new Date();
 
 // Generate data for today and the next 5 days
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 4; i++) {
 const date = new Date(currentDate.getTime() + i * 24 * 60 * 60 *
 1000); // Calculate date for each day
 const year = date.getFullYear();
