@@ -30,7 +30,7 @@ transition: font-size 0.3s ease; /* Apply a smooth transition for font size chan
 .section-table{
 display: flex;
 flex-direction: column;
-margin: 1.5em;
+margin: 1em;
 }
 
 .section-schedule{
@@ -40,7 +40,7 @@ flex-direction: column;
 padding-top: 20px;
 padding-bottom: 60px;
 border-radius: 1em;
-padding: 1.5em;
+padding: 1em;
 }
 
 .schedule{
@@ -517,57 +517,6 @@ margin-top: 1.5em;
 }
 
 
-/* Media Queries */
-@media only screen and (max-width: 768px) {
-
-.svg{
-display: none;
-}
-
-table {
-width: 100%;
-margin: auto;
-}
-
-.table-questions{
-margin-top: 10px;
-}
-
-.schedule{
-display: flex;
-flex-direction: column;
-width: 100%;
-margin-top: 40px;
-}
-
-.cards{
-flex: 0 0 30%;
-}
-
-.home {
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-margin: 0;
-padding: 1em; 
-text-align: left;
-align-items: left;
-}
-
-.card-layout{
-display: flex;
-flex-direction: row;
-justify-content: left;
-width: 100%;
-margin: auto;
-}
-
-th, td{
-text-align: left;
-}
-
-}
-
 .sidebar {
 height: 100%;
 width: 80px; /* Adjust as needed */
@@ -595,45 +544,11 @@ border-radius: 1em;
 }
 
 .main-content {
-margin-left: 80px; /* Adjust based on sidebar width */
-padding: 20px;
+margin-left: 80px;
+padding: 1.5em;
 }
 
-/* Media query for mobile devices */
-@media screen and (max-width: 1024px) {
 
-.sidebar {
-height: 50px;
-width: 100%; /* Adjust as needed */
-bottom: 0;
-padding-top: 10px;
-padding-bottom: 10px;
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-align-items: center;
-z-index: 9999; /* Set a high z-index value */
-}
-
-.section{
-  margin-bottom: 100px;
-}
-
-.main-content {
-margin-left: 0px; /* Adjust based on sidebar width */
-padding: 0;
-}
-
-.about{
-display: flex;
-flex-direction: column;
-flex-wrap: nowrap;
-align-items: center;
-text-align: center;
-margin-bottom: 100px;
-}
-
-}
 
 
 .table-flex img{
@@ -869,6 +784,42 @@ margin-bottom: 100px;
     border-left: 2px solid white;
   }
 
+/* Media query for mobile devices */
+@media screen and (max-width: 1024px) {
+
+  .sidebar {
+  height: 50px;
+  width: 100%; /* Adjust as needed */
+  bottom: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9999; /* Set a high z-index value */
+  }
+  
+  .section{
+    margin-bottom: 100px;
+  }
+  
+  .main-content {
+  margin-left: 0px; /* Adjust based on sidebar width */
+  padding: 0.2em;
+  }
+  
+  .about{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 100px;
+  }
+  
+  }
+
   @media screen and (max-width: 1024px){
     
 .flex-row{
@@ -918,3 +869,54 @@ margin-bottom: 100px;
     width: 100%;
   }
 }
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+
+  .svg{
+  display: none;
+  }
+  
+  table {
+  width: 100%;
+  margin: auto;
+  }
+  
+  .table-questions{
+  margin-top: 10px;
+  }
+  
+  .schedule{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 40px;
+  }
+  
+  .cards{
+  flex: 0 0 30%;
+  }
+  
+  .home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 0;
+  padding: 1em; 
+  text-align: left;
+  align-items: left;
+  }
+  
+  .card-layout{
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  width: 100%;
+  margin: auto;
+  }
+  
+  th, td{
+  text-align: left;
+  }
+  
+  }
