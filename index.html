@@ -27,21 +27,25 @@ rel="stylesheet">
 
 <body>
 
-<!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
-
-<script>
-const firebaseConfig = {
-apiKey: "AIzaSyBbH7hVugewu6gd6lRuyYRS7V74PaeIOV4",
-authDomain: "web-app-d632b.firebaseapp.com",
-databaseURL: "https://web-app-d632b-default-rtdb.asia-southeast1.firebasedatabase.app",
-projectId: "web-app-d632b",
-storageBucket: "web-app-d632b.appspot.com",
-messagingSenderId: "1032245612513",
-appId: "1:1032245612513:web:dd334264beb6a0c672cca0"
-};
-firebase.initializeApp(firebaseConfig);
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyBbH7hVugewu6gd6lRuyYRS7V74PaeIOV4",
+      authDomain: "web-app-d632b.firebaseapp.com",
+      databaseURL: "https://web-app-d632b-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "web-app-d632b",
+      storageBucket: "web-app-d632b.appspot.com",
+      messagingSenderId: "1032245612513",
+      appId: "1:1032245612513:web:dd334264beb6a0c672cca0"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
 </script>
 
 <style>
