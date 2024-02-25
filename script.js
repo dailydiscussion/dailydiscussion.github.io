@@ -597,8 +597,18 @@ console.error('No event data found for:', dateString);
 function createTestSchedule(eventData, timetableElement, dayOfMonth, dayOfWeek, index) {
 const container = document.createElement('div');
 container.classList.add('test-container');
-container.style.backgroundColor = index % 2 === 0 ? '#FAFDD6' :
-'#F9EFDB'; // Alternate background colors
+// Define an array of background colors
+const backgroundColors = ['#FAFDD6', '#F9EFDB', '#F3F8FF', '#FFF8CD'];
+
+// Define an array of text colors
+const textColors = ['#000000', '#000000', '#000000', '#YourTextColorHere'];
+
+// Set the background color based on the index
+container.style.backgroundColor = backgroundColors[index % backgroundColors.length];
+
+// Set the text color based on the index
+container.style.color = textColors[index % textColors.length];
+
 
 const dateTestContainer = document.createElement('div');
 dateTestContainer.classList.add('date-test-container');

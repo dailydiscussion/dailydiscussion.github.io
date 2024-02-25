@@ -21,7 +21,6 @@
         },
         {
           "s.no": 3,
-          "id": "Quiz",
           "text": "Nose + Instruments 1",
           "questions":"50",
           "days": 1,
@@ -30,12 +29,31 @@
         },
         {
           "s.no": 4,
-          "id": "Quiz-2",
           "text": "Nose + Instruments 2",
           "questions":"50",
           "days": 0,
           "date_completed": "25 Feb 2024",
           "url": "https://link.marrow.com/join_custom_module/55CW0LZH"
+        }
+        ,
+        {
+          "s.no": 5,
+          "id": "Quiz",
+          "text": "Larynx + Pharynx 1",
+          "questions":"50",
+          "days": 1,
+          "date_completed": "26 Feb 2024",
+          "url": "https://link.marrow.com/join_custom_module/55CX0HUX"
+        }
+        ,
+        {
+          "s.no": 6,
+          "id": "Quiz-2",
+          "text": "Larynx + Pharynx 2",
+          "questions":"50",
+          "days": 0,
+          "date_completed": "26 Feb 2024",
+          "url": "https://link.marrow.com/join_custom_module/55CX0HV3"
         }
       ]
     }
