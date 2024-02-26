@@ -713,7 +713,7 @@ flex-direction: row;
 }
 
 .test-container{
-background-color: #34495510;
+border: 1px solid #ddd;
 border-radius: 1em;
 color: black;
 padding-left: 1em;
@@ -735,12 +735,11 @@ padding: 1em;
 padding-left: 1em;
 font-weight: 100;
 width: 100%;
-color: #344955;
 }
 
 .date-test-container{
 display: flex;
-background-color: #34495515;
+background-color: #34495520;
 color: #344955;
 flex-direction: column;
 border-radius: 1em;
