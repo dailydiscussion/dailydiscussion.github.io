@@ -163,7 +163,7 @@ setInterval(updateDate, 1000);
 };
 
 
-// js for event calendar //
+// js for event calender //
 
 document.addEventListener("DOMContentLoaded", function() {
 const currentDate = new Date();
@@ -268,9 +268,28 @@ dayElement.click(); // Trigger click event for today's date
 
 daysContainer.innerHTML = ''; // Clear the container
 daysContainer.appendChild(fragment); // Append fragment to container
+
+// Call addRedDots() after the calendar is rendered
+addRedDots();
 })
 .catch(error => {
 console.error('Error fetching event data:', error);
+});
+}
+
+function addRedDots() {
+const eventDates = ['2024-02-24', '2024-02-25', '2024-02-26', '2024-02-27', '2024-02-28', '2024-02-29', '2024-03-1', '2024-03-2','2024-05-19','2024-07-7'];
+
+const days = document.querySelectorAll('.day-app');
+days.forEach(day => {
+const dayNum = parseInt(day.textContent);
+const paddedMonth = currentMonth.toString().padStart(2, '0');
+const dateKey = `${currentYear}-${paddedMonth}-${dayNum}`;
+if (eventDates.includes(dateKey)) {
+const dot = document.createElement('div');
+dot.classList.add('red-dot');
+day.appendChild(dot);
+}
 });
 }
 
@@ -278,16 +297,7 @@ renderCalendar();
 });
 
 
-
-function simulateClick(element) {
-if (typeof element.click === 'function') {
-element.click(); // If the element has a click method, simply call it
-} else {
-console.error('simulateClick: Unable to trigger click event on the element. The element does not have a click method.');
-}
-}
-
-// end of event calendar //
+// end of event calender //
 
 // Function to update the countdown
 function updateCountdown(targetDate, outputElementId) {
@@ -566,7 +576,7 @@ const timetableElement = document.getElementById('timetable');
 const currentDate = new Date();
 
 // Generate data for today and the next 5 days
-for (let i = 0; i < 4; i++) {
+for (let i = 0; i < 3; i++) {
 const date = new Date(currentDate.getTime() + i * 24 * 60 * 60 *
 1000); // Calculate date for each day
 const year = date.getFullYear();
@@ -597,18 +607,6 @@ console.error('No event data found for:', dateString);
 function createTestSchedule(eventData, timetableElement, dayOfMonth, dayOfWeek, index) {
 const container = document.createElement('div');
 container.classList.add('test-container');
-// Define an array of background colors
-const backgroundColors = ['#FAFDD6', '#F9EFDB', '#F3F8FF', '#FFF8CD'];
-
-// Define an array of text colors
-const textColors = ['#000000', '#000000', '#000000', '#YourTextColorHere'];
-
-// Set the background color based on the index
-container.style.backgroundColor = backgroundColors[index % backgroundColors.length];
-
-// Set the text color based on the index
-container.style.color = textColors[index % textColors.length];
-
 
 const dateTestContainer = document.createElement('div');
 dateTestContainer.classList.add('date-test-container');
