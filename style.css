@@ -22,6 +22,7 @@ display: flex;
 flex-direction: column;
 user-select: none;
 min-height: 100vh;
+background-color: white;
 font-family: 'Josefin Sans', sans-serif;
 transition: font-size 0.3s ease; /* Apply a smooth transition for font size changes */
 }
@@ -712,7 +713,7 @@ flex-direction: row;
 }
 
 .test-container{
-border: 1px solid #ddd;
+background-color: #34495510;
 border-radius: 1em;
 color: black;
 padding-left: 1em;
@@ -734,13 +735,14 @@ padding: 1em;
 padding-left: 1em;
 font-weight: 100;
 width: 100%;
+color: #344955;
 }
 
 .date-test-container{
 display: flex;
-flex-direction: column;
-background-color: #34495510;
+background-color: #34495515;
 color: #344955;
+flex-direction: column;
 border-radius: 1em;
 padding: 1em;
 }
