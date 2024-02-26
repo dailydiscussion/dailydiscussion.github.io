@@ -1,18 +1,19 @@
-
-// Get the current hour of the day
-var currentHour = new Date().getHours();
-
-// Function to determine the appropriate greeting based on the time
+// js for greetings 
 function getGreeting() {
-var greeting = '';
-if (currentHour >= 5 && currentHour < 12) {
-greeting = 'Good Morning';
-} else if (currentHour >= 12 && currentHour < 18) {
-greeting = 'Good Afternoon';
-} else {
-greeting = 'Good Evening';
-}
-return greeting;
+    var currentHour = new Date().getHours();
+    var greeting = '';
+
+    if (currentHour >= 5 && currentHour < 12) {
+        greeting = 'Good Morning';
+    } else if (currentHour >= 12 && currentHour < 18) {
+        greeting = 'Good Afternoon';
+    } else if (currentHour >= 2 && currentHour < 5) {
+        greeting = 'Good Night';
+    } else {
+        greeting = 'Good Evening';
+    }
+
+    return greeting;
 }
 
 // Display the greeting message
