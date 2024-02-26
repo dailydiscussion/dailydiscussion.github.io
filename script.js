@@ -567,6 +567,7 @@ e.preventDefault();
 
 
 // script for timetable //
+// JavaScript code goes here
 // Function to fetch test events data from JSON and populate the timetable element
 function fetchTestEventsAndPopulateTimetable() {
 fetch('calendar-event.json')
@@ -575,61 +576,57 @@ fetch('calendar-event.json')
 const timetableElement = document.getElementById('timetable');
 const currentDate = new Date();
 
-// Generate data for today and the next 5 days
+// Generate data for today and the next 3 days
 for (let i = 0; i < 3; i++) {
-const date = new Date(currentDate.getTime() + i * 24 * 60 * 60 *
-1000); // Calculate date for each day
-const year = date.getFullYear();
-const month = ('0' + (date.getMonth() + 1)).slice(-
-2); // Add leading zero if necessary
-const dayOfMonth = ('0' + date.getDate()).slice(-
-2); // Add leading zero if necessary
-const dateString =
-`${year}-${month}-${dayOfMonth}`; // Format date as YYYY-MM-DD
-const dayOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][date
-.getDay()
-]; // Get day string
+const date = new Date(currentDate.getTime() + i * 24 * 60 * 60 * 1000); // Calculate date for each day
+const dayLabels = ['Today', 'Tomorrow', 'Day after Tomorrow'];
+const dayLabel = dayLabels[i];
 
-const eventData = data[dateString] || data[
-`${year}-${month}-${date.getDate()}`]; // Check both formats
+const dayTimeContainer = document.createElement('div');
+dayTimeContainer.classList.add('test-container');
+
+const dayTime = document.createElement('div');
+dayTime.classList.add('day-time');
+const dayLabelDiv = document.createElement('div');
+dayLabelDiv.classList.add('test-date'); // Adding class to the day label div
+dayLabelDiv.textContent = dayLabel;
+const testDateDiv = document.createElement('div');
+testDateDiv.classList.add('test-date');
+testDateDiv.textContent = `${date.getDate()} ${getMonthName(date.getMonth())}`;
+
+dayTime.appendChild(dayLabelDiv);
+dayTime.appendChild(testDateDiv);
+
+const eventData = data[formatDate(date)]; // Get event data for the current date
+const testEvent = document.createElement('div');
+testEvent.classList.add('test-event');
 if (eventData) {
-createTestSchedule(eventData, timetableElement, dayOfMonth, dayOfWeek,
-i);
+testEvent.innerHTML = eventData.event;
 } else {
-console.error('No event data found for:', dateString);
+testEvent.innerHTML = `<p>No event scheduled</p>`;
 }
+
+dayTimeContainer.appendChild(dayTime);
+dayTimeContainer.appendChild(testEvent);
+
+timetableElement.appendChild(dayTimeContainer);
 }
 })
 .catch(error => console.error('Error fetching test events data:', error));
 }
 
-// Function to create and append elements based on fetched data and populate the timetable element
-function createTestSchedule(eventData, timetableElement, dayOfMonth, dayOfWeek, index) {
-const container = document.createElement('div');
-container.classList.add('test-container');
+// Helper function to get month name from month number
+function getMonthName(month) {
+const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+return months[month];
+}
 
-const dateTestContainer = document.createElement('div');
-dateTestContainer.classList.add('date-test-container');
-
-const dateElement = document.createElement('div');
-dateElement.classList.add('date');
-dateElement.textContent = dayOfMonth;
-
-const dayElement = document.createElement('div');
-dayElement.classList.add('date-day');
-dayElement.textContent = dayOfWeek;
-
-const testEvent = document.createElement('div');
-testEvent.classList.add('test-event');
-testEvent.innerHTML = eventData.event;
-
-dateTestContainer.appendChild(dateElement);
-dateTestContainer.appendChild(dayElement);
-
-container.appendChild(dateTestContainer);
-container.appendChild(testEvent);
-
-timetableElement.appendChild(container);
+// Helper function to format date as YYYY-MM-DD
+function formatDate(date) {
+const year = date.getFullYear();
+const month = ('0' + (date.getMonth() + 1)).slice(-2);
+const day = ('0' + date.getDate()).slice(-2);
+return `${year}-${month}-${day}`;
 }
 
 // Call the function to fetch test events data and populate the timetable element

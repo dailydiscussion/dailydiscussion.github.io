@@ -715,11 +715,9 @@ flex-direction: row;
 border: 1px solid #ddd;
 border-radius: 1em;
 color: black;
-padding-left: 1em;
 margin-bottom: 10px;
 display: flex;
-flex-direction: row;
-align-items: center;
+flex-direction: column;
 font-weight: 100;
 margin-right: 10px;
 width: 33.33%;
@@ -730,20 +728,24 @@ margin-right: 0;
 }
 
 .test-event{
-padding: 1em;
 padding-left: 1em;
 font-weight: 100;
 width: 100%;
 }
 
-.date-test-container{
-display: flex;
-flex-direction: column;
-background-color: #34495510;
-color: #344955;
-border-radius: 1em;
-padding: 1em;
+.day-time {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 900;
+  background-color: #34495510;
+  color: #344955;
+  padding: 1em;
+  border-top-left-radius: 1em;
+  border-top-right-radius: 1em;
 }
+
 
 @media (max-width: 768px) {
 .test-flex{
@@ -830,7 +832,7 @@ border-radius: 1em;
 }
 
 .flex-head{
-padding: 1em;
+padding: 21px;
 padding-bottom: 1.5em;
 padding-left: 1em;
 margin-top: 0;
@@ -917,7 +919,7 @@ padding-left: 0;
 .flex-head{
 color: black;
 margin-bottom: 0;
-padding-top: 0.5em;
+padding-top: 0.6em;
 padding-left: 1.5em;
 }
 

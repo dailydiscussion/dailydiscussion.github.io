@@ -33,31 +33,31 @@
     "event": "<p>Surgery</p> <p>Surgery Test ST1 2017</p>"
   },
   "2024-01-23": {
-    "event": "<p>Surgery</p> <p>Surgery Test ST2 2017</p> <p>Surgery Test ST3 2017</p>"
+    "event": "<p>Surgery</p> <p>Surgery Test ST2 2017 & Surgery Test ST3 2017</p>"
   },
   "2024-01-24": {
     "event": "<p>Surgery</p> <p>Surgery Test ST4 2017</p>"
   },
   "2024-01-25": {
-    "event": "<p>Surgery</p> <p>Surgery Test 1 2018</p> <p>Surgery Test 2 2018</p>"
+    "event": "<p>Surgery</p> <p>Surgery Test 1 2018 & Surgery Test 2 2018</p>"
   },
   "2024-01-26": {
-    "event": "<p>Surgery</p> <p>Surgery Test 3 2018</p> <p>Surgery Test 1 2019</p>"
+    "event": "<p>Surgery</p> <p>Surgery Test 3 2018 & Surgery Test 1 2019</p>"
   },
   "2024-01-27": {
-    "event": "<p>Surgery</p> <p>Surgery Test 2 2019</p> <p>Surgery Test 1 2020</p>"
+    "event": "<p>Surgery</p> <p>Surgery Test 2 2019 & Surgery Test 1 2020</p>"
   },
   "2024-01-28": {
-    "event": "<p>Surgery</p> <p>Surgery Test 2 2020</p> <p>Surgery Test ST1 2021</p>"
+    "event": "<p>Surgery</p> <p>Surgery Test 2 2020 & Surgery Test ST1 2021</p>"
   },
   "2024-01-29": {
-    "event": "<p>Surgery</p> <p>Surgery Test 1 2020</p> <p>Surgery Test ST2 2021</p>"
+    "event": "<p>Surgery</p> <p>Surgery Test 1 2020 & Surgery Test ST2 2021</p>"
   },
   "2024-01-30": {
     "event": "<p>Surgery</p> <p>Surgery Test ST1 2021</p>"
   },
   "2024-02-1": {
-    "event": "<p>Surgery</p> <p>Surgery Test 2022</p> <p>Surgery Test-1 2023</p>"
+    "event": "<p>Surgery</p> <p>Surgery Test 2022 & Surgery Test-1 2023</p>"
   },
   "2024-02-2": {
     "event": "<p>Obs&Gyne</p> <p>Fundamentals + Antenatal + Instruments</p>"
@@ -93,34 +93,34 @@
     "event": "<p>Obs&Gyne</p> <p>OBG Test 2 (2018)</p>"
   },
   "2024-02-13": {
-    "event": "<p>Obs&Gyne</p> <p>OBG Test 1 (2019) & OBG Test 2 (2020)</p>"
+    "event": "<p>Obs&Gyne</p> <p>OBG Test 1 (2019) & OBG Test 1 (2020)</p>"
   },
   "2024-02-14": {
-    "event": "<p>Obs&Gyne</p> <p>OBG Test 1 (2020) & OBG Test 2 (2020) & OBG Complete (2022)</p>"
+    "event": "<p>Obs&Gyne</p> <p>OBG Test 2 (2020) & OBG Complete (2022)</p>"
   },
   "2024-02-15": {
     "event": "<p>Obs&Gyne</p> <p>OBG 1 (2023) & OBG 2 (2023)</p>"
   },
   "2024-02-16": {
-    "event": "<p>Ortho</p><p>Upper limb + Lower limb + Spine & Pelvis 1</p><p>Upper limb + Lower limb + Spine & Pelvis 2</p>"
+    "event": "<p>Ortho</p><p>Upper limb + Lower limb + Spine & Pelvis 1 & 2</p>"
   },
   "2024-02-17": {
-    "event": "<p>Ortho</p><p>Metabolic + Pediatric + Arthritis + Bone Infection 1</p><p>Metabolic + Pediatric + Arthritis + Bone Infection 2</p>"
+    "event": "<p>Ortho</p><p>Metabolic + Pediatric + Arthritis + Bone Infection 1 & 2</p>"
   },
   "2024-02-19": {
-    "event": "<p>Ortho</p><p>Bone Tumors + Miscellaneous 1</p><p>Bone Tumors + Miscellaneous 2</p>"
+    "event": "<p>Ortho</p><p>Bone Tumors + Miscellaneous 1 & 2</p>"
   },
   "2024-02-20": {
-    "event": "<p>Ortho</p><p>Ortho ST-1 (2017)</p><p>Ortho ST-2 (2017)</p>"
+    "event": "<p>Ortho</p><p>Ortho ST-1 (2017) & Ortho ST-2 (2017)</p>"
   },
   "2024-02-21": {
-    "event": "<p>Ortho</p><p>Ortho Test 1 (2018)</p><p>Ortho Test 2 (2018)</p>"
+    "event": "<p>Ortho</p><p>Ortho Test 1 (2018) & Ortho Test 2 (2018)</p>"
   },
   "2024-02-22": {
-    "event": "<p>Ortho</p><p>Ortho Test (2019)</p><p>Ortho Test (2020)</p>"
+    "event": "<p>Ortho</p><p>Ortho Test (2019) & Ortho Test (2020)</p>"
   },
   "2024-02-23": {
-    "event": "<p>Ortho</p><p>Ortho Test (2022)</p><p>Ortho Test (2023)</p>"
+    "event": "<p>Ortho</p><p>Ortho Test (2022) & Ortho Test (2023)</p>"
   },
   "2024-02-24": {
     "event": "<p>ENT</p> <p>Ear 1 + 2</p>"
