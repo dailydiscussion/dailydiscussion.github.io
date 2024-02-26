@@ -651,8 +651,8 @@ grid-template-columns: repeat(7, 1fr);
 .day-app {
 padding: auto;
 border-radius: 1em;
-padding-top: 2em;
-padding-bottom: 2em;
+padding-top: 1.5em;
+padding-bottom: 1.5em;
 text-align: center;
 font-weight: 900;
 color: gray;
@@ -716,12 +716,12 @@ border: 1px solid #ddd;
 border-radius: 1em;
 color: black;
 padding-left: 1em;
-margin-bottom: 1em;
+margin-bottom: 10px;
 display: flex;
 flex-direction: row;
 align-items: center;
 font-weight: 100;
-margin-right: 20px;
+margin-right: 10px;
 width: 33.33%;
 }
 
@@ -731,18 +731,15 @@ margin-right: 0;
 
 .test-event{
 padding: 1em;
-padding-left: 1.5em;
+padding-left: 1em;
 font-weight: 100;
 width: 100%;
-border-top-right-radius: 1em;
-border-bottom-right-radius: 1em;
-border-left: 2px solid white;
 }
 
 .date-test-container{
 display: flex;
 flex-direction: column;
-background-color: #34495520;
+background-color: #34495510;
 color: #344955;
 border-radius: 1em;
 padding: 1em;
