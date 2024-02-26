@@ -719,7 +719,7 @@ margin-bottom: 10px;
 display: flex;
 flex-direction: column;
 font-weight: 100;
-margin-right: 10px;
+margin-right: 1em;
 width: 33.33%;
 }
 
@@ -739,8 +739,8 @@ width: 100%;
   justify-content: space-between;
   font-size: 14px;
   font-weight: 900;
-  background-color: #34495510;
-  color: #344955;
+  background-color: #637a9f13;
+  color: #637A9F;
   padding: 1em;
   border-top-left-radius: 1em;
   border-top-right-radius: 1em;
@@ -757,6 +757,7 @@ flex-wrap: wrap;
 .test-container{
 margin-right: 0px;
 width: 100%;
+margin-bottom: 1em;
 }
 
 .test-container:nth-child(1),
