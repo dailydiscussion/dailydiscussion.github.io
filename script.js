@@ -624,10 +624,11 @@ return months[month];
 
 // Helper function to format date as YYYY-MM-DD
 function formatDate(date) {
-const year = date.getFullYear();
-const month = ('0' + (date.getMonth() + 1)).slice(-2);
-const day = ('0' + date.getDate()).slice(-2);
-return `${year}-${month}-${day}`;
+    const year = date.getFullYear();
+    const month = ('0' + (date.getMonth() + 1)).slice(-2);
+    const day = ('0' + date.getDate()).slice(-2);
+    const formattedDay = date.getDate() < 10 ? date.getDate().toString() : ('0' + date.getDate()).slice(-2);
+    return `${year}-${month}-${formattedDay}`;
 }
 
 // Call the function to fetch test events data and populate the timetable element

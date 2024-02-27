@@ -54,21 +54,37 @@
         },
         {
           "s.no": 7,
-          "id": "Quiz",
           "text": "ENT ST 1",
           "questions":"50",
-          "days": 0,
+          "days": 1,
           "date_completed": "27 Feb 2024",
           "url": "https://link.marrow.com/test/5952ad8c5d817243aa2e972b?prev=subject"
         },
         {
           "s.no": 8,
-          "id": "Quiz-2",
           "text": "ENT ST 2",
           "questions":"50",
           "days": 0,
           "date_completed": "27 Feb 2024",
           "url": "https://link.marrow.com/test/5953221f5d817243aa2e97ed?prev=subject"
+        },
+        {
+          "s.no":9,
+          "id": "Quiz",
+          "text": "ENT 1",
+          "questions":"50",
+          "days": 1,
+          "date_completed": "28 Feb 2024",
+          "url": "https://link.marrow.com/test/5a61862f4f2544767f6a1820?prev=subject"
+        },
+        {
+          "s.no": 10,
+          "id": "Quiz-2",
+          "text": "ENT 2",
+          "questions":"50",
+          "days": 0,
+          "date_completed": "28 Feb 2024",
+          "url": "https://link.marrow.com/test/5a6185824f2544767f6a181a?prev=subject"
         }
       ]
     }
