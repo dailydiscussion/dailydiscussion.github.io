@@ -1,19 +1,19 @@
 // js for greetings 
 function getGreeting() {
-    var currentHour = new Date().getHours();
-    var greeting = '';
+var currentHour = new Date().getHours();
+var greeting = '';
 
-    if (currentHour >= 5 && currentHour < 12) {
-        greeting = 'Good Morning';
-    } else if (currentHour >= 12 && currentHour < 18) {
-        greeting = 'Good Afternoon';
-    } else if (currentHour >= 2 && currentHour < 5) {
-        greeting = 'Good Night';
-    } else {
-        greeting = 'Good Evening';
-    }
+if (currentHour >= 5 && currentHour < 12) {
+greeting = 'Good Morning';
+} else if (currentHour >= 12 && currentHour < 18) {
+greeting = 'Good Afternoon';
+} else if (currentHour >= 2 && currentHour < 5) {
+greeting = 'Good Night';
+} else {
+greeting = 'Good Evening';
+}
 
-    return greeting;
+return greeting;
 }
 
 // Display the greeting message
@@ -247,7 +247,8 @@ dayElement.classList.add('today');
 
 dayElement.addEventListener("click", function() {
 const paddedMonth = currentMonth.toString().padStart(2, '0');
-const dateKey = `${currentYear}-${paddedMonth}-${i}`;
+const paddedDay = i.toString().padStart(2, '0');
+const dateKey = `${currentYear}-${paddedMonth}-${paddedDay}`;
 const event = events[dateKey];
 if (event) {
 eventContainer.querySelector('.date-day').textContent = dayNames[new Date(dateKey).getDay()];
@@ -272,20 +273,26 @@ daysContainer.appendChild(fragment); // Append fragment to container
 
 // Call addRedDots() after the calendar is rendered
 addRedDots();
+
+// Call addGreenDots() after the calendar is rendered
+addGreenDots();
 })
 .catch(error => {
 console.error('Error fetching event data:', error);
 });
 }
 
+// Assuming currentMonth and currentYear are defined globally or within the same scope
+
 function addRedDots() {
-const eventDates = ['2024-02-24', '2024-02-25', '2024-02-26', '2024-02-27', '2024-02-28', '2024-02-29', '2024-03-1', '2024-03-2','2024-05-19','2024-07-7'];
+const eventDates = ['2024-02-24', '2024-02-25', '2024-02-26', '2024-02-27', '2024-02-28', '2024-02-29', '2024-03-01', '2024-03-02','2024-05-19','2024-07-07'];
 
 const days = document.querySelectorAll('.day-app');
 days.forEach(day => {
 const dayNum = parseInt(day.textContent);
-const paddedMonth = currentMonth.toString().padStart(2, '0');
-const dateKey = `${currentYear}-${paddedMonth}-${dayNum}`;
+const paddedMonth = String(currentMonth).padStart(2, '0');
+const paddedDay = String(dayNum).padStart(2, '0');
+const dateKey = `${currentYear}-${paddedMonth}-${paddedDay}`;
 if (eventDates.includes(dateKey)) {
 const dot = document.createElement('div');
 dot.classList.add('red-dot');
@@ -294,9 +301,25 @@ day.appendChild(dot);
 });
 }
 
+function addGreenDots() {
+const eventDates = ['2024-03-11', '2024-03-17', '2024-03-24', '2024-03-31'];
+
+const days = document.querySelectorAll('.day-app');
+days.forEach(day => {
+const dayNum = parseInt(day.textContent);
+const paddedMonth = String(currentMonth).padStart(2, '0');
+const paddedDay = String(dayNum).padStart(2, '0');
+const dateKey = `${currentYear}-${paddedMonth}-${paddedDay}`;
+if (eventDates.includes(dateKey)) {
+const dot = document.createElement('div');
+dot.classList.add('green-dot');
+day.appendChild(dot);
+}
+});
+}
+
 renderCalendar();
 });
-
 
 // end of event calender //
 
@@ -624,11 +647,10 @@ return months[month];
 
 // Helper function to format date as YYYY-MM-DD
 function formatDate(date) {
-    const year = date.getFullYear();
-    const month = ('0' + (date.getMonth() + 1)).slice(-2);
-    const day = ('0' + date.getDate()).slice(-2);
-    const formattedDay = date.getDate() < 10 ? date.getDate().toString() : ('0' + date.getDate()).slice(-2);
-    return `${year}-${month}-${formattedDay}`;
+const year = date.getFullYear();
+const month = ('0' + (date.getMonth() + 1)).slice(-2);
+const day = ('0' + date.getDate()).slice(-2);
+return `${year}-${month}-${day}`;
 }
 
 // Call the function to fetch test events data and populate the timetable element
