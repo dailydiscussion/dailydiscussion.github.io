@@ -26,6 +26,10 @@ font-family: 'Josefin Sans', sans-serif;
 transition: font-size 0.3s ease; /* Apply a smooth transition for font size changes */
 }
 
+button{
+  cursor: pointer;
+}
+
 
 .section-table{
 display: flex;
