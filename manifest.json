@@ -1,23 +1,23 @@
 {
     "theme_color": "#000000",
-    "background_color": "#000000",
+    "background_color": "#f5756a",
     "display": "standalone",
-    "scope": "/",
+    "scope": "https://link.marrow.com/",
     "start_url": "dailydiscussion.github.io",
-    "name": "NEET PG '24",
+    "name": "Daily Discussion",
     "short_name": "NEET PG",
     "description": "\"Ready to boost your NEET PG | INICET preparation together? Start quizzing now!\"",
     "screenshots": [
         {
-          "src": "images/screenshot1.jpg",
+          "src": "images/iPhone-13-PRO-127.0.0.1.png",
           "type": "image/png",
-          "sizes": "341x720",
+          "sizes": "264x537",
           "form_factor": "narrow"
         },
         {
-          "src": "images/screenshot2.png",
+          "src": "images/Macbook-Air-127.0.0.1.png",
           "type": "image/jpg",
-          "sizes": "720x405",
+          "sizes": "922x530",
           "form_factor": "wide"
         }
       ],
