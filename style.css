@@ -30,21 +30,20 @@ button{
   cursor: pointer;
 }
 
+.margin-1{
+  margin: 1em;
+}
 
 .section-table{
 display: flex;
 flex-direction: column;
-margin: 1em;
 }
 
 .section-schedule{
 color: black;
 display: flex;
 flex-direction: column;
-padding-top: 20px;
-padding-bottom: 60px;
 border-radius: 1em;
-padding: 1em;
 }
 
 .schedule{
