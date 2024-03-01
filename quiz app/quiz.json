@@ -1,0 +1,103 @@
+{
+  "questions": [
+    {
+      "question": "Q1. Which of the following is not a primary color of light?",
+      "options": [
+        {"option": "A. Red"},
+        {"option": "B. Green"},
+        {"option": "C. Blue"},
+        {"option": "D. Yellow"}
+      ],
+      "correct_answer": "D. Yellow",
+      "explanation": "Yellow is not a primary color of light."
+    },
+    {
+      "question": "Q3. What is the primary function of the cochlea?",
+      "options": [
+        {"option": "A. Balance"},
+        {"option": "B. Hearing"},
+        {"option": "C. Smell"},
+        {"option": "D. Vision"}
+      ],
+      "correct_answer": "B. Hearing",
+      "explanation": "The primary function of the cochlea is hearing."
+    },
+    {
+      "question": "Q4. Which part of the brain is responsible for regulating temperature and hunger?",
+      "options": [
+        {"option": "A. Cerebellum"},
+        {"option": "B. Hypothalamus"},
+        {"option": "C. Amygdala"},
+        {"option": "D. Thalamus"}
+      ],
+      "correct_answer": "B. Hypothalamus",
+      "explanation": "The hypothalamus regulates temperature and hunger."
+    },
+    {
+      "question": "Q5. What is the smallest bone in the human body?",
+      "options": [
+        {"option": "A. Femur"},
+        {"option": "B. Stapes"},
+        {"option": "C. Tibia"},
+        {"option": "D. Radius"}
+      ],
+      "correct_answer": "B. Stapes",
+      "explanation": "The stapes is the smallest bone in the human body."
+    },
+    {
+      "question": "Q6. Which of the following is not a function of the liver?",
+      "options": [
+        {"option": "A. Detoxification"},
+        {"option": "B. Carbohydrate metabolism"},
+        {"option": "C. Red blood cell production"},
+        {"option": "D. Bile production"}
+      ],
+      "correct_answer": "C. Red blood cell production",
+      "explanation": "The liver does not produce red blood cells."
+    },
+    {
+      "question": "Q7. What is the chemical symbol for potassium?",
+      "options": [
+        {"option": "A. K"},
+        {"option": "B. Pt"},
+        {"option": "C. Pb"},
+        {"option": "D. Ko"}
+      ],
+      "correct_answer": "A. K",
+      "explanation": "The chemical symbol for potassium is K."
+    },
+    {
+      "question": "Q8. What is the powerhouse of the cell?",
+      "options": [
+        {"option": "A. Golgi apparatus"},
+        {"option": "B. Nucleus"},
+        {"option": "C. Mitochondria"},
+        {"option": "D. Endoplasmic reticulum"}
+      ],
+      "correct_answer": "C. Mitochondria",
+      "explanation": "The powerhouse of the cell is the mitochondria."
+    },
+    {
+      "question": "Q9. Which planet is known as the 'Red Planet'?",
+      "options": [
+        {"option": "A. Earth"},
+        {"option": "B. Mars"},
+        {"option": "C. Venus"},
+        {"option": "D. Jupiter"}
+      ],
+      "correct_answer": "B. Mars",
+      "explanation": "Mars is known as the 'Red Planet' due to its reddish appearance."
+    },
+    {
+      "question": "Q10. What is the chemical formula for water?",
+      "options": [
+        {"option": "A. H2O2"},
+        {"option": "B. CO2"},
+        {"option": "C. H2O"},
+        {"option": "D. H2O3"}
+      ],
+      "correct_answer": "C. H2O",
+      "explanation": "The chemical formula for water is H2O."
+    }
+  ]
+}
