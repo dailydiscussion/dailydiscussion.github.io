@@ -10,7 +10,7 @@ greeting = 'Hi, Good Afternoon ☀️';
 } else if (currentHour >= 2 && currentHour < 5) {
 greeting = "Hey, It's time to sleep 😴";
 } else {
-greeting = 'Hi, Good Evening';
+greeting = 'Hi, Good Evening 🌙';
 }
 
 return greeting;
