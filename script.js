@@ -19,8 +19,10 @@ return greeting;
 // Display the greeting message
 document.getElementById('greeting').textContent = getGreeting();
 
+// Quiz links //
+
 // Fetch the JSON data from the file using AJAX
-fetch('data/ent.json')
+fetch('data/anesthesia.json')
 .then(response => response.json())
 .then(jsonData => {
 // Find the Quiz entry by ID
@@ -44,7 +46,7 @@ console.error('Quiz entries not found in JSON data.');
 // quiz-2 script 
 
 // Fetch the JSON data from the file using AJAX
-fetch('data/ent.json')
+fetch('data/anesthesia.json')
 .then(response => response.json())
 .then(jsonData => {
 // Find the Quiz entry by ID
@@ -285,7 +287,7 @@ console.error('Error fetching event data:', error);
 // Assuming currentMonth and currentYear are defined globally or within the same scope
 
 function addRedDots() {
-const eventDates = ['2024-02-24', '2024-02-25', '2024-02-26', '2024-02-27', '2024-02-28', '2024-02-29', '2024-03-01', '2024-03-02','2024-05-19','2024-07-07'];
+const eventDates = ['2024-03-03', '2024-03-04', '2024-03-05', '2024-03-06', '2024-03-07', '2024-03-08', '2024-03-09', '2024-03-10'];
 
 const days = document.querySelectorAll('.day-app');
 days.forEach(day => {
@@ -354,6 +356,13 @@ return testData.tests[0].links.length;
 
 const cardData = [
 {
+id: 'anesthesia-link',
+img: 'svg/anesthesia.svg',
+title: 'Anesthesiology',
+icon: 'anesthesia-icon',
+json: 'data/anesthesia.json'
+},
+{
 id: 'ent-link',
 img: 'svg/ent.svg',
 title: 'ENT',
@@ -394,13 +403,6 @@ img: 'svg/pedia.svg',
 title: 'Pediatrics',
 icon: 'pedia-icon',
 json: 'data/pedia.json'
-},
-{
-id: 'anesthesia-link',
-img: 'svg/anesthesia.svg',
-title: 'Anesthesiology',
-icon: 'anesthesia-icon',
-json: 'data/anesthesia.json'
 },
 {
 id: 'radiology-link',
@@ -496,7 +498,7 @@ cardElement.classList.add('dash-card', 'card');
 cardElement.style.justifyContent = 'center';
 
 // Apply default style to the card with ID 'ent-link'
-if (cardInfo.id === 'ent-link') {
+if (cardInfo.id === 'anesthesia-link') {
 cardElement.style.backgroundColor = '#637A9F';
 cardElement.style.color = 'white';
 }
@@ -770,4 +772,4 @@ createDynamicTable("psychiatry-link", "data/psychiatry.json", "psychiatry-icon")
 createDynamicTable("fmt-link", "data/fmt.json", "fmt-icon");
 
 // Triggering the click event for "obgy-link"
-document.getElementById("ent-link").click();
+document.getElementById("anesthesia-link").click();

@@ -121,7 +121,6 @@
         ,
         {
           "s.no": 15,
-          "id": "Quiz",
           "text": "ENT Test (2023)",
           "questions":"50",
           "days": 1,
@@ -130,7 +129,6 @@
         },
         {
           "s.no": 16,
-          "id": "Quiz-2",
           "text": "Dizziness Mini Test 23",
           "questions":"20",
           "days": 0,

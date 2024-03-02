@@ -3,6 +3,24 @@
     {
       "title": "Anesthesia Tests",
       "links": [
+        {
+          "s.no": 1,
+          "id": "Quiz",
+          "text": "Preop + Complication + Specific Anesthesia 1",
+          "questions": "50",
+          "days": 1,
+          "date_completed": "3 March 2024",
+          "url": "https://link.marrow.com/join_custom_module/55F20O6Y"
+        },
+        {
+          "s.no": 2,
+          "id": "Quiz-2",
+          "text": "Preop + Complication + Specific Anesthesia 2",
+          "questions": "50",
+          "days": 0,
+          "date_completed": "3 March 2024",
+          "url": "https://link.marrow.com/join_custom_module/55F20O70"
+        }
       ]
     }
   ]
