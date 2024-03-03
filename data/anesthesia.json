@@ -5,7 +5,6 @@
       "links": [
         {
           "s.no": 1,
-          "id": "Quiz",
           "text": "Preop + Complication + Specific Anesthesia 1",
           "questions": "50",
           "days": 1,
@@ -14,12 +13,29 @@
         },
         {
           "s.no": 2,
-          "id": "Quiz-2",
           "text": "Preop + Complication + Specific Anesthesia 2",
           "questions": "50",
           "days": 0,
           "date_completed": "3 March 2024",
           "url": "https://link.marrow.com/join_custom_module/55F20O70"
+        },
+        {
+          "s.no": 3,
+          "id": "Quiz",
+          "text": "Airway management + Muscle relaxants 1",
+          "questions": "50",
+          "days": 1,
+          "date_completed": "4 March 2024",
+          "url": "https://link.marrow.com/join_custom_module/55F30J19"
+        },
+        {
+          "s.no": 4,
+          "id": "Quiz-2",
+          "text": "Airway management + Muscle relaxants 2",
+          "questions": "50",
+          "days": 0,
+          "date_completed": "4 March 2024",
+          "url": "https://link.marrow.com/join_custom_module/55F30J1R"
         }
       ]
     }
