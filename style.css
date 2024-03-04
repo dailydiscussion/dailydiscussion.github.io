@@ -739,7 +739,7 @@ margin-right: 0;
 .test-event{
 padding-left: 1em;
 font-weight: 100;
-width: 100%;
+padding-right: 1em;
 }
 
 .day-time {
@@ -1001,16 +1001,3 @@ text-align: left;
 }
 
 }
-
-
-footer{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  }
-
-  footer p img{
-    margin-left: 3px;
-  }
