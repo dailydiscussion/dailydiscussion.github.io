@@ -1009,8 +1009,8 @@ text-align: left;
   border-radius: 1em;
 }
 
-.quick-links a{
-  color: #637A9F;
+.quick-links:hover{
+  background-color: #637a9f31;
 }
 
 .margin-top-2{
