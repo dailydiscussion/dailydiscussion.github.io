@@ -1001,3 +1001,38 @@ text-align: left;
 }
 
 }
+
+.quick-links{
+  background-color: #637a9f10;
+  max-width: max-content;
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.quick-links a{
+  color: #637A9F;
+}
+
+.margin-top-2{
+  margin-top: 2em;
+}
+
+.flex-quick-links{
+  display: flex;
+  flex-direction: row;
+}
+
+.quick-links{
+  margin-right: 1em;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-column{
+  margin-top: 1em;
+}

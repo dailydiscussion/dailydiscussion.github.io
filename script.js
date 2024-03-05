@@ -204,7 +204,7 @@ function renderCalendar() {
 const monthNames = ["January", "February", "March", "April", "May", "June",
 "July", "August", "September", "October", "November", "December"
 ];
-const dayNames = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
+const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 currentMonthText.textContent = monthNames[currentMonth - 1] + ' ' + currentYear;
 const fragment = document.createDocumentFragment(); // Create a document fragment

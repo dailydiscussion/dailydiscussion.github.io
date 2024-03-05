@@ -21,7 +21,6 @@
         },
         {
           "s.no": 3,
-          "id": "Quiz",
           "text": "Airway management + Muscle relaxants 1",
           "questions": "50",
           "days": 1,
@@ -30,12 +29,20 @@
         },
         {
           "s.no": 4,
-          "id": "Quiz-2",
           "text": "Airway management + Muscle relaxants 2",
           "questions": "50",
           "days": 0,
           "date_completed": "4 March 2024",
           "url": "https://link.marrow.com/join_custom_module/55F30J1R"
+        },
+        {
+          "s.no": 4,
+          "id": "Quiz",
+          "text": "General, Local & Regional Anesthesia",
+          "questions": "50",
+          "days": 1,
+          "date_completed": "5 March 2024",
+          "url": "https://link.marrow.com/join_custom_module/55F50F5V"
         }
       ]
     }
