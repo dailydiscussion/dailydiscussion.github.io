@@ -20,7 +20,6 @@ margin: 0;
 padding: 0;
 display: flex;
 flex-direction: column;
-user-select: none;
 min-height: 100vh;
 font-family: 'Josefin Sans', sans-serif;
 transition: font-size 0.3s ease; /* Apply a smooth transition for font size changes */
@@ -1035,4 +1034,38 @@ text-align: left;
 
 .text-column{
   margin-top: 1em;
+}
+
+.progress-text {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: row;
+  border-radius: 1em;
+  margin-top: 2em;
+  align-items: center;
+  background-color: #dddddd33;
+  padding: 1.5em;
+}
+
+.margin-10px{
+  margin-bottom: 10px;
+}
+
+.margin-20px{
+  margin-bottom: 20px;
+}
+
+.progress-test{
+  font-size: 14px;
+  color: gray;
+}
+
+.progress-details{
+  font-size: 24px;
+  color: black;
+  font-weight: 900;
 }

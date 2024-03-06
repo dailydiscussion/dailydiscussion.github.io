@@ -11,7 +11,9 @@
 <title>Daily Discussion</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap"
+rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -160,7 +162,8 @@ document.getElementById('home-link').style.display = 'block';
 <div class="header" style="color: white;">
 <h2><span id="greeting"></span></h2>
 <h4 style="color: #B6BBC4; font-weight:100;">
-Every day is crucial for your NEET PG | INICET success. <span style="color: coral; font-weight:900;">Make it count!</span> 
+Every day is crucial for your NEET PG | INICET success. <span
+style="color: coral; font-weight:900;">Make it count!</span>
 </h4>
 </div>
 </div>
@@ -181,7 +184,7 @@ Today's Quizes
 <div>
 <p id="topicContainer1" style="margin:10px;"></p>
 <p style="margin:10px; font-size:13px; color: #333;">(<span
-id="MCQCount1"></span> MCQs)</p>
+    id="MCQCount1"></span> MCQs)</p>
 </div>
 <div style="margin-right: 10px; margin-left:10px;">
 <span><img src="svg/right.svg"></span>
@@ -202,7 +205,7 @@ id="MCQCount1"></span> MCQs)</p>
 <div>
 <p id="topicContainer2" style="margin:10px;"></p>
 <p style="margin:10px; font-size:13px; color: #333;">(<span
-id="MCQCount2"></span> MCQs)</p>
+    id="MCQCount2"></span> MCQs)</p>
 </div>
 <div style="margin-right: 10px; margin-left:10px;">
 <span><img src="svg/right.svg" alt="right"></span>
@@ -239,6 +242,7 @@ Performance Overview
 </h5>
 
 <hr>
+
 </div>
 
 <div class="dash-container">
@@ -298,6 +302,20 @@ Timetable
 Upcoming Test schedule
 </h5>
 <hr>
+</div>
+
+<div class="progress-bar">
+<div class="progress-circle" id="progressCircle"></div>
+<div class="progress-text">
+<div class="margin-10px progress-test">Subject</div>
+<div class="margin-20px progress-details">
+<span id="subject"></span>
+</div>
+<div class="margin-10px progress-test">Test Completed</div>
+<div class="progress-details">
+<span id="progressDetails"></span>
+</div>
+</div>
 </div>
 
 <div id="timetable" class="dash-container test-flex"></div>
@@ -457,8 +475,8 @@ Quick Links
 <div class="text-column">
 NEET-PG 24
 </div>
-</div> 
-</a>  
+</div>
+</a>
 
 </div>
 <div class="col quick-links">
@@ -470,7 +488,7 @@ NEET-PG 24
 <div class="text-column">
 INICET May 24
 </div>
-</div> 
+</div>
 </a>
 </div>
 </div>
@@ -511,6 +529,102 @@ appId: "88e8b250-302e-41c7-ba16-0be6fdc3b645",
 });
 </script>
 
+<script>
+// Fetch data from JSON file
+fetch('data/anesthesia.json')
+.then(response => response.json())
+.then(data => {
+const totalTests = calculateTotalTests(data); // Calculate total number of tests
+const progress = totalTests / 15; // Calculate progress
+
+// Extract subject name from the JSON data
+const subjectName = data.tests[0]
+.title; // Assuming there's only one subject in the JSON
+
+// Update HTML elements with fetched data
+document.getElementById('subject').innerText = `${subjectName}`;
+document.getElementById('progressDetails').innerText = `${totalTests}/15`;
+
+// Update progress circle with calculated percentage
+updateProgress(progress);
+})
+.catch(error => console.error('Error fetching data:', error));
+
+// Function to calculate total number of tests
+function calculateTotalTests(testData) {
+return testData.tests.reduce((total, currentTest) => {
+return total + currentTest.links.length;
+}, 0);
+}
+
+// Function to update progress circle
+function updateProgress(progress) {
+// Define the parameters for the progress circle
+const radius = 50;
+const circumference = 2 * Math.PI * radius;
+
+// Calculate the progress length
+const progressLength = circumference * progress;
+
+// Calculate the stroke-dasharray and stroke-dashoffset
+const dashArray = `${circumference} ${circumference}`;
+const dashOffset = circumference - progressLength;
+
+// Get the element to append the SVG to
+const progressCircle = document.getElementById('progressCircle');
+
+// Clear previous SVG elements
+progressCircle.innerHTML = '';
+
+// Create the SVG element
+const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+svg.setAttribute('width', '120');
+svg.setAttribute('height', '120');
+
+// Create the background circle
+const bgCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+bgCircle.setAttribute('cx', '60');
+bgCircle.setAttribute('cy', '60');
+bgCircle.setAttribute('r', '50');
+bgCircle.setAttribute('stroke', '#f3f3f3');
+bgCircle.setAttribute('stroke-width', '10');
+bgCircle.setAttribute('fill', 'none');
+
+// Append the background circle to the SVG
+svg.appendChild(bgCircle);
+
+// Create the progress arc
+const progressArc = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+progressArc.setAttribute('cx', '60');
+progressArc.setAttribute('cy', '60');
+progressArc.setAttribute('r', '50');
+progressArc.setAttribute('stroke', '#4caf50');
+progressArc.setAttribute('stroke-width', '10');
+progressArc.setAttribute('fill', 'none');
+progressArc.setAttribute('stroke-dasharray', dashArray);
+progressArc.setAttribute('stroke-dashoffset', dashOffset);
+progressArc.setAttribute('transform', 'rotate(90 60 60)'); // Start from bottom
+
+// Append the progress arc to the SVG
+svg.appendChild(progressArc);
+
+// Create the text element for percentage
+const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+text.setAttribute('x', '50%');
+text.setAttribute('y', '50%');
+text.setAttribute('text-anchor', 'middle');
+text.setAttribute('dominant-baseline', 'middle');
+text.setAttribute('font-size', '20px');
+text.setAttribute('fill', '#4caf50');
+text.textContent = `${Math.round(progress * 100)}%`; // Display the percentage
+
+// Append the text to the SVG
+svg.appendChild(text);
+
+// Append the SVG to the progress circle element
+progressCircle.appendChild(svg);
+}
+</script>
 </body>
 
 </html>
