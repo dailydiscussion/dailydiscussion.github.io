@@ -1043,12 +1043,8 @@ text-align: left;
 
 .progress-bar {
   display: flex;
-  flex-direction: row;
-  border-radius: 1em;
-  margin-top: 2em;
+  flex-direction: row;  
   align-items: center;
-  background-color: #dddddd33;
-  padding: 1.5em;
 }
 
 .margin-10px{
@@ -1068,4 +1064,11 @@ text-align: left;
   font-size: 22px;
   color: black;
   font-weight: 900;
+}
+
+.progress-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
