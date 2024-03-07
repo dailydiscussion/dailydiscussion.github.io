@@ -50,7 +50,7 @@ display: flex;
 flex-direction: column;
 width: 100%;
 margin: auto;
-margin-top: 40px;
+margin-top: 20px;
 margin-bottom: 40px;
 }
 
@@ -361,8 +361,8 @@ flex: 0 0 20%;
 }
 
 .card {
-background-color: #637a9f13;
-color: #637A9F;
+background-color: #637a9f10;
+color: black;
 padding: 1.5em;
 border-radius: 1em;
 margin-right: 10px;
@@ -410,7 +410,7 @@ border-collapse: collapse;
 .table-questions{
 margin-top: 10px;
 background-color: white;
-color: #637A9F;
+color: black;
 max-width: max-content;
 padding: 0.5em;
 border-radius: 1em;
@@ -419,8 +419,8 @@ font-weight: 100;
 
 .table-flex{
 padding: 1.2em;
-background-color: #637a9f13;
-color: #637A9F;
+background-color: #637a9f10;
+color: black;
 margin-top: 10px;
 border-radius: 1em;
 font-weight: 900;
@@ -432,7 +432,7 @@ color: white;
 }
 
 .th {
-color: #637A9F;
+color: black;
 padding: 1em;
 border-bottom: 1px solid #ddd;
 font-weight: 900;
@@ -603,9 +603,7 @@ border-radius: 1em;
 }
 
 .calendar-app {
-background-color: #FAFDD6;
 border-radius: 1em;
-padding: 5px;
 }
 
 .header-app {
@@ -626,7 +624,7 @@ padding: 0.5em;
 }
 
 .header-app .btn-app:hover {
-background-color: white;
+background-color: #dddddd44;
 border-radius: 1em;
 padding: 0.5em;
 }
@@ -673,7 +671,7 @@ color: gray;
 
 
 .day-app:hover {
-background-color: rgba(255, 255, 0, 0.4);
+background-color: #637a9f10;
 color: black;
 }  
 
@@ -686,12 +684,12 @@ margin-bottom: 1.5em;
 }
 
 .today {
-background-color: rgba(255, 255, 0, 0.4);
+background-color: #637a9f10;
 color: black;
 } 
 
 .today:hover{
-background-color: rgba(255, 255, 0, 0.4);
+background-color: #637a9f10;
 }
 
 .week-day{
@@ -701,8 +699,10 @@ text-align: center;
 }
 
 .event-container{
+background-color: #637a9f10;
 color: black;
-padding: 0;
+border-radius: 1em;
+padding-left: 1em;
 display: flex;
 flex-direction: row;
 align-items: center;
@@ -715,7 +715,7 @@ flex-direction: row;
 }
 
 .test-container{
-background-color: #637a9f13;
+background-color: #637a9f10;
 border-radius: 1em;
 color: black;
 margin-bottom: 10px;
@@ -784,7 +784,6 @@ width: 80px;
 }
 
 .event{
-background-color: white;
 color: black;
 padding: 1em;
 border-radius: 1em;
@@ -797,19 +796,19 @@ margin-bottom: 20px; /* Adjust the value as needed */
 }
 
 .imp-date {
-background-color: #FAFDD6;
+background-color: #637a9f10;
 color: black;
 border-radius: 1em;
 display: flex;
 flex-direction: row;
 align-items: center;
 font-weight: 100;
-margin-bottom: 10px;
+margin-bottom: 1em;
+padding-left: 1em;
 }
 
 .counter-date {
   font-weight: 100;
-  background-color: white;
   width: 100%;
   padding: 1em;
   border-radius: 1em;
@@ -824,8 +823,6 @@ justify-content: left;
 .flex-row{
 display: flex;
 flex-direction: row;
-background-color: #FAFDD6;
-border-radius: 1em;
 }
 
 .flex-head{
@@ -833,7 +830,7 @@ padding: 21px;
 padding-bottom: 1.5em;
 padding-left: 1em;
 margin-bottom: 1.5em;
-border-bottom: 2px solid white;
+border-bottom: 2px solid #ddd;
 color: black;
 font-weight: 900;
 }
@@ -841,7 +838,7 @@ font-weight: 900;
 .flex-item:nth-child(1) {
 flex-basis: 60%;
 margin-right: 1.5em;
-margin-left: 1.5em;
+
 }
 
 .flex-item:nth-child(2) {
@@ -905,7 +902,6 @@ margin: 0;
 margin-top: 0.1em;
 padding-top: 1em;
 border-radius: 1em;
-background-color: #FAFDD6;
 border: 0;
 padding-left: 0;
 }
@@ -917,23 +913,15 @@ padding-top: 0.6em;
 padding-left: 1.5em;
 }
 
-.imp-date{
-  padding: 1em;
-  margin-bottom: 0;
-  padding-top: 0;
-}
 
 .imp-head{
-  border-top: 2px solid white; 
-  padding-top: 1.5em;
-  margin-top: 1em;
+  margin-top: 2em;
   margin-bottom: 1em;
 }
 
 .event-container{
-background-color: #FAFDD6;
 border-radius: 1em;
-padding: 1em;
+margin-top: 1em;
 }
 
 .calendar-app {
@@ -970,7 +958,7 @@ margin-top: 10px;
 display: flex;
 flex-direction: column;
 width: 100%;
-margin-top: 40px;
+margin-top: 20px;
 }
 
 .cards{
@@ -1061,7 +1049,7 @@ text-align: left;
 }
 
 .progress-details{
-  font-size: 22px;
+  font-size: 18px;
   color: black;
   font-weight: 900;
 }
