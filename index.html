@@ -604,9 +604,11 @@ progressArc.setAttribute('fill', 'none');
 progressArc.setAttribute('stroke-dasharray', dashArray);
 progressArc.setAttribute('stroke-dashoffset', dashOffset);
 progressArc.setAttribute('transform', 'rotate(90 60 60)'); // Start from bottom
+progressArc.setAttribute('stroke-linecap', 'round'); // Rounded edges
 
 // Append the progress arc to the SVG
 svg.appendChild(progressArc);
+
 
 // Create the text element for percentage
 const text = document.createElementNS("http://www.w3.org/2000/svg", "text");

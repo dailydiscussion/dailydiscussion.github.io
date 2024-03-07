@@ -720,7 +720,7 @@ flex-direction: row;
 }
 
 .test-container{
-border: 1px solid #ddd;
+background-color: #637a9f13;
 border-radius: 1em;
 color: black;
 margin-bottom: 10px;
@@ -747,7 +747,7 @@ padding-right: 1em;
   justify-content: space-between;
   font-size: 14px;
   font-weight: 900;
-  background-color: #637a9f13;
+  border-bottom: 2px solid white;
   color: #637A9F;
   padding: 1em;
   border-top-left-radius: 1em;
@@ -1060,12 +1060,12 @@ text-align: left;
 }
 
 .progress-test{
-  font-size: 14px;
+  font-size: 12px;
   color: gray;
 }
 
 .progress-details{
-  font-size: 24px;
+  font-size: 22px;
   color: black;
   font-weight: 900;
 }
