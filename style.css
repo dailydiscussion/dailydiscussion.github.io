@@ -504,14 +504,6 @@ pointer-events: none;
 transition: opacity 0.2s ease-in-out, pointer-events 0.2s ease-in-out;
 }
 
-.counter-date {
-font-weight: 100;
-background-color: white;
-max-width: max-content;
-padding: 1em;
-border-radius: 1em;
-}
-
 
 .date-complete{
 font-size: 12px;
@@ -784,8 +776,8 @@ justify-content: left;
 .date-container{
 display: flex;
 flex-direction: column;
-margin-right: 1.5em;
 margin-left: 1em;
+width: 80px;
 }
 
 .event{
@@ -805,33 +797,26 @@ margin-bottom: 20px; /* Adjust the value as needed */
 background-color: #FAFDD6;
 color: black;
 border-radius: 1em;
-padding: 0.8em;
 display: flex;
 flex-direction: row;
 align-items: center;
 font-weight: 100;
-max-width: max-content;
-margin-right: 1em;
-flex: 0 0 90%;
+margin-bottom: 10px;
 }
+
+.counter-date {
+  font-weight: 100;
+  background-color: white;
+  width: 100%;
+  padding: 1em;
+  border-radius: 1em;
+  }
 
 .date-imp {
 font-size: 24px;
 font-weight: 900;
 justify-content: left;
 }
-
-.horizontal::-webkit-scrollbar {
-display: none;
-}
-
-.horizontal {
-overflow: auto;
-flex-wrap: nowrap;
-display: flex;
-flex-direction: row;
-}
-
 
 .flex-row{
 display: flex;
@@ -928,6 +913,11 @@ color: black;
 margin-bottom: 0;
 padding-top: 0.6em;
 padding-left: 1.5em;
+}
+
+.imp-date{
+  padding: 1em;
+  margin-bottom: 0;
 }
 
 .event-container{
