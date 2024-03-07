@@ -266,7 +266,8 @@ margin-right: 0px;
 }
 
 .imp-head{
-  margin-top: 1em;
+  margin-top: 2em;
+  margin-bottom: 1em;
 }
 
 .topic{
@@ -826,11 +827,10 @@ flex-direction: row;
 }
 
 .flex-head{
-padding: 21px;
+padding-top: 1em;
 padding-bottom: 1.5em;
-padding-left: 1em;
 margin-bottom: 1.5em;
-border-bottom: 2px solid #ddd;
+border-bottom: 1px solid #ddd;
 color: black;
 font-weight: 900;
 }
@@ -910,7 +910,6 @@ padding-left: 0;
 color: black;
 margin-bottom: 0;
 padding-top: 0.6em;
-padding-left: 1.5em;
 }
 
 
