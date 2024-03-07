@@ -4,13 +4,13 @@ var currentHour = new Date().getHours();
 var greeting = '';
 
 if (currentHour >= 5 && currentHour < 12) {
-greeting = 'Hi, Good Morning 🌞';
+greeting = 'Hi, Good Morning';
 } else if (currentHour >= 12 && currentHour < 18) {
-greeting = 'Hi, Good Afternoon ☀️';
+greeting = 'Hi, Good Afternoon';
 } else if (currentHour >= 2 && currentHour < 5) {
-greeting = "Hey, It's time to sleep 😴";
+greeting = "Hey, It's time to sleep";
 } else {
-greeting = 'Hi, Good Evening 🌙';
+greeting = 'Hi, Good Evening';
 }
 
 return greeting;
