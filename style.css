@@ -19,6 +19,7 @@ body {
 margin: 0;
 padding: 0;
 display: flex;
+user-select: none;
 flex-direction: column;
 min-height: 100vh;
 font-family: 'Josefin Sans', sans-serif;
@@ -187,7 +188,12 @@ margin-top: 20px;
 
 .dash-container{
 padding-bottom: 0;
-padding-top: 40px;
+padding-top: 1em;
+}
+
+.timetable-container{
+padding-bottom: 0;
+padding-top: 10px;
 }
 
 .col{
@@ -267,7 +273,6 @@ margin-right: 0px;
 
 .imp-head{
   margin-top: 2em;
-  margin-bottom: 1em;
 }
 
 .topic{
@@ -713,6 +718,7 @@ font-weight: 100;
 .test-flex{
 display: flex;
 flex-direction: row;
+margin-top: 10px;
 }
 
 .test-container{
@@ -827,10 +833,8 @@ flex-direction: row;
 }
 
 .flex-head{
-padding-top: 1em;
+padding-top: 0.6em;
 padding-bottom: 1.5em;
-margin-bottom: 1.5em;
-border-bottom: 1px solid #ddd;
 color: black;
 font-weight: 900;
 }
@@ -909,6 +913,7 @@ padding-left: 0;
 .flex-head{
 color: black;
 margin-bottom: 0;
+padding-bottom: 1em;
 padding-top: 0.6em;
 }
 
