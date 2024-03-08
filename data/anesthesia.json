@@ -61,7 +61,6 @@
         },
         {
           "s.no": 8,
-          "id": "Quiz",
           "text": "Anesthesia Test 1 (2018)",
           "questions": "50",
           "days": 1,
@@ -70,12 +69,29 @@
         },
         {
           "s.no": 9,
-          "id": "Quiz-2",
           "text": "Anesthesia Test 2 (2018)",
           "questions": "50",
           "days": 0,
           "date_completed": "7 March 2024",
           "url": "https://link.marrow.com/test/5a6189ff4f2544767f6a1839?prev=subject"
+        },
+        {
+          "s.no": 10,
+          "id": "Quiz",
+          "text": "Anesthesia Test (2019)",
+          "questions": "75",
+          "days": 1,
+          "date_completed": "8 March 2024",
+          "url": "https://link.marrow.com/test/5c471e371576320cfd048187?prev=subject"
+        },
+        {
+          "s.no": 11,
+          "id": "Quiz-2",
+          "text": "Anesthesia Test (2020)",
+          "questions": "75",
+          "days": 0,
+          "date_completed": "8 March 2024",
+          "url": "https://link.marrow.com/test/5e3d5357c49dd4524decb775?prev=subject"
         }
       ]
     }

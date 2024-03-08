@@ -582,7 +582,7 @@ const bgCircle = document.createElementNS("http://www.w3.org/2000/svg", "circle"
 bgCircle.setAttribute('cx', '60');
 bgCircle.setAttribute('cy', '60');
 bgCircle.setAttribute('r', '50');
-bgCircle.setAttribute('stroke', '#f3f3f3');
+bgCircle.setAttribute('stroke', 'white');
 bgCircle.setAttribute('stroke-width', '10');
 bgCircle.setAttribute('fill', 'none');
 
@@ -599,7 +599,7 @@ progressArc.setAttribute('stroke-width', '10');
 progressArc.setAttribute('fill', 'none');
 progressArc.setAttribute('stroke-dasharray', dashArray);
 progressArc.setAttribute('stroke-dashoffset', dashOffset);
-progressArc.setAttribute('transform', 'rotate(90 60 60)'); // Start from bottom
+progressArc.setAttribute('transform', 'rotate(0 60 60)'); // Start from bottom
 progressArc.setAttribute('stroke-linecap', 'round'); // Rounded edges
 
 // Append the progress arc to the SVG
