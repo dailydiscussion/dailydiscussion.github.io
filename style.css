@@ -448,7 +448,7 @@ color: white;
 .th {
 color: black;
 padding: 1em;
-border-bottom: 1px solid #ddd;
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 font-weight: 900;
 }
 
@@ -913,7 +913,7 @@ margin: 0;
 .flex-item:nth-child(2) {
 flex-basis: 100%;
 margin: 0;
-border-top: 1px solid #ddd;
+border-top: 1px solid rgba(0, 0, 0, 0.1);
 padding-top: 1.5em;
 padding-left: 0;
 }
@@ -1050,7 +1050,7 @@ text-align: left;
 
 .progress-test{
   font-size: 12px;
-  color: gray;
+  color: rgba(0, 0, 0, 0.8);
 }
 
 .progress-details{
