@@ -110,9 +110,10 @@ flex-wrap: nowrap;
 
 
 hr {
-border: none; /* Remove default border */
-height: 1px; /* Set the height of the line */
-background-color: #ccc; /* Set the color of the line */
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .header {
@@ -169,6 +170,13 @@ flex-direction: column;
 display: flex;
 flex-direction: row;
 align-items: center;
+}
+
+.dashboard-items {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .calender-subhead {
@@ -793,9 +801,10 @@ width: 80px;
 .event{
 color: black;
 padding: 1em;
-border-radius: 1em;
+padding-left: 1.5em;
 font-weight: 100;
 width: 100%;
+border-left: 2px solid white;
 }
 
 .flex-item {
@@ -818,7 +827,8 @@ padding-left: 1em;
   font-weight: 100;
   width: 100%;
   padding: 1em;
-  border-radius: 1em;
+  padding-left: 1.5em;
+  border-left: 2px solid white;
   }
 
 .date-imp {
@@ -903,29 +913,20 @@ margin: 0;
 .flex-item:nth-child(2) {
 flex-basis: 100%;
 margin: 0;
-margin-top: 0.1em;
-padding-top: 1em;
-border-radius: 1em;
-border: 0;
+border-top: 1px solid #ddd;
+padding-top: 1.5em;
 padding-left: 0;
 }
 
 .flex-head{
 color: black;
 margin-bottom: 0;
-padding-bottom: 1em;
+padding-bottom: 1.5em;
 padding-top: 0.6em;
-}
-
-
-.imp-head{
-  margin-top: 2em;
-  margin-bottom: 1em;
 }
 
 .event-container{
 border-radius: 1em;
-margin-top: 1em;
 }
 
 .calendar-app {

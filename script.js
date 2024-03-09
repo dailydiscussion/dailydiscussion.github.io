@@ -67,7 +67,7 @@ console.error('Quiz entries not found in JSON data.');
 })
 .catch(error => console.error('Error fetching JSON:', error));
 
-
+// dashboard Script //
 
 // Function to calculate total number of questions
 function calculateTotalQuestions(testData) {
