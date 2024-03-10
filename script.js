@@ -22,7 +22,7 @@ document.getElementById('greeting').textContent = getGreeting();
 // Quiz links //
 
 // Fetch the JSON data from the file using AJAX
-fetch('data/anesthesia.json')
+fetch('data/grandtest.json')
 .then(response => response.json())
 .then(jsonData => {
 // Find the Quiz entry by ID
@@ -113,7 +113,7 @@ const fetchData = async () => {
 const files = ['surgery.json', 'obgy.json', 'anatomy.json', 'anesthesia.json', 'biochem.json',
 'derma.json', 'ent.json', 'fmt.json', 'medicine.json', 'microbiology.json', 'ortho.json',
 'patho.json', 'pedia.json', 'pharma.json', 'physiology.json', 'psm.json', 'psychiatry.json',
-'radiology.json'
+'radiology.json','grandtest.json'
 ];
 const responses = await Promise.all(files.map(file => fetch(`data/${file}`).then(response =>
 response.json())));
@@ -136,7 +136,6 @@ return accumulator;
 document.getElementById('totalQuestions').innerText = calculateTotalQuestions(combinedData);
 document.getElementById('totalTests').innerText = calculateTotalTests(combinedData);
 document.getElementById('totalDays').innerText = calculateTotalDays(combinedData);
-document.getElementById('totalTests-card').innerText = calculateTotalTests(combinedData);
 })
 .catch(error => console.error('Error fetching JSON:', error));
 
@@ -356,6 +355,13 @@ return testData.tests[0].links.length;
 
 const cardData = [
 {
+id: 'grandtest-link',
+img: 'svg/grandtest.svg',
+title: 'Grand&nbsp;Tests',
+icon: 'grandtest-icon',
+json: 'data/grandtest.json'
+},
+{
 id: 'anesthesia-link',
 img: 'svg/anesthesia.svg',
 title: 'Anesthesiology',
@@ -498,7 +504,7 @@ cardElement.classList.add('dash-card', 'card');
 cardElement.style.justifyContent = 'center';
 
 // Apply default style to the card with ID 'ent-link'
-if (cardInfo.id === 'anesthesia-link') {
+if (cardInfo.id === 'grandtest-link') {
 cardElement.style.backgroundColor = '#637A9F';
 cardElement.style.color = 'white';
 }
@@ -770,6 +776,7 @@ createDynamicTable("pharma-link", "data/pharma.json", "pharma-icon");
 createDynamicTable("psm-link", "data/psm.json", "psm-icon");
 createDynamicTable("psychiatry-link", "data/psychiatry.json", "psychiatry-icon");
 createDynamicTable("fmt-link", "data/fmt.json", "fmt-icon");
+createDynamicTable("grandtest-link", "data/grandtest.json", "grandtest-icon");
 
 // Triggering the click event for "obgy-link"
-document.getElementById("anesthesia-link").click();
+document.getElementById("grandtest-link").click();
