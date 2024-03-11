@@ -31,8 +31,9 @@ button{
 }
 
 .margin-1{
-  margin: 1em;
+  margin: 2.5em;
 }
+
 
 .section-table{
 display: flex;
@@ -72,7 +73,7 @@ display: none;
 display: none;
 }
 
-.ul::-webkit-scrollbar {
+.todayfocus::-webkit-scrollbar {
 display: none;
 }
 
@@ -109,6 +110,10 @@ flex-wrap: nowrap;
 }
 
 
+.margin-top-20px{
+  margin-top: 40px;
+}
+
 hr {
   border: 0;
   height: 0;
@@ -119,7 +124,6 @@ hr {
 .header {
 margin: 0;
 padding: 0;
-color: white;
 }
 
 .home {
@@ -127,18 +131,14 @@ display: flex;
 flex-direction: column;
 justify-content: flex-start;
 margin: 0;
-padding: 1em; 
 text-align: left;
 align-items: left;
+padding-bottom: 10px;
 }
 
 .header-box{
-background-color: #1D2B53;
-background-image: url(svg/topography.svg);
-color: white;
-border-radius: 1em;
-padding: 2em;
 margin: 0;
+padding: 0;
 }
 
 .flex-question {
@@ -149,18 +149,46 @@ align-items: center;
 
 .button{
 text-align: left;
-margin: 0;
+margin-top: 1.5em;
+margin-right: 1em;
 padding: 0.1em;
-border-radius: 2em;
+border-radius: 1em;
 background-color: #FBF9F1;
 }
 
-.col-quiz{
-margin-top: 50px;
+.button:hover{
+  background-color: #ece9dc;
+}
+
+.todayfocus{
+display: flex;
+flex-wrap: nowrap;
+flex-direction: row;
+width: 100%;
+margin: auto;
+overflow: auto;
+}
+
+.actualcontent{
+  padding: 1.5em;
+  width: 300px;
+}
+
+.col-2 p{
+  font-weight:900 ;
+}
+
+.col-3{
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size:13px; 
+  color: #333;
 }
 
 .dash{
-margin: 1em;
 display: flex;
 margin-bottom: 40px;
 flex-direction: column;
@@ -182,7 +210,6 @@ align-items: center;
 .calender-subhead {
 font-weight: 100;
 margin-top: 0px;
-color: rgba(0, 0, 0, 0.8);
 margin-bottom: 20px;
 }
 
@@ -220,9 +247,7 @@ margin: auto;
 
 .col-header{
 display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
+flex-direction: column;
 }
 
 .flex {
@@ -298,7 +323,7 @@ font-family: 'Josefin Sans', sans-serif;
 margin: 0;
 padding: 1.1em;
 border: none;
-box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
 }
 
 .table-flex{
@@ -353,12 +378,12 @@ width: 100%;
 
 button:active{
 transform: translateY(2px); 
-box-shadow: 0 0 5px rgba(109, 108, 108, 0.3);  
+box-shadow: 0 0 5px rgba(109, 108, 108, 0.1);  
 }
 
 button:hover{
 transform: translateY(-2px); 
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-layout{
@@ -412,7 +437,6 @@ margin-bottom:20px;
 .about{
 display: flex;
 flex-direction: column;
-margin: 1em;
 }
 
 table {
@@ -522,13 +546,11 @@ pointer-events: none;
 transition: opacity 0.2s ease-in-out, pointer-events 0.2s ease-in-out;
 }
 
-
 .date-complete{
 font-size: 12px;
 font-weight: 100;
 margin-top: 1.5em;
 }
-
 
 .sidebar {
 height: 100%;
@@ -558,7 +580,6 @@ border-radius: 1em;
 
 .main-content {
 margin-left: 80px;
-padding: 1.5em;
 }
 
 .table-flex img{
@@ -884,8 +905,7 @@ margin-bottom: 100px;
 }
 
 .main-content {
-margin-left: 0px; /* Adjust based on sidebar width */
-padding: 0.2em;
+margin-left: 0px;
 }
 
 .about{
@@ -898,6 +918,16 @@ justify-content: left;
 }
 
 @media screen and (max-width: 1024px){
+
+.home {
+  padding: 0; 
+  background: none;
+  color: black;
+  }
+
+.margin-1{
+    margin: 1.2em;
+}
 
 .flex-row{
 display: flex;
@@ -968,16 +998,6 @@ margin-top: 20px;
 
 .cards{
 flex: 0 0 30%;
-}
-
-.home {
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-margin: 0;
-padding: 1em; 
-text-align: left;
-align-items: left;
 }
 
 .card-layout{

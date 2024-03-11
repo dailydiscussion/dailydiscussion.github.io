@@ -1,28 +1,28 @@
-// js for greetings 
-function getGreeting() {
-var currentHour = new Date().getHours();
-var greeting = '';
+// // js for greetings 
+// function getGreeting() {
+// var currentHour = new Date().getHours();
+// var greeting = '';
 
-if (currentHour >= 5 && currentHour < 12) {
-greeting = 'Hi, Good Morning';
-} else if (currentHour >= 12 && currentHour < 18) {
-greeting = 'Hi, Good Afternoon';
-} else if (currentHour >= 2 && currentHour < 5) {
-greeting = "Hey, It's time to sleep";
-} else {
-greeting = 'Hi, Good Evening';
-}
+// if (currentHour >= 5 && currentHour < 12) {
+// greeting = 'Hi, Good Morning';
+// } else if (currentHour >= 12 && currentHour < 18) {
+// greeting = 'Hi, Good Afternoon';
+// } else if (currentHour >= 2 && currentHour < 5) {
+// greeting = "Hey, It's time to sleep";
+// } else {
+// greeting = 'Hi, Good Evening';
+// }
 
-return greeting;
-}
+// return greeting;
+// }
 
-// Display the greeting message
-document.getElementById('greeting').textContent = getGreeting();
+// // Display the greeting message
+// document.getElementById('greeting').textContent = getGreeting();
 
 // Quiz links //
 
 // Fetch the JSON data from the file using AJAX
-fetch('data/grandtest.json')
+fetch('data/anesthesia.json')
 .then(response => response.json())
 .then(jsonData => {
 // Find the Quiz entry by ID
@@ -66,6 +66,31 @@ console.error('Quiz entries not found in JSON data.');
 }
 })
 .catch(error => console.error('Error fetching JSON:', error));
+
+// grand-test script //
+
+// Fetch the JSON data from the file using AJAX
+fetch('data/grandtest.json')
+.then(response => response.json())
+.then(jsonData => {
+// Find the Quiz entry by ID
+var quizEntry2 = jsonData.tests[0].links.find(link => link.id === "Quiz");
+
+// Check if both Quiz entries are found
+if (quizEntry2) {
+// Update the HTML content with the Quiz dynamically for Quiz-2 entry
+var quizLink2 = document.getElementById("grandtest");
+
+quizLink2.href = quizEntry2.url;
+
+document.getElementById("topicContainer3").textContent = quizEntry2.text;
+document.getElementById("MCQCount3").textContent = quizEntry2.questions;
+} else {
+console.error('Quiz entries not found in JSON data.');
+}
+})
+.catch(error => console.error('Error fetching JSON:', error));
+
 
 // dashboard Script //
 
