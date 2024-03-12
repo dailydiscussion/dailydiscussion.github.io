@@ -920,7 +920,6 @@ justify-content: left;
 @media screen and (max-width: 1024px){
 
 .home {
-  padding: 0; 
   background: none;
   color: black;
   }
@@ -1084,4 +1083,15 @@ text-align: left;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.progress-card{
+  background-color: #4caf4f11;
+  margin-top: 1em;
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.progress-card:hover{
+background-color: #4caf4f21;
 }
