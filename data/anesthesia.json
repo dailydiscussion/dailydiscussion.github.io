@@ -115,6 +115,7 @@
           "s.no": 13,
           "text": "Anesthesia Test (2022)",
           "questions": "50",
+          "duration": "53 min",
           "days": 0,
           "date_completed": "10 March 2024",
           "url": "https://link.marrow.com/test/62c408eca459775417ddb2df?prev=subject",
@@ -122,9 +123,9 @@
         },
         {
           "s.no": 14,
-          "id": "Quiz",
           "text": "Anesthesia Test (2023)",
           "questions": "50",
+          "duration": "53 min",
           "days": 0,
           "date_completed": "12 March 2024",
           "url": "https://link.marrow.com/test/64241007a1bb1feba2454b32?prev=subject",

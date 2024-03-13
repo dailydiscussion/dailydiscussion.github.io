@@ -11,9 +11,7 @@
 <title>Daily Discussion</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -176,7 +174,6 @@ Performance Overview
 
 </div>
 
-
 <div class="dash-container">
 <div>
 <div class="flex">
@@ -209,7 +206,7 @@ Tests
 Subjects
 </h6>
 <h2>
-5/19
+6/19
 </h2>
 </div>
 
@@ -238,80 +235,7 @@ Today's Focus
 Your Daily Test and Grand Test This Week
 </h5>
 
-<div class="todayfocus">
-<a class="quiz-card" id="quizLink1" href="#">
-<div class="button">
-<div class="actualcontent">
-<div class="row-1">
-<div class="col-1">
-<div>
-<span><img src="svg/anesthesia.svg"></span>
-</div>
-</div>
-
-<div class="col-2">
-<p id="topicContainer1"></p>
-</div>
-
-<hr>
-
-<div class="col-3">
-<div>(<span id="MCQCount1"></span> MCQs)</div>
-<div>53 min</div>
-</div>
-</div>
-</div>   
-</div>
-</a>
-<!-- <a class="quiz-card" id="quizLink2" href="#">
-<div class="button">
-<div class="actualcontent">
-<div class="row-1">
-<div class="col-1">
-<div>
-<span><img src="svg/anesthesia.svg"></span>
-</div>
-</div>
-
-<div class="col-2">
-<p id="topicContainer2"></p>
-</div>
-
-<hr>
-
-<div class="col-3">
-<div>(<span id="MCQCount2"></span> MCQs)</div>
-<div>50 min</div>
-</div>
-</div>
-</div>   
-</div>
-</a> -->
-<a class="quiz-card" id="grandtest" href="#">
-<div class="button">
-<div class="actualcontent">
-<div class="row-1">
-<div class="col-1">
-<div>
-<span><img src="svg/exam.svg"></span>
-</div>
-</div>
-
-<div class="col-2">
-<p id="topicContainer3"></p>
-</div>
-
-<hr>
-
-<div class="col-3">
-<div>(<span id="MCQCount3"></span> MCQs)</div>
-<div>210 min</div>
-</div>
-</div>
-</div>   
-</div>
-</a>
-</div>    
+<div class="todayfocus" id="quizContainer"></div>
 </div>
 </div>
 </div>
@@ -524,7 +448,7 @@ INICET May 24
 </div>
 </div>
 </div>
-</div>  
+</div>
 </section>
 
 </div>
@@ -548,7 +472,12 @@ document.getElementById('mainContent').style.opacity = '1';
 });
 </script>
 
-<script src="script.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/todayfocus.js"></script>
+<script src="js/timetable.js"></script>
+<script src="js/eventcalender.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/tests.js"></script>
 
 <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
@@ -562,19 +491,18 @@ appId: "88e8b250-302e-41c7-ba16-0be6fdc3b645",
 
 <script>
 // Fetch data from JSON file
-fetch('data/anesthesia.json')
+fetch('data/microbiology.json')
 .then(response => response.json())
 .then(data => {
 const totalTests = calculateTotalTests(data); // Calculate total number of tests
-const progress = totalTests / 14; // Calculate progress
+const progress = totalTests / 19; // Calculate progress
 
 // Extract subject name from the JSON data
-const subjectName = data.tests[0]
-.title; // Assuming there's only one subject in the JSON
+const subjectName = data.tests[0].title; // Assuming there's only one subject in the JSON
 
 // Update HTML elements with fetched data
 document.getElementById('subject').innerText = `${subjectName}`;
-document.getElementById('progressDetails').innerText = `${totalTests}/14`;
+document.getElementById('progressDetails').innerText = `${totalTests}/19`;
 
 // Update progress circle with calculated percentage
 updateProgress(progress);
@@ -634,7 +562,7 @@ progressArc.setAttribute('stroke-width', '10');
 progressArc.setAttribute('fill', 'none');
 progressArc.setAttribute('stroke-dasharray', dashArray);
 progressArc.setAttribute('stroke-dashoffset', dashOffset);
-progressArc.setAttribute('transform', 'rotate(290 60 60)');
+progressArc.setAttribute('transform', 'rotate(-90 60 60)'); // Rotate anticlockwise from 12 o'clock position
 progressArc.setAttribute('stroke-linecap', 'round'); // Rounded edges
 
 // Append the progress arc to the SVG
@@ -657,6 +585,7 @@ svg.appendChild(text);
 progressCircle.appendChild(svg);
 }
 </script>
+
 </body>
 
 </html>

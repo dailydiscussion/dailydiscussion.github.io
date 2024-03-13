@@ -1086,12 +1086,8 @@ text-align: left;
 }
 
 .progress-card{
-  background-color: #4caf4f11;
+  background-color: #e3ffe78c;
   margin-top: 1em;
   border-radius: 1em;
   padding: 1em;
-}
-
-.progress-card:hover{
-background-color: #4caf4f21;
 }
