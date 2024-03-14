@@ -3,215 +3,97 @@ function calculateTotalTests(testData) {
 return testData.tests[0].links.length;
 }
 
+// Modified card data array
 const cardData = [
 {
-id: 'grandtest-link',
-img: 'svg/grandtest.svg',
-title: 'Grand&nbsp;Tests',
-icon: 'grandtest-icon',
-json: 'data/grandtest.json'
+json: 'data/grandtest.json',
+title: 'Grand&nbsp;Tests'
 },
 {
-id: 'microbiology-link',
-img: 'svg/microbiology.svg',
-title: 'Microbiology',
-icon: 'microbiology-icon',
-json: 'data/microbiology.json'
+json: 'data/microbiology.json',
+title: 'Microbiology'
 },
 {
-id: 'anesthesia-link',
-img: 'svg/anesthesia.svg',
-title: 'Anesthesiology',
-icon: 'anesthesia-icon',
-json: 'data/anesthesia.json'
+json: 'data/anesthesia.json',
+title: 'Anesthesiology'
 },
 {
-id: 'ent-link',
-img: 'svg/ent.svg',
-title: 'ENT',
-icon: 'ent-icon',
-json: 'data/ent.json'
+json: 'data/ent.json',
+title: 'ENT'
 },
 {
-id: 'ortho-link',
-img: 'svg/ortho.svg',
-title: 'Orthopaedics',
-icon: 'ortho-icon',
-json: 'data/ortho.json'
-},    
-{
-id: 'obgy-link',
-img: 'svg/obgy.svg',
-title: 'Obs&Gyne',
-icon: 'obgy-icon',
-json: 'data/obgy.json'
+json: 'data/ortho.json',
+title: 'Orthopaedics'
 },
 {
-id: 'surgery-link',
-img: 'svg/surgery.svg',
-title: 'Surgery',
-icon: 'surgery-icon',
-json: 'data/surgery.json'
+json: 'data/obgy.json',
+title: 'Obs&Gyne'
 },
 {
-id: 'medicine-link',
-img: 'svg/medicine.svg',
-title: 'Medicine',
-icon: 'medicine-icon',
-json: 'data/medicine.json'
+json: 'data/surgery.json',
+title: 'Surgery'
 },
 {
-id: 'pedia-link',
-img: 'svg/pedia.svg',
-title: 'Pediatrics',
-icon: 'pedia-icon',
-json: 'data/pedia.json'
+json: 'data/medicine.json',
+title: 'Medicine'
 },
 {
-id: 'radiology-link',
-img: 'svg/radiology.svg',
-title: 'Radiology',
-icon: 'radiology-icon',
-json: 'data/radiology.json'
+json: 'data/pedia.json',
+title: 'Pediatrics'
 },
 {
-id: 'anatomy-link',
-img: 'svg/anatomy.svg',
-title: 'Anatomy',
-icon: 'anatomy-icon',
-json: 'data/anatomy.json'
+json: 'data/radiology.json',
+title: 'Radiology'
 },
 {
-id: 'physiology-link',
-img: 'svg/physiology.svg',
-title: 'Physiology',
-icon: 'physiology-icon',
-json: 'data/physiology.json'
+json: 'data/anatomy.json',
+title: 'Anatomy'
 },
 {
-id: 'biochem-link',
-img: 'svg/biochem.svg',
-title: 'Biochemistry',
-icon: 'biochem-icon',
-json: 'data/biochem.json'
+json: 'data/physiology.json',
+title: 'Physiology'
 },
 {
-id: 'derma-link',
-img: 'svg/derma.svg',
-title: 'Dermatology',
-icon: 'derma-icon',
-json: 'data/derma.json'
+json: 'data/biochem.json',
+title: 'Biochemistry'
 },
 {
-id: 'eye-link',
-img: 'svg/eye.svg',
-title: 'Eye',
-icon: 'eye-icon',
-json: 'data/eye.json'
+json: 'data/derma.json',
+title: 'Dermatology'
 },
 {
-id: 'patho-link',
-img: 'svg/patho.svg',
-title: 'Pathology',
-icon: 'patho-icon',
-json: 'data/patho.json'
+json: 'data/eye.json',
+title: 'Eye'
 },
 {
-id: 'pharma-link',
-img: 'svg/pharma.svg',
-title: 'Pharmacology',
-icon: 'pharma-icon',
-json: 'data/pharma.json'
+json: 'data/patho.json',
+title: 'Pathology'
 },
 {
-id: 'psm-link',
-img: 'svg/psm.svg',
-title: 'PSM',
-icon: 'psm-icon',
-json: 'data/psm.json'
+json: 'data/pharma.json',
+title: 'Pharmacology'
 },
 {
-id: 'psychiatry-link',
-img: 'svg/psychiatry.svg',
-title: 'Psychiatry',
-icon: 'psychiatry-icon',
-json: 'data/psychiatry.json'
+json: 'data/psm.json',
+title: 'PSM'
 },
 {
-id: 'fmt-link',
-img: 'svg/fmt.svg',
-title: 'FMT',
-icon: 'fmt-icon',
-json: 'data/fmt.json'
+json: 'data/psychiatry.json',
+title: 'Psychiatry'
+},
+{
+json: 'data/fmt.json',
+title: 'FMT'
 }
-// Add more card data as needed
 ];
 
-
-// Function to create a card element
-function createCard(cardInfo) {
-    const cardElement = document.createElement('div');
-    cardElement.classList.add('dash-card', 'card');
-    cardElement.style.justifyContent = 'center';
-
-    // Extract JSON name from the cardInfo.json path
-    const jsonName = cardInfo.json.split('/').pop().split('.')[0];
-
-    // Apply default style to the card with ID 'ent-link'
-    if (jsonName === 'microbiology') {
-        cardElement.style.backgroundColor = '#637A9F';
-        cardElement.style.color = 'white';
-    }
-
-    // Event listener to toggle active state and apply styles
-    cardElement.addEventListener('click', function () {
-        // Remove active state from all cards
-        document.querySelectorAll('.dash-card.card').forEach(function (card) {
-            card.style.backgroundColor = '';
-            card.style.color = '';
-        });
-
-        // Apply active state to the clicked card
-        cardElement.style.backgroundColor = '#637A9F';
-        cardElement.style.color = 'white';
-    });
-
-    // Fetch JSON data and update the total-test element
-    fetch(cardInfo.json)
-        .then(response => response.json())
-        .then(data => {
-            const totalTests = calculateTotalTests(data);
-            document.getElementById(`total-test-${jsonName}-link`).innerHTML = totalTests;
-        })
-        .catch(error => console.error('Error fetching data:', error));
-
-    // Card HTML content
-    cardElement.innerHTML = `
-        <div>
-            <span><img src="svg/${jsonName}.svg"></span>
-        </div>
-        <div>
-            ${cardInfo.title}
-        </div>
-        <div class="card-text">
-            <span id="total-test-${jsonName}-link"></span> Tests
-        </div>
-    `;
-
-    return cardElement;
-}
-
-
-// Function to handle card click
-function handleCardClick(event) {
-event.preventDefault();
-const cardId = event.currentTarget.id;
-const cardInfo = cardData.find(card => card.id === cardId);
-fetch(cardInfo.json)
-.then(response => response.json())
-.then(data => createTable(data, document.getElementById("dynamic-table"), cardInfo.icon))
-.catch(error => console.error('Error fetching data:', error));
-}
+// Dynamically add id, img, and icon properties based on JSON file names
+cardData.forEach(card => {
+const jsonName = card.json.split('/').pop().split('.')[0];
+card.id = `${jsonName}-link`;
+card.img = `svg/${jsonName}.svg`;
+card.icon = `${jsonName}-icon`;
+});
 
 // Function to render cards
 function renderCards() {
@@ -231,9 +113,67 @@ cardContainer.appendChild(cardWrapper);
 }
 
 renderCards();
-cardData.forEach((cardInfo) => {
-createDynamicTable(cardInfo.id, cardInfo.json, cardInfo.icon);
+
+// Function to create a card element
+function createCard(cardInfo) {
+const cardElement = document.createElement('div');
+cardElement.classList.add('dash-card', 'card');
+cardElement.style.justifyContent = 'center';
+
+// Apply default style to the card with ID 'microbiology-link'
+if (cardInfo.title === 'Microbiology') {
+cardElement.style.backgroundColor = '#637A9F';
+cardElement.style.color = 'white';
+}
+
+// Event listener to toggle active state and apply styles
+cardElement.addEventListener('click', function () {
+// Remove active state from all cards
+document.querySelectorAll('.dash-card.card').forEach(function (card) {
+card.style.backgroundColor = '';
+card.style.color = '';
 });
+
+// Apply active state to the clicked card
+cardElement.style.backgroundColor = '#637A9F';
+cardElement.style.color = 'white';
+});
+
+// Fetch JSON data and update the total-test element
+fetch(cardInfo.json)
+.then(response => response.json())
+.then(data => {
+const totalTests = calculateTotalTests(data);
+document.getElementById(`total-test-${cardInfo.id}`).innerHTML = totalTests;
+})
+.catch(error => console.error('Error fetching data:', error));
+
+// Card HTML content
+cardElement.innerHTML = `
+<div>
+<span><img src="${cardInfo.img}"></span>
+</div>
+<div>
+${cardInfo.title}
+</div>
+<div class="card-text">
+<span id="total-test-${cardInfo.id}"></span> Tests
+</div>
+`;
+
+return cardElement;
+}
+
+// Function to handle card click
+function handleCardClick(event) {
+event.preventDefault();
+const cardId = event.currentTarget.id;
+const cardInfo = cardData.find(card => card.id === cardId);
+fetch(cardInfo.json)
+.then(response => response.json())
+.then(data => createTable(data, document.getElementById("dynamic-table"), cardInfo.icon))
+.catch(error => console.error('Error fetching data:', error));
+}
 
 // Optional: If you want to disable right-click as well
 document.addEventListener('contextmenu', function (e) {

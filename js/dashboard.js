@@ -38,23 +38,23 @@ return totalDays;
 }
 
 const fetchData = async () => {
-    try {
-        // Fetch filePaths.json to get the list of files for the dashboard
-        const response = await fetch('filePaths.json');
-        const filePaths = await response.json();
-        
-        // Extract the list of files from the dashboard key
-        const files = filePaths.dashboard;
+try {
+// Fetch filePaths.json to get the list of files for the dashboard
+const response = await fetch('filePaths.json');
+const filePaths = await response.json();
 
-        // Fetch JSON data from all files listed in the dashboard
-        const responses = await Promise.all(files.map(file => fetch(`data/${file}`).then(response =>
-            response.json())));
+// Extract the list of files from the dashboard key
+const files = filePaths.dashboard;
 
-        return responses;
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        return [];
-    }
+// Fetch JSON data from all files listed in the dashboard
+const responses = await Promise.all(files.map(file => fetch(file.json).then(response =>
+response.json())));
+
+return responses;
+} catch (error) {
+console.error('Error fetching data:', error);
+return [];
+}
 };
 
 
