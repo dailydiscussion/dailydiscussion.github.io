@@ -135,7 +135,7 @@ day.appendChild(dot);
 }
 
 function addGreenDots() {
-const eventDates = ['2024-03-11', '2024-03-17', '2024-03-24', '2024-03-31', '2024-05-19', '2024-07-07'];
+const eventDates = ['2024-03-11', '2024-03-18', '2024-03-24', '2024-03-31', '2024-05-19', '2024-07-07'];
 
 const days = document.querySelectorAll('.day-app');
 days.forEach(day => {
