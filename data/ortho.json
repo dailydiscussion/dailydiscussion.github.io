@@ -2,6 +2,7 @@
   "tests": [
     {
       "title": "Orthopaedics Tests",
+      "totalTests": "14",
       "links": [
         {
           "s.no": 1,

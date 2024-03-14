@@ -171,7 +171,7 @@ overflow: auto;
 
 .actualcontent{
   padding: 1.5em;
-  width: 300px;
+  width: 250px;
 }
 
 .col-2 p{
@@ -271,7 +271,7 @@ margin-right: 10px;
 margin-right: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
 .flex {
 display: flex;
 flex-direction: row;

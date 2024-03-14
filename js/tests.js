@@ -147,69 +147,66 @@ json: 'data/fmt.json'
 // Add more card data as needed
 ];
 
+
 // Function to create a card element
 function createCard(cardInfo) {
-const cardElement = document.createElement('div');
-cardElement.classList.add('dash-card', 'card');
-cardElement.style.justifyContent = 'center';
+    const cardElement = document.createElement('div');
+    cardElement.classList.add('dash-card', 'card');
+    cardElement.style.justifyContent = 'center';
 
-// Apply default style to the card with ID 'ent-link'
-if (cardInfo.id === 'microbiology-link') {
-cardElement.style.backgroundColor = '#637A9F';
-cardElement.style.color = 'white';
+    // Extract JSON name from the cardInfo.json path
+    const jsonName = cardInfo.json.split('/').pop().split('.')[0];
+
+    // Apply default style to the card with ID 'ent-link'
+    if (jsonName === 'microbiology') {
+        cardElement.style.backgroundColor = '#637A9F';
+        cardElement.style.color = 'white';
+    }
+
+    // Event listener to toggle active state and apply styles
+    cardElement.addEventListener('click', function () {
+        // Remove active state from all cards
+        document.querySelectorAll('.dash-card.card').forEach(function (card) {
+            card.style.backgroundColor = '';
+            card.style.color = '';
+        });
+
+        // Apply active state to the clicked card
+        cardElement.style.backgroundColor = '#637A9F';
+        cardElement.style.color = 'white';
+    });
+
+    // Fetch JSON data and update the total-test element
+    fetch(cardInfo.json)
+        .then(response => response.json())
+        .then(data => {
+            const totalTests = calculateTotalTests(data);
+            document.getElementById(`total-test-${jsonName}-link`).innerHTML = totalTests;
+        })
+        .catch(error => console.error('Error fetching data:', error));
+
+    // Card HTML content
+    cardElement.innerHTML = `
+        <div>
+            <span><img src="svg/${jsonName}.svg"></span>
+        </div>
+        <div>
+            ${cardInfo.title}
+        </div>
+        <div class="card-text">
+            <span id="total-test-${jsonName}-link"></span> Tests
+        </div>
+    `;
+
+    return cardElement;
 }
 
-// Event listener to toggle active state and apply styles
-cardElement.addEventListener('click', function() {
-// Remove active state from all cards
-document.querySelectorAll('.dash-card.card').forEach(function(card) {
-card.style.backgroundColor = '';
-card.style.color = '';
-});
-// Apply active state to the clicked card
-cardElement.style.backgroundColor = '#637A9F';
-cardElement.style.color = 'white';
-});
-
-// Fetch JSON data
-fetch(cardInfo.json)
-.then(response => response.json())
-.then(data => {
-// Calculate total test count using 'calculateTotalTests' function
-const totalTests = calculateTotalTests(data);
-
-// Update the total-test element
-document.getElementById(`total-test-${cardInfo.id}`).innerHTML = totalTests;
-})
-.catch(error => console.error('Error fetching data:', error));
-
-cardElement.innerHTML = `
-<div>
-<span><img src="${cardInfo.img}"></span>
-</div>
-<div>
-${cardInfo.title}
-</div>
-<div class="card-text">
-<span id="total-test-${cardInfo.id}"></span> Tests
-</div>
-`;
-
-return cardElement;
-}
 
 // Function to handle card click
 function handleCardClick(event) {
-// Prevent the default behavior of the link
 event.preventDefault();
-
-// Get the ID of the clicked card
 const cardId = event.currentTarget.id;
-
-// Find the corresponding card data
 const cardInfo = cardData.find(card => card.id === cardId);
-
-// Perform the necessary action based on the card data
 fetch(cardInfo.json)
 .then(response => response.json())
 .then(data => createTable(data, document.getElementById("dynamic-table"), cardInfo.icon))
@@ -219,28 +216,24 @@ fetch(cardInfo.json)
 // Function to render cards
 function renderCards() {
 const cardContainer = document.getElementById('card-container');
-
 cardData.forEach((cardInfo) => {
 const cardElement = createCard(cardInfo);
-
 const cardLink = document.createElement('a');
-cardLink.href = '#'; // Set the link destination if needed
+cardLink.href = '#';
 cardLink.id = cardInfo.id;
 cardLink.appendChild(cardElement);
-
-// Add click event listener to the link
 cardLink.addEventListener('click', handleCardClick);
-
 const cardWrapper = document.createElement('div');
 cardWrapper.classList.add('cards');
 cardWrapper.appendChild(cardLink);
-
 cardContainer.appendChild(cardWrapper);
 });
 }
 
-// Call the function to render cards
 renderCards();
+cardData.forEach((cardInfo) => {
+createDynamicTable(cardInfo.id, cardInfo.json, cardInfo.icon);
+});
 
 // Optional: If you want to disable right-click as well
 document.addEventListener('contextmenu', function (e) {
@@ -335,27 +328,9 @@ fetch(jsonFile)
 });
 }
 
-// Modify each createDynamicTable call to incorporate the changes
-createDynamicTable("surgery-link", "data/surgery.json", "surgery-icon");
-createDynamicTable("medicine-link", "data/medicine.json", "medicine-icon");
-createDynamicTable("obgy-link", "data/obgy.json", "obgy-icon");
-createDynamicTable("pedia-link", "data/pedia.json", "pedia-icon");
-createDynamicTable("ortho-link", "data/ortho.json", "ortho-icon");
-createDynamicTable("anesthesia-link", "data/anesthesia.json", "anesthesia-icon");
-createDynamicTable("radiology-link", "data/radiology.json", "radiology-icon");
-createDynamicTable("anatomy-link", "data/anatomy.json", "anatomy-icon");
-createDynamicTable("physiology-link", "data/physiology.json", "physiology-icon");
-createDynamicTable("biochem-link", "data/biochem.json", "biochem-icon");
-createDynamicTable("derma-link", "data/derma.json", "derma-icon");
-createDynamicTable("eye-link", "data/eye.json", "eye-icon");
-createDynamicTable("ent-link", "data/ent.json", "ent-icon");
-createDynamicTable("microbiology-link", "data/microbiology.json", "microbiology-icon");
-createDynamicTable("patho-link", "data/patho.json", "patho-icon");
-createDynamicTable("pharma-link", "data/pharma.json", "pharma-icon");
-createDynamicTable("psm-link", "data/psm.json", "psm-icon");
-createDynamicTable("psychiatry-link", "data/psychiatry.json", "psychiatry-icon");
-createDynamicTable("fmt-link", "data/fmt.json", "fmt-icon");
-createDynamicTable("grandtest-link", "data/grandtest.json", "grandtest-icon");
+cardData.forEach((cardInfo) => {
+createDynamicTable(cardInfo.id, cardInfo.json, cardInfo.icon);
+});
 
 // Triggering the click event for "obgy-link"
 document.getElementById("microbiology-link").click();

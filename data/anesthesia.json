@@ -2,6 +2,7 @@
   "tests": [
     {
       "title": "Anesthesia Tests",
+      "totalTests": "14",
       "links": [
         {
           "s.no": 1,

@@ -1,0 +1,25 @@
+{
+    "todayquiz": "data/microbiology.json",
+    "grandtest": "data/grandtest.json",
+    "dashboard": [
+      "surgery.json",
+      "obgy.json",
+      "anatomy.json",
+      "anesthesia.json",
+      "biochem.json",
+      "derma.json",
+      "ent.json",
+      "fmt.json",
+      "medicine.json",
+      "microbiology.json",
+      "ortho.json",
+      "patho.json",
+      "pedia.json",
+      "pharma.json",
+      "physiology.json",
+      "psm.json",
+      "psychiatry.json",
+      "radiology.json",
+      "grandtest.json"
+    ]
+  }

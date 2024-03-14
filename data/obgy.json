@@ -2,6 +2,7 @@
   "tests": [
     {
       "title": "Obs&Gyne Tests",
+      "totalTests": "20",
       "links": [
         {
           "s.no": 1,

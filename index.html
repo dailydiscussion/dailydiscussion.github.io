@@ -479,7 +479,7 @@ document.getElementById('mainContent').style.opacity = '1';
 <script src="js/counter.js"></script>
 <script src="js/tests.js"></script>
 
-<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<!-- <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
 window.OneSignalDeferred = window.OneSignalDeferred || [];
 OneSignalDeferred.push(function (OneSignal) {
@@ -487,30 +487,35 @@ OneSignal.init({
 appId: "88e8b250-302e-41c7-ba16-0be6fdc3b645",
 });
 });
-</script>
+</script> -->
 
 <script>
-// Fetch data from JSON file
-fetch('data/microbiology.json')
+fetchFilePaths().then(paths => {
+if (paths && paths.todayquiz) {
+// Fetch data from the todayquiz file path
+fetch(paths.todayquiz)
 .then(response => response.json())
 .then(data => {
-const totalTests = calculateTotalTests(data); // Calculate total number of tests
-const progress = totalTests / 19; // Calculate progress
+const totalTests = data.tests[0].totalTests; 
+const completedTests = calculateCompletedTests(data); // Calculate completedTests
+const progress = completedTests / totalTests; // Calculate progress
 
 // Extract subject name from the JSON data
 const subjectName = data.tests[0].title; // Assuming there's only one subject in the JSON
 
 // Update HTML elements with fetched data
 document.getElementById('subject').innerText = `${subjectName}`;
-document.getElementById('progressDetails').innerText = `${totalTests}/19`;
+document.getElementById('progressDetails').innerText = `${completedTests}/${totalTests}`;
 
 // Update progress circle with calculated percentage
 updateProgress(progress);
 })
 .catch(error => console.error('Error fetching data:', error));
+}
+});
 
-// Function to calculate total number of tests
-function calculateTotalTests(testData) {
+// Function to calculate completed number of tests
+function calculateCompletedTests(testData) {
 return testData.tests.reduce((total, currentTest) => {
 return total + currentTest.links.length;
 }, 0);

@@ -26,11 +26,33 @@ console.error('Error fetching JSON:', error);
 }
 }
 
-// Fetch and update Quiz-1 and Quiz-2 data
-fetchAndUpdateQuizData('data/microbiology.json', ['Quiz', 'Quiz-2'], 'quizContainer', 'quizLink', 'MCQCount', 'duration');
+// Function to fetch file paths dynamically
+async function fetchFilePaths() {
+try {
+const response = await fetch('filePaths.json');
+return await response.json();
+} catch (error) {
+console.error('Error fetching file paths:', error);
+return null;
+}
+}
 
-// Fetch and update Grand Test data
-fetchAndUpdateQuizData('data/grandtest.json', ['Quiz-3'], 'quizContainer', 'grandtest', 'MCQCount', 'duration');
+fetchFilePaths().then(paths => {
+if (paths) {
+// Now you can use paths.todayquiz and paths.grandtest to get the file paths
+const todayQuizPromise = fetchAndUpdateQuizData(paths.todayquiz, ['Quiz', 'Quiz-2'], 'quizContainer', 'quizLink', 'MCQCount', 'duration');
+const grandTestPromise = fetchAndUpdateQuizData(paths.grandtest, ['Quiz-3'], 'quizContainer', 'grandtest', 'MCQCount', 'duration');
+
+Promise.all([todayQuizPromise, grandTestPromise])
+.then(results => {
+// Handle results if needed
+})
+.catch(error => {
+// Handle errors if any
+});
+}
+});
+
 
 // Function to create a new quiz card dynamically and return the created element
 function createQuizCard(containerId, quizEntry, iconPath, linkId, countId, durationId) {

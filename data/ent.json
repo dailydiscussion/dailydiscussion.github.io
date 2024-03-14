@@ -2,6 +2,7 @@
   "tests": [
     {
       "title": "ENT Tests",
+      "totalTests": "16",
       "links": [
         {
           "s.no": 1,

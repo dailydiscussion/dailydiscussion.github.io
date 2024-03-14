@@ -2,6 +2,7 @@
   "tests": [
     {
       "title": "Surgery Tests",
+      "totalTests": "26",
       "links": [
         {
           "s.no": 1,

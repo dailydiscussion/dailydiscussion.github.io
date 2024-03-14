@@ -37,18 +37,26 @@ console.error(`Invalid or missing number of days for test: ${test.text}`);
 return totalDays;
 }
 
-// Fetch JSON data from all files in the data folder
 const fetchData = async () => {
-const files = ['surgery.json', 'obgy.json', 'anatomy.json', 'anesthesia.json', 'biochem.json',
-'derma.json', 'ent.json', 'fmt.json', 'medicine.json', 'microbiology.json', 'ortho.json',
-'patho.json', 'pedia.json', 'pharma.json', 'physiology.json', 'psm.json', 'psychiatry.json',
-'radiology.json','grandtest.json'
-];
-const responses = await Promise.all(files.map(file => fetch(`data/${file}`).then(response =>
-response.json())));
+    try {
+        // Fetch filePaths.json to get the list of files for the dashboard
+        const response = await fetch('filePaths.json');
+        const filePaths = await response.json();
+        
+        // Extract the list of files from the dashboard key
+        const files = filePaths.dashboard;
 
-return responses;
+        // Fetch JSON data from all files listed in the dashboard
+        const responses = await Promise.all(files.map(file => fetch(`data/${file}`).then(response =>
+            response.json())));
+
+        return responses;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        return [];
+    }
 };
+
 
 fetchData()
 .then(dataArray => {
