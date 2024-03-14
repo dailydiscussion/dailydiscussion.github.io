@@ -1,91 +1,18 @@
-// Function to calculate total number of tests
-function calculateTotalTests(testData) {
-return testData.tests[0].links.length;
-}
+// Define cardData globally
+let cardData;
 
-// Modified card data array
-const cardData = [
-{
-json: 'data/grandtest.json',
-title: 'Grand&nbsp;Tests'
-},
-{
-json: 'data/microbiology.json',
-title: 'Microbiology'
-},
-{
-json: 'data/anesthesia.json',
-title: 'Anesthesiology'
-},
-{
-json: 'data/ent.json',
-title: 'ENT'
-},
-{
-json: 'data/ortho.json',
-title: 'Orthopaedics'
-},
-{
-json: 'data/obgy.json',
-title: 'Obs&Gyne'
-},
-{
-json: 'data/surgery.json',
-title: 'Surgery'
-},
-{
-json: 'data/medicine.json',
-title: 'Medicine'
-},
-{
-json: 'data/pedia.json',
-title: 'Pediatrics'
-},
-{
-json: 'data/radiology.json',
-title: 'Radiology'
-},
-{
-json: 'data/anatomy.json',
-title: 'Anatomy'
-},
-{
-json: 'data/physiology.json',
-title: 'Physiology'
-},
-{
-json: 'data/biochem.json',
-title: 'Biochemistry'
-},
-{
-json: 'data/derma.json',
-title: 'Dermatology'
-},
-{
-json: 'data/eye.json',
-title: 'Eye'
-},
-{
-json: 'data/patho.json',
-title: 'Pathology'
-},
-{
-json: 'data/pharma.json',
-title: 'Pharmacology'
-},
-{
-json: 'data/psm.json',
-title: 'PSM'
-},
-{
-json: 'data/psychiatry.json',
-title: 'Psychiatry'
-},
-{
-json: 'data/fmt.json',
-title: 'FMT'
-}
-];
+// Fetch data from filePaths.json and populate cardData
+fetch('filePaths.json')
+.then(response => response.json())
+.then(data => {
+// Extract the dashboard key
+const dashboard = data.dashboard;
+
+// Recreate cardData array from the dashboard key
+cardData = dashboard.map(item => ({
+json: item.json,
+title: item.title
+}));
 
 // Dynamically add id, img, and icon properties based on JSON file names
 cardData.forEach(card => {
@@ -94,6 +21,19 @@ card.id = `${jsonName}-link`;
 card.img = `svg/${jsonName}.svg`;
 card.icon = `${jsonName}-icon`;
 });
+
+// Call function to render cards after cardData is populated
+renderCards();
+
+// Call function to create dynamic tables after cardData is populated
+cardData.forEach((cardInfo) => {
+createDynamicTable(cardInfo.id, cardInfo.json, cardInfo.icon);
+});
+
+// Triggering the click event for "microbiology-link"
+document.getElementById("microbiology-link").click();
+})
+.catch(error => console.error('Error fetching JSON:', error));
 
 // Function to render cards
 function renderCards() {
@@ -112,7 +52,13 @@ cardContainer.appendChild(cardWrapper);
 });
 }
 
-renderCards();
+// Rest of your code remains the same
+
+
+// Function to calculate total number of tests
+function calculateTotalTests(testData) {
+return testData.tests[0].links.length;
+}
 
 // Function to create a card element
 function createCard(cardInfo) {
@@ -207,7 +153,7 @@ imgDiv.style.marginRight = "10px";
 imgDiv.innerHTML = '<span><img src="' + iconPath + '"></span>';
 
 var titleDiv = document.createElement("div");
-titleDiv.innerHTML = '<span id="dynamic-title"></span>';
+titleDiv.innerHTML = '<span id="dynamic-title"></span> Tests';
 
 div1.appendChild(imgDiv);
 div1.appendChild(titleDiv);
@@ -267,10 +213,3 @@ fetch(jsonFile)
 .catch(error => console.error('Error fetching data:', error));
 });
 }
-
-cardData.forEach((cardInfo) => {
-createDynamicTable(cardInfo.id, cardInfo.json, cardInfo.icon);
-});
-
-// Triggering the click event for "obgy-link"
-document.getElementById("microbiology-link").click();

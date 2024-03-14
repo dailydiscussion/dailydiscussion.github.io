@@ -2,85 +2,25 @@
 "todayquiz": "data/microbiology.json",
 "grandtest": "data/grandtest.json",
 "dashboard": [
-{
-"json": "data/grandtest.json",
-"title": "Grand&nbsp;Tests"
-},
-{
-"json": "data/microbiology.json",
-"title": "Microbiology"
-},
-{
-"json": "data/anesthesia.json",
-"title": "Anesthesiology"
-},
-{
-"json": "data/ent.json",
-"title": "ENT"
-},
-{
-"json": "data/ortho.json",
-"title": "Orthopaedics"
-},
-{
-"json": "data/obgy.json",
-"title": "Obs&Gyne"
-},
-{
-"json": "data/surgery.json",
-"title": "Surgery"
-},
-{
-"json": "data/medicine.json",
-"title": "Medicine"
-},
-{
-"json": "data/pedia.json",
-"title": "Pediatrics"
-},
-{
-"json": "data/radiology.json",
-"title": "Radiology"
-},
-{
-"json": "data/anatomy.json",
-"title": "Anatomy"
-},
-{
-"json": "data/physiology.json",
-"title": "Physiology"
-},
-{
-"json": "data/biochem.json",
-"title": "Biochemistry"
-},
-{
-"json": "data/derma.json",
-"title": "Dermatology"
-},
-{
-"json": "data/eye.json",
-"title": "Eye"
-},
-{
-"json": "data/patho.json",
-"title": "Pathology"
-},
-{
-"json": "data/pharma.json",
-"title": "Pharmacology"
-},
-{
-"json": "data/psm.json",
-"title": "PSM"
-},
-{
-"json": "data/psychiatry.json",
-"title": "Psychiatry"
-},
-{
-"json": "data/fmt.json",
-"title": "FMT"
-}
+{ "json": "data/grandtest.json", "title": "Grand Tests" },
+{ "json": "data/microbiology.json", "title": "Microbiology" },
+{ "json": "data/anesthesia.json", "title": "Anesthesiology" },
+{ "json": "data/ent.json", "title": "ENT" },
+{ "json": "data/ortho.json", "title": "Orthopaedics" },
+{ "json": "data/obgy.json", "title": "Obs&Gyne" },
+{ "json": "data/surgery.json", "title": "Surgery" },
+{ "json": "data/medicine.json", "title": "Medicine" },
+{ "json": "data/pedia.json", "title": "Pediatrics" },
+{ "json": "data/radiology.json", "title": "Radiology" },
+{ "json": "data/anatomy.json", "title": "Anatomy" },
+{ "json": "data/physiology.json", "title": "Physiology" },
+{ "json": "data/biochem.json", "title": "Biochemistry" },
+{ "json": "data/derma.json", "title": "Dermatology" },
+{ "json": "data/eye.json", "title": "Eye" },
+{ "json": "data/patho.json", "title": "Pathology" },
+{ "json": "data/pharma.json", "title": "Pharmacology" },
+{ "json": "data/psm.json", "title": "PSM" },
+{ "json": "data/psychiatry.json", "title": "Psychiatry" },
+{ "json": "data/fmt.json", "title": "FMT" }
 ]
 }
