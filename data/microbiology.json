@@ -26,24 +26,24 @@
         {
           "s.no": 3,
           "id": "Quiz",
-          "text": "Virology 1",
+          "text": "Bacteriology 3",
           "questions": "50",
           "duration": "Custom",
           "days": 1,
           "date_completed": "14 March 2024",
           "timestamp": "2024-03-14T00:00:00Z",
-          "url": "https://link.marrow.com/join_custom_module/55FD0FYM"
+          "url": "https://link.marrow.com/join_custom_module/55FE0H04"
         },
         {
           "s.no": 4,
           "id": "Quiz-2",
-          "text": "Virology 2",
+          "text": "Bacteriology 4",
           "questions": "50",
           "duration": "Custom",
           "days": 0,
           "date_completed": "14 March 2024",
           "timestamp": "2024-03-14T00:00:00Z",
-          "url": "https://link.marrow.com/join_custom_module/55FD0FYM"
+          "url": "https://link.marrow.com/join_custom_module/55FE0H0Z"
         }
       ]
     }
