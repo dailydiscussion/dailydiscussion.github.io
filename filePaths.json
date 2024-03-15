@@ -1,8 +1,9 @@
 {
 "todayquiz": "data/microbiology.json",
 "grandtest": "data/grandtest.json",
+"defaultcard":"microbiology-link",
 "dashboard": [
-{ "json": "data/grandtest.json", "title": "Grand Tests" },
+{ "json": "data/grandtest.json", "title": "Grand&nbsp;Tests" },
 { "json": "data/microbiology.json", "title": "Microbiology" },
 { "json": "data/anesthesia.json", "title": "Anesthesiology" },
 { "json": "data/ent.json", "title": "ENT" },

@@ -5,6 +5,10 @@ let cardData;
 fetch('filePaths.json')
 .then(response => response.json())
 .then(data => {
+
+// Extract the default link ID from the JSON data
+const defaultLinkId = data.defaultcard;
+
 // Extract the dashboard key
 const dashboard = data.dashboard;
 
@@ -23,23 +27,23 @@ card.icon = `${jsonName}-icon`;
 });
 
 // Call function to render cards after cardData is populated
-renderCards();
+renderCards(defaultLinkId);
 
 // Call function to create dynamic tables after cardData is populated
 cardData.forEach((cardInfo) => {
 createDynamicTable(cardInfo.id, cardInfo.json, cardInfo.icon);
 });
 
-// Triggering the click event for "microbiology-link"
-document.getElementById("microbiology-link").click();
+// Triggering the click event for the default link
+document.getElementById(defaultLinkId).click();
 })
 .catch(error => console.error('Error fetching JSON:', error));
 
 // Function to render cards
-function renderCards() {
+function renderCards(defaultLinkId) {
 const cardContainer = document.getElementById('card-container');
 cardData.forEach((cardInfo) => {
-const cardElement = createCard(cardInfo);
+const cardElement = createCard(cardInfo, defaultLinkId); // Pass defaultLinkId as argument
 const cardLink = document.createElement('a');
 cardLink.href = '#';
 cardLink.id = cardInfo.id;
@@ -52,25 +56,17 @@ cardContainer.appendChild(cardWrapper);
 });
 }
 
-// Rest of your code remains the same
-
-
-// Function to calculate total number of tests
-function calculateTotalTests(testData) {
-return testData.tests[0].links.length;
-}
-
 // Function to create a card element
-function createCard(cardInfo) {
+function createCard(cardInfo, defaultLinkId) { // Accept defaultLinkId as argument
 const cardElement = document.createElement('div');
 cardElement.classList.add('dash-card', 'card');
 cardElement.style.justifyContent = 'center';
 
-// Apply default style to the card with ID 'microbiology-link'
-if (cardInfo.title === 'Microbiology') {
+// Apply default style to the card with the default ID
+if (cardInfo.id === defaultLinkId) {
 cardElement.style.backgroundColor = '#637A9F';
 cardElement.style.color = 'white';
-}
+} 
 
 // Event listener to toggle active state and apply styles
 cardElement.addEventListener('click', function () {
@@ -108,6 +104,12 @@ ${cardInfo.title}
 `;
 
 return cardElement;
+}
+
+
+// Function to calculate total number of tests
+function calculateTotalTests(testData) {
+return testData.tests[0].links.length;
 }
 
 // Function to handle card click
