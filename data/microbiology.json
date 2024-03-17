@@ -46,25 +46,45 @@
         },
         {
           "s.no": 5,
-          "id": "Quiz",
           "text": "Virology 1",
           "questions": "50",
           "duration": "Custom",
           "days": 1,
-          "date_completed": "15 March 2024",
-          "timestamp": "2024-03-15T00:00:00Z",
+          "date_completed": "16 March 2024",
+          "timestamp": "2024-03-16T00:00:00Z",
           "url": "https://link.marrow.com/join_custom_module/55FF06F3"
         },
         {
           "s.no": 6,
-          "id": "Quiz-2",
           "text": "Virology 2",
           "questions": "50",
           "duration": "Custom",
           "days": 0,
-          "date_completed": "15 March 2024",
-          "timestamp": "2024-03-15T00:00:00Z",
+          "date_completed": "16 March 2024",
+          "timestamp": "2024-03-16T00:00:00Z",
           "url": "https://link.marrow.com/join_custom_module/55FF06FV"
+        },
+        {
+          "s.no": 7,
+          "id": "Quiz",
+          "text": "Fungus & Immunology 1",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 1,
+          "date_completed": "17 March 2024",
+          "timestamp": "2024-03-17T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55FH06CG"
+        },
+        {
+          "s.no": 8,
+          "id": "Quiz-2",
+          "text": "Fungus & Immunology 2",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 0,
+          "date_completed": "17 March 2024",
+          "timestamp": "2024-03-17T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55FH06D1"
         }
       ]
     }
