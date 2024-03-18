@@ -276,11 +276,8 @@ margin-right: 0;
   padding-left: 0.5em;
   padding-right: 0.5em;
   border-radius: 1em;
-  text-align: center;
-  align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   max-width: max-content;
 }
 
