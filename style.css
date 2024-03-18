@@ -259,9 +259,7 @@ flex-direction: row;
 display: flex;
 flex-direction: column;
 color: black;
-text-align: center;
-padding: 0.5em;
-height: 100px;
+padding: 1.5em;
 width: 25%;
 border-radius: 1em;
 margin-right: 10px;
@@ -269,6 +267,31 @@ margin-right: 10px;
 
 .col-6-12:last-child{
 margin-right: 0;
+}
+
+.weeklycounter{
+  font-size: 14px;
+  background-color: white;
+  padding: 0.2em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-radius: 1em;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: max-content;
+}
+
+.dashboard-img{
+  background-color: #333;
+  padding: 0.5em;
+  border-radius: 50%;
+}
+
+.col-6-12 img{
+align-items: center;
 }
 
 @media (max-width: 768px) {
@@ -279,7 +302,7 @@ flex-wrap: wrap;
 }
 
 .col-6-12 {
-width: calc(50% - 21px);
+width: calc(50% - 53px);
 margin-bottom: 10px;
 margin-right: 10px;
 }
@@ -293,11 +316,14 @@ margin-right: 0;
 .col-6-12 h6{
 color: gray;
 padding: 0;
-margin: 1em;
+margin-top: 1.5em;
+margin-bottom: 0;
 }
 
 .col-6-12 h2{
-font-size: 30px;
+font-size: 34px;
+margin: 0.3em;
+margin-left: 0;
 }
 
 .col-6-12:last-child{

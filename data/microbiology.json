@@ -66,7 +66,6 @@
         },
         {
           "s.no": 7,
-          "id": "Quiz",
           "text": "Fungus & Immunology 1",
           "questions": "50",
           "duration": "Custom",
@@ -77,7 +76,6 @@
         },
         {
           "s.no": 8,
-          "id": "Quiz-2",
           "text": "Fungus & Immunology 2",
           "questions": "50",
           "duration": "Custom",
@@ -85,6 +83,28 @@
           "date_completed": "17 March 2024",
           "timestamp": "2024-03-17T00:00:00Z",
           "url": "https://link.marrow.com/join_custom_module/55FH06D1"
+        },
+        {
+          "s.no": 9,
+          "id": "Quiz",
+          "text": "Parasitology 1",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 1,
+          "date_completed": "18 March 2024",
+          "timestamp": "2024-03-18T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55FI09DP"
+        },
+        {
+          "s.no": 10,
+          "id": "Quiz-2",
+          "text": "Parasitology 2",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 0,
+          "date_completed": "18 March 2024",
+          "timestamp": "2024-03-18T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55FI09E9"
         }
       ]
     }

@@ -11,7 +11,8 @@
 <title>Daily Discussion</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap"
+<link
+href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap"
 rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
@@ -173,42 +174,72 @@ Dashboard
 Performance Overview
 </h5>
 
-</div>
+</div>                      
 
 <div class="dash-container">
 <div>
 <div class="flex">
 
 <div class="col-6-12" style="background-color: #FAFDD6;">
+<div>
+<img class="dashboard-img" src="svg/days.svg">
+</div>
 <h6 style="color: black; font-weight:300;">
 Days
 </h6>
 <h2 id="totalDays"></h2>
-
+<div class="weeklycounter">
+<div>
+<span>Last 7 days :</span> <span style=" color: green;" id="totalDaysDiscussedOutput"></span>
+</div>
+</div>
 </div>
 
 <div class="col-6-12" style="background-color: #F9EFDB;">
+<div>
+<img class="dashboard-img" src="svg/mcq.svg">
+</div>
 <h6 style="color: black; font-weight:300;">
 MCQs
 </h6>
 <h2 id="totalQuestions"></h2>
-
+<div class="weeklycounter">
+<div>
+<span>Last 7 days :</span> <span style=" color: green;" id="totalQuestionsOutput"></span>
+</div>
+</div>
 </div>
 
 <div class="col-6-12" style="background-color: #F3F8FF;">
+<div>
+<img class="dashboard-img" src="svg/test.svg">
+</div>
 <h6 style="color: black; font-weight:300;">
 Tests
 </h6>
 <h2 id="totalTests"></h2>
+<div class="weeklycounter">
+<div>
+<span>Last 7 days :</span> <span style=" color: green;" id="totalTestsOutput"></span>
+</div>
+</div>
 </div>
 
 <div class="col-6-12" style="background-color: #FFF8CD;">
+<div>
+<img class="dashboard-img" src="svg/subject.svg">
+</div>
 <h6 style="color: black; font-weight:300;">
 Subjects
 </h6>
 <h2>
 6/19
 </h2>
+<div class="weeklycounter">
+<div>
+<span>Last 7 days :</span> <span style=" color: green;">+1</span>
+</div>
+</div>
 </div>
 
 </div>
@@ -474,6 +505,7 @@ document.getElementById('mainContent').style.opacity = '1';
 </script>
 
 <script src="js/dashboard.js"></script>
+<script src="js/analysis.js"></script>
 <script src="js/todayfocus.js"></script>
 <script src="js/progress.js"></script>
 <script src="js/timetable.js"></script>
