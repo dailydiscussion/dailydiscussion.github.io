@@ -40,8 +40,8 @@ return null;
 fetchFilePaths().then(paths => {
 if (paths) {
 // Now you can use paths.todayquiz and paths.grandtest to get the file paths
+const todayQuizPromise = fetchAndUpdateQuizData(paths.todayquiz, ['Quiz', 'Quiz-2','Quiz-4'], 'quizContainer', 'quizLink', 'MCQCount', 'duration');
 const grandTestPromise = fetchAndUpdateQuizData(paths.grandtest, ['Quiz-3'], 'quizContainer', 'grandtest', 'MCQCount', 'duration');
-const todayQuizPromise = fetchAndUpdateQuizData(paths.todayquiz, ['Quiz', 'Quiz-2'], 'quizContainer', 'quizLink', 'MCQCount', 'duration');
 
 Promise.all([todayQuizPromise, grandTestPromise])
 .then(results => {
