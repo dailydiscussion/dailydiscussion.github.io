@@ -196,7 +196,6 @@
         },
         {
           "s.no": 20,
-          "id": "Quiz",
           "text": "Microbiology Test (2022)",
           "questions": "50",
           "duration": "53 min",
@@ -207,7 +206,6 @@
         },
         {
           "s.no": 21,
-          "id": "Quiz-2",
           "text": "Microbiology Test (2023)",
           "questions": "50",
           "duration": "53 min",

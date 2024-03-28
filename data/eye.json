@@ -2,8 +2,50 @@
   "tests": [
     {
       "title": "Eye",
+      "totalTests": "15",
       "links": [
-        
+        {
+          "s.no": 1,
+          "text": "Basic, Optics, Lens, Misc 1",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 1,
+          "date_completed": "27 March 2024",
+          "url": "https://link.marrow.com/join_custom_module/55FROP9K",
+          "timestamp": "2024-03-27T00:00:00Z"
+        },
+        {
+          "s.no": 2,
+          "text": "Basic, Optics, Lens, Misc 2",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 0,
+          "date_completed": "27 March 2024",
+          "url": "https://link.marrow.com/join_custom_module/55FROPAP",
+          "timestamp": "2024-03-27T00:00:00Z"
+        },
+        {
+          "s.no": 3,
+          "id": "Quiz",
+          "text": "Conjunctiva, Cornea, Sclera and Uvea 1",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 0,
+          "date_completed": "27 March 2024",
+          "url": "https://link.marrow.com/join_custom_module/55FS08N1",
+          "timestamp": "2024-03-27T00:00:00Z"
+        },
+        {
+          "s.no": 4,
+          "id": "Quiz-2",
+          "text": "Conjunctiva, Cornea, Sclera and Uvea 2",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 0,
+          "date_completed": "27 March 2024",
+          "url": "https://link.marrow.com/join_custom_module/55FS08OE",
+          "timestamp": "2024-03-27T00:00:00Z"
+        }
       ]
     }
   ]
