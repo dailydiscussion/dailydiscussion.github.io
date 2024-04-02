@@ -249,7 +249,7 @@
     "event": "<p>Physiology</p> <p>General, CNS, Endo, Misc</p>"
   },
   "2024-04-07": {
-    "event": "<p>Physiology</p> <p>Physio ST1 , ST 2 (2017), Physio 1 (2018)</p>"
+    "event": "<p>Physiology</p> <p>Physio ST1 , ST 2 (2017), Physio 1 (2018)</p> <p>INICET Mock Test - 3 Apr 2024</p>"
   },
   "2024-04-08": {
     "event": "<p>Physiology</p> <p>Physio (2019), Physio (2020)</p>"
@@ -270,7 +270,7 @@
     "event": "<p>Pharmacology</p> <p>Pharma ST1, ST2 (2017), Pharma 1 (2018)</p>"
   },
   "2024-04-14": {
-    "event": "<p>Pharmacology</p> <p>Pharma 1,2 (2019)</p>"
+    "event": "<p>Pharmacology</p> <p>Pharma 1,2 (2019)</p> <p>Grand Test 1 - 12 Feb 2024</p>"
   },
   "2024-04-15": {
     "event": "<p>Pharmacology</p> <p>Pharma (2020), Pharma 2 (2018)</p>"
@@ -291,15 +291,90 @@
     "event": "<p>Pathology</p> <p>Patho 1,2 (2019)</p>"
   },
   "2024-04-21": {
-    "event": "<p>Pathology</p> <p>Path0 1,2 (2018), Patho (2022)</p>"
+    "event": "<p>Pathology</p> <p>Patho 1,2 (2018), Patho (2022)</p> <p>Grand Test 2 - 11 Mar 2024</p>"
   },
   "2024-04-22": {
     "event": "<p>Pathology</p> <p>Patho (2020), Patho (2023)</p>"
   },
+  "2024-04-23": {
+    "event": "<p>Medicine</p> <p> </p>"
+  },
+  "2024-04-24": {
+    "event": "<p>Medicine</p> <p> </p>"
+  },
+  "2024-04-25": {
+    "event": "<p>Medicine</p> <p> </p>"
+  },
+  "2024-04-26": {
+    "event": "<p>Medicine</p> <p></p>"
+  },
+  "2024-04-27": {
+    "event": "<p>Medicine</p> <p> </p>"
+  },
+  "2024-04-28": {
+    "event": "<p>Medicine</p> <p> </p> <p>Grand Test 16 - 18 Mar 2024</p>"
+  },
+  "2024-04-29": {
+    "event": "<p>Medicine</p> <p> </p>"
+  },
+  "2024-04-30": {
+    "event": "<p>Medicine</p> <p> </p>"
+  },
+  "2024-05-01": {
+    "event": "<p>Medicine</p> <p> </p>"
+  },
+  "2024-05-02": {
+    "event": "<p>Medicine</p> <p> </p>"
+  },
+  "2024-05-03": {
+    "event": "<p>PSM</p> <p> </p>"
+  },
+  "2024-05-04": {
+    "event": "<p>PSM</p> <p> </p>"
+  },
+  "2024-05-05": {
+    "event": "<p>PSM</p> <p> </p>"
+  },
+  "2024-05-06": {
+    "event": "<p>PSM</p> <p> </p>"
+  },
+  "2024-05-07": {
+    "event": "<p>PSM</p> <p> </p>"
+  },
+  "2024-05-08": {
+    "event": "<p>PSM</p> <p> </p>"
+  },
+  "2024-05-10": {
+    "event": "<p>PSM</p> <p> </p>"
+  },
+  "2024-05-11": {
+    "event": "<p>FMT</p> <p> </p>"
+  },
+  "2024-05-12": {
+    "event": "<p>FMT</p> <p> </p>"
+  },
+  "2024-05-13": {
+    "event": "<p>FMT</p> <p> </p>"
+  },
+  "2024-05-14": {
+    "event": "<p>FMT</p> <p> </p>"
+  },
+  "2024-05-15": {
+    "event": "<p>FMT</p> <p> </p>"
+  },
+  "2024-05-16": {
+    "event": "<p>FMT</p> <p> </p>"
+  },
+  "2024-05-17": {
+    "event": "<p>Grand Test</p> <p> </p>"
+  },
+  "2024-05-18": {
+    "event": "<p>Grand Test</p> <p> </p>"
+  },
   "2024-05-19": {
     "event": "<p>Exam Day</p> <p>INICET May 2024</p>"
   },
-  "2024-06-23": {
+  "2024-07-07": {
     "event": "<p>Exam Day</p> <p>NEET PG 2024</p>"
   }
 }
