@@ -66,7 +66,7 @@
         },
         {
           "s.no": 7,
-          "text": "Opthamlogy ST 1 (2017)",
+          "text": "Opthalmology ST 1 (2017)",
           "questions": "50",
           "duration": "45min",
           "days": 1,
@@ -76,7 +76,7 @@
         },
         {
           "s.no": 8,
-          "text": "Opthamlogy ST 2 (2017)",
+          "text": "Opthalmology ST 2 (2017)",
           "questions": "50",
           "duration": "45min",
           "days": 0,
@@ -86,7 +86,7 @@
         },
         {
           "s.no": 9,
-          "text": "Opthamlogy 1 (2018)",
+          "text": "Opthalmology 1 (2018)",
           "questions": "50",
           "duration": "45min",
           "days": 1,
@@ -96,7 +96,7 @@
         },
         {
           "s.no": 10,
-          "text": "Opthamlogy 2 (2018)",
+          "text": "Opthalmology 2 (2018)",
           "questions": "50",
           "duration": "45min",
           "days": 0,
@@ -106,7 +106,7 @@
         },
         {
           "s.no": 11,
-          "text": "Opthamlogy (2022)",
+          "text": "Opthalmology (2022)",
           "questions": "50",
           "duration": "45min",
           "days": 0,
@@ -116,8 +116,7 @@
         },
         {
           "s.no": 12,
-          "id": "Quiz",
-          "text": "Opthamlogy (2019)",
+          "text": "Opthalmology (2019)",
           "questions": "75",
           "duration": "60min",
           "days": 1,
@@ -127,14 +126,36 @@
         },
         {
           "s.no": 13,
-          "id": "Quiz-2",
-          "text": "Opthamlogy 1 (2020)",
+          "text": "Opthalmology 1 (2020)",
           "questions": "75",
           "duration": "60min",
           "days": 0,
           "date_completed": "02 April 2024",
           "url": "https://link.marrow.com/test/5e3d5589c49dd4524decb781?prev=subject",
           "timestamp": "2024-04-02T00:00:00Z"
+        }
+        ,
+        {
+          "s.no": 14,
+          "id": "Quiz",
+          "text": "Opthalmology 2 (2020)",
+          "questions": "50",
+          "duration": "53min",
+          "days": 1,
+          "date_completed": "03 April 2024",
+          "url": "https://link.marrow.com/test/60cb1b61c49dd476fff8dbba?prev=subject",
+          "timestamp": "2024-04-03T00:00:00Z"
+        },
+        {
+          "s.no": 15,
+          "id": "Quiz-2",
+          "text": "Opthalmology (2023)",
+          "questions": "50",
+          "duration": "53min",
+          "days": 0,
+          "date_completed": "03 April 2024",
+          "url": "https://link.marrow.com/test/642412aca1bb1feba2454b3e?prev=subject",
+          "timestamp": "2024-04-03T00:00:00Z"
         }
       ]
     }
