@@ -137,7 +137,6 @@
         ,
         {
           "s.no": 14,
-          "id": "Quiz",
           "text": "Opthalmology 2 (2020)",
           "questions": "50",
           "duration": "53min",
@@ -148,7 +147,6 @@
         },
         {
           "s.no": 15,
-          "id": "Quiz-2",
           "text": "Opthalmology (2023)",
           "questions": "50",
           "duration": "53min",

@@ -1,9 +1,10 @@
 {
-"todayquiz": "data/eye.json",
+"todayquiz": "data/physiology.json",
 "grandtest": "data/grandtest.json",
-"defaultcard":"eye-link",
+"defaultcard":"physiology-link",
 "dashboard": [
 { "json": "data/grandtest.json", "title": "Grand&nbsp;Tests" },
+{ "json": "data/physiology.json", "title": "Physiology" },
 { "json": "data/eye.json", "title": "Eye" },
 { "json": "data/microbiology.json", "title": "Microbiology" },
 { "json": "data/anesthesia.json", "title": "Anesthesiology" },
@@ -15,7 +16,6 @@
 { "json": "data/pedia.json", "title": "Pediatrics" },
 { "json": "data/radiology.json", "title": "Radiology" },
 { "json": "data/anatomy.json", "title": "Anatomy" },
-{ "json": "data/physiology.json", "title": "Physiology" },
 { "json": "data/biochem.json", "title": "Biochemistry" },
 { "json": "data/derma.json", "title": "Dermatology" },
 { "json": "data/patho.json", "title": "Pathology" },
