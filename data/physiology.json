@@ -6,7 +6,6 @@
       "links": [
         {
           "s.no": 1,
-          "id": "Quiz",
           "text": "Respiratory, CVS Physiology 1",
           "questions": "50",
           "duration": "Custom",
@@ -17,7 +16,6 @@
         },
         {
           "s.no": 2,
-          "id": "Quiz-2",
           "text": "Respiratory, CVS Physiology 2",
           "questions": "50",
           "duration": "Custom",
@@ -25,6 +23,28 @@
           "date_completed": "04 April 2024",
           "url": "https://link.marrow.com/join_custom_module/55HW0F5J",
           "timestamp": "2024-04-04T00:00:00Z"
+        },
+        {
+          "s.no": 3,
+          "id": "Quiz",
+          "text": "GIT, Renal Physiology 1",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 1,
+          "date_completed": "05 April 2024",
+          "url": "https://link.marrow.com/join_custom_module/55HX0F0F",
+          "timestamp": "2024-04-05T00:00:00Z"
+        },
+        {
+          "s.no": 4,
+          "id": "Quiz-2",
+          "text": "GIT, Renal Physiology 2",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 0,
+          "date_completed": "05 April 2024",
+          "url": "https://link.marrow.com/join_custom_module/55HX0F3M",
+          "timestamp": "2024-04-05T00:00:00Z"
         }
       ]
     }
