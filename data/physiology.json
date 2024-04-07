@@ -46,7 +46,6 @@
         },
         {
           "s.no": 5,
-          "id": "Quiz",
           "text": "General, CNS, Endo & Misc 1",
           "questions": "50",
           "duration": "Custom",
@@ -57,7 +56,6 @@
         },
         {
           "s.no": 6,
-          "id": "Quiz-2",
           "text": "General, CNS, Endo & Misc 2",
           "questions": "50",
           "duration": "Custom",
@@ -65,6 +63,39 @@
           "date_completed": "06 April 2024",
           "url": "https://link.marrow.com/join_custom_module/55HY08R3",
           "timestamp": "2024-04-06T00:00:00Z"
+        },
+        {
+          "s.no": 7,
+          "id": "Quiz",
+          "text": "Physiology ST 1 (2017)",
+          "questions": "50",
+          "duration": "45 min",
+          "days": 1,
+          "date_completed": "07 April 2024",
+          "url": "https://link.marrow.com/test/59531a875d817243aa2e97d2?prev=subject",
+          "timestamp": "2024-04-07T00:00:00Z"
+        },
+        {
+          "s.no": 8,
+          "id": "Quiz-2",
+          "text": "Physiology ST 2 (2017)",
+          "questions": "50",
+          "duration": "45 min",
+          "days": 0,
+          "date_completed": "07 April 2024",
+          "url": "https://link.marrow.com/test/595483925d817243aa2e9c24?prev=subject",
+          "timestamp": "2024-04-07T00:00:00Z"
+        },
+        {
+          "s.no": 9,
+          "id": "Quiz-3",
+          "text": "Physiology 1 (2018)",
+          "questions": "50",
+          "duration": "45min",
+          "days": 0,
+          "date_completed": "07 April 2024",
+          "url": "https://link.marrow.com/test/5a6188124f2544767f6a1834?prev=subject",
+          "timestamp": "2024-04-07T00:00:00Z"
         }
       ]
     }
