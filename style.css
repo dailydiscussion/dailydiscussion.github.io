@@ -271,14 +271,7 @@ margin-right: 0;
 
 .weeklycounter{
   font-size: 14px;
-  background-color: white;
-  padding: 0.2em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  border-radius: 1em;
-  display: flex;
-  flex-direction: row;
-  max-width: max-content;
+  color: gray;
 }
 
 .dashboard-img{
@@ -1110,3 +1103,4 @@ text-align: left;
   border-radius: 1em;
   padding: 1em;
 }
+
