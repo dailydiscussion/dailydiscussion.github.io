@@ -2,8 +2,30 @@
   "tests": [
     {
       "title": "Pharmacology",
+      "totalTests": "16",
       "links": [
-        
+        {
+          "s.no": 1,
+          "id": "Quiz",
+          "text": "ANS, CVS, Respi, Endo 1",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 1,
+          "date_completed": "10 April 2024",
+          "url": "https://link.marrow.com/join_custom_module/55I20HQA",
+          "timestamp": "2024-04-10T00:00:00Z"
+        },
+        {
+          "s.no": 2,
+          "id": "Quiz-2",
+          "text": "ANS, CVS, Respi, Endo 2",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 0,
+          "date_completed": "10 April 2024",
+          "url": "https://link.marrow.com/join_custom_module/55I20HUF",
+          "timestamp": "2024-04-10T00:00:00Z"
+        }
       ]
     }
   ]

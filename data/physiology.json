@@ -116,7 +116,6 @@
         },
         {
           "s.no": 12,
-          "id": "Quiz",
           "text": "Physiology (2018)",
           "questions": "50",
           "duration": "45min",
@@ -138,7 +137,6 @@
         },
         {
           "s.no": 14,
-          "id": "Quiz-3",
           "text": "Physiology (2023)",
           "questions": "50",
           "duration": "53min",
