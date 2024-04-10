@@ -118,7 +118,7 @@ console.error('Error fetching event data:', error);
 // Assuming currentMonth and currentYear are defined globally or within the same scope
 
 function addRedDots() {
-const eventDates = ['2024-04-04', '2024-04-05', '2024-04-06', '2024-04-08', '2024-04-09'];
+const eventDates = ['2024-04-10', '2024-04-11', '2024-04-12', '2024-04-13', '2024-04-14','2024-04-15','2024-04-16'];
 
 const days = document.querySelectorAll('.day-app');
 days.forEach(day => {
@@ -135,7 +135,7 @@ day.appendChild(dot);
 }
 
 function addGreenDots() {
-const eventDates = ['2024-04-10','2024-04-11','2024-04-12','2024-04-13','2024-04-14', '2024-05-15', '2024-06-16'];
+const eventDates = ['2024-04-07','2024-04-14','2024-04-21','2024-04-28'];
 
 const days = document.querySelectorAll('.day-app');
 days.forEach(day => {
