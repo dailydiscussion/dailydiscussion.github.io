@@ -6,7 +6,6 @@
       "links": [
         {
           "s.no": 1,
-          "id": "Quiz",
           "text": "ANS, CVS, Respi, Endo 1",
           "questions": "50",
           "duration": "Custom",
@@ -17,7 +16,6 @@
         },
         {
           "s.no": 2,
-          "id": "Quiz-2",
           "text": "ANS, CVS, Respi, Endo 2",
           "questions": "50",
           "duration": "Custom",
@@ -28,7 +26,6 @@
         },
         {
           "s.no": 3,
-          "id": "Quiz-3",
           "text": "Antimicrobials & Autacoids 1",
           "questions": "50",
           "duration": "Custom",
@@ -39,7 +36,6 @@
         },
         {
           "s.no": 4,
-          "id": "Quiz-4",
           "text": "Antimicrobials & Autacoids 2",
           "questions": "50",
           "duration": "Custom",
@@ -47,6 +43,28 @@
           "date_completed": "11 April 2024",
           "url": "https://link.marrow.com/join_custom_module/55I30MQ3",
           "timestamp": "2024-04-11T00:00:00Z"
+        },
+        {
+          "s.no": 5,
+          "id": "Quiz",
+          "text": "General & Miscellaneous 1",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 1,
+          "date_completed": "12 April 2024",
+          "url": "https://link.marrow.com/join_custom_module/55I415YC",
+          "timestamp": "2024-04-12T00:00:00Z"
+        },
+        {
+          "s.no": 6,
+          "id": "Quiz-2",
+          "text": "General & Miscellaneous 2",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 0,
+          "date_completed": "12 April 2024",
+          "url": "https://link.marrow.com/join_custom_module/55I415ZT",
+          "timestamp": "2024-04-12T00:00:00Z"
         }
       ]
     }
