@@ -46,7 +46,6 @@
         },
         {
           "s.no": 5,
-          "id": "Quiz",
           "text": "General & Miscellaneous 1",
           "questions": "50",
           "duration": "Custom",
@@ -57,7 +56,6 @@
         },
         {
           "s.no": 6,
-          "id": "Quiz-2",
           "text": "General & Miscellaneous 2",
           "questions": "50",
           "duration": "Custom",
@@ -65,6 +63,39 @@
           "date_completed": "12 April 2024",
           "url": "https://link.marrow.com/join_custom_module/55I415ZT",
           "timestamp": "2024-04-12T00:00:00Z"
+        },
+        {
+          "s.no": 7,
+          "id": "Quiz",
+          "text": "Pharmacology ST 1 (2017)",
+          "questions": "50",
+          "duration": "45min",
+          "days": 1,
+          "date_completed": "13 April 2024",
+          "url": "https://link.marrow.com/test/59531add5d817243aa2e97d4?prev=subject",
+          "timestamp": "2024-04-13T00:00:00Z"
+        },
+        {
+          "s.no": 8,
+          "id": "Quiz-2",
+          "text": "Pharmacology ST 2 (2017)",
+          "questions": "50",
+          "duration": "45min",
+          "days": 0,
+          "date_completed": "13 April 2024",
+          "url": "https://link.marrow.com/test/595323625d817243aa2e97f6?prev=subject",
+          "timestamp": "2024-04-13T00:00:00Z"
+        },
+        {
+          "s.no": 9,
+          "id": "Quiz-3",
+          "text": "Pharmacology 1 (2018)",
+          "questions": "50",
+          "duration": "45min",
+          "days": 0,
+          "date_completed": "13 April 2024",
+          "url": "https://link.marrow.com/test/5a6186e54f2544767f6a1827?prev=subject",
+          "timestamp": "2024-04-13T00:00:00Z"
         }
       ]
     }
