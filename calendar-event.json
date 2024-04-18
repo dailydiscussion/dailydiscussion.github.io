@@ -269,35 +269,32 @@
   "2024-04-16": {
     "event": "<p>Pharmacology</p> <p> - Pharma ST1, ST2 (2017), Pharma 1 (2018)</p>"
   },
-  "2024-04-17": {
-    "event": "<p>Pharmacology</p> <p> - Pharma 1,2 (2019)</p> <p>Grand Test 1 - 12 Feb 2024</p>"
-  },
   "2024-04-18": {
-    "event": "<p>Pharmacology</p> <p> - Pharma (2020), Pharma 2 (2018)</p>"
+    "event": "<p>Pharmacology</p> <p> - Pharma 1,2 (2019)</p>"
   },
   "2024-04-19": {
-    "event": "<p>Pharmacology</p> <p> - Pharma (2021), Pharma (2022), Pharma (2023)</p>"
+    "event": "<p>Pharmacology</p> <p> - Pharma (2020), Pharma 2 (2018)</p>"
   },
   "2024-04-20": {
-    "event": "<p>Pathology</p> <p> - General Pathology</p>"
+    "event": "<p>Pharmacology</p> <p> - Pharma (2021), Pharma (2022), Pharma (2023)</p>"
   },
   "2024-04-21": {
-    "event": "<p>Pathology</p> <p> - Systemic Pathology</p>"
+    "event": "<p>Pathology</p> <p> - General Pathology</p>"
   },
   "2024-04-22": {
-    "event": "<p>Pathology</p> <p> - Patho ST 1,2,3 (2017)</p>"
+    "event": "<p>Pathology</p> <p> - Systemic Pathology</p>"
   },
   "2024-04-23": {
-    "event": "<p>Pathology</p> <p> - Patho 1,2 (2019)</p>"
+    "event": "<p>Pathology</p> <p> - Patho ST 1,2,3 (2017)</p>"
   },
   "2024-04-24": {
-    "event": "<p>Pathology</p> <p> - Patho 1,2 (2018), Patho (2022)</p> <p>Grand Test 2 - 11 Mar 2024</p>"
+    "event": "<p>Pathology</p> <p> - Patho 1,2 (2019)</p>"
   },
   "2024-04-25": {
-    "event": "<p>Pathology</p> <p> - Patho (2020), Patho (2023)</p>"
+    "event": "<p>Pathology</p> <p> - Patho 1,2 (2018), Patho (2022)</p>"
   },
   "2024-04-26": {
-    "event": "<p>Medicine</p> <p> - Coming Soon</p>"
+    "event": "<p>Pathology</p> <p> - Patho (2020), Patho (2023)</p>"
   },
   "2024-04-27": {
     "event": "<p>Medicine</p> <p> - Coming Soon</p>"
@@ -311,13 +308,13 @@
   "2024-04-30": {
     "event": "<p>Medicine</p> <p> - Coming Soon</p>"
   },
-  "2024-04-01": {
+  "2024-05-01": {
     "event": "<p>Medicine</p> <p> - Coming Soon</p> <p>Grand Test 16 - 18 Mar 2024</p>"
   },
-  "2024-04-02": {
+  "2024-05-02": {
     "event": "<p>Medicine</p> <p> - Coming Soon</p>"
   },
-  "2024-04-03": {
+  "2024-05-03": {
     "event": "<p>Medicine</p> <p> - Coming Soon</p>"
   },
   "2024-05-04": {
