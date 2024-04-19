@@ -96,7 +96,6 @@
         },
         {
           "s.no": 10,
-          "id": "Quiz",
           "text": "Pharmacology 1 (2019)",
           "questions": "75",
           "duration": "60min",
@@ -107,7 +106,7 @@
         },
         {
           "s.no": 11,
-          "id": "Quiz-2",
+          "id": "Quiz",
           "text": "Pharmacology 2 (2019)",
           "questions": "75",
           "duration": "45min",
@@ -115,6 +114,27 @@
           "date_completed": "18 April 2024",
           "url": "https://link.marrow.com/test/5c471d8e1576320cfd048184?prev=subject",
           "timestamp": "2024-04-18T00:00:00Z"
+        },
+        {
+          "s.no": 12,
+          "id": "Quiz-2",
+          "text": "Pharmacology (2020)",
+          "questions": "75",
+          "duration": "60min",
+          "days": 1,
+          "date_completed": "19 April 2024",
+          "url": "https://link.marrow.com/test/5e3d567bc49dd4524decb786?prev=subject",
+          "timestamp": "2024-04-19T00:00:00Z"
+        },{
+          "s.no": 12,
+          "id": "Quiz-3",
+          "text": "Pharmacology 2 (2018)",
+          "questions": "50",
+          "duration": "45min",
+          "days": 0,
+          "date_completed": "19 April 2024",
+          "url": "https://link.marrow.com/test/5a61913d4f2544767f6a1852?prev=subject",
+          "timestamp": "2024-04-19T00:00:00Z"
         }
       ]
     }
