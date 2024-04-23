@@ -146,7 +146,6 @@
         },
         {
           "s.no": 14,
-          "id": "Quiz",
           "text": "Pharmacology (2022)",
           "questions": "50",
           "duration": "53min",
@@ -157,14 +156,13 @@
         },
         {
           "s.no": 15,
-          "id": "Quiz-2",
           "text": "Pharmacology (2023)",
           "questions": "50",
           "duration": "53min",
           "days": 0,
-          "date_completed": "21 April 2024",
+          "date_completed": "22 April 2024",
           "url": "https://link.marrow.com/test/6424150ca1bb1feba2454b44?prev=subject",
-          "timestamp": "2024-04-21T00:00:00Z"
+          "timestamp": "2024-04-22T00:00:00Z"
         }
       ]
     }

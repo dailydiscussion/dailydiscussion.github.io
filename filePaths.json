@@ -1,9 +1,10 @@
 {
-"todayquiz": "data/pharma.json",
+"todayquiz": "data/patho.json",
 "grandtest": "data/grandtest.json",
-"defaultcard":"pharma-link",
+"defaultcard":"patho-link",
 "dashboard": [
 { "json": "data/grandtest.json", "title": "Grand&nbsp;Tests" },
+{ "json": "data/patho.json", "title": "Pathology" },
 { "json": "data/pharma.json", "title": "Pharmacology" },
 { "json": "data/physiology.json", "title": "Physiology" },
 { "json": "data/eye.json", "title": "Eye" },
@@ -19,7 +20,6 @@
 { "json": "data/anatomy.json", "title": "Anatomy" },
 { "json": "data/biochem.json", "title": "Biochemistry" },
 { "json": "data/derma.json", "title": "Dermatology" },
-{ "json": "data/patho.json", "title": "Pathology" },
 { "json": "data/psm.json", "title": "PSM" },
 { "json": "data/psychiatry.json", "title": "Psychiatry" },
 { "json": "data/fmt.json", "title": "FMT" }
