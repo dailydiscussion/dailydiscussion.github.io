@@ -24,7 +24,6 @@
         },
         {
           "s.no": 3,
-          "id": "Quiz-3",
           "text": "Histopathology Slides Mini Test",
           "questions": "20",
           "days": 0,
@@ -34,7 +33,6 @@
         },
         {
           "s.no": 4,
-          "id": "Quiz",
           "text": "Hematology 1",
           "questions": "50",
           "days": 1,
@@ -44,13 +42,32 @@
         },
         {
           "s.no": 5,
-          "id": "Quiz-2",
           "text": "Hematology 2",
           "questions": "50",
           "days": 0,
           "date_completed": "24 April 2024",
           "timestamp": "2024-04-24T00:00:00Z",
           "url": "https://link.marrow.com/join_custom_module/55IG0UEC"
+        },
+        {
+          "s.no": 6,
+          "id": "Quiz",
+          "text": "CVS, Respi, Genitourinary 1",
+          "questions": "50",
+          "days": 1,
+          "date_completed": "25 April 2024",
+          "timestamp": "2024-04-25T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55IH10BN"
+        },
+        {
+          "s.no": 7,
+          "id": "Quiz-2",
+          "text": "CVS, Respi, Genitourinary 2",
+          "questions": "50",
+          "days": 0,
+          "date_completed": "25 April 2024",
+          "timestamp": "2024-04-25T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55IH10DY"
         }
       ]
     }
