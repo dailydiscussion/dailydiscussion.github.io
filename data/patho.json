@@ -60,7 +60,6 @@
         },
         {
           "s.no": 7,
-          "id": "Quiz",
           "text": "CVS, Respi, Genitourinary 2",
           "questions": "50",
           "days": 0,
@@ -70,7 +69,6 @@
         },
          {
           "s.no": 8,
-          "id": "Quiz-2",
           "text": "CNS, Endo, GIT, Skin 1",
           "questions": "50",
           "days": 1,
@@ -80,13 +78,45 @@
         },
         {
           "s.no": 9,
-          "id": "Quiz-3",
           "text": "CNS, Endo, GIT, Skin 2",
           "questions": "50",
           "days": 0,
           "date_completed": "26 April 2024",
           "timestamp": "2024-04-26T00:00:00Z",
           "url": "https://link.marrow.com/join_custom_module/55II0YST"
+        },
+        {
+          "s.no": 10,
+          "id": "Quiz",
+          "text": "Pathology ST 1 (2017)",
+          "duration": "45min",
+          "questions": "50",
+          "days": 1,
+          "date_completed": "27 April 2024",
+          "timestamp": "2024-04-27T00:00:00Z",
+          "url": "https://link.marrow.com/test/595323ce5d817243aa2e97fc?prev=subject"
+        },
+        {
+          "s.no": 11,
+          "id": "Quiz-2",
+          "text": "Pathology ST 2 (2017)",
+          "duration": "45min",
+          "questions": "50",
+          "days": 0,
+          "date_completed": "27 April 2024",
+          "timestamp": "2024-04-27T00:00:00Z",
+          "url": "https://link.marrow.com/test/59532e585d817243aa2e9810?prev=subject"
+        },
+        {
+          "s.no": 12,
+          "id": "Quiz-3",
+          "text": "Pathology ST 3 (2017)",
+          "duration": "45min",
+          "questions": "50",
+          "days": 0,
+          "date_completed": "27 April 2024",
+          "timestamp": "2024-04-27T00:00:00Z",
+          "url": "https://link.marrow.com/test/5982f4765d81725377cc911c?prev=subject"
         }
       ]
     }
