@@ -167,7 +167,6 @@
         },
         {
           "s.no": 18,
-          "id": "Quiz",
           "text": "Pathology (2023)",
           "duration": "53min",
           "questions": "50",
@@ -178,7 +177,6 @@
         },
         {
           "s.no": 19,
-          "id": "Quiz-2",
           "text": "Pathology (2020)",
           "duration": "60min",
           "questions": "75",
