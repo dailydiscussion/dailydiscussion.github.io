@@ -6,7 +6,6 @@
       "links": [
         {
           "s.no": 1,
-          "id": "Quiz",
           "text": "Endo, Renal, Blood 1",
           "questions": "50",
           "days": 1,
@@ -17,7 +16,6 @@
         },
         {
           "s.no": 2,
-          "id": "Quiz-2",
           "text": "Endo, Renal, Blood 2",
           "questions": "50",
           "days": 0,
@@ -25,6 +23,28 @@
           "date_completed": "3 May 2024",
           "timestamp": "2024-05-03T00:00:00Z",
           "url": "https://link.marrow.com/join_custom_module/55KN1256"
+        },
+        {
+          "s.no": 3,
+          "id": "Quiz",
+          "text": "CVS, Respi, Infectious, Rheumatology 1",
+          "questions": "50",
+          "days": 1,
+          "duration": "Custom",
+          "date_completed": "4 May 2024",
+          "timestamp": "2024-05-04T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55KO1050"
+        },
+        {
+          "s.no": 4,
+          "id": "Quiz-2",
+          "text": "CVS, Respi, Infectious, Rheumatology 2",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "4 May 2024",
+          "timestamp": "2024-05-04T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55KO10O4"
         }
       ]
     }
