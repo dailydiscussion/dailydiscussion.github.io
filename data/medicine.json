@@ -26,7 +26,6 @@
         },
         {
           "s.no": 3,
-          "id": "Quiz",
           "text": "CVS, Respi, Infectious, Rheumatology 1",
           "questions": "50",
           "days": 1,
@@ -37,7 +36,7 @@
         },
         {
           "s.no": 4,
-          "id": "Quiz-2",
+          "id": "Quiz",
           "text": "CVS, Respi, Infectious, Rheumatology 2",
           "questions": "50",
           "days": 0,
@@ -45,6 +44,28 @@
           "date_completed": "4 May 2024",
           "timestamp": "2024-05-04T00:00:00Z",
           "url": "https://link.marrow.com/join_custom_module/55KO10O4"
+        },
+        {
+          "s.no": 5,
+          "id": "Quiz-2",
+          "text": "CNS, GIT, General 1",
+          "questions": "50",
+          "days": 1,
+          "duration": "Custom",
+          "date_completed": "5 May 2024",
+          "timestamp": "2024-05-05T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55KP0UFE"
+        },
+        {
+          "s.no": 6,
+          "id": "Quiz-3",
+          "text": "CNS, GIT, General 2",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "5 May 2024",
+          "timestamp": "2024-05-05T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55KP0UMZ"
         }
       ]
     }
