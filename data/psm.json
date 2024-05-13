@@ -2,8 +2,28 @@
   "tests": [
     {
       "title": "PSM",
+      "totalTests": "16",
       "links": [
-        
+        {
+          "s.no": 1,
+          "text": "Health Programmes, Communiable d/s, Preventive obs 1",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "13 May 2024",
+          "timestamp": "2024-05-13T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55KX0D3Z"
+        },
+        {
+          "s.no": 1,
+          "text": "Health Programmes, Communiable d/s, Preventive obs 2",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "13 May 2024",
+          "timestamp": "2024-05-13T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55KX0D8S"
+        }
       ]
     }
   ]
