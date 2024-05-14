@@ -3,8 +3,8 @@
 "grandtest": "data/grandtest.json",
 "defaultcard":"psm-link",
 "dashboard": [
-{ "json": "data/grandtest.json", "title": "Grand&nbsp;Tests" },
 { "json": "data/psm.json", "title": "PSM" },
+{ "json": "data/fmt.json", "title": "FMT" },
 { "json": "data/medicine.json", "title": "Medicine" },
 { "json": "data/patho.json", "title": "Pathology" },
 { "json": "data/pharma.json", "title": "Pharmacology" },
@@ -22,6 +22,6 @@
 { "json": "data/biochem.json", "title": "Biochemistry" },
 { "json": "data/derma.json", "title": "Dermatology" },
 { "json": "data/psychiatry.json", "title": "Psychiatry" },
-{ "json": "data/fmt.json", "title": "FMT" }
+{ "json": "data/grandtest.json", "title": "Grand&nbsp;Tests" }
 ]
 }
