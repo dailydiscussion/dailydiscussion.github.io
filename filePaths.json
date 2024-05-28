@@ -1,8 +1,9 @@
 {
 "todayquiz": "data/medicine.json",
 "grandtest": "data/grandtest.json",
-"defaultcard":"psm-link",
+"defaultcard":"surgery-link",
 "dashboard": [
+{ "json": "data/surgery.json", "title": "Surgery" },
 { "json": "data/psm.json", "title": "PSM" },
 { "json": "data/fmt.json", "title": "FMT" },
 { "json": "data/medicine.json", "title": "Medicine" },
@@ -15,7 +16,6 @@
 { "json": "data/ent.json", "title": "ENT" },
 { "json": "data/ortho.json", "title": "Orthopaedics" },
 { "json": "data/obgy.json", "title": "Obs&Gyne" },
-{ "json": "data/surgery.json", "title": "Surgery" },
 { "json": "data/pedia.json", "title": "Pediatrics" },
 { "json": "data/radiology.json", "title": "Radiology" },
 { "json": "data/anatomy.json", "title": "Anatomy" },
