@@ -1,11 +1,11 @@
 {
-"todayquiz": "data/medicine.json",
+"todayquiz": "data/fmt.json",
 "grandtest": "data/grandtest.json",
-"defaultcard":"surgery-link",
+"defaultcard":"fmt-link",
 "dashboard": [
 { "json": "data/surgery.json", "title": "Surgery" },
-{ "json": "data/psm.json", "title": "PSM" },
 { "json": "data/fmt.json", "title": "FMT" },
+{ "json": "data/psm.json", "title": "PSM" },
 { "json": "data/medicine.json", "title": "Medicine" },
 { "json": "data/patho.json", "title": "Pathology" },
 { "json": "data/pharma.json", "title": "Pharmacology" },
