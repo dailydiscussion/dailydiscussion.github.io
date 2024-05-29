@@ -26,7 +26,6 @@
         },
         {
           "s.no": 3,
-          "id": "Quiz",
           "text": "Medical Jurispondence & Injuries 1",
           "questions": "50",
           "days": 0,
@@ -37,7 +36,6 @@
         },
         {
           "s.no": 4,
-          "id": "Quiz-2",
           "text": "Medical Jurispondence & Injuries 2",
           "questions": "50",
           "days": 0,
@@ -45,6 +43,28 @@
           "date_completed": "28 May 2024",
           "timestamp": "2024-05-28T00:00:00Z",
           "url": "https://link.marrow.com/join_custom_module/55LC0QOC"
+        },
+        {
+          "s.no": 5,
+          "id": "Quiz",
+          "text": "Autopsy, PM changes, Identification and misc 1",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "29 May 2024",
+          "timestamp": "2024-05-29T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55LD16IF"
+        },
+        {
+          "s.no": 6,
+          "id": "Quiz-2",
+          "text": "Autopsy, PM changes, Identification and misc 2",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "29 May 2024",
+          "timestamp": "2024-05-29T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55LD16KD"
         }
       ]
     }
