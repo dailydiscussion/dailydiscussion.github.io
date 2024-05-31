@@ -1,7 +1,7 @@
 {
-"todayquiz": "data/fmt.json",
+"todayquiz": "data/psm.json",
 "grandtest": "data/grandtest.json",
-"defaultcard":"fmt-link",
+"defaultcard":"psm-link",
 "dashboard": [
 { "json": "data/surgery.json", "title": "Surgery" },
 { "json": "data/fmt.json", "title": "FMT" },

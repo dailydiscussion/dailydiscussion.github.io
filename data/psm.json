@@ -2,6 +2,7 @@
   "tests": [
     {
       "title": "PSM",
+      "totalTests": "6",
       "links": [
         {
           "s.no": 1,
@@ -42,6 +43,28 @@
           "date_completed": "20 May 2024",
           "timestamp": "2024-05-20T00:00:00Z",
           "url": "https://link.marrow.com/join_custom_module/55L410QB"
+        },
+        {
+          "s.no": 5,
+          "id": "Quiz",
+          "text": "Nutrition and Miscellaneous 1",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "31 May 2024",
+          "timestamp": "2024-05-31T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55LF1PH0"
+        },
+        {
+          "s.no": 6,
+          "id": "Quiz-2",
+          "text": "Nutrition and Miscellaneous 2",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "31 May 2024",
+          "timestamp": "2024-05-31T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55LF1PP8"
         }
       ]
     }
