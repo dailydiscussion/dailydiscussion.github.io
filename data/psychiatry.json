@@ -2,8 +2,70 @@
   "tests": [
     {
       "title": "Psychiatry",
+       "totalTests": "6",
       "links": [
-        
+        {
+          "s.no": 1,
+          "id": "Quiz",
+          "text": "Neurocognitive, Mood, Subs related, Neurosis 1",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "25 June 2024",
+          "timestamp": "2024-06-25T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55O00C56"
+        },
+        {
+          "s.no": 2,
+          "id": "Quiz-2",
+          "text": "Neurocognitive, Mood, Subs related, Neurosis 1",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "25 June 2024",
+          "timestamp": "2024-06-25T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55O00C60"
+        },
+        {
+          "s.no": 3,
+          "text": "Personality, Specific, Psychaitric emergency and Clinical psychiatry 1",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "25 June 2024",
+          "timestamp": "2024-06-25T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55O00C79"
+        },
+        {
+          "s.no": 4,
+          "text": "Personality, Specific, Psychaitric emergency and Clinical psychiatry 2",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "25 June 2024",
+          "timestamp": "2024-06-25T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55O00C8K"
+        },
+        {
+          "s.no": 5,
+          "text": "Sexuality, Child Psychi, Foreign Pshci, Facets and Psychotic disorders 1",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "25 June 2024",
+          "timestamp": "2024-06-25T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55O00CA3"
+        },
+        {
+          "s.no": 6,
+          "text": "Sexuality, Child Psychi, Foreign Pshci, Facets and Psychotic disorders 1",
+          "questions": "50",
+          "days": 0,
+          "duration": "Custom",
+          "date_completed": "25 June 2024",
+          "timestamp": "2024-06-25T00:00:00Z",
+          "url": "https://link.marrow.com/join_custom_module/55O00CAQ"
+        }
       ]
     }
   ]
