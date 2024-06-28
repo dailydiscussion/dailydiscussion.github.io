@@ -26,7 +26,6 @@
         },
         {
           "s.no": 3,
-          "id": "Quiz",
           "text": "Personality, Specific, Psychaitric emergency and Clinical psychiatry 1",
           "questions": "50",
           "days": 0,
@@ -37,7 +36,6 @@
         },
         {
           "s.no": 4,
-          "id": "Quiz-2",
           "text": "Personality, Specific, Psychaitric emergency and Clinical psychiatry 2",
           "questions": "50",
           "days": 0,
@@ -48,6 +46,7 @@
         },
         {
           "s.no": 5,
+          "id": "Quiz",
           "text": "Sexuality, Child Psychi, Foreign Pshci, Facets and Psychotic disorders 1",
           "questions": "50",
           "days": 0,
@@ -58,6 +57,7 @@
         },
         {
           "s.no": 6,
+          "id": "Quiz-2",
           "text": "Sexuality, Child Psychi, Foreign Pshci, Facets and Psychotic disorders 2",
           "questions": "50",
           "days": 0,
