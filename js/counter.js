@@ -18,5 +18,5 @@ const targetDate1 = new Date("2024-05-19T00:00:00");
 setInterval(() => updateCountdown(targetDate1, "countdownOutput1"), 1000);
 
 // Set the target date for the second countdown
-const targetDate2 = new Date("2024-06-23T00:00:00");
+const targetDate2 = new Date("2024-08-11T00:00:00");
 setInterval(() => updateCountdown(targetDate2, "countdownOutput2"), 1000);
