@@ -1,8 +1,9 @@
 {
 "todayquiz": "data/psychiatry.json",
 "grandtest": "data/grandtest.json",
-"defaultcard":"psychiatry-link",
+"defaultcard":"grandtest-link",
 "dashboard": [
+{ "json": "data/grandtest.json", "title": "Grand&nbsp;Tests" },
 { "json": "data/psychiatry.json", "title": "Psychiatry" },
 { "json": "data/surgery.json", "title": "Surgery" },
 { "json": "data/obgy.json", "title": "Obs&Gyne" },
@@ -21,7 +22,6 @@
 { "json": "data/ortho.json", "title": "Orthopaedics" },
 { "json": "data/anesthesia.json", "title": "Anesthesiology" },
 { "json": "data/radiology.json", "title": "Radiology" },
-{ "json": "data/derma.json", "title": "Dermatology" },
-{ "json": "data/grandtest.json", "title": "Grand&nbsp;Tests" }
+{ "json": "data/derma.json", "title": "Dermatology" }
 ]
 }

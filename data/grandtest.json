@@ -1,48 +1,29 @@
 {
-  "tests": [{
-    "title": "Grand",
-    "links": [{
-        "s.no": 1,
-        "text": "Grand Test 8 (2023-24)",
-        "questions": "200",
-        "duration": "210 min",
-        "days": 1,
-        "date_completed": "11 March 2024",
-        "url": "https://link.marrow.com/test/64240d7fa1bb1feba2454b2a?prev=grand",
-        "timestamp": "2024-03-11T00:00:00Z"
-      },
-      {
-        "s.no": 2,
-        "text": "Grand Test 10 (2023-24)",
-        "questions": "200",
-        "duration": "210 min",
-        "days": 1,
-        "date_completed": "19 March 2024",
-        "url": "https://link.marrow.com/test/64240d87a1bb1feba2454b2c?prev=grand",
-        "timestamp": "2024-03-19T00:00:00Z"
-      },
-      {
-        "s.no": 3,
-        "id": "Quiz-GT1",
-        "text": "Grand Test 11 (2023-24)",
-        "questions": "200",
-        "duration": "210 min",
-        "days": 1,
-        "date_completed": "31 March 2024",
-        "url": "https://link.marrow.com/test/64240e0aa1bb1feba2454b2d?prev=grand",
-        "timestamp": "2024-03-31T00:00:00Z"
-      },
-      {
-        "s.no": 4,
-        "id": "Quiz-GT2",
-        "text": "National INICET Mock May 2024",
-        "questions": "200",
-        "duration": "180 min",
-        "days": 0,
-        "date_completed": "07 April 2024",
-        "url": "https://www.marrow.com/test/65a12618d105134eb7765369?prev=grand",
-        "timestamp": "2024-04-07T00:00:00Z"
-      }
-    ]
-  }]
+  "tests": [
+    {
+      "title": "Grand",
+      "links": [
+        {
+          "s.no": 1,
+          "text": "Test 1",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 0,
+          "date_completed": "29 July 2024",
+          "url": "https://link.marrow.com/join_custom_module/L55QX0002",
+          "timestamp": "2024-07-29T00:00:00Z"
+        },
+        {
+          "s.no": 1,
+          "text": "Test 2",
+          "questions": "50",
+          "duration": "Custom",
+          "days": 0,
+          "date_completed": "30 July 2024",
+          "url": "https://link.marrow.com/join_custom_module/L55QX0005",
+          "timestamp": "2024-07-30T00:00:00Z"
+        }
+      ]
+    }
+  ]
 }
