@@ -1,9 +1,8 @@
 {
 "todayquiz": "data/psychiatry.json",
 "grandtest": "data/grandtest.json",
-"defaultcard":"grandtest-link",
+"defaultcard":"psychiatry-link",
 "dashboard": [
-{ "json": "data/grandtest.json", "title": "Grand&nbsp;Tests" },
 { "json": "data/psychiatry.json", "title": "Psychiatry" },
 { "json": "data/surgery.json", "title": "Surgery" },
 { "json": "data/obgy.json", "title": "Obs&Gyne" },

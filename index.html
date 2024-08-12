@@ -11,9 +11,7 @@
 <title>Daily Discussion</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap"
-rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Kalnia:wght@600&family=Lemon&family=Raleway:wght@700&family=Tilt+Prism&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -99,6 +97,55 @@ padding: 30px;
 font-size: 14px;
 font-weight: 100;
 }
+
+/* Login Screen Styles */
+.sign-in-screen {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+background-image: url(svg/topography.svg);
+background-color: #1D2B53;
+color: white;
+}
+
+.login-container {
+padding: 1em;
+}
+
+.login-container h2 {
+margin-bottom: 20px;
+}
+
+.login-container label {
+display: block;
+margin: 10px 0 5px;
+}
+
+.login-container input {
+width: 100%;
+padding: 10px;
+margin-bottom: 20px;
+border: none;
+border-radius: 5px;
+box-sizing: border-box;
+}
+
+.login-container button {
+width: 100%;
+padding: 10px;
+background-color: #ff5e5e;
+border: none;
+border-radius: 5px;
+color: white;
+font-size: 16px;
+cursor: pointer;
+box-sizing: border-box;
+}
+
+.login-container button:hover {
+background-color: #ff4a4a;
+}
 </style>
 
 <!-- Loading screen container -->
@@ -116,6 +163,17 @@ Ready to boost your NEET PG | INICET preparation together? Start quizzing now!
 </div>
 <div class="div-footer">
 &copy Copyright 2024
+</div>
+</div>
+
+<div class="sign-in-screen">
+<div class="login-container">
+<h2>Sign In</h2>
+<label for="username">Username:</label>
+<input type="text" id="username" required>
+<label for="password">Password:</label>
+<input type="password" id="password" required>
+<button onclick="signIn()">Sign In</button>
 </div>
 </div>
 
@@ -486,21 +544,27 @@ INICET May 24
 
 <div class="col" style="margin-top: 2em;">
 <p>
-    Dear Users, <br>
+Dear Users, <br>
 
-    <p style="line-height: 25px;">
-    As you embark on your journey towards the NEET PG and INICET exams, we want to extend our heartfelt wishes for your success. This period of preparation is a testament to your dedication, hard work, and perseverance. We believe in your potential and are confident that your efforts will bear fruit. 
-    Remember, every challenge you face is an opportunity to grow, learn, and become better. Stay focused, stay positive, and keep pushing your limits. Trust in your abilities, and don't hesitate to seek help whenever you need it – we are here to support you every step of the way.
-    All the best for your exams! May you achieve the success you so richly deserve. <br>
-    </p>
+<p style="line-height: 25px;">
+As you embark on your journey towards the NEET PG and INICET exams, we want to
+extend our heartfelt wishes for your success. This period of preparation is a
+testament to your dedication, hard work, and perseverance. We believe in your
+potential and are confident that your efforts will bear fruit.
+Remember, every challenge you face is an opportunity to grow, learn, and become
+better. Stay focused, stay positive, and keep pushing your limits. Trust in your
+abilities, and don't hesitate to seek help whenever you need it – we are here to
+support you every step of the way.
+All the best for your exams! May you achieve the success you so richly deserve. <br>
+</p>
 
-    <p>
-        Warm regards, 
-    </p>
-    
-    <p>
-    Daily Discussion Team 
-    </p>
+<p>
+Warm regards,
+</p>
+
+<p>
+Daily Discussion Team
+</p>
 </h4>
 </div>
 
@@ -512,20 +576,62 @@ INICET May 24
 
 </div>
 
-<script>
-// JavaScript code to toggle between loading screen and main content
+<script id="signin-screen">
+// JavaScript code to handle sign-in and content transition
 document.addEventListener('DOMContentLoaded', function () {
-// Simulate content loading (e.g., fetching data from a server)
+const loadingScreen = document.getElementById('loadingScreen');
+const signInScreen = document.querySelector('.sign-in-screen');
+const mainContent = document.getElementById('mainContent');
+const loadingTime = 1500; // Simulated loading time in milliseconds
+const transitionDelay = 50; // Delay for smooth transition
+
+// Function to show the main content
+function showMainContent() {
+loadingScreen.style.display = 'none';
+mainContent.classList.remove('hidden');
+setTimeout(() => {
+mainContent.style.opacity = '1';
+}, transitionDelay);
+}
+
+// Function to validate sign-in
+function signIn() {
+const username = document.getElementById('username').value;
+const password = document.getElementById('password').value;
+const validCredentials = [{
+id: 'Nikhil',
+password: 'Nikhil@12'
+}];
+
+const isValid = validCredentials.some(cred => cred.id === username && cred.password ===
+password);
+
+if (isValid) {
+// Save login status in localStorage
+localStorage.setItem('isLoggedIn', 'true');
+localStorage.setItem('username', username); // Optional: Save the username if needed
+
+signInScreen.style.display = 'none';
+showMainContent();
+} else {
+alert('Invalid credentials. Please try again.');
+}
+}
+
+// Check if the user is already logged in
+if (localStorage.getItem('isLoggedIn') === 'true') {
+signInScreen.style.display = 'none';
+showMainContent();
+} else {
+// Simulate content loading
 setTimeout(function () {
-// Hide loading screen
-document.getElementById('loadingScreen').style.display = 'none';
-// Show main content
-document.getElementById('mainContent').classList.remove('hidden');
-// Trigger transition by changing opacity
-setTimeout(function () {
-document.getElementById('mainContent').style.opacity = '1';
-}, 50); // Delay to ensure smooth transition after displaying main content
-}, 1500); // Simulated loading time (1.5 seconds)
+loadingScreen.style.display = 'none';
+signInScreen.style.display = 'flex';
+}, loadingTime);
+}
+
+// Expose the signIn function globally
+window.signIn = signIn;
 });
 </script>
 
